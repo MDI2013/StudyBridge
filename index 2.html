@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>StudyBridge – Universités et pays, au même endroit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F2F5F7;--ink:#14213D;--card:#fff;--line:#D6DEE5;--teal:#0B7A75;--acc:#C8431F;--mut:#566376;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1726;--ink:#E8EEF5;--card:#16233A;--line:#27384F;--teal:#4FC3B9;--acc:#FF8A63;--mut:#9AA9BC;--on:#0E1726}}
+:root[data-theme="dark"]{--bg:#0E1726;--ink:#E8EEF5;--card:#16233A;--line:#27384F;--teal:#4FC3B9;--acc:#FF8A63;--mut:#9AA9BC;--on:#0E1726}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Public Sans",system-ui,sans-serif}
+h1,h2,h3,.logo{font-family:"Bricolage Grotesque","Public Sans",sans-serif;line-height:1.1;margin:0}
+button,select,input{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;flex-wrap:wrap}
+.logo{font-weight:800;font-size:1.4rem;display:flex;gap:8px;align-items:center}
+nav{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px}
+nav button{border:0;background:none;padding:8px 14px;border-radius:999px;cursor:pointer;font-weight:600;color:var(--mut)}
+nav button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.hero{position:relative;padding:34px 0 26px;overflow:hidden}
+.hero svg{position:absolute;right:-40px;top:0;width:min(560px,90%);opacity:.14;pointer-events:none}
+.hero h1{font-size:clamp(2rem,6vw,3.6rem);font-weight:800;max-width:15ch;position:relative}
+.hero p{max-width:52ch;color:var(--mut);margin:14px 0 20px;position:relative}
+.search{display:grid;grid-template-columns:1fr 200px auto;gap:8px;position:relative;max-width:760px}
+.search input,.search select,.f select,.f input[type=search]{background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;width:100%}
+.btn{background:var(--acc);color:#fff;border:0;border-radius:10px;padding:12px 20px;font-weight:600;cursor:pointer}
+.btn.alt{background:var(--card);color:var(--ink);border:1.5px solid var(--line)}
+.filters{display:flex;flex-wrap:wrap;gap:14px;align-items:end;margin:22px 0 8px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:6px 13px;cursor:pointer;font-size:.9rem}
+.chip[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:var(--on)}
+.f{display:flex;flex-direction:column;gap:4px;font-size:.85rem;color:var(--mut)}
+#ll{background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:8px 12px;cursor:pointer}
+.f input[type=range]{accent-color:var(--teal);width:190px}
+.count{color:var(--mut);margin:10px 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;padding-bottom:40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:8px;text-align:left;cursor:pointer;width:100%}
+.card:hover{border-color:var(--teal)}
+.card h3{font-size:1.15rem}
+.meta{color:var(--mut);font-size:.9rem}
+.tags{display:flex;gap:5px;flex-wrap:wrap}
+.tag{background:var(--bg);border-radius:6px;padding:2px 8px;font-size:.78rem}
+.fee{font-weight:600;color:var(--teal);margin-top:auto}
+.empty{padding:40px 0;color:var(--mut)}
+.pays{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0}
+.pays .chip{font-size:1rem}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:40px}
+.panel h2{font-size:2rem;margin-bottom:6px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:18px 0}
+.fact{border-left:3px solid var(--teal);padding-left:12px}
+.fact b{display:block;font-size:.8rem;color:var(--mut);font-weight:500}
+dialog{border:0;border-radius:16px;padding:0;max-width:560px;width:calc(100% - 28px);background:var(--card);color:var(--ink)}
+dialog::backdrop{background:rgba(10,15,30,.6)}
+.dl{padding:24px;display:flex;flex-direction:column;gap:12px}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+footer{border-top:1px solid var(--line);padding:22px 0 30px;color:var(--mut);font-size:.85rem}
+.view[hidden]{display:none}
+@media(max-width:640px){.search{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:no-preference){.card{transition:border-color .15s}}
+.stats{display:flex;gap:30px;flex-wrap:wrap;margin:6px 0 30px}
+.stats div{font-size:.9rem;color:var(--mut)}
+.stats b{display:block;font:800 2rem "Bricolage Grotesque",sans-serif;color:var(--ink)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:12px 0 30px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;text-align:left;cursor:pointer;display:flex;flex-direction:column;gap:6px}
+.step:hover{border-color:var(--teal)}
+.step b{font:700 1.1rem "Bricolage Grotesque",sans-serif}
+.step span{color:var(--mut);font-size:.92rem}
+h2.pt{font-size:clamp(1.5rem,4vw,2.1rem);margin:10px 0 4px}
+.pd{color:var(--mut);margin:0 0 14px}
+.tw{overflow-x:auto;margin-bottom:20px}
+table{border-collapse:collapse;width:100%;min-width:560px;background:var(--card);border:1px solid var(--line)}
+th,td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;font-size:.9rem}
+tbody th{color:var(--mut);font-weight:500;white-space:nowrap}
+.bar{height:10px;background:var(--line);border-radius:6px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--teal)}
+.ck{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-top:8px}
+.ck label{display:flex;gap:10px;align-items:center;cursor:pointer;flex:1}
+.ck input{width:20px;height:20px;accent-color:var(--teal);flex:none}
+@media(max-width:720px){header nav{order:3;width:100%;overflow-x:auto}nav button{white-space:nowrap}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="logo" data-v="home" role="link" tabindex="0" style="cursor:pointer"><svg width="34" height="22" viewBox="0 0 34 22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M2 18C8 2 26 2 32 18M2 18h30M10 18V9M17 18V5M24 18V9"/></svg>StudyBridge</div>
+  <nav aria-label="Navigation principale">
+    <button data-v="home" aria-pressed="true" data-i="tHome">Accueil</button>
+    <button data-v="unis" aria-pressed="false" data-i="tUnis">Universités</button>
+    <button data-v="pays" aria-pressed="false" data-i="tPays">Guide pays</button>
+    <button data-v="fav" aria-pressed="false"><span data-i="tFav">Ma sélection</span> <span id="fc"></span></button>
+    <button data-v="plan" aria-pressed="false" data-i="tPlan">Mon dossier</button>
+  </nav>
+  <select id="ll" aria-label="Langue / Language / Idioma"><option value="fr">Français</option><option value="en">English</option><option value="es">Español</option></select>
+</header>
+
+
+
+<main>
+<div class="view" id="v-home"><section class="hero">
+  <svg viewBox="0 0 560 220" fill="none" stroke="currentColor" stroke-width="5" aria-hidden="true"><path d="M10 200C120 -40 440 -40 550 200M10 200H550M110 200V80M210 200V30M350 200V30M450 200V80"/></svg>
+  <h1 data-i="h1">Choisis ton université. Découvre ton futur pays.</h1>
+  <p data-i="hp">Frais de scolarité, langues, domaines d'étude, visa, coût de la vie : tout ce qu'il faut pour préparer des études à l'étranger, sur une seule page.</p>
+  <form class="search" id="sf" role="search">
+    <input id="q" type="search" placeholder="Nom d'université, ville, discipline…" aria-label="Rechercher une université">
+    <select id="qc" aria-label="Pays"><option value="">Tous les pays</option></select>
+    <button class="btn" type="submit" data-i="search">Rechercher</button>
+  </form>
+</section>
+  <div class="stats" id="st"></div>
+  <h2 class="pt" data-i="howT"></h2>
+  <div class="steps">
+    <button class="step" data-v="pays"><b data-i="s1T"></b><span data-i="s1D"></span></button>
+    <button class="step" data-v="unis"><b data-i="s2T"></b><span data-i="s2D"></span></button>
+    <button class="step" data-v="fav"><b data-i="s3T"></b><span data-i="s3D"></span></button>
+  </div>
+  <h2 class="pt" data-i="popT"></h2>
+  <div class="pays" id="pop"></div>
+</div>
+<div class="view" id="v-unis" hidden><h2 class="pt" data-i="pU"></h2><p class="pd" data-i="pUd"></p>
+  <div class="filters"><label class="f"><span data-i="sr">Recherche</span><input id="q2" type="search"></label><label class="f"><span data-i="cty">Pays</span><select id="c2"></select></label>
+    <div class="f"><span data-i="field">Domaine</span><div class="chips" id="fields"></div></div>
+    <label class="f"><span data-i="lang">Langue d'enseignement</span><select id="lg"></select></label>
+    <label class="f"><span><span data-i="budget">Budget max :</span> <b id="bl"></b></span><input id="bg" type="range" min="0" max="60000" step="1000" value="60000"></label>
+    <label class="f"><span data-i="sort">Trier par</span><select id="so"><option value="n" data-i="sN">Nom</option><option value="a" data-i="sA">Frais croissants</option><option value="d" data-i="sD">Frais décroissants</option></select></label>
+  </div>
+  <div class="count" id="ct" aria-live="polite"></div>
+  <div class="grid" id="gr"></div>
+</div>
+
+<div class="view" id="v-pays" hidden><h2 class="pt" data-i="pP"></h2><p class="pd" data-i="pPd"></p>
+  <div class="pays" id="pl"></div>
+  <div class="panel" id="pp"></div>
+</div>
+
+<div class="view" id="v-fav" hidden>
+  <h2 class="pt" data-i="pF"></h2><p class="pd" data-i="pFd"></p>
+  <div class="grid" id="fg"></div><div id="cp"></div><div style="height:40px"></div>
+</div>
+<div class="view" id="v-plan" hidden><h2 class="pt" data-i="pPl"></h2><p class="pd" data-i="pPld"></p><div id="pc"></div><div style="height:40px"></div></div>
+</main>
+
+<footer data-i="foot">Les montants (convertis en euros) et les règles de visa sont des repères indicatifs, valables pour des étudiants internationaux et susceptibles de changer. Vérifie toujours sur le site officiel de l'université et de l'ambassade. StudyBridge n'est affilié à aucun établissement.</footer>
+</div>
+
+<dialog id="dg" aria-label="Détails de l'université"><div class="dl" id="dc"></div></dialog>
+
+<script>
+const P={
+FR:{n:"France",f:"🇫🇷",cap:"Paris",lang:"Français",cur:"Euro (€)",life:"800–1 400 €",visa:"Visa long séjour étudiant, démarche via Campus France",work:"Jusqu'à 964 h/an",note:"Frais publics modérés, fortes aides au logement (CAF) et bourses Eiffel."},
+CA:{n:"Canada",f:"🇨🇦",cap:"Ottawa",lang:"Anglais, français",cur:"Dollar canadien (CAD)",life:"1 000–1 500 €",visa:"Permis d'études avec lettre d'acceptation",work:"Environ 20–24 h/sem. hors campus",note:"Filières post-diplôme possibles pour rester travailler. Au Québec, les cours sont en français."},
+DE:{n:"Allemagne",f:"🇩🇪",cap:"Berlin",lang:"Allemand (nombreux masters en anglais)",cur:"Euro (€)",life:"850–1 200 €",visa:"Visa étudiant + compte bloqué (environ 11 900 €/an)",work:"120 jours pleins ou 240 demi-jours/an",note:"Les frais sont faibles, voire nuls, dans beaucoup d'universités publiques. Niveau d'allemand souvent requis."},
+UK:{n:"Royaume-Uni",f:"🇬🇧",cap:"Londres",lang:"Anglais",cur:"Livre sterling (GBP)",life:"1 200–1 800 €",visa:"Student visa (CAS fourni par l'université)",work:"20 h/sem. en période de cours",note:"Licences en 3 ans, masters en 1 an. Frais élevés pour les étudiants internationaux."},
+US:{n:"États-Unis",f:"🇺🇸",cap:"Washington D.C.",lang:"Anglais",cur:"Dollar américain (USD)",life:"1 300–2 200 €",visa:"Visa F-1, formulaire I-20 de l'université",work:"20 h/sem. sur le campus",note:"Aides financières et bourses au mérite fréquentes dans les grandes universités. Tests (SAT/TOEFL/GRE) selon le cursus."},
+MA:{n:"Maroc",f:"🇲🇦",cap:"Rabat",lang:"Arabe, français",cur:"Dirham (MAD)",life:"300–600 €",visa:"Visa étudiant ou carte de séjour selon la nationalité",work:"Très encadré pour les étrangers",note:"Coût de la vie bas, nombreuses filières en français."},
+ES:{n:"Espagne",f:"🇪🇸",cap:"Madrid",lang:"Espagnol",cur:"Euro (€)",life:"700–1 200 €",visa:"Visa étudiant pour les séjours de plus de 90 jours (hors UE)",work:"Jusqu'à 30 h/sem.",note:"Cadre de vie agréable, frais publics modérés."},
+NL:{n:"Pays-Bas",f:"🇳🇱",cap:"Amsterdam",lang:"Néerlandais, anglais",cur:"Euro (€)",life:"1 000–1 500 €",visa:"Permis de séjour demandé par l'université (hors UE/EEE)",work:"16 h/sem. en période de cours",note:"Très grande offre de programmes en anglais. Logement tendu dans les grandes villes."},
+AU:{n:"Australie",f:"🇦🇺",cap:"Canberra",lang:"Anglais",cur:"Dollar australien (AUD)",life:"1 400–2 000 €",visa:"Student visa (subclass 500) + assurance santé OSHC",work:"48 h par quinzaine en période de cours",note:"Universités très bien classées, frais élevés, vie étudiante active."},
+JP:{n:"Japon",f:"🇯🇵",cap:"Tokyo",lang:"Japonais, anglais (certains programmes)",cur:"Yen (JPY)",life:"700–1 100 €",visa:"Visa étudiant, certificat d'éligibilité",work:"28 h/sem. avec permission",note:"Bourses MEXT disponibles. Frais modérés dans les universités nationales."}};
+// [nom, pays, ville, type, frais €/an, langue, domaines, site, description]
+const U=[
+["Sorbonne Université","FR","Paris","Public",2800,"Français",["Sciences","Santé","Lettres & SHS"],"https://www.sorbonne-universite.fr","Université pluridisciplinaire au cœur de Paris, forte en sciences et en médecine."],
+["Université de Strasbourg","FR","Strasbourg","Public",2800,"Français",["Sciences","Santé","Lettres & SHS"],"https://www.unistra.fr","Grande université européenne, proche de l'Allemagne, avec de nombreux échanges."],
+["Université de Montpellier","FR","Montpellier","Public",2800,"Français",["Santé","Sciences","Ingénierie"],"https://www.umontpellier.fr","Une des plus anciennes facultés de médecine d'Europe, ville étudiante dynamique."],
+["McGill University","CA","Montréal","Public",22000,"Anglais",["Santé","Sciences","Business"],"https://www.mcgill.ca","Université de recherche reconnue, dans une ville bilingue."],
+["Université de Montréal","CA","Montréal","Public",18000,"Français",["Santé","Sciences","Lettres & SHS"],"https://www.umontreal.ca","Grande université francophone d'Amérique du Nord."],
+["University of Toronto","CA","Toronto","Public",28000,"Anglais",["Ingénierie","Sciences","Business"],"https://www.utoronto.ca","Première université canadienne en recherche, trois campus."],
+["Technische Universität München","DE","Munich","Public",4000,"Allemand, anglais",["Ingénierie","Sciences"],"https://www.tum.de","Référence allemande en ingénierie et innovation, liens étroits avec l'industrie."],
+["LMU Munich","DE","Munich","Public",600,"Allemand, anglais",["Sciences","Lettres & SHS","Santé"],"https://www.lmu.de","Université de recherche historique avec une contribution semestrielle faible."],
+["Universität Heidelberg","DE","Heidelberg","Public",3000,"Allemand, anglais",["Sciences","Santé","Lettres & SHS"],"https://www.uni-heidelberg.de","La plus ancienne université d'Allemagne, ambiance de petite ville étudiante."],
+["University of Oxford","UK","Oxford","Public",32000,"Anglais",["Lettres & SHS","Sciences","Santé"],"https://www.ox.ac.uk","Enseignement par tutorats en petits groupes, collèges historiques."],
+["University of Manchester","UK","Manchester","Public",26000,"Anglais",["Ingénierie","Business","Sciences"],"https://www.manchester.ac.uk","Grande université urbaine avec un fort réseau d'employeurs."],
+["University of Edinburgh","UK","Édimbourg","Public",28000,"Anglais",["Lettres & SHS","Sciences","Ingénierie"],"https://www.ed.ac.uk","Université écossaise ancienne et très internationale."],
+["MIT","US","Cambridge (MA)","Privé",52000,"Anglais",["Ingénierie","Sciences"],"https://www.mit.edu","Institut de référence en ingénierie, informatique et recherche appliquée."],
+["University of Michigan","US","Ann Arbor","Public",55000,"Anglais",["Ingénierie","Business","Santé"],"https://umich.edu","Grande université publique, vie de campus et sport très présents."],
+["UC Berkeley","US","Berkeley","Public",47000,"Anglais",["Sciences","Ingénierie","Business"],"https://www.berkeley.edu","Université publique de recherche proche de la Silicon Valley."],
+["Université Mohammed V","MA","Rabat","Public",500,"Français, arabe",["Sciences","Santé","Lettres & SHS"],"https://www.um5.ac.ma","Principale université publique de la capitale."],
+["Al Akhawayn University","MA","Ifrane","Privé",10000,"Anglais",["Business","Ingénierie","Lettres & SHS"],"https://www.aui.ma","Campus anglophone de type américain dans le Moyen Atlas."],
+["Université Cadi Ayyad","MA","Marrakech","Public",500,"Français, arabe",["Sciences","Ingénierie","Santé"],"https://www.uca.ma","Université publique multi-sites autour de Marrakech."],
+["Universitat de Barcelona","ES","Barcelone","Public",3000,"Espagnol, catalan",["Santé","Sciences","Lettres & SHS"],"https://www.ub.edu","Grande université publique au centre de Barcelone."],
+["Universidad Complutense de Madrid","ES","Madrid","Public",2500,"Espagnol",["Lettres & SHS","Santé","Sciences"],"https://www.ucm.es","L'une des plus grandes universités d'Espagne."],
+["Universidad de Salamanca","ES","Salamanque","Public",2000,"Espagnol",["Lettres & SHS","Sciences"],"https://www.usal.es","Université fondée au XIIIe siècle, idéale pour apprendre l'espagnol."],
+["University of Amsterdam","NL","Amsterdam","Public",13000,"Anglais, néerlandais",["Business","Lettres & SHS","Sciences"],"https://www.uva.nl","Nombreux programmes en anglais dans une ville très internationale."],
+["TU Delft","NL","Delft","Public",16000,"Anglais, néerlandais",["Ingénierie","Sciences"],"https://www.tudelft.nl","Université technique de premier plan en ingénierie et architecture."],
+["Utrecht University","NL","Utrecht","Public",12000,"Anglais, néerlandais",["Sciences","Santé","Lettres & SHS"],"https://www.uu.nl","Recherche forte et enseignement en petits groupes."],
+["University of Melbourne","AU","Melbourne","Public",28000,"Anglais",["Santé","Business","Sciences"],"https://www.unimelb.edu.au","Modèle de masters professionnels, ville réputée pour la vie étudiante."],
+["University of Sydney","AU","Sydney","Public",28000,"Anglais",["Business","Santé","Ingénierie"],"https://www.sydney.edu.au","Campus historique près du centre-ville de Sydney."],
+["Australian National University","AU","Canberra","Public",27000,"Anglais",["Sciences","Lettres & SHS"],"https://www.anu.edu.au","Université nationale axée sur la recherche."],
+["Université de Tokyo","JP","Tokyo","Public",4000,"Japonais, anglais",["Ingénierie","Sciences","Santé"],"https://www.u-tokyo.ac.jp","Première université du Japon, programmes en anglais disponibles."],
+["Université de Kyoto","JP","Kyoto","Public",4000,"Japonais, anglais",["Sciences","Ingénierie"],"https://www.kyoto-u.ac.jp","Tradition de liberté académique et nombreux prix Nobel."],
+["Université d'Osaka","JP","Osaka","Public",4000,"Japonais, anglais",["Ingénierie","Santé","Sciences"],"https://www.osaka-u.ac.jp","Grande université nationale, ville à la vie étudiante abordable."]
+].map((u,i)=>({id:i,n:u[0],c:u[1],city:u[2],t:u[3],fee:u[4],l:u[5],fl:u[6],url:u[7],d:u[8]}));
+
+const S={
+fr:{title:"StudyBridge – Universités et pays, au même endroit",tUnis:"Universités",tPays:"Guide pays",tFav:"Ma sélection",h1:"Choisis ton université. Découvre ton futur pays.",hp:"Frais de scolarité, langues, domaines d'étude, visa, coût de la vie : tout ce qu'il faut pour préparer des études à l'étranger, sur une seule page.",ph:"Nom d'université, ville, discipline…",all:"Tous les pays",search:"Rechercher",field:"Domaine",lang:"Langue d'enseignement",allL:"Toutes",budget:"Budget max :",unl:"illimité",sort:"Trier par",sN:"Nom",sA:"Frais croissants",sD:"Frais décroissants",cnt:n=>`${n} université${n>1?"s":""} trouvée${n>1?"s":""}`,none:"Aucun résultat. Élargis ton budget, retire un filtre ou essaie un autre mot-clé.",favE:"Ta sélection est vide. Ouvre une université et choisis « Ajouter à ma sélection ».",tc:"Cours",capL:"Capitale",lgL:"Langues",curL:"Monnaie",life:"Coût de la vie / mois",visa:"Visa étudiant",work:"Travail étudiant",see:"Voir les universités",fee:"Frais de scolarité (indicatif)",perY:"/ an",low:"(frais très faibles)",dom:"Domaines",site:"Site officiel",add:"Ajouter à ma sélection",rem:"Retirer de ma sélection",guide:"Guide",close:"Fermer",foot:"Les montants (convertis en euros) et les règles de visa sont des repères indicatifs, valables pour des étudiants internationaux et susceptibles de changer. Vérifie toujours sur le site officiel de l'université et de l'ambassade. StudyBridge n'est affilié à aucun établissement."},
+en:{title:"StudyBridge – Universities and countries, in one place",tUnis:"Universities",tPays:"Country guide",tFav:"My shortlist",h1:"Choose your university. Discover your next country.",hp:"Tuition, languages, fields of study, visas, cost of living: everything you need to plan your studies abroad, on a single page.",ph:"University, city, subject…",all:"All countries",search:"Search",field:"Field",lang:"Language of instruction",allL:"All",budget:"Max budget:",unl:"unlimited",sort:"Sort by",sN:"Name",sA:"Fees: low to high",sD:"Fees: high to low",cnt:n=>`${n} universit${n>1?"ies":"y"} found`,none:"No results. Raise your budget, remove a filter or try another keyword.",favE:"Your shortlist is empty. Open a university and choose “Add to my shortlist”.",tc:"Taught in",capL:"Capital",lgL:"Languages",curL:"Currency",life:"Cost of living / month",visa:"Student visa",work:"Student work",see:"See universities",fee:"Tuition (indicative)",perY:"/ year",low:"(very low fees)",dom:"Fields",site:"Official website",add:"Add to my shortlist",rem:"Remove from my shortlist",guide:"Guide:",close:"Close",foot:"Amounts (converted to euros) and visa rules are indicative for international students and may change. Always check the official website of the university and the embassy. StudyBridge is not affiliated with any institution."},
+es:{title:"StudyBridge – Universidades y países, en un solo lugar",tUnis:"Universidades",tPays:"Guía de países",tFav:"Mi selección",h1:"Elige tu universidad. Descubre tu próximo país.",hp:"Matrícula, idiomas, áreas de estudio, visado, coste de vida: todo lo necesario para preparar tus estudios en el extranjero, en una sola página.",ph:"Universidad, ciudad, disciplina…",all:"Todos los países",search:"Buscar",field:"Área",lang:"Idioma de enseñanza",allL:"Todos",budget:"Presupuesto máx.:",unl:"sin límite",sort:"Ordenar por",sN:"Nombre",sA:"Precio ascendente",sD:"Precio descendente",cnt:n=>`${n} universidad${n>1?"es":""} encontrada${n>1?"s":""}`,none:"Sin resultados. Sube tu presupuesto, quita un filtro o prueba otra palabra clave.",favE:"Tu selección está vacía. Abre una universidad y elige «Añadir a mi selección».",tc:"Idioma",capL:"Capital",lgL:"Idiomas",curL:"Moneda",life:"Coste de vida / mes",visa:"Visado de estudiante",work:"Trabajo de estudiante",see:"Ver universidades",fee:"Matrícula (orientativa)",perY:"/ año",low:"(tasas muy bajas)",dom:"Áreas",site:"Sitio oficial",add:"Añadir a mi selección",rem:"Quitar de mi selección",guide:"Guía:",close:"Cerrar",foot:"Los importes (convertidos a euros) y las normas de visado son orientativos para estudiantes internacionales y pueden cambiar. Comprueba siempre el sitio oficial de la universidad y de la embajada. StudyBridge no está afiliado a ningún centro."}};
+Object.assign(S.fr,{tHome:"Accueil",tPlan:"Mon dossier",stU:"universités",stC:"pays",stL:"langues du site",howT:"Comment ça marche",s1T:"1. Explorer les pays",s1D:"Compare langues, coût de la vie et visas.",s2T:"2. Trouver une université",s2D:"Filtre par domaine, langue et budget.",s3T:"3. Comparer et préparer",s3D:"Mets tes favoris côte à côte et suis ton dossier.",popT:"Destinations populaires",pU:"Trouver une université",pUd:"Filtre par domaine, langue et budget pour trouver les établissements qui te correspondent.",pP:"Découvrir un pays",pPd:"Visa, coût de la vie, langues : l'essentiel avant de partir.",pF:"Ma sélection et comparaison",pFd:"Mets tes favoris côte à côte pour décider.",pPl:"Mon dossier",pPld:"Suis les étapes pour préparer ton départ. Ta progression est enregistrée sur cet appareil.",sr:"Recherche",cty:"Pays",cityL:"Ville",typeL:"Type",cmp:"Comparaison",cmpH:"Ajoute au moins 2 universités à ta sélection pour les comparer.",goU:"Parcourir les universités",plp:"étapes terminées",pl1:"Choisir un pays",pl2:"Sélectionner 3 à 5 universités",pl3:"Comparer frais et coût de la vie",pl4:"Vérifier conditions d'admission et dates limites",pl5:"Passer le test de langue requis",pl6:"Rassembler les documents (diplômes, passeport, lettres)",pl7:"Déposer la demande de visa",pl8:"Organiser logement et budget"});
+Object.assign(S.en,{tHome:"Home",tPlan:"My checklist",stU:"universities",stC:"countries",stL:"site languages",howT:"How it works",s1T:"1. Explore countries",s1D:"Compare languages, cost of living and visas.",s2T:"2. Find a university",s2D:"Filter by field, language and budget.",s3T:"3. Compare and prepare",s3D:"Put your favourites side by side and track your application.",popT:"Popular destinations",pU:"Find a university",pUd:"Filter by field, language and budget to find the institutions that suit you.",pP:"Discover a country",pPd:"Visa, cost of living, languages: the essentials before you go.",pF:"My shortlist and comparison",pFd:"Put your favourites side by side to decide.",pPl:"My checklist",pPld:"Follow the steps to prepare your departure. Your progress is saved on this device.",sr:"Search",cty:"Country",cityL:"City",typeL:"Type",cmp:"Comparison",cmpH:"Add at least 2 universities to your shortlist to compare them.",goU:"Browse universities",plp:"steps completed",pl1:"Choose a country",pl2:"Shortlist 3 to 5 universities",pl3:"Compare fees and cost of living",pl4:"Check admission requirements and deadlines",pl5:"Take the required language test",pl6:"Gather documents (diplomas, passport, letters)",pl7:"Apply for the visa",pl8:"Arrange housing and budget"});
+Object.assign(S.es,{tHome:"Inicio",tPlan:"Mi expediente",stU:"universidades",stC:"países",stL:"idiomas del sitio",howT:"Cómo funciona",s1T:"1. Explorar países",s1D:"Compara idiomas, coste de vida y visados.",s2T:"2. Encontrar una universidad",s2D:"Filtra por área, idioma y presupuesto.",s3T:"3. Comparar y preparar",s3D:"Pon tus favoritas lado a lado y sigue tu expediente.",popT:"Destinos populares",pU:"Encontrar una universidad",pUd:"Filtra por área, idioma y presupuesto para hallar los centros que te convienen.",pP:"Descubrir un país",pPd:"Visado, coste de vida, idiomas: lo esencial antes de viajar.",pF:"Mi selección y comparación",pFd:"Pon tus favoritas lado a lado para decidir.",pPl:"Mi expediente",pPld:"Sigue los pasos para preparar tu viaje. Tu progreso se guarda en este dispositivo.",sr:"Búsqueda",cty:"País",cityL:"Ciudad",typeL:"Tipo",cmp:"Comparación",cmpH:"Añade al menos 2 universidades a tu selección para compararlas.",goU:"Ver universidades",plp:"pasos completados",pl1:"Elegir un país",pl2:"Seleccionar de 3 a 5 universidades",pl3:"Comparar tasas y coste de vida",pl4:"Revisar requisitos de admisión y plazos",pl5:"Hacer la prueba de idioma exigida",pl6:"Reunir documentos (títulos, pasaporte, cartas)",pl7:"Solicitar el visado",pl8:"Organizar alojamiento y presupuesto"});
+const M={
+en:{"France":"France","Canada":"Canada","Allemagne":"Germany","Royaume-Uni":"United Kingdom","États-Unis":"United States","Maroc":"Morocco","Espagne":"Spain","Pays-Bas":"Netherlands","Australie":"Australia","Japon":"Japan","Ingénierie":"Engineering","Sciences":"Sciences","Santé":"Health","Business":"Business","Lettres & SHS":"Humanities & Social Sciences","Français":"French","Anglais":"English","Allemand":"German","Arabe":"Arabic","Espagnol":"Spanish","Néerlandais":"Dutch","Catalan":"Catalan","Japonais":"Japanese","Public":"Public","Privé":"Private","Montréal":"Montreal","Édimbourg":"Edinburgh","Barcelone":"Barcelona","Salamanque":"Salamanca","Londres":"London","Dollar canadien (CAD)":"Canadian dollar (CAD)","Livre sterling (GBP)":"Pound sterling (GBP)","Dollar américain (USD)":"US dollar (USD)","Dollar australien (AUD)":"Australian dollar (AUD)","Sorbonne Université":"Sorbonne University","Université de Strasbourg":"University of Strasbourg","Université de Montpellier":"University of Montpellier","Université Mohammed V":"Mohammed V University","Université Cadi Ayyad":"Cadi Ayyad University","Université de Tokyo":"University of Tokyo","Université de Kyoto":"Kyoto University","Université d'Osaka":"Osaka University"},
+es:{"France":"Francia","Canada":"Canadá","Allemagne":"Alemania","Royaume-Uni":"Reino Unido","États-Unis":"Estados Unidos","Maroc":"Marruecos","Espagne":"España","Pays-Bas":"Países Bajos","Australie":"Australia","Japon":"Japón","Ingénierie":"Ingeniería","Sciences":"Ciencias","Santé":"Salud","Business":"Negocios","Lettres & SHS":"Humanidades y Ciencias Sociales","Français":"Francés","Anglais":"Inglés","Allemand":"Alemán","Arabe":"Árabe","Espagnol":"Español","Néerlandais":"Neerlandés","Catalan":"Catalán","Japonais":"Japonés","Public":"Público","Privé":"Privado","Montréal":"Montreal","Édimbourg":"Edimburgo","Barcelone":"Barcelona","Salamanque":"Salamanca","Munich":"Múnich","Strasbourg":"Estrasburgo","Tokyo":"Tokio","Kyoto":"Kioto","Berlin":"Berlín","Amsterdam":"Ámsterdam","Londres":"Londres","Dollar canadien (CAD)":"Dólar canadiense (CAD)","Livre sterling (GBP)":"Libra esterlina (GBP)","Dollar américain (USD)":"Dólar estadounidense (USD)","Dollar australien (AUD)":"Dólar australiano (AUD)","Sorbonne Université":"Universidad de la Sorbona","Université de Strasbourg":"Universidad de Estrasburgo","Université de Montpellier":"Universidad de Montpellier","Université Mohammed V":"Universidad Mohammed V","Université Cadi Ayyad":"Universidad Cadi Ayyad","Université de Tokyo":"Universidad de Tokio","Université de Kyoto":"Universidad de Kioto","Université d'Osaka":"Universidad de Osaka"}};
+M.en.Munich="Munich";M.en.Strasbourg="Strasbourg";M.en.Tokyo="Tokyo";M.en.Berlin="Berlin";M.en.Amsterdam="Amsterdam";
+// [note, visa, travail, langues]
+const CT={
+en:{FR:["Moderate public fees, strong housing aid (CAF) and Eiffel scholarships.","Long-stay student visa, applied for via Campus France","Up to 964 h/year","French"],
+CA:["Post-graduation work options let you stay and work. In Quebec, classes are in French.","Study permit with acceptance letter","About 20–24 h/week off campus","English, French"],
+DE:["Fees are low or zero at many public universities. German is often required.","Student visa + blocked account (about €11,900/year)","120 full days or 240 half days/year","German (many master's in English)"],
+UK:["3-year bachelor's, 1-year master's. High fees for international students.","Student visa (CAS provided by the university)","20 h/week during term","English"],
+US:["Financial aid and merit scholarships are common at top universities. Tests (SAT/TOEFL/GRE) depend on the program.","F-1 visa, university I-20 form","20 h/week on campus","English"],
+MA:["Low cost of living, many programs in French.","Student visa or residence card depending on nationality","Heavily restricted for foreigners","Arabic, French"],
+ES:["Pleasant lifestyle, moderate public fees.","Student visa for stays over 90 days (non-EU)","Up to 30 h/week","Spanish"],
+NL:["Huge range of English-taught programs. Housing is tight in big cities.","Residence permit requested by the university (non-EU/EEA)","16 h/week during term","Dutch, English"],
+AU:["Top-ranked universities, high fees, lively student life.","Student visa (subclass 500) + OSHC health cover","48 h per fortnight during term","English"],
+JP:["MEXT scholarships available. Moderate fees at national universities.","Student visa, certificate of eligibility","28 h/week with permission","Japanese, English (some programs)"]},
+es:{FR:["Matrículas públicas moderadas, buenas ayudas a la vivienda (CAF) y becas Eiffel.","Visado de larga estancia para estudiantes, vía Campus France","Hasta 964 h/año","Francés"],
+CA:["Permiso de trabajo posgrado para quedarte a trabajar. En Quebec, las clases son en francés.","Permiso de estudios con carta de aceptación","Unas 20–24 h/semana fuera del campus","Inglés, francés"],
+DE:["Las tasas son bajas o nulas en muchas universidades públicas. A menudo se exige alemán.","Visado de estudiante + cuenta bloqueada (unos 11 900 €/año)","120 días completos o 240 medios días/año","Alemán (muchos másteres en inglés)"],
+UK:["Grados de 3 años, másteres de 1 año. Tasas altas para estudiantes internacionales.","Student visa (CAS emitido por la universidad)","20 h/semana en periodo lectivo","Inglés"],
+US:["Ayudas y becas por mérito frecuentes en las grandes universidades. Pruebas (SAT/TOEFL/GRE) según el programa.","Visado F-1, formulario I-20 de la universidad","20 h/semana en el campus","Inglés"],
+MA:["Coste de vida bajo, muchos programas en francés.","Visado de estudiante o tarjeta de residencia según la nacionalidad","Muy limitado para extranjeros","Árabe, francés"],
+ES:["Estilo de vida agradable, matrículas públicas moderadas.","Visado de estudiante para estancias de más de 90 días (fuera de la UE)","Hasta 30 h/semana","Español"],
+NL:["Enorme oferta de programas en inglés. La vivienda escasea en las grandes ciudades.","Permiso de residencia solicitado por la universidad (fuera de la UE/EEE)","16 h/semana en periodo lectivo","Neerlandés, inglés"],
+AU:["Universidades muy bien clasificadas, tasas altas, vida estudiantil activa.","Student visa (subclase 500) + seguro médico OSHC","48 h por quincena en periodo lectivo","Inglés"],
+JP:["Becas MEXT disponibles. Tasas moderadas en universidades nacionales.","Visado de estudiante, certificado de elegibilidad","28 h/semana con permiso","Japonés, inglés (algunos programas)"]}};
+
+const $=s=>document.querySelector(s);
+const FIELDS=["Ingénierie","Sciences","Santé","Business","Lettres & SHS"];
+const cap=s=>s[0].toUpperCase()+s.slice(1);
+const LANGS=[...new Set(U.flatMap(u=>u.l.split(", ").map(cap)))].sort();
+const LOC={fr:"fr-FR",en:"en-US",es:"es-ES"};
+let LG="fr",ck="FR";
+try{LG=localStorage.getItem("sb-lg")||(["en","es"].includes((navigator.language||"").slice(0,2))?navigator.language.slice(0,2):"fr")}catch(e){}
+if(!S[LG])LG="fr";
+const t=k=>S[LG][k],tr=s=>LG==="fr"?s:(M[LG][s]||s),trl=s=>LG==="fr"?s:s.split(", ").map(x=>tr(cap(x))).join(", ");
+const cx=k=>LG==="fr"?[P[k].note,P[k].visa,P[k].work,P[k].lang]:CT[LG][k];
+const fmt=n=>n.toLocaleString(LOC[LG]);
+const st={q:"",c:"",f:"",lg:"",bg:60000,so:"n",fav:new Set()};
+try{JSON.parse(localStorage.getItem("sb-fav")||"[]").forEach(i=>st.fav.add(i))}catch(e){}
+const save=()=>{try{localStorage.setItem("sb-fav",JSON.stringify([...st.fav]))}catch(e){}$("#fc").textContent=st.fav.size?"("+st.fav.size+")":""};
+const feeTxt=u=>"≈ "+fmt(u.fee)+" € "+t("perY")+(u.fee<=1000?" "+t("low"):"");
+const sc=$("#qc"),c2=$("#c2");
+
+function card(u){return `<button class="card" data-id="${u.id}"><h3>${tr(u.n)}</h3><div class="meta">${P[u.c].f} ${tr(u.city)}, ${tr(P[u.c].n)} · ${tr(u.t)}</div><div class="tags">${u.fl.map(f=>`<span class="tag">${tr(f)}</span>`).join("")}</div><div class="meta">${t("tc")} : ${trl(u.l)}</div><div class="fee">${feeTxt(u)}</div></button>`}
+
+function list(){
+  const q=st.q.toLowerCase();
+  let r=U.filter(u=>(!st.c||u.c===st.c)&&(!st.f||u.fl.includes(st.f))&&(!st.lg||u.l.toLowerCase().includes(st.lg.toLowerCase()))&&u.fee<=st.bg&&(!q||(u.n+" "+tr(u.n)+" "+u.city+" "+tr(u.city)+" "+P[u.c].n+" "+tr(P[u.c].n)+" "+u.fl.join(" ")+" "+u.fl.map(tr).join(" ")).toLowerCase().includes(q)));
+  r.sort((a,b)=>st.so==="a"?a.fee-b.fee:st.so==="d"?b.fee-a.fee:tr(a.n).localeCompare(tr(b.n),LG));
+  $("#ct").textContent=t("cnt")(r.length);
+  $("#gr").innerHTML=r.length?r.map(card).join(""):`<div class="empty">${t("none")}</div>`;
+  $("#bl").textContent=st.bg>=60000?t("unl"):fmt(st.bg)+" €";
+}
+function favs(){
+  const r=U.filter(u=>st.fav.has(u.id));
+  $("#fg").innerHTML=r.length?r.map(card).join(""):`<div class="empty">${t("favE")}<br><br><button class="btn alt" data-v="unis">${t("goU")}</button></div>`;
+  const rows=[["cty",u=>P[u.c].f+" "+tr(P[u.c].n)],["cityL",u=>tr(u.city)],["typeL",u=>tr(u.t)],["fee",u=>feeTxt(u)],["lang",u=>trl(u.l)],["dom",u=>u.fl.map(tr).join(", ")],["life",u=>P[u.c].life],["visa",u=>cx(u.c)[1]],["work",u=>cx(u.c)[2]]];
+  $("#cp").innerHTML=r.length>1?`<h3 style="margin-bottom:10px">${t("cmp")}</h3><div class="tw"><table><thead><tr><th></th>${r.map(u=>`<th>${tr(u.n)}</th>`).join("")}</tr></thead><tbody>${rows.map(x=>`<tr><th scope="row">${t(x[0])}</th>${r.map(u=>`<td>${x[1](u)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`:(r.length?`<p class="meta">${t("cmpH")}</p>`:"");
+}
+function country(k){
+  ck=k;const p=P[k],c=cx(k);$("#pl").querySelectorAll(".chip").forEach(b=>b.setAttribute("aria-pressed",b.dataset.k===k));
+  const fa=[[t("capL"),tr(p.cap)],[t("lgL"),c[3]],[t("curL"),tr(p.cur)],[t("life"),p.life],[t("visa"),c[1]],[t("work"),c[2]]];
+  $("#pp").innerHTML=`<h2>${p.f} ${tr(p.n)}</h2><p>${c[0]}</p><div class="facts">${fa.map(x=>`<div class="fact"><b>${x[0]}</b>${x[1]}</div>`).join("")}</div><button class="btn" data-go="${k}">${t("see")} (${U.filter(u=>u.c===k).length})</button>`;
+}
+function view(v){
+  ["home","unis","pays","fav","plan"].forEach(x=>$("#v-"+x).hidden=x!==v);
+  document.querySelectorAll("nav button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.v===v));
+  if(v==="fav")favs();scrollTo(0,0);
+}
+function open(id){
+  const u=U[id],p=P[u.c],c=cx(u.c),on=st.fav.has(id);
+  $("#dc").innerHTML=`<div><h2 style="font-size:1.5rem">${tr(u.n)}</h2><div class="meta">${p.f} ${tr(u.city)}, ${tr(p.n)} · ${tr(u.t)}</div></div><div class="facts" style="margin:0"><div class="fact"><b>${t("fee")}</b>${feeTxt(u)}</div><div class="fact"><b>${t("lang")}</b>${trl(u.l)}</div><div class="fact"><b>${t("dom")}</b>${u.fl.map(tr).join(", ")}</div><div class="fact"><b>${t("life")}</b>${p.life}</div><div class="fact"><b>${t("visa")}</b>${c[1]}</div><div class="fact"><b>${t("work")}</b>${c[2]}</div></div><div class="row"><a class="btn" href="${u.url}" target="_blank" rel="noopener" style="text-decoration:none">${t("site")}</a><button class="btn alt" data-fav="${id}">${on?t("rem"):t("add")}</button><button class="btn alt" data-pays="${u.c}">${t("guide")} ${tr(p.n)}</button><button class="btn alt" data-close>${t("close")}</button></div>`;
+  $("#dg").showModal();
+}
+function build(){
+  const c=sc.value,l=$("#lg").value;
+  [sc,c2].forEach(s=>{const v=s.value;s.innerHTML="";s.add(new Option(t("all"),""));Object.keys(P).forEach(k=>s.add(new Option(P[k].f+" "+tr(P[k].n),k)));s.value=v});
+  $("#lg").innerHTML="";$("#lg").add(new Option(t("allL"),""));LANGS.forEach(x=>$("#lg").add(new Option(tr(x),x)));$("#lg").value=l;
+  $("#fields").innerHTML=FIELDS.map(f=>`<button type="button" class="chip" data-f="${f}" aria-pressed="${st.f===f}">${tr(f)}</button>`).join("");
+  $("#pl").innerHTML=Object.keys(P).map(k=>`<button class="chip" data-k="${k}" aria-pressed="${k===ck}">${P[k].f} ${tr(P[k].n)}</button>`).join("");
+}
+function applyLang(){
+  document.documentElement.lang=LG;document.title=t("title");
+  document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t(e.dataset.i));
+  $("#q").placeholder=t("ph");$("#q2").placeholder=t("ph");$("#ll").value=LG;
+  build();list();country(ck);favs();home();plan();
+}
+const PL=[["pl1","pays"],["pl2","unis"],["pl3","fav"],["pl4"],["pl5"],["pl6"],["pl7"],["pl8"]],TB={pays:"tPays",unis:"tUnis",fav:"tFav"},done=new Set();
+try{JSON.parse(localStorage.getItem("sb-plan")||"[]").forEach(i=>done.add(i))}catch(e){}
+function home(){
+  $("#st").innerHTML=[[U.length,t("stU")],[Object.keys(P).length,t("stC")],[Object.keys(S).length,t("stL")]].map(x=>`<div><b>${x[0]}</b>${x[1]}</div>`).join("");
+  $("#pop").innerHTML=["FR","CA","DE","UK","US","JP"].map(k=>`<button class="chip" data-gc="${k}">${P[k].f} ${tr(P[k].n)}</button>`).join("");
+}
+function plan(){
+  $("#pc").innerHTML=`<div class="bar"><i style="width:${done.size/PL.length*100}%"></i></div><p class="meta">${done.size} / ${PL.length} ${t("plp")}</p>`+PL.map((p,i)=>`<div class="ck"><label><input type="checkbox" data-ck="${i}"${done.has(i)?" checked":""}><span>${t(p[0])}</span></label>${p[1]?`<button class="btn alt" data-v="${p[1]}">${t(TB[p[1]])}</button>`:""}</div>`).join("");
+}
+// events
+$("#pc").onchange=e=>{const c=e.target.closest("[data-ck]");if(!c)return;const i=+c.dataset.ck;c.checked?done.add(i):done.delete(i);try{localStorage.setItem("sb-plan",JSON.stringify([...done]))}catch(x){}plan()};
+$("#ll").onchange=e=>{LG=e.target.value;try{localStorage.setItem("sb-lg",LG)}catch(x){}applyLang()};
+$("#sf").onsubmit=e=>{e.preventDefault();st.q=$("#q").value.trim();st.c=sc.value;$("#q2").value=st.q;c2.value=st.c;view("unis");list()};
+$("#fields").onclick=e=>{const b=e.target.closest("[data-f]");if(!b)return;st.f=st.f===b.dataset.f?"":b.dataset.f;document.querySelectorAll("#fields .chip").forEach(c=>c.setAttribute("aria-pressed",c.dataset.f===st.f));list()};
+$("#lg").onchange=e=>{st.lg=e.target.value;list()};
+$("#bg").oninput=e=>{st.bg=+e.target.value;list()};
+$("#so").onchange=e=>{st.so=e.target.value;list()};
+$("#q2").oninput=e=>{st.q=e.target.value.trim();list()};c2.onchange=e=>{st.c=e.target.value;list()};
+$("#pl").onclick=e=>{const b=e.target.closest("[data-k]");if(b)country(b.dataset.k)};
+$("#pp").onclick=e=>{const b=e.target.closest("[data-go]");if(!b)return;st.c=b.dataset.go;sc.value=st.c;c2.value=st.c;view("unis");list();scrollTo(0,0)};
+document.addEventListener("click",e=>{const c=e.target.closest(".card");if(c)return open(+c.dataset.id);const v=e.target.closest("[data-v]");if(v)return view(v.dataset.v);const g=e.target.closest("[data-gc]");if(g){view("pays");country(g.dataset.gc)}});
+$("#dc").onclick=e=>{
+  const b=e.target.closest("button");if(!b)return;
+  if(b.dataset.fav){const i=+b.dataset.fav;st.fav.has(i)?st.fav.delete(i):st.fav.add(i);save();open(i);favs()}
+  else if(b.dataset.pays){$("#dg").close();view("pays");country(b.dataset.pays);scrollTo(0,0)}
+  else if("close" in b.dataset)$("#dg").close();
+};
+save();applyLang();
+</script>
+</body>
+</html>
