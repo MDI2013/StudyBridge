@@ -19,9 +19,11 @@
 Each scholarship record must include a stable ID, official title, provider, nationality and residence eligibility, host/destination country, eligible study levels, eligible programmes or fields (if restricted), funding type and amount (with currency and coverage), deadline or application cycle, official application URL, official source URL, date checked, and verification status.
 
 ### Nationality-based discovery
-- Students should be able to filter opportunities by their nationality, independently of their current country of residence. These are different eligibility dimensions and must not be conflated.
-- Use ISO 3166-1 alpha-3 country codes for nationality and residence values. Use `ALL` only when the official provider explicitly confirms all nationalities are eligible.
+- Students should be able to filter opportunities by one or more nationalities, independently of their current country of residence. These are different eligibility dimensions and must not be conflated.
+- Store each nationality separately using ISO 3166-1 alpha-3 country codes. Use `ALL` only when the official provider explicitly confirms all nationalities are eligible.
 - Keep `eligible_nationalities`, `excluded_nationalities`, and `eligible_residencies` separate. Do not infer eligibility from a scholarship's host country, university, or application location.
+- For a student with multiple nationalities, assess each nationality against the provider's official rules. A match on one nationality is not automatically sufficient if the provider restricts dual/multiple citizens or imposes additional nationality conditions.
+- If dual/multiple-citizenship rules are unclear, show eligibility as unknown and link to the official source rather than promising eligibility.
 - Support destination country, study level, field of study, and funding type as additional discovery filters.
 - Matching statuses should be clear: eligible only when the official source confirms the student's conditions; not eligible only when the source clearly excludes them; otherwise show eligibility as unknown / not yet verified.
 - If the provider does not state a condition, preserve it as unknown. Never treat missing data as unrestricted eligibility.
