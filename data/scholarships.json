@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.2.0",
+  "schema_version": "1.3.0",
   "dataset_name": "StudyBridge Scholarship Directory",
   "updated_at": "2026-11-23",
   "publication_policy": "Only publish opportunities with an official scholarship or funding source, clear eligibility, award details, deadline or application cycle, and a last-verified date. Empty dataset means no scholarships have yet been verified; do not display invented examples.",
@@ -12,14 +12,14 @@
     "funding_type"
   ],
   "nationality_input_policy": "Students may select and save more than one nationality. Keep each nationality as a separate ISO 3166-1 alpha-3 code; do not infer citizenship from country of residence.",
-  "eligibility_matching_policy": "For a student with multiple nationalities, evaluate each nationality separately against the official provider rules. A match on at least one nationality may qualify only if the provider's rules do not impose a restriction on dual or multiple citizenship. If rules are unclear, conflict, or have not been checked, show eligibility as unknown and direct the student to the official source; do not label the opportunity eligible.",
+  "eligibility_matching_policy": "For a student with multiple nationalities, evaluate each nationality separately against official provider rules and any eligible nationality groups. A match on at least one nationality may qualify only if the provider's rules do not impose a restriction on dual or multiple citizenship. If rules are unclear, conflict, or have not been checked, show eligibility as unknown and direct the student to the official source; do not label the opportunity eligible.",
   "nationality_code_standard": "Use ISO 3166-1 alpha-3 country codes for nationality and residence fields. Use the special value ALL only when the official provider explicitly confirms eligibility for applicants of all nationalities.",
   "record_schema": {
     "id": "Stable unique scholarship identifier",
     "title": "Official scholarship or funding opportunity name",
     "provider": "Official funding organization",
     "eligibility_scope": "all_nationalities | specific_nationalities | regional | unknown",
-    "eligible_nationalities": "Array of ISO alpha-3 codes; use ALL only when explicitly confirmed; otherwise use an empty array when unknown",
+    "eligible_nationalities": "Array of ISO alpha-3 codes; use ALL only when explicitly confirmed; empty if eligibility is expressed only as a group or remains unknown",
     "excluded_nationalities": "Array of ISO alpha-3 codes only when exclusions are explicitly stated",
     "eligible_residencies": "Array of ISO alpha-3 codes or ALL only when officially stated; keep separate from nationality",
     "host_countries": "Array of ISO alpha-3 destination country codes",
@@ -35,7 +35,162 @@
     "official_source_url": "Official provider eligibility/award source",
     "last_verified": "ISO date (YYYY-MM-DD) or null",
     "verification_status": "verified | needs_review | expired | closed",
-    "notes": "Relevant official conditions, including dual/multiple-citizenship restrictions and uncertainty"
+    "notes": "Relevant official conditions, including dual/multiple-citizenship restrictions and uncertainty",
+    "eligible_nationality_groups": "Array of official provider-defined nationality groups or region/category labels (for example non-EEA or DAC-listed countries); do not infer group membership without an authoritative classification source"
   },
-  "scholarships": []
+  "scholarships": [
+    {
+      "id": "sb-sch-fr-eiffel-2027",
+      "title": "France Excellence Eiffel Scholarship",
+      "provider": "French Ministry for Europe and Foreign Affairs; administered by Campus France",
+      "eligibility_scope": "unknown",
+      "eligible_nationalities": [],
+      "eligible_nationality_groups": [
+        "International/foreign applicants; individual nationality and dual-citizenship conditions require confirmation in the 2027 regulations"
+      ],
+      "excluded_nationalities": [],
+      "eligible_residencies": [],
+      "host_countries": [
+        "FRA"
+      ],
+      "study_levels": [
+        "postgraduate"
+      ],
+      "eligible_fields": [
+        "Biology and health",
+        "Ecological transition",
+        "Mathematics and digital sciences",
+        "Engineering sciences",
+        "History, French language and civilization",
+        "Law and political science",
+        "Economics and management"
+      ],
+      "funding_type": "stipend",
+      "award_amount": null,
+      "currency": "EUR",
+      "funding_coverage": "Scholarship benefits are defined in the official 2027 programme regulations; amount and covered items not transcribed into this record pending review of the regulations.",
+      "deadline": "2027-01-06",
+      "application_cycle": "2027 campaign; applications submitted to Campus France by French higher education institutions",
+      "official_application_url": "https://www.campusfrance.org/en/france-excellence-eiffel-scholarship-program",
+      "official_source_url": "https://www.campusfrance.org/en/france-excellence-eiffel-scholarship-program",
+      "last_verified": "2026-11-23",
+      "verification_status": "verified",
+      "notes": "Master's applicants must be up to 29 years old; doctoral applicants up to 35, as stated on the programme page. Students cannot submit directly: French higher education institutions submit applications. Results expected from 12 April 2027. Confirm nationality and dual-citizenship conditions in the 2027 regulations before displaying a positive eligibility match."
+    },
+    {
+      "id": "sb-sch-nl-nl-scholarship-2027",
+      "title": "NL Scholarship",
+      "provider": "Dutch Ministry of Education, Culture and Science and participating Dutch higher education institutions",
+      "eligibility_scope": "regional",
+      "eligible_nationalities": [],
+      "eligible_nationality_groups": [
+        "Non-EEA nationalities"
+      ],
+      "excluded_nationalities": [],
+      "eligible_residencies": [],
+      "host_countries": [
+        "NLD"
+      ],
+      "study_levels": [
+        "undergraduate",
+        "postgraduate"
+      ],
+      "eligible_fields": [],
+      "funding_type": "partial",
+      "award_amount": 5000,
+      "currency": "EUR",
+      "funding_coverage": "€5,000 in the first year of study; explicitly not a full-tuition scholarship",
+      "deadline": null,
+      "application_cycle": "2027-2028 academic year; application period shown as open on the official Study in NL page; institution-specific closing dates apply",
+      "official_application_url": "https://www.studyinnl.org/finances/nl-scholarship",
+      "official_source_url": "https://www.studyinnl.org/finances/nl-scholarship",
+      "last_verified": "2026-11-23",
+      "verification_status": "verified",
+      "notes": "Applicants must have a non-EEA nationality, apply for a full-time bachelor's or master's programme at a participating institution, meet that institution's requirements, and not hold a degree from a Dutch educational institution. Participating institutions and deadlines vary by year. Dual-nationality cases should be checked against the provider's nationality rule."
+    },
+    {
+      "id": "sb-sch-de-daad-epos-2027",
+      "title": "DAAD Development-Related Postgraduate Courses (EPOS)",
+      "provider": "German Academic Exchange Service (DAAD)",
+      "eligibility_scope": "regional",
+      "eligible_nationalities": [],
+      "eligible_nationality_groups": [
+        "Developing and newly industrialised countries listed in the official DAAD EPOS eligible-country list"
+      ],
+      "excluded_nationalities": [],
+      "eligible_residencies": [],
+      "host_countries": [
+        "DEU"
+      ],
+      "study_levels": [
+        "postgraduate"
+      ],
+      "eligible_fields": [],
+      "funding_type": "partial",
+      "award_amount": 992,
+      "currency": "EUR",
+      "funding_coverage": "Monthly payment of €992 for graduates; doctoral candidates €1,400 per month from February 2026; health, accident and personal liability insurance contributions and travel allowance. Additional benefits may apply under conditions.",
+      "deadline": null,
+      "application_cycle": "2027-2028 course cycle; deadlines vary by selected postgraduate course and are listed in the official course deadline schedule",
+      "official_application_url": "https://www.daad.de/en/information-services-for-higher-education-institutions/further-information-on-daad-programmes/epos/",
+      "official_source_url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database.pdf?detail=50076777&origin=137&page=1&status=3",
+      "last_verified": "2026-11-23",
+      "verification_status": "verified",
+      "notes": "For graduates from eligible developing/newly industrialised countries with at least two years of professional experience. Supports selected postgraduate courses in Germany, usually master's and in exceptional cases doctoral study. Funding duration 12-42 months depending on programme. Applicants must verify their country against the official eligible-country list and check the deadline for their chosen course."
+    },
+    {
+      "id": "sb-sch-au-australia-awards-africa-2027",
+      "title": "Australia Awards Scholarships – Africa (2027 intake)",
+      "provider": "Australian Government Department of Foreign Affairs and Trade (DFAT)",
+      "eligibility_scope": "regional",
+      "eligible_nationalities": [
+        "DZA",
+        "AGO",
+        "BWA",
+        "CIV",
+        "COD",
+        "EGY",
+        "ETH",
+        "GMB",
+        "GHA",
+        "GIN",
+        "KEN",
+        "MDG",
+        "MWI",
+        "MUS",
+        "MAR",
+        "MOZ",
+        "NAM",
+        "NGA",
+        "RWA",
+        "SLE",
+        "ZAF",
+        "TZA",
+        "UGA",
+        "ZMB",
+        "ZWE"
+      ],
+      "eligible_nationality_groups": [
+        "African participating-country applicants; country-specific criteria apply"
+      ],
+      "excluded_nationalities": [],
+      "eligible_residencies": [],
+      "host_countries": [
+        "AUS"
+      ],
+      "study_levels": [],
+      "eligible_fields": [],
+      "funding_type": "unknown",
+      "award_amount": null,
+      "currency": "AUD",
+      "funding_coverage": "Refer to the Australia Awards Scholarships Policy Handbook and the country-specific profile; benefits not itemised in this record.",
+      "deadline": "2026-04-30",
+      "application_cycle": "2027 study commencement; Africa applications opened 1 February 2026 and closed 30 April 2026",
+      "official_application_url": "https://www.dfat.gov.au/people-to-people/australia-awards/how-to-apply-for-an-australia-awards-scholarship",
+      "official_source_url": "https://www.dfat.gov.au/people-to-people/australia-awards/participating-countries",
+      "last_verified": "2026-11-23",
+      "verification_status": "closed",
+      "notes": "The DRC is explicitly listed among eligible African participating countries. Country-specific eligibility, priority fields, study levels, opening and closing dates must be checked with the relevant in-country contact. The 2027 intake deadline has passed; do not show this cycle as open."
+    }
+  ]
 }
