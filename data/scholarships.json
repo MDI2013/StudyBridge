@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "dataset_name": "StudyBridge Scholarship Directory",
   "updated_at": "2026-11-23",
   "publication_policy": "Only publish opportunities with an official scholarship or funding source, clear eligibility, award details, deadline or application cycle, and a last-verified date. Empty dataset means no scholarships have yet been verified; do not display invented examples.",
@@ -11,7 +11,8 @@
     "field_of_study",
     "funding_type"
   ],
-  "eligibility_matching_policy": "A scholarship is a confirmed match only when the official provider source supports the student's nationality and any relevant residence, destination, study-level, and programme conditions. If eligibility is unclear or a condition has not been checked, show eligibility as unknown and do not label the opportunity eligible.",
+  "nationality_input_policy": "Students may select and save more than one nationality. Keep each nationality as a separate ISO 3166-1 alpha-3 code; do not infer citizenship from country of residence.",
+  "eligibility_matching_policy": "For a student with multiple nationalities, evaluate each nationality separately against the official provider rules. A match on at least one nationality may qualify only if the provider's rules do not impose a restriction on dual or multiple citizenship. If rules are unclear, conflict, or have not been checked, show eligibility as unknown and direct the student to the official source; do not label the opportunity eligible.",
   "nationality_code_standard": "Use ISO 3166-1 alpha-3 country codes for nationality and residence fields. Use the special value ALL only when the official provider explicitly confirms eligibility for applicants of all nationalities.",
   "record_schema": {
     "id": "Stable unique scholarship identifier",
@@ -34,7 +35,7 @@
     "official_source_url": "Official provider eligibility/award source",
     "last_verified": "ISO date (YYYY-MM-DD) or null",
     "verification_status": "verified | needs_review | expired | closed",
-    "notes": "Relevant official conditions and uncertainty"
+    "notes": "Relevant official conditions, including dual/multiple-citizenship restrictions and uncertainty"
   },
   "scholarships": []
 }
