@@ -29,7 +29,10 @@ function setupHomeAccordions(){
  wrap(steps,"How StudyBridge works");
  if(stats)wrap(stats,"StudyBridge at a glance");
  if(pop&&popTitle&&popTitle.matches("h2")){const d=document.createElement("details");d.className="sb-home-accordion";d.appendChild(popTitle);const s=document.createElement("summary");s.textContent="Popular study destinations";d.insertBefore(s,popTitle);pop.parentNode.insertBefore(d,pop);d.appendChild(pop);}
- const accordions=[...home.querySelectorAll(".sb-home-accordion")];\n const sync=()=>accordions.forEach(d=>{if(window.innerWidth>720)d.open=true;else d.open=false;});\n sync();window.addEventListener("resize",sync,{passive:true});\n home.dataset.mobileSectionsReady="true";
+ const accordions=[...home.querySelectorAll(".sb-home-accordion")];
+ const sync=()=>accordions.forEach(d=>{if(window.innerWidth>720)d.open=true;else d.open=false;});
+ sync();window.addEventListener("resize",sync,{passive:true});
+ home.dataset.mobileSectionsReady="true";
 }
 document.addEventListener("DOMContentLoaded",()=>{setupNav();setupBackTop();setupHomeAccordions();});
 })();
