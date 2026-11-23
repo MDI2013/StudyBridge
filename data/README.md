@@ -3,6 +3,7 @@
 ## Files
 - `universities.json`: normalized seed directory migrated from the original website's university list.
 - `degree-levels.json`: supported undergraduate and postgraduate search categories.
+- `scholarships.json`: verified scholarship and funding opportunity directory (currently an empty, ready-to-populate dataset).
 
 ## Record rules
 - Each institution has a stable `id`.
@@ -13,6 +14,9 @@
 - `record_status` values: `needs_review`, `reviewed`, `published`, `archived`.
 - `tuition.verification_status` values: `not_verified`, `official_source_verified`, `expired`.
 - `last_verified` uses ISO date format (YYYY-MM-DD) and remains null until a human/source review is completed.
+
+## Scholarship record requirements
+Each scholarship record must include a stable ID, official title, provider, eligible countries/nationalities, eligible study levels, eligible programmes or fields (if restricted), funding type and amount (with currency and coverage), application deadline or cycle, official application URL, official source URL, date checked, and verification status. If a field is not stated by the official provider, mark it unknown rather than guessing. Recheck deadlines and eligibility for every cycle.
 
 ## Required tuition evidence before publication
 1. Official institution fee page or official programme fee schedule.
