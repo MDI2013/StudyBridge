@@ -36,7 +36,8 @@
       "official_source_url": "https://emildai.eu/",
       "last_verified": "2026-11-23",
       "verification_status": "official_source_checked",
-      "notes": "Interdisciplinary programme delivered by six partner universities. The reviewed official source confirms new partners in the Netherlands and Brazil but does not enumerate every partner country on the page inspected. Do not infer teaching language, fees, or exact duration from the programme title."
+      "notes": "Interdisciplinary programme delivered by six partner universities. The reviewed official source confirms new partners in the Netherlands and Brazil but does not enumerate every partner country on the page inspected. Do not infer teaching language, fees, or exact duration from the programme title.",
+      "partner_institution_ids": []
     },
     {
       "id": "sb-prog-waves-2027",
@@ -76,7 +77,12 @@
       "official_source_url": "https://www.msc-waves.eu/",
       "last_verified": "2026-11-23",
       "verification_status": "official_source_checked",
-      "notes": "Three specialisation tracks and mobility between partner countries. The published study guide is marked draft and subject to change until 1 January 2027."
+      "notes": "Three specialisation tracks and mobility between partner countries. The published study guide is marked draft and subject to change until 1 January 2027.",
+      "partner_institution_ids": [
+        "sb-031",
+        "sb-032",
+        "sb-033"
+      ]
     },
     {
       "id": "sb-prog-maia-2027",
@@ -115,7 +121,12 @@
       "official_source_url": "https://maiamaster.org/about/",
       "last_verified": "2026-11-23",
       "verification_status": "official_source_checked",
-      "notes": "Two-year full-time programme with mandatory mobility and a joint consortium. Application deadline and teaching language remain unknown."
+      "notes": "Two-year full-time programme with mandatory mobility and a joint consortium. Application deadline and teaching language remain unknown.",
+      "partner_institution_ids": [
+        "sb-034",
+        "sb-035",
+        "sb-036"
+      ]
     }
   ]
 }
