@@ -50,3 +50,4 @@ jobs:
         run: node scripts/validate-universities.js
       - name: Validate page scripts and local links
         run: node scripts/validate-pages.js
+          node scripts/test-matching.js
