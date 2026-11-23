@@ -1,7 +1,40 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "dataset_name": "StudyBridge Scholarship Directory",
   "updated_at": "2026-11-23",
   "publication_policy": "Only publish opportunities with an official scholarship or funding source, clear eligibility, award details, deadline or application cycle, and a last-verified date. Empty dataset means no scholarships have yet been verified; do not display invented examples.",
+  "student_discovery_filters": [
+    "nationality",
+    "country_of_residence",
+    "destination_country",
+    "study_level",
+    "field_of_study",
+    "funding_type"
+  ],
+  "eligibility_matching_policy": "A scholarship is a confirmed match only when the official provider source supports the student's nationality and any relevant residence, destination, study-level, and programme conditions. If eligibility is unclear or a condition has not been checked, show eligibility as unknown and do not label the opportunity eligible.",
+  "nationality_code_standard": "Use ISO 3166-1 alpha-3 country codes for nationality and residence fields. Use the special value ALL only when the official provider explicitly confirms eligibility for applicants of all nationalities.",
+  "record_schema": {
+    "id": "Stable unique scholarship identifier",
+    "title": "Official scholarship or funding opportunity name",
+    "provider": "Official funding organization",
+    "eligibility_scope": "all_nationalities | specific_nationalities | regional | unknown",
+    "eligible_nationalities": "Array of ISO alpha-3 codes; use ALL only when explicitly confirmed; otherwise use an empty array when unknown",
+    "excluded_nationalities": "Array of ISO alpha-3 codes only when exclusions are explicitly stated",
+    "eligible_residencies": "Array of ISO alpha-3 codes or ALL only when officially stated; keep separate from nationality",
+    "host_countries": "Array of ISO alpha-3 destination country codes",
+    "study_levels": "Array using undergraduate and/or postgraduate",
+    "eligible_fields": "Array of eligible or restricted programme/field labels; empty when not specified",
+    "funding_type": "full | partial | stipend | tuition_only | other | unknown",
+    "award_amount": "Numeric amount or null",
+    "currency": "ISO 4217 currency code or null",
+    "funding_coverage": "Officially stated costs covered; do not infer full funding",
+    "deadline": "ISO date or null",
+    "application_cycle": "Official cycle/intake wording or null",
+    "official_application_url": "Direct official application page",
+    "official_source_url": "Official provider eligibility/award source",
+    "last_verified": "ISO date (YYYY-MM-DD) or null",
+    "verification_status": "verified | needs_review | expired | closed",
+    "notes": "Relevant official conditions and uncertainty"
+  },
   "scholarships": []
 }
