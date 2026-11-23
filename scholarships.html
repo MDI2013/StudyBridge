@@ -115,6 +115,12 @@ async function init(){
   addOptions($("#destination"),records.flatMap(r=>r.host_countries||[]),"All destinations");
   const fields=[...new Set(records.flatMap(r=>r.eligible_fields||[]))].sort();
   fields.forEach(f=>$("#field").add(new Option(f,f)));
+  try{
+   const prefs=JSON.parse(localStorage.getItem("studybridge.profile.preferences.v1")||"{}");
+   if(prefs.destination&&[...$("#destination").options].some(o=>o.value===prefs.destination))$("#destination").value=prefs.destination;
+   if(prefs.level&&[...$("#level").options].some(o=>o.value===prefs.level))$("#level").value=prefs.level;
+   if((prefs.funding==="full"||prefs.funding==="partial")&&[...$("#funding").options].some(o=>o.value===prefs.funding))$("#funding").value=prefs.funding;
+  }catch(e){}
   render();
  }catch(e){$("#count").textContent="Database unavailable";$("#results").innerHTML='<div class="empty">We could not load the scholarship database. Please try again later.</div>'}
 }
