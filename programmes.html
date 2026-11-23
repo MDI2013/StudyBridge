@@ -17,7 +17,7 @@ h1{font-size:clamp(2rem,5vw,3rem);line-height:1.08;margin:.35rem 0 .8rem}h2{font
 input,select{font:inherit;width:100%;padding:11px 12px;border:1px solid #cbd5e1;border-radius:9px;background:white;color:var(--ink)}
 .actions{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}button{border:0;border-radius:9px;background:var(--brand);color:white;padding:11px 17px;font:inherit;font-weight:700;cursor:pointer}button.secondary{background:#e9eef6;color:var(--ink)}
 .results-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:24px 0 12px}.muted{color:var(--muted);font-size:.9rem}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:19px;display:flex;flex-direction:column;gap:8px}.pills{display:flex;gap:7px;flex-wrap:wrap}.pill{font-size:.77rem;border-radius:999px;background:#edf3fb;color:#244b82;padding:4px 9px;font-weight:700}.pill.open{background:#e8f6ef;color:#17643f}.meta{font-size:.9rem;color:var(--muted)}.facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:5px 0}.fact{background:var(--soft);border-radius:9px;padding:9px;font-size:.87rem}.fact b{display:block;font-size:.76rem;color:var(--muted);margin-bottom:2px}.links{display:flex;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px}.links a{color:var(--brand);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:19px;display:flex;flex-direction:column;gap:8px}.pills{display:flex;gap:7px;flex-wrap:wrap}.pill{font-size:.77rem;border-radius:999px;background:#edf3fb;color:#244b82;padding:4px 9px;font-weight:700}.pill.open{background:#e8f6ef;color:#17643f}.meta{font-size:.9rem;color:var(--muted)}.facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:5px 0}.fact{background:var(--soft);border-radius:9px;padding:9px;font-size:.87rem}.fact b{display:block;font-size:.76rem;color:var(--muted);margin-bottom:2px}.links{display:flex;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px}.links a{color:var(--brand);font-weight:700}.match{background:#f2f7ff;border-left:3px solid var(--brand);border-radius:8px;padding:10px 12px;font-size:.87rem}.match b{display:block;margin-bottom:3px}.match ul{margin:5px 0 0;padding-left:18px}.match .caution{color:var(--muted)}
 footer{color:var(--muted);font-size:.85rem;margin:34px 0;padding:18px 0;border-top:1px solid var(--line)}.empty{background:white;border:1px dashed #cbd5e1;border-radius:12px;padding:24px;color:var(--muted);grid-column:1/-1}
 @media(max-width:760px){.filters{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}}@media(max-width:480px){.filters{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}}
 </style>
@@ -36,6 +36,7 @@ footer{color:var(--muted);font-size:.85rem;margin:34px 0;padding:18px 0;border-t
 <div class="results-head"><h2>Programmes</h2><span id="count" class="muted" aria-live="polite">Loading…</span></div><section id="results" class="grid"><div class="empty">Loading the programme database…</div></section>
 <footer>StudyBridge is an independent discovery platform, not an admissions office or scholarship provider. Programme details, deadlines, fees and eligibility can change. Always confirm requirements and submit applications through the official programme provider.</footer>
 </main>
+<script src="assets/matching.js"></script>
 <script>
 const $=s=>document.querySelector(s);
 const countries={NL:"Netherlands",BR:"Brazil",IE:"Ireland",IT:"Italy",ES:"Spain",FR:"France",SI:"Slovenia",CA:"Canada"};
@@ -53,7 +54,9 @@ function render(){
   return true;
  });
  $("#count").textContent=rows.length+" programme(s)";
+ let preferences={};try{preferences=JSON.parse(localStorage.getItem("studybridge.profile.preferences.v1")||"{}")}catch(e){}
  $("#results").innerHTML=rows.length?rows.map(r=>{
+  const fit=window.StudyBridgeMatching.programmeFit(r,preferences);
   const countriesText=(r.delivery_countries||[]).map(c=>countries[c]||c).join(", ");
   const deadline=r.application_deadline||"Not confirmed";
   const partners=(r.partner_institutions||[]).join(" · ")||"Not confirmed";
