@@ -18,11 +18,7 @@
       ],
       "delivery_countries": [
         "NL",
-        "BR",
-        "IE",
-        "IT",
-        "ES",
-        "other consortium locations"
+        "BR"
       ],
       "partner_institutions": [
         "Six partner universities; includes Erasmus University Rotterdam and Fundação Getulio Vargas from the 2026/2028 intake"
@@ -40,7 +36,7 @@
       "official_source_url": "https://emildai.eu/",
       "last_verified": "2026-11-23",
       "verification_status": "official_source_checked",
-      "notes": "Interdisciplinary programme delivered by six partner universities. Do not infer teaching language, fees, or exact duration from the programme title."
+      "notes": "Interdisciplinary programme delivered by six partner universities. The reviewed official source confirms new partners in the Netherlands and Brazil but does not enumerate every partner country on the page inspected. Do not infer teaching language, fees, or exact duration from the programme title."
     },
     {
       "id": "sb-prog-waves-2027",
