@@ -3,9 +3,9 @@
 ## Files
 - `universities.json`: normalized seed directory migrated from the original website's university list.
 - `degree-levels.json`: supported undergraduate and postgraduate search categories.
-- `scholarships.json`: verified scholarship and funding opportunity directory (currently an empty, ready-to-populate dataset).
+- `scholarships.json`: scholarship and funding opportunity directory. It is currently empty until official opportunities are researched and verified.
 
-## Record rules
+## University record rules
 - Each institution has a stable `id`.
 - StudyBridge supports both `undergraduate` and `postgraduate` discovery. Each university's `degree_levels` remains empty until its official programme catalogue is checked; do not infer availability from the institution name.
 - `official_website` is the institution's homepage URL carried over from the existing site; verify it before marking the record reviewed.
@@ -16,7 +16,19 @@
 - `last_verified` uses ISO date format (YYYY-MM-DD) and remains null until a human/source review is completed.
 
 ## Scholarship record requirements
-Each scholarship record must include a stable ID, official title, provider, eligible countries/nationalities, eligible study levels, eligible programmes or fields (if restricted), funding type and amount (with currency and coverage), application deadline or cycle, official application URL, official source URL, date checked, and verification status. If a field is not stated by the official provider, mark it unknown rather than guessing. Recheck deadlines and eligibility for every cycle.
+Each scholarship record must include a stable ID, official title, provider, nationality and residence eligibility, host/destination country, eligible study levels, eligible programmes or fields (if restricted), funding type and amount (with currency and coverage), deadline or application cycle, official application URL, official source URL, date checked, and verification status.
+
+### Nationality-based discovery
+- Students should be able to filter opportunities by their nationality, independently of their current country of residence. These are different eligibility dimensions and must not be conflated.
+- Use ISO 3166-1 alpha-3 country codes for nationality and residence values. Use `ALL` only when the official provider explicitly confirms all nationalities are eligible.
+- Keep `eligible_nationalities`, `excluded_nationalities`, and `eligible_residencies` separate. Do not infer eligibility from a scholarship's host country, university, or application location.
+- Support destination country, study level, field of study, and funding type as additional discovery filters.
+- Matching statuses should be clear: eligible only when the official source confirms the student's conditions; not eligible only when the source clearly excludes them; otherwise show eligibility as unknown / not yet verified.
+- If the provider does not state a condition, preserve it as unknown. Never treat missing data as unrestricted eligibility.
+- Recheck eligibility, award coverage, and deadlines for every application cycle. Mark expired or closed opportunities accordingly.
+- Never describe an award as fully funded unless the official provider confirms the full coverage.
+
+The detailed machine-readable field definitions and matching policy are in `scholarships.json`.
 
 ## Required tuition evidence before publication
 1. Official institution fee page or official programme fee schedule.
@@ -27,4 +39,4 @@ Each scholarship record must include a stable ID, official title, provider, elig
 6. Direct source URL and date checked.
 
 ## Current status
-The initial migration contains 30 records from the legacy website. They are intentionally marked `needs_review`; this migration does not certify fees or admission information. The existing live UI is unchanged in this milestone.
+The initial migration contains 30 university records. They are intentionally marked `needs_review`; this migration does not certify fees or admission information. The scholarship dataset is an empty schema, not a claim that no scholarships exist. The existing live UI is unchanged in this milestone.
