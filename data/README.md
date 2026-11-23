@@ -4,7 +4,7 @@
 - `universities.json`: normalized university directory; 30 migrated seed records plus 6 consortium partner institutions added from official joint-programme sources.
 - `degree-levels.json`: supported undergraduate and postgraduate search categories.
 - `scholarships.json`: scholarship and funding opportunity directory.
-- `programmes.json`: evidence-based degree-programme directory.
+- `programmes.json`: evidence-based degree-programme directory (5 initial records across Canada and European joint master's programmes).
 - `../programmes.html`: searchable programme discovery page.
 
 ## University record rules
