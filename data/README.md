@@ -34,6 +34,9 @@ Each scholarship record must include a stable ID, official title, provider, nati
 
 The detailed machine-readable field definitions and matching policy are in `scholarships.json`.
 
+### Local validation
+Run `node scripts/validate-scholarships.js` from the repository root to check required fields, unique IDs, verification/application status values, country-code formats, study-level values, date formats, and HTTPS source/application links. The script uses only Node.js built-ins.
+
 ## Required tuition evidence before publication
 1. Official institution fee page or official programme fee schedule.
 2. Programme and degree level.
