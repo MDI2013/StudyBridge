@@ -15,7 +15,8 @@ main{max-width:1040px;margin:34px auto;padding:0 20px}.intro{max-width:720px}h1{
 .notice{background:#fff8e8;border:1px solid #f1d79a;border-radius:12px;padding:13px 15px;font-size:.9rem}.results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.result{background:var(--soft);border-radius:12px;padding:16px}.result h3{margin:0 0 6px}.result p{margin:0 0 12px;color:var(--muted);font-size:.9rem}
 footer{border-top:1px solid var(--line);margin:30px 0;padding:18px 0;color:var(--muted);font-size:.85rem}
 @media(max-width:650px){.grid,.results{grid-template-columns:1fr}}
-</style></head>
+</style>
+<link rel="stylesheet" href="assets/site.css"></head>
 <body>
 <header><a class="brand" href="index.html">StudyBridge</a><nav class="nav"><a href="index.html">Universities</a><a href="programmes.html">Programmes</a><a href="scholarships.html">Scholarships</a><a href="tracker.html">Application tracker</a></nav></header>
 <main>
@@ -46,4 +47,5 @@ function load(){try{const p=JSON.parse(localStorage.getItem(KEY)||"{}");["level"
 $("profileForm").addEventListener("submit",e=>{e.preventDefault();const p={};["level","intake","destination","field","language","funding"].forEach(k=>p[k]=$(k).value);try{localStorage.setItem(KEY,JSON.stringify(p));$("status").textContent="Your study preferences have been saved on this browser.";}catch(e){$("status").textContent="Your browser could not save these preferences. You can still use the discovery pages."}});
 $("reset").addEventListener("click",()=>{try{localStorage.removeItem(KEY)}catch(e){}$("profileForm").reset();$("status").textContent="Saved preferences cleared from this browser."});
 load();
-</script></body></html>
+</script><script src="assets/site.js" defer></script>
+</body></html>
