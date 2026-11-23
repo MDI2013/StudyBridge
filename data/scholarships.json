@@ -960,6 +960,37 @@
       "verification_status": "verified",
       "notes": "Applicants must hold citizenship of an African country. Dual citizenship that includes a country outside Africa is explicitly ineligible. Applicants must be under 35 on 1 September of the scholarship application year; must be completing or hold a bachelor's degree from a university on Sciences Po's reference list, or meet the specified recognised bridge-programme/mentoring route, or have refugee status recognised by UNHCR; and must not already hold or be pursuing a master's degree. Applicants must apply to and be admitted to an eligible two-year Sciences Po master's programme; one-year and dual-degree programmes are excluded. Applicants already enrolled at Sciences Po or currently enrolled in or graduated from a French higher-education institution are ineligible. Two application deadlines apply: 23 November 2026 for an earlier admission decision, or 14 December 2026 for a later decision. The scholarship selection result is communicated in April 2027. The applicant must submit both the Scholars Program eligibility application and the Sciences Po master's application; admission and scholarship selection are separate competitive decisions. Confirm that the intended programme is on the eligible two-year list and check the minimum academic results required for the applicant's country of prior university study.",
       "application_status": "open"
+    },
+    {
+      "id": "sb-sch-rw-alu-mastercard-2027",
+      "title": "Mastercard Foundation Scholars Program at African Leadership University – January 2027 intake",
+      "provider": "African Leadership University and the Mastercard Foundation",
+      "eligibility_scope": "regional",
+      "eligible_nationalities": [],
+      "eligible_nationality_groups": [
+        "Promising young Africans facing financial hardship or socio-economic disadvantage; the programme gives particular emphasis to young women, refugees and displaced people, and young people with disabilities"
+      ],
+      "excluded_nationalities": [],
+      "eligible_residencies": [],
+      "host_countries": [
+        "RWA"
+      ],
+      "study_levels": [
+        "undergraduate"
+      ],
+      "eligible_fields": [],
+      "funding_type": "full",
+      "award_amount": null,
+      "currency": "USD",
+      "funding_coverage": "Full tuition and additional financial support throughout the scholar's time at ALU. The exact support package may vary by scholarship contract or partner donor; confirm the individual award terms.",
+      "deadline": null,
+      "application_cycle": "ALU January 2027 intake. The Mastercard Foundation partner directory lists ALU as open. UNHCR Rwanda reports 30 November 2026 as the ALU deadline; confirm this date and the applicable intake directly with ALU before relying on it.",
+      "official_application_url": "https://www.alueducation.com/mastercard-foundation-scholars-program-at-alu/",
+      "official_source_url": "https://www.alueducation.com/financial-aid-at-alu/",
+      "last_verified": "2026-11-23",
+      "verification_status": "needs_review",
+      "notes": "ALU's official financial-aid page describes Mastercard Foundation awards as full-ride scholarships covering full tuition and additional financial support, with exact terms varying by scholarship contract or donor. Applicants must first meet ALU admission requirements; demonstrate financial need and socio-economic disadvantage; be aged 26 or below; have strong academic potential and at least a B in national examinations; and demonstrate leadership potential and community contribution. Young women, refugees and displaced people, and people with physical or learning disabilities are especially encouraged. Scholarship places are limited and meeting criteria does not guarantee an award. The Mastercard Foundation's partner directory lists ALU in Kigali, Rwanda, at undergraduate level with applications open. UNHCR Rwanda reports 30 November 2026 as the ALU deadline for the January 2027 intake, but the reviewed ALU pages do not independently state this deadline; confirm the date, intake and applicant nationality/residence rules directly with ALU. The official pages reviewed do not specify how dual or multiple citizenship is treated, so do not auto-confirm eligibility.",
+      "application_status": "open"
     }
   ]
 }
