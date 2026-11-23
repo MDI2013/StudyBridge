@@ -31,7 +31,7 @@ Each scholarship record must include a stable ID, official title, provider, nati
 - Support destination country, study level, field of study, and funding type as additional discovery filters.
 - Matching statuses should be clear: eligible only when the official source confirms the student's conditions; not eligible only when the source clearly excludes them; otherwise show eligibility as unknown / not yet verified.
 - Track application-cycle availability separately from eligibility verification with `application_status`: `open`, `upcoming`, `closed`, `not_announced`, `varies`, or `unknown`. A verified eligibility source does not mean applications are currently open.
-- The scholarship discovery page provides a global nationality and residence picker, supports multiple selected nationalities, remembers nationality selections in the browser, and filters destinations, study levels, application-cycle status, and records needing review.
+- The scholarship discovery page provides a global nationality and residence picker, supports multiple selected nationalities, and filters destinations, study levels, application-cycle status, and records needing review. Nationality and residence selections are held only in page memory and are not saved to browser storage.
 - If the provider does not state a condition, preserve it as unknown. Never treat missing data as unrestricted eligibility.
 - Recheck eligibility, award coverage, and deadlines for every application cycle. Mark expired or closed opportunities accordingly.
 - Never describe an award as fully funded unless the official provider confirms the full coverage.
