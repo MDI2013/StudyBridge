@@ -47,6 +47,7 @@ footer{padding:28px 0;color:var(--muted);font-size:.85rem}
 <div id="results" class="grid"><div class="empty">Loading the StudyBridge scholarship database…</div></div>
 <footer>StudyBridge is an information and discovery platform, not a scholarship provider. A nationality match does not guarantee eligibility or an award. Always confirm the full rules, deadlines and application route with the official provider. Missing or unverified information is shown transparently.</footer>
 </div>
+<script src="assets/matching.js"></script>
 <script>
 const $=s=>document.querySelector(s);
 const countries={
@@ -59,17 +60,7 @@ function countryName(code){if(code==="ALL")return "All nationalities";const a=al
 function labelStatus(s){return s==="closed"||s==="expired"?"Closed":s==="needs_review"?"Needs verification":"Eligibility source verified"}
 function cycleLabel(s){return ({open:"Applications open",upcoming:"Upcoming cycle",closed:"Applications closed",not_announced:"Call not announced",varies:"Deadlines vary",unknown:"Cycle status unknown"})[s]||"Cycle status unknown"}
 function eligibleStatus(r,selected,residence){
- if(!selected.length)return "Select a nationality to check the match";
- if(r.verification_status!=="verified")return "Eligibility needs verification";
- const eligible=r.eligible_nationalities||[];
- const excluded=r.excluded_nationalities||[];
- if(selected.some(x=>excluded.includes(x)))return "Possible exclusion — check provider rules";
- const matched=eligible.includes("ALL")||selected.some(x=>eligible.includes(x));
- if(!matched)return r.eligible_nationality_groups?.length?"Nationality group must be checked":"No confirmed nationality match";
- const residencyRules=r.eligible_residencies||[];
- if(residencyRules.length&&!residence)return "Nationality match — residence requirement not checked";
- if(residencyRules.length&&residence&&!residencyRules.includes("ALL")&&!residencyRules.includes(residence))return "Residence does not match listed eligible countries";
- return "Nationality match — other conditions apply";
+ return window.StudyBridgeMatching.scholarshipNationalityFit(r,selected,residence);
 }
 function render(){
  const selected=[...$("#nationalities").selectedOptions].map(o=>o.value),res=$("#residence").value,dest=$("#destination").value,level=$("#level").value,status=$("#status").value,field=$("#field").value,funding=$("#funding").value,keyword=$("#keyword").value.trim().toLowerCase();
@@ -93,7 +84,7 @@ function render(){
   const dests=(r.host_countries||[]).map(countryName).join(", ");
   const nations=(r.eligible_nationalities||[]).map(countryName).join(", ");
   const coverage=r.funding_coverage||"Not yet verified";
-  return `<article class="card"><div><span class="pill ${review?"review":""}">${esc(labelStatus(r.verification_status))}</span><span class="pill ${closed?"closed":""}">${esc(cycleLabel(r.application_status))}</span><span class="pill">${esc(dests||"Destination not specified")}</span></div><h2>${esc(r.title)}</h2><div class="meta">${esc(r.provider)} · ${esc((r.study_levels||[]).join(", ")||"Study level not specified")}</div><p><b>Nationality check:</b> ${esc(stat)}</p><p>${esc(coverage)}</p><div class="meta">Funding type: ${esc(r.funding_type||"unknown")} · Application cycle: ${esc(r.application_cycle||"Not yet verified")}</div><div class="meta">${r.deadline?"Deadline: "+esc(r.deadline):"Deadline: check official cycle"} ${nations?" · Nationalities: "+esc(nations):""}</div><div class="links"><a href="${esc(r.official_application_url)}" target="_blank" rel="noopener">Application information ↗</a><a href="${esc(r.official_source_url)}" target="_blank" rel="noopener noreferrer">Official source ↗</a><button type="button" class="secondary" data-track="${esc(r.id)}">Add to tracker</button></div></article>`;
+  return `<article class="card"><div><span class="pill ${review?"review":""}">${esc(labelStatus(r.verification_status))}</span><span class="pill ${closed?"closed":""}">${esc(cycleLabel(r.application_status))}</span><span class="pill">${esc(dests||"Destination not specified")}</span></div><h2>${esc(r.title)}</h2><div class="meta">${esc(r.provider)} · ${esc((r.study_levels||[]).join(", ")||"Study level not specified")}</div><p><b>Nationality check:</b> ${esc(stat.label)}</p><p>${esc(coverage)}</p><p class="meta">${esc(stat.notes.join(" "))}</p><div class="meta">Funding type: ${esc(r.funding_type||"unknown")} · Application cycle: ${esc(r.application_cycle||"Not yet verified")}</div><div class="meta">${r.deadline?"Deadline: "+esc(r.deadline):"Deadline: check official cycle"} ${nations?" · Nationalities: "+esc(nations):""}</div><div class="links"><a href="${esc(r.official_application_url)}" target="_blank" rel="noopener">Application information ↗</a><a href="${esc(r.official_source_url)}" target="_blank" rel="noopener noreferrer">Official source ↗</a><button type="button" class="secondary" data-track="${esc(r.id)}">Add to tracker</button></div></article>`;
  }).join(""):'<div class="empty">No records match these filters. Try changing your filters.</div>';
 }
 $("#results").addEventListener("click",ev=>{
