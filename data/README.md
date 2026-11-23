@@ -22,7 +22,7 @@ Each scholarship record must include a stable ID, official title, provider, nati
 - Students should be able to filter opportunities by one or more nationalities, independently of their current country of residence. These are different eligibility dimensions and must not be conflated.
 - Store each nationality separately using ISO 3166-1 alpha-3 country codes. Use `ALL` only when the official provider explicitly confirms all nationalities are eligible.
 - Keep `eligible_nationalities`, `excluded_nationalities`, and `eligible_residencies` separate. Do not infer eligibility from a scholarship's host country, university, or application location.
-- For a student with multiple nationalities, assess each nationality against the provider's official rules. A match on one nationality is not automatically sufficient if the provider restricts dual/multiple citizens or imposes additional nationality conditions.
+- For a student with multiple nationalities, assess each nationality against the provider's official rules and any provider-defined nationality groups. A match on one nationality is not automatically sufficient if the provider restricts dual/multiple citizens or imposes additional nationality conditions.
 - If dual/multiple-citizenship rules are unclear, show eligibility as unknown and link to the official source rather than promising eligibility.
 - Support destination country, study level, field of study, and funding type as additional discovery filters.
 - Matching statuses should be clear: eligible only when the official source confirms the student's conditions; not eligible only when the source clearly excludes them; otherwise show eligibility as unknown / not yet verified.
@@ -41,4 +41,4 @@ The detailed machine-readable field definitions and matching policy are in `scho
 6. Direct source URL and date checked.
 
 ## Current status
-The initial migration contains 30 university records. They are intentionally marked `needs_review`; this migration does not certify fees or admission information. The scholarship dataset is an empty schema, not a claim that no scholarships exist. The existing live UI is unchanged in this milestone.
+The initial migration contains 30 university records. They are intentionally marked `needs_review`; this migration does not certify fees or admission information. The scholarship dataset now contains four researched records: three verified opportunities and one closed 2027 intake retained for reference. The existing live UI is unchanged in this milestone.
