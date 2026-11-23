@@ -1,0 +1,26 @@
+name: Validate StudyBridge scholarship data
+
+on:
+  push:
+    paths:
+      - "data/scholarships.json"
+      - "scripts/validate-scholarships.js"
+      - ".github/workflows/validate-scholarships.yml"
+  pull_request:
+    paths:
+      - "data/scholarships.json"
+      - "scripts/validate-scholarships.js"
+      - ".github/workflows/validate-scholarships.yml"
+
+jobs:
+  validate-scholarships:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate scholarship records
+        run: node scripts/validate-scholarships.js
