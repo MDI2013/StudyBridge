@@ -127,6 +127,82 @@
         "sb-035",
         "sb-036"
       ]
+    },
+    {
+      "id": "sb-prog-mcgill-mma-2027",
+      "title": "Master of Management in Analytics (MMA) – In-Person",
+      "qualification": "Master of Management",
+      "degree_level": "postgraduate",
+      "duration": "12 or 16 months, full-time",
+      "ects": null,
+      "study_fields": [
+        "Business analytics",
+        "Data analytics",
+        "Artificial intelligence",
+        "Management"
+      ],
+      "delivery_countries": [
+        "CA"
+      ],
+      "partner_institutions": [
+        "McGill University"
+      ],
+      "partner_institution_ids": [
+        "sb-004"
+      ],
+      "teaching_language": null,
+      "intake": "July 2027",
+      "application_status": "open",
+      "application_deadline": "2027-01-15",
+      "application_notes": "The official admissions page lists 15 January 2027 as the final deadline for international students for the Summer 2027 in-person intake. A separate March 15 deadline applies to Canadian citizens and permanent residents.",
+      "tuition_amount": null,
+      "tuition_currency": "CAD",
+      "funding_notes": "See the official tuition and financial aid page for the 2027 entering class. StudyBridge does not currently display a tuition figure in this record.",
+      "official_programme_url": "https://www.mcgill.ca/desautels/programs/mma/inperson",
+      "official_admissions_url": "https://www.mcgill.ca/desautels/programs/mma/inperson/admissions",
+      "official_source_url": "https://www.mcgill.ca/desautels/programs/mma/inperson",
+      "last_verified": "2026-11-23",
+      "verification_status": "official_source_checked",
+      "notes": "In-person delivery in Montreal. McGill also offers an online version; this record represents only the in-person delivery."
+    },
+    {
+      "id": "sb-prog-utoronto-mi-2027",
+      "title": "Master of Information (MI)",
+      "qualification": "Master of Information",
+      "degree_level": "postgraduate",
+      "duration": "2 years",
+      "ects": null,
+      "study_fields": [
+        "Information science",
+        "Human-centered data science",
+        "User experience design",
+        "Information systems",
+        "Knowledge management",
+        "Archives and records management"
+      ],
+      "delivery_countries": [
+        "CA"
+      ],
+      "partner_institutions": [
+        "University of Toronto"
+      ],
+      "partner_institution_ids": [
+        "sb-006"
+      ],
+      "teaching_language": null,
+      "intake": "September 2027",
+      "application_status": "open",
+      "application_deadline": "2027-01-31",
+      "application_notes": "The Faculty of Information states that applications are open for September 2027 entry and that all supporting documents must be submitted by 31 January. Check the official admissions page for exact requirements and updates.",
+      "tuition_amount": null,
+      "tuition_currency": "CAD",
+      "funding_notes": "The faculty describes automatic consideration for entrance awards for applicants meeting the stated GPA and file-completion conditions; award details and eligibility must be checked directly with the faculty.",
+      "official_programme_url": "https://www.sgs.utoronto.ca/programs/information/",
+      "official_admissions_url": "https://ischool.utoronto.ca/future-students/apply-to-masters-programs/",
+      "official_source_url": "https://ischool.utoronto.ca/future-students/apply-to-masters-programs/",
+      "last_verified": "2026-11-23",
+      "verification_status": "official_source_checked",
+      "notes": "The Master of Information offers eight concentrations. Admission requirements and academic equivalencies must be checked directly with the Faculty of Information."
     }
   ]
 }
