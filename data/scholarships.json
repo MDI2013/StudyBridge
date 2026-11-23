@@ -768,6 +768,39 @@
       "verification_status": "verified",
       "notes": "Applicants need a completed two-year master's degree or equivalent with at least Second Class/Upper Division or equivalent, strong motivation, proficiency in the language of instruction, and a last university degree obtained no more than six years before application. Applicants must be nationals or permanent residents of a Sub-Saharan African country. Target candidates include public university staff, prospective teaching/research staff, public-sector candidates, DAFI alumni, and other fresh graduates/professionals. Up to two in-country and three in-region awards are planned, subject to funding. Apply through the DAAD Portal and separately apply for admission to JKUAT. In-country and in-region benefits differ; for in-region study the applicant must study in another Sub-Saharan African country outside their home country/country of residence permit. Dual citizenship and the appropriate route should be confirmed with DAAD.",
       "application_status": "open"
+    },
+    {
+      "id": "sb-sch-uk-cambridge-mastercard-2027",
+      "title": "Mastercard Foundation Scholars Program at the University of Cambridge 2027–2028",
+      "provider": "University of Cambridge and the Mastercard Foundation",
+      "eligibility_scope": "regional",
+      "eligible_nationalities": [],
+      "eligible_nationality_groups": [
+        "Citizens of African countries; applicants must normally be resident in an African country, with stated exceptions for temporary absence for study or work and for people with refugee or internally displaced status"
+      ],
+      "excluded_nationalities": [],
+      "eligible_residencies": [],
+      "host_countries": [
+        "GBR"
+      ],
+      "study_levels": [
+        "postgraduate"
+      ],
+      "eligible_fields": [
+        "Full-time one-year postgraduate courses aligned with climate resilience and sustainability; MBA, MCL, MFin and MAcc excluded"
+      ],
+      "funding_type": "full",
+      "award_amount": null,
+      "currency": "GBP",
+      "funding_coverage": "Full tuition costs and a monthly maintenance allowance; the programme describes support intended to cover students' needs while studying. Confirm any individual course-specific costs and award terms in the official guidance.",
+      "deadline": null,
+      "application_cycle": "2027–2028 academic year; applications open. Submit the integrated scholarship/course application by the selected course's funding deadline, usually early December 2026 or January 2027. DRC applicants were listed for an automatic application-fee waiver, but the separate waiver request deadline was 20 November 2026.",
+      "official_application_url": "https://www.mastercardfoundation.fund.cam.ac.uk/apply/how-apply",
+      "official_source_url": "https://www.mastercardfoundation.fund.cam.ac.uk/news/2027-applications-now-open",
+      "last_verified": "2026-11-23",
+      "verification_status": "verified",
+      "notes": "For African citizens applying to eligible full-time one-year postgraduate courses at Cambridge under the programme themes of climate resilience and sustainability. Applicants must normally be resident in an African country; the official programme states an exception for temporary absence for study or work and for applicants with refugee or internally displaced status. The scholarship application is integrated into the course application and applicants opt in for funding. Course-specific funding deadlines vary, generally falling in early December or January; check the exact course deadline before applying. The official fee-waiver page includes Congo (Dem. Rep.) among countries whose applicants receive an automatic application-fee waiver, but the general waiver request deadline for countries not on that list was 20 November 2026. Admission and scholarship selection are competitive; meeting nationality and residence criteria does not guarantee an award. Confirm dual/multiple-citizenship cases with the programme.",
+      "application_status": "open"
     }
   ]
 }
