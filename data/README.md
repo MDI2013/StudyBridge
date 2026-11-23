@@ -2,9 +2,11 @@
 
 ## Files
 - `universities.json`: normalized seed directory migrated from the original website's university list.
+- `degree-levels.json`: supported undergraduate and postgraduate search categories.
 
 ## Record rules
 - Each institution has a stable `id`.
+- StudyBridge supports both `undergraduate` and `postgraduate` discovery. Each university's `degree_levels` remains empty until its official programme catalogue is checked; do not infer availability from the institution name.
 - `official_website` is the institution's homepage URL carried over from the existing site; verify it before marking the record reviewed.
 - `tuition.amount` must remain `null` until an official source confirms the amount for the relevant programme, degree level, international-student category, currency, and academic year.
 - `legacy_estimate_eur` preserves the old site's approximate EUR figure for audit only. It is not verified and must not be treated as current tuition.
