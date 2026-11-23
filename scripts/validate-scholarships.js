@@ -11,6 +11,7 @@ const ids = new Set();
 const allowedVerification = new Set(["verified", "needs_review", "expired", "closed"]);
 const allowedApplication = new Set(["open", "upcoming", "closed", "not_announced", "varies", "unknown"]);
 const allowedLevels = new Set(["undergraduate", "postgraduate"]);
+const allowedDualCitizenshipPolicies = new Set(["provider_unspecified", "non_african_disqualifies", "single_nationality_only", "manual_confirmation_required"]);
 const isoDate = /^\d{4}-\d{2}-\d{2}$/;
 const alpha3 = code => code === "ALL" || /^[A-Z]{3}$/.test(code);
 const isUrl = value => {
@@ -41,6 +42,7 @@ for (const [index, item] of (data.scholarships || []).entries()) {
   for (const field of ["official_application_url", "official_source_url"]) {
     if (item[field] && !isUrl(item[field])) errors.push(label + ": " + field + " must be an HTTPS URL");
   }
+  if (item.dual_citizenship_policy && !allowedDualCitizenshipPolicies.has(item.dual_citizenship_policy)) errors.push(label + ": invalid dual_citizenship_policy");
   if (item.verification_status === "verified" && (!item.official_source_url || !item.last_verified)) {
     errors.push(label + ": verified records require an official source and last_verified date");
   }
