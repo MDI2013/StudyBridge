@@ -13,7 +13,12 @@ a{color:var(--teal)}.brand{font-size:1.35rem;font-weight:800;color:var(--ink);te
 .panel,.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
 .filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}
 label{font-weight:650;font-size:.92rem}input,select{font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:9px;background:white;color:#14213d;width:100%}
-small,.muted{color:var(--muted)}.hint{font-size:.84rem}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+small,.muted{color:var(--muted)}.hint{font-size:.84rem}
+.nationality-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;max-height:210px;overflow:auto;padding:9px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.nationality-option{display:flex;align-items:center;gap:7px;padding:5px 7px;border-radius:7px;font-size:.86rem;font-weight:500}
+.nationality-option input{width:auto;accent-color:var(--teal)}
+.nationality-selected{font-size:.86rem;color:var(--muted);padding:5px 0}
+@media(max-width:650px){.nationality-options{grid-template-columns:repeat(2,minmax(0,1fr));max-height:190px}}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 button{font:inherit;cursor:pointer;border:0;border-radius:9px;padding:10px 14px;background:var(--teal);color:white;font-weight:650}
 button.secondary{background:white;color:var(--ink);border:1px solid var(--line)}
 .results-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:24px 0 12px;flex-wrap:wrap}
@@ -33,7 +38,7 @@ footer{padding:28px 0;color:var(--muted);font-size:.85rem}
 <section class="hero"><h1>Find scholarships that fit your journey.</h1><p>Search verified scholarship records by nationality, destination and study level. You can select more than one nationality. StudyBridge distinguishes confirmed nationality matches from opportunities that still need eligibility checks.</p></section>
 <section class="panel" aria-label="Scholarship filters">
 <div class="filters">
-<div class="field full"><label for="nationalities">Your nationality or nationalities</label><select id="nationalities" multiple size="7" aria-describedby="nat-help"></select><small id="nat-help" class="hint">Hold Ctrl (Windows) or Command (Mac) to select more than one. Residence is a separate requirement and is not inferred from nationality.</small></div>
+<div class="field full"><label for="nationalities">Your nationality or nationalities</label><input id="natSearch" type="search" placeholder="Search for a nationality or country…" autocomplete="off" aria-label="Search nationalities"><div id="nationalityOptions" class="nationality-options" role="group" aria-label="Choose nationalities"></div><div id="nationalitySelected" class="nationality-selected" aria-live="polite">No nationalities selected</div><small id="nat-help" class="hint">Search and select one or more nationalities. Your country of residence is a separate requirement and is not inferred from nationality.</small></div>
 <div class="field"><label for="residence">Country where you currently live (optional)</label><select id="residence"><option value="">Not specified</option></select></div>
 <div class="field"><label for="destination">Where would you like to study?</label><select id="destination"><option value="">All destinations</option></select></div>
 <div class="field"><label for="level">Study level</label><select id="level"><option value="">All levels</option><option value="undergraduate">Undergraduate</option><option value="postgraduate">Postgraduate</option></select></div>
@@ -64,7 +69,7 @@ function eligibleStatus(r,selected,residence){
  return window.StudyBridgeMatching.scholarshipNationalityFit(r,selected,residence);
 }
 function render(){
- const selected=[...$("#nationalities").selectedOptions].map(o=>o.value),res=$("#residence").value,dest=$("#destination").value,level=$("#level").value,status=$("#status").value,field=$("#field").value,funding=$("#funding").value,keyword=$("#keyword").value.trim().toLowerCase();
+ const selected=[...selectedNationalities],res=$("#residence").value,dest=$("#destination").value,level=$("#level").value,status=$("#status").value,field=$("#field").value,funding=$("#funding").value,keyword=$("#keyword").value.trim().toLowerCase();
  let rows=records.filter(r=>{
   if(dest&&!r.host_countries?.includes(dest))return false;
   if(level&&!r.study_levels?.includes(level))return false;
@@ -98,12 +103,27 @@ $("#results").addEventListener("click",ev=>{
  entries.push({id,title:record.title,provider:record.provider||"Scholarship provider",kind:"scholarship",deadline:record.deadline||"",status:"researching",nextDate:"",next:"Review official eligibility and application instructions.",url:record.official_application_url||record.official_source_url,lastUpdated:new Date().toISOString().slice(0,10)});
  try{localStorage.setItem(key,JSON.stringify(entries));button.textContent="Added to tracker";}catch(e){button.textContent="Could not save";}
 });
+let selectedNationalities=[];
+function renderNationalityOptions(){
+ const term=$("#natSearch").value.trim().toLowerCase();
+ const all=Object.keys(alpha3).filter(code=>alpha3[code]&&countries[alpha3[code]]).map(code=>({code,name:countryName(code)})).sort((a,b)=>a.name.localeCompare(b.name));
+ const visible=all.filter(x=>(x.name+" "+x.code).toLowerCase().includes(term));
+ $("#nationalityOptions").innerHTML=visible.length?visible.map(x=>'<label class="nationality-option"><input type="checkbox" value="'+esc(x.code)+'" '+(selectedNationalities.includes(x.code)?"checked":"")+'><span>'+esc(x.name)+' ('+esc(x.code)+')</span></label>').join(""):'<span class="muted">No matching country found.</span>';
+ $("#nationalitySelected").textContent=selectedNationalities.length?selectedNationalities.map(countryName).join(" · "):"No nationalities selected";
+}
+$("#nationalityOptions").addEventListener("change",ev=>{
+ const box=ev.target.closest('input[type="checkbox"]');if(!box)return;
+ if(box.checked&&!selectedNationalities.includes(box.value))selectedNationalities.push(box.value);
+ if(!box.checked)selectedNationalities=selectedNationalities.filter(x=>x!==box.value);
+ renderNationalityOptions();render();
+});
+$("#natSearch").addEventListener("input",renderNationalityOptions);
 function addOptions(sel,codes,first){const keep=sel.value;sel.innerHTML=first?'<option value="">'+first+'</option>':'';[...new Set(codes)].sort((a,b)=>countryName(a).localeCompare(countryName(b))).forEach(c=>{if(c==="ALL")return;const o=new Option(countryName(c)+" ("+c+")",c);sel.add(o)});if([...sel.options].some(o=>o.value===keep))sel.value=keep}
 async function init(){
  try{
   const res=await fetch("data/scholarships.json");if(!res.ok)throw new Error("Unable to load scholarship data");const data=await res.json();records=data.scholarships||[];
   const allNationalityCodes=Object.keys(alpha3).filter(code=>alpha3[code]&&countries[alpha3[code]]);
-  addOptions($("#nationalities"),allNationalityCodes);addOptions($("#residence"),allNationalityCodes,"Not specified");
+  renderNationalityOptions();addOptions($("#residence"),allNationalityCodes,"Not specified");
   addOptions($("#destination"),records.flatMap(r=>r.host_countries||[]),"All destinations");
   const fields=[...new Set(records.flatMap(r=>r.eligible_fields||[]))].sort();
   fields.forEach(f=>$("#field").add(new Option(f,f)));
@@ -118,7 +138,7 @@ async function init(){
 }
 $("#apply").onclick=render;
 // Nationality selections remain in page memory only; do not persist personal eligibility details in browser storage.
-$("#clear").onclick=()=>{["nationalities","residence","destination","level","field","funding","status","keyword"].forEach(id=>{const e=$("#"+id);if(e.multiple)[...e.options].forEach(o=>o.selected=false);else if(e.tagName==="SELECT")e.selectedIndex=0;else e.value=""});render()};
+$("#clear").onclick=()=>{["nationalities","residence","destination","level","field","funding","status","keyword"].forEach(id=>{const e=$("#"+id);if(id==="nationalities")selectedNationalities=[];else if(e.tagName==="SELECT")e.selectedIndex=0;else e.value=""});renderNationalityOptions();render()};
 init();
 </script>
 <script src="assets/site.js" defer></script>
