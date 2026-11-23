@@ -6,6 +6,9 @@ const path = require("node:path");
 
 const file = path.join(__dirname, "..", "data", "programmes.json");
 const data = JSON.parse(fs.readFileSync(file, "utf8"));
+const universityFile = path.join(__dirname, "..", "data", "universities.json");
+const universityData = JSON.parse(fs.readFileSync(universityFile, "utf8"));
+const universityIds = new Set((universityData.universities || []).map(item => item.id));
 const errors = [];
 const ids = new Set();
 const statuses = new Set(["open", "upcoming", "closed", "not_announced", "unknown"]);
@@ -32,6 +35,10 @@ for (const [index, item] of (data.programmes || []).entries()) {
   if (item.ects !== null && item.ects !== undefined && (!Number.isInteger(item.ects) || item.ects <= 0)) errors.push(label + ": ects must be a positive integer or null");
   for (const field of ["official_programme_url", "official_admissions_url", "official_source_url"]) {
     if (item[field] && !https(item[field])) errors.push(label + ": " + field + " must be an HTTPS URL");
+  }
+  if (!Array.isArray(item.partner_institution_ids)) errors.push(label + ": partner_institution_ids must be an array");
+  else for (const institutionId of item.partner_institution_ids) {
+    if (!universityIds.has(institutionId)) errors.push(label + ": unknown partner institution id " + institutionId);
   }
   for (const field of ["study_fields", "delivery_countries", "partner_institutions"]) {
     if (!Array.isArray(item[field])) errors.push(label + ": " + field + " must be an array");
