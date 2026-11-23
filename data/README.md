@@ -3,7 +3,9 @@
 ## Files
 - `universities.json`: normalized seed directory migrated from the original website's university list.
 - `degree-levels.json`: supported undergraduate and postgraduate search categories.
-- `scholarships.json`: scholarship and funding opportunity directory. It is currently empty until official opportunities are researched and verified.
+- `scholarships.json`: scholarship and funding opportunity directory.
+- `programmes.json`: evidence-based degree-programme directory.
+- `../programmes.html`: searchable programme discovery page.
 
 ## University record rules
 - Each institution has a stable `id`.
@@ -47,3 +49,13 @@ Run `node scripts/validate-scholarships.js` from the repository root to check re
 
 ## Current status
 The initial migration contains 30 university records. They are intentionally marked `needs_review`; this migration does not certify fees or admission information. The scholarship dataset currently contains eleven researched records: four verified opportunities, four closed cycles retained for reference, and three opportunities requiring further verification. Each record also has an explicit application-cycle status so users can distinguish open, upcoming, closed, not-yet-announced, and variable-deadline opportunities. These records cover all ten initial target countries: France, Canada, Germany, the United Kingdom, the United States, Morocco, Spain, the Netherlands, Australia and Japan. The dedicated `scholarships.html` page loads this JSON dataset and provides multi-nationality, residence, destination, study-level and status filters. The main navigation links to the scholarship page. These changes remain on the development branch until merged into `main` and deployed.
+
+
+## Programme record rules
+- Each programme has a stable ID and its own official programme, admissions and source URLs.
+- Store programme-level details separately from institution-level details. A university may offer hundreds of programmes with different fees, entry requirements, languages, deadlines and intakes.
+- Do not infer tuition, teaching language, admission requirements, or scholarship eligibility. Unknown values remain null or explicitly unknown.
+- Record qualification, study level, duration, ECTS where relevant, study fields, delivery countries, partner institutions, intake, application status, deadline, funding notes, and last verification date.
+- Programme-cycle status is separate from eligibility. An open application does not mean every applicant qualifies.
+- Joint and multi-country degrees should list their actual delivery countries and consortium institutions rather than assigning the programme to only one country.
+- The initial programme records are a small pilot, not a comprehensive catalogue. Each entry links to its official provider website.
