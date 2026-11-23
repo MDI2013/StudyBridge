@@ -97,7 +97,7 @@
         notes:["Your selected country of residence is not in the provider's listed eligible-residence countries."] };
     }
     return { status:"possible_match", label:"Listed nationality match — other conditions apply",
-      notes:["This is not a confirmation of eligibility. Check academic, age, residence, prior-study and application-route conditions with the provider."] };
+      notes:["Your selected nationality is explicitly listed by the provider.","This is only a nationality-level match. Academic, age, residence, financial-need, prior-study, programme, documentation and application-route conditions may still apply; check the official source before applying."] };
   }
 
   root.StudyBridgeMatching = { programmeFit, scholarshipNationalityFit };
