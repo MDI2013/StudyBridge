@@ -454,6 +454,65 @@
       "last_verified": "2026-11-23",
       "verification_status": "needs_review",
       "notes": "Hassan II University states that AMCI awards scholarships each year under cooperation programmes and annual quotas. Current call-specific nationality lists, award coverage, deadline and application route have not yet been verified; do not present as an open application."
+    },
+    {
+      "id": "sb-sch-us-csusb-presidential-2027",
+      "title": "Merit-Based Presidential Award for Non-Resident Students",
+      "provider": "California State University, San Bernardino",
+      "eligibility_scope": "unknown",
+      "eligible_nationalities": [],
+      "eligible_nationality_groups": [
+        "Newly admitted non-resident students; international-student eligibility and exclusions require confirmation"
+      ],
+      "excluded_nationalities": [],
+      "eligible_residencies": [],
+      "host_countries": [
+        "USA"
+      ],
+      "study_levels": [],
+      "eligible_fields": [],
+      "funding_type": "unknown",
+      "award_amount": null,
+      "currency": "USD",
+      "funding_coverage": "Award value and renewal conditions require confirmation from the official scholarship page.",
+      "deadline": "2026-12-07",
+      "application_cycle": "Spring 2027 application period: 26 October–7 December 2026; Fall 2027 application period: 26 April–6 July 2027",
+      "official_application_url": "https://www.csusb.edu/international-education/international-admissions/newly-admitted-students",
+      "official_source_url": "https://www.csusb.edu/international-education/international-admissions/newly-admitted-students",
+      "last_verified": "2026-11-23",
+      "verification_status": "needs_review",
+      "notes": "The university lists this merit award for newly admitted non-resident students and publishes application periods. The page snippet available for this record does not establish the award amount or confirm all international applicant categories. Confirm full eligibility and award terms before marking verified."
+    },
+    {
+      "id": "sb-sch-jp-tohoku-global-2027",
+      "title": "Tohoku University International Student Scholarship Programme 2027",
+      "provider": "Tohoku University",
+      "eligibility_scope": "unknown",
+      "eligible_nationalities": [],
+      "eligible_nationality_groups": [
+        "Non-Japanese nationals residing outside Japan; priority-region selection may apply"
+      ],
+      "excluded_nationalities": [],
+      "eligible_residencies": [],
+      "host_countries": [
+        "JPN"
+      ],
+      "study_levels": [
+        "undergraduate",
+        "postgraduate"
+      ],
+      "eligible_fields": [],
+      "funding_type": "tuition_only",
+      "award_amount": null,
+      "currency": "JPY",
+      "funding_coverage": "Full or half tuition fee coverage; approximately the top one-third of admitted students may be considered, subject to final programme details.",
+      "deadline": null,
+      "application_cycle": "Students enrolling from the 2027 academic year; detailed rules and application procedures are to be announced by the university",
+      "official_application_url": "https://www.tohoku.ac.jp/en/news/images/382_new_scholarship_program_for_international_students_2027_poster.pdf",
+      "official_source_url": "https://www.tohoku.ac.jp/en/news/images/382_new_scholarship_program_for_international_students_2027_poster.pdf",
+      "last_verified": "2026-11-23",
+      "verification_status": "needs_review",
+      "notes": "Official university poster announces a new programme for international students enrolling from 2027, covering full or half tuition for undergraduate, master's and professional degree programmes. It says detailed rules will be announced later; do not treat this as an open application or confirmed nationality-wide award yet."
     }
   ]
 }
