@@ -138,7 +138,7 @@ async function init(){
 }
 $("#apply").onclick=render;
 // Nationality selections remain in page memory only; do not persist personal eligibility details in browser storage.
-$("#clear").onclick=()=>{["nationalities","residence","destination","level","field","funding","status","keyword"].forEach(id=>{const e=$("#"+id);if(id==="nationalities")selectedNationalities=[];else if(e.tagName==="SELECT")e.selectedIndex=0;else e.value=""});renderNationalityOptions();render()};
+$("#clear").onclick=()=>{selectedNationalities=[];["residence","destination","level","field","funding","status"].forEach(id=>$("#"+id).selectedIndex=0);$("#keyword").value="";$("#natSearch").value="";renderNationalityOptions();render()};
 init();
 </script>
 <script src="assets/site.js" defer></script>
