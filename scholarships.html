@@ -93,9 +93,19 @@ function render(){
   const dests=(r.host_countries||[]).map(countryName).join(", ");
   const nations=(r.eligible_nationalities||[]).map(countryName).join(", ");
   const coverage=r.funding_coverage||"Not yet verified";
-  return `<article class="card"><div><span class="pill ${review?"review":""}">${esc(labelStatus(r.verification_status))}</span><span class="pill ${closed?"closed":""}">${esc(cycleLabel(r.application_status))}</span><span class="pill">${esc(dests||"Destination not specified")}</span></div><h2>${esc(r.title)}</h2><div class="meta">${esc(r.provider)} · ${esc((r.study_levels||[]).join(", ")||"Study level not specified")}</div><p><b>Nationality check:</b> ${esc(stat)}</p><p>${esc(coverage)}</p><div class="meta">Funding type: ${esc(r.funding_type||"unknown")} · Application cycle: ${esc(r.application_cycle||"Not yet verified")}</div><div class="meta">${r.deadline?"Deadline: "+esc(r.deadline):"Deadline: check official cycle"} ${nations?" · Nationalities: "+esc(nations):""}</div><div class="links"><a href="${esc(r.official_application_url)}" target="_blank" rel="noopener">Application information ↗</a><a href="${esc(r.official_source_url)}" target="_blank" rel="noopener">Official source ↗</a></div></article>`;
+  return `<article class="card"><div><span class="pill ${review?"review":""}">${esc(labelStatus(r.verification_status))}</span><span class="pill ${closed?"closed":""}">${esc(cycleLabel(r.application_status))}</span><span class="pill">${esc(dests||"Destination not specified")}</span></div><h2>${esc(r.title)}</h2><div class="meta">${esc(r.provider)} · ${esc((r.study_levels||[]).join(", ")||"Study level not specified")}</div><p><b>Nationality check:</b> ${esc(stat)}</p><p>${esc(coverage)}</p><div class="meta">Funding type: ${esc(r.funding_type||"unknown")} · Application cycle: ${esc(r.application_cycle||"Not yet verified")}</div><div class="meta">${r.deadline?"Deadline: "+esc(r.deadline):"Deadline: check official cycle"} ${nations?" · Nationalities: "+esc(nations):""}</div><div class="links"><a href="${esc(r.official_application_url)}" target="_blank" rel="noopener">Application information ↗</a><a href="${esc(r.official_source_url)}" target="_blank" rel="noopener noreferrer">Official source ↗</a><button type="button" class="secondary" data-track="${esc(r.id)}">Add to tracker</button></div></article>`;
  }).join(""):'<div class="empty">No records match these filters. Try changing your filters.</div>';
 }
+$("#results").addEventListener("click",ev=>{
+ const button=ev.target.closest("[data-track]");if(!button)return;
+ const record=records.find(r=>r.id===button.dataset.track);if(!record)return;
+ const key="studybridge.application.tracker.v1";let entries=[];
+ try{const raw=JSON.parse(localStorage.getItem(key)||"[]");if(Array.isArray(raw))entries=raw;}catch(e){}
+ const id="scholarship-"+record.id;
+ if(entries.some(x=>x.id===id)){button.textContent="Already in tracker";return;}
+ entries.push({id,title:record.title,provider:record.provider||"Scholarship provider",kind:"scholarship",deadline:record.deadline||"",status:"researching",nextDate:"",next:"Review official eligibility and application instructions.",url:record.official_application_url||record.official_source_url,lastUpdated:new Date().toISOString().slice(0,10)});
+ try{localStorage.setItem(key,JSON.stringify(entries));button.textContent="Added to tracker";}catch(e){button.textContent="Could not save";}
+});
 function addOptions(sel,codes,first){const keep=sel.value;sel.innerHTML=first?'<option value="">'+first+'</option>':'';[...new Set(codes)].sort((a,b)=>countryName(a).localeCompare(countryName(b))).forEach(c=>{if(c==="ALL")return;const o=new Option(countryName(c)+" ("+c+")",c);sel.add(o)});if([...sel.options].some(o=>o.value===keep))sel.value=keep}
 async function init(){
  try{
