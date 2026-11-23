@@ -27,6 +27,8 @@ on:
       - "scripts/validate-programmes.js"
       - "scripts/validate-universities.js"
       - "scripts/validate-pages.js"
+      - "scripts/test-matching.js"
+      - "assets/matching.js"
       - "index.html"
       - "scholarships.html"
       - "programmes.html"
