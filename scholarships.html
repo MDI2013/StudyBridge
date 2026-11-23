@@ -36,6 +36,9 @@ footer{padding:28px 0;color:var(--muted);font-size:.85rem}
 <div class="field"><label for="residence">Country where you currently live (optional)</label><select id="residence"><option value="">Not specified</option></select></div>
 <div class="field"><label for="destination">Where would you like to study?</label><select id="destination"><option value="">All destinations</option></select></div>
 <div class="field"><label for="level">Study level</label><select id="level"><option value="">All levels</option><option value="undergraduate">Undergraduate</option><option value="postgraduate">Postgraduate</option></select></div>
+<div class="field"><label for="field">Field of study</label><select id="field"><option value="">All fields</option></select></div>
+<div class="field"><label for="funding">Funding type</label><select id="funding"><option value="">All funding types</option><option value="full">Full funding</option><option value="partial">Partial funding</option><option value="stipend">Stipend</option><option value="tuition_only">Tuition only</option><option value="other">Other</option><option value="unknown">Not specified</option></select></div>
+<div class="field full"><label for="keyword">Search by scholarship or provider</label><input id="keyword" type="search" placeholder="e.g. Eiffel, DAAD, engineering"></div>
 <div class="field"><label for="status">Opportunity status</label><select id="status"><option value="all">All records</option><option value="open">Open now</option><option value="upcoming">Upcoming</option><option value="varies">Deadlines vary</option><option value="not_announced">Not yet announced</option><option value="closed">Closed</option><option value="review">Needs verification</option></select></div>
 </div>
 <div class="actions"><button id="apply">Find scholarships</button><button class="secondary" id="clear">Clear filters</button></div>
@@ -69,10 +72,13 @@ function eligibleStatus(r,selected,residence){
  return "Nationality match — other conditions apply";
 }
 function render(){
- const selected=[...$("#nationalities").selectedOptions].map(o=>o.value),res=$("#residence").value,dest=$("#destination").value,level=$("#level").value,status=$("#status").value;
+ const selected=[...$("#nationalities").selectedOptions].map(o=>o.value),res=$("#residence").value,dest=$("#destination").value,level=$("#level").value,status=$("#status").value,field=$("#field").value,funding=$("#funding").value,keyword=$("#keyword").value.trim().toLowerCase();
  let rows=records.filter(r=>{
   if(dest&&!r.host_countries?.includes(dest))return false;
   if(level&&!r.study_levels?.includes(level))return false;
+  if(field&&!(r.eligible_fields||[]).some(x=>x.toLowerCase().includes(field.toLowerCase())))return false;
+  if(funding&&r.funding_type!==funding)return false;
+  if(keyword&&!([r.title,r.provider,...(r.eligible_fields||[]),r.notes].join(" ").toLowerCase().includes(keyword)))return false;
   if(status==="closed"&&r.application_status!=="closed")return false;
   if(status==="review"&&r.verification_status!=="needs_review")return false;
   if(["open","upcoming","varies","not_announced"].includes(status)&&r.application_status!==status)return false;
@@ -97,13 +103,15 @@ async function init(){
   const allNationalityCodes=Object.keys(alpha3).filter(code=>alpha3[code]&&countries[alpha3[code]]);
   addOptions($("#nationalities"),allNationalityCodes);addOptions($("#residence"),allNationalityCodes,"Not specified");
   addOptions($("#destination"),records.flatMap(r=>r.host_countries||[]),"All destinations");
+  const fields=[...new Set(records.flatMap(r=>r.eligible_fields||[]))].sort();
+  fields.forEach(f=>$("#field").add(new Option(f,f)));
   try{const saved=JSON.parse(localStorage.getItem("sb-nationalities")||"[]");[...$("#nationalities").options].forEach(o=>o.selected=saved.includes(o.value))}catch(e){}
   render();
  }catch(e){$("#count").textContent="Database unavailable";$("#results").innerHTML='<div class="empty">We could not load the scholarship database. Please try again later.</div>'}
 }
 $("#apply").onclick=render;
 $("#nationalities").addEventListener("change",()=>{try{localStorage.setItem("sb-nationalities",JSON.stringify([...$("#nationalities").selectedOptions].map(o=>o.value)))}catch(e){}});
-$("#clear").onclick=()=>{["nationalities","residence","destination","level","status"].forEach(id=>{const e=$("#"+id);if(e.multiple)[...e.options].forEach(o=>o.selected=false);else e.selectedIndex=0});render()};
+$("#clear").onclick=()=>{["nationalities","residence","destination","level","field","funding","status","keyword"].forEach(id=>{const e=$("#"+id);if(e.multiple)[...e.options].forEach(o=>o.selected=false);else e.selectedIndex=0});render()};
 init();
 </script>
 </body></html>
