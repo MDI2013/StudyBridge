@@ -6,6 +6,8 @@
 - `scholarships.json`: scholarship and funding opportunity directory.
 - `programmes.json`: evidence-based degree-programme directory (5 initial records across Canada and European joint master's programmes).
 - `../programmes.html`: searchable programme discovery page.
+- `../profile.html`: student study-preference profile (browser-local preferences only).
+- `../tracker.html`: application tracker with local save, JSON backup export/import, and delete controls.
 
 ## University record rules
 - Each institution has a stable `id`.
@@ -59,3 +61,11 @@ The initial migration contains 30 university records. They are intentionally mar
 - Programme-cycle status is separate from eligibility. An open application does not mean every applicant qualifies.
 - Joint and multi-country degrees should list their actual delivery countries and consortium institutions rather than assigning the programme to only one country.
 - The initial programme records are a small pilot, not a comprehensive catalogue. Each entry links to its official provider website.
+
+
+## Student profile and application tracker privacy
+- The profile stores only study preferences (study level, intended intake, destination preference, subject area, teaching-language preference and funding preference) in the user's browser. It does not request identity, contact details, passport data, academic records or uploaded documents.
+- Nationality selections on the scholarship page are kept in page memory only and are not persisted.
+- The application tracker stores opportunity names, provider names, deadlines, status, next-action reminders and official URLs in browser local storage. It is not a secure document vault, cloud account or cross-device sync service.
+- Never ask users to enter passwords, passport numbers, bank details, grades, identity documents or other sensitive information into these browser-only features. Display clear privacy notices and provide clear/delete and export/import controls.
+- Browser storage is accessible to scripts running on the same origin and to people with access to the browser profile. Do not store credentials or sensitive personal information in local storage. See the OWASP HTML5 Security and Session Management guidance.
