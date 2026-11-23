@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_name": "StudyBridge Scholarship Directory",
+  "updated_at": "2026-11-23",
+  "publication_policy": "Only publish opportunities with an official scholarship or funding source, clear eligibility, award details, deadline or application cycle, and a last-verified date. Empty dataset means no scholarships have yet been verified; do not display invented examples.",
+  "scholarships": []
+}
