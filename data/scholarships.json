@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.3.0",
+  "schema_version": "1.4.0",
   "dataset_name": "StudyBridge Scholarship Directory",
   "updated_at": "2026-11-23",
   "publication_policy": "Only publish opportunities with an official scholarship or funding source, clear eligibility, award details, deadline or application cycle, and a last-verified date. Empty dataset means no scholarships have yet been verified; do not display invented examples.",
@@ -36,7 +36,8 @@
     "last_verified": "ISO date (YYYY-MM-DD) or null",
     "verification_status": "verified | needs_review | expired | closed",
     "notes": "Relevant official conditions, including dual/multiple-citizenship restrictions and uncertainty",
-    "eligible_nationality_groups": "Array of official provider-defined nationality groups or region/category labels (for example non-EEA or DAC-listed countries); do not infer group membership without an authoritative classification source"
+    "eligible_nationality_groups": "Array of official provider-defined nationality groups or region/category labels (for example non-EEA or DAC-listed countries); do not infer group membership without an authoritative classification source",
+    "application_status": "open | upcoming | closed | not_announced | varies | unknown; distinguish cycle availability from eligibility verification"
   },
   "scholarships": [
     {
@@ -75,7 +76,8 @@
       "official_source_url": "https://www.campusfrance.org/en/france-excellence-eiffel-scholarship-program",
       "last_verified": "2026-11-23",
       "verification_status": "verified",
-      "notes": "Master's applicants must be up to 29 years old; doctoral applicants up to 35, as stated on the programme page. Students cannot submit directly: French higher education institutions submit applications. Results expected from 12 April 2027. Confirm nationality and dual-citizenship conditions in the 2027 regulations before displaying a positive eligibility match."
+      "notes": "Master's applicants must be up to 29 years old; doctoral applicants up to 35, as stated on the programme page. Students cannot submit directly: French higher education institutions submit applications. Results expected from 12 April 2027. Confirm nationality and dual-citizenship conditions in the 2027 regulations before displaying a positive eligibility match.",
+      "application_status": "upcoming"
     },
     {
       "id": "sb-sch-nl-nl-scholarship-2027",
@@ -106,7 +108,8 @@
       "official_source_url": "https://www.studyinnl.org/finances/nl-scholarship",
       "last_verified": "2026-11-23",
       "verification_status": "verified",
-      "notes": "Applicants must have a non-EEA nationality, apply for a full-time bachelor's or master's programme at a participating institution, meet that institution's requirements, and not hold a degree from a Dutch educational institution. Participating institutions and deadlines vary by year. Dual-nationality cases should be checked against the provider's nationality rule."
+      "notes": "Applicants must have a non-EEA nationality, apply for a full-time bachelor's or master's programme at a participating institution, meet that institution's requirements, and not hold a degree from a Dutch educational institution. Participating institutions and deadlines vary by year. Dual-nationality cases should be checked against the provider's nationality rule.",
+      "application_status": "open"
     },
     {
       "id": "sb-sch-de-daad-epos-2027",
@@ -136,7 +139,8 @@
       "official_source_url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database.pdf?detail=50076777&origin=137&page=1&status=3",
       "last_verified": "2026-11-23",
       "verification_status": "verified",
-      "notes": "For graduates from eligible developing/newly industrialised countries with at least two years of professional experience. Supports selected postgraduate courses in Germany, usually master's and in exceptional cases doctoral study. Funding duration 12-42 months depending on programme. Applicants must verify their country against the official eligible-country list and check the deadline for their chosen course."
+      "notes": "For graduates from eligible developing/newly industrialised countries with at least two years of professional experience. Supports selected postgraduate courses in Germany, usually master's and in exceptional cases doctoral study. Funding duration 12-42 months depending on programme. Applicants must verify their country against the official eligible-country list and check the deadline for their chosen course.",
+      "application_status": "varies"
     },
     {
       "id": "sb-sch-au-australia-awards-africa-2027",
@@ -190,7 +194,8 @@
       "official_source_url": "https://www.dfat.gov.au/people-to-people/australia-awards/participating-countries",
       "last_verified": "2026-11-23",
       "verification_status": "closed",
-      "notes": "The DRC is explicitly listed among eligible African participating countries. Country-specific eligibility, priority fields, study levels, opening and closing dates must be checked with the relevant in-country contact. The 2027 intake deadline has passed; do not show this cycle as open."
+      "notes": "The DRC is explicitly listed among eligible African participating countries. Country-specific eligibility, priority fields, study levels, opening and closing dates must be checked with the relevant in-country contact. The 2027 intake deadline has passed; do not show this cycle as open.",
+      "application_status": "closed"
     },
     {
       "id": "sb-sch-uk-commonwealth-shared-2027",
@@ -308,7 +313,8 @@
       "official_source_url": "https://cscuk.fcdo.gov.uk/shared/",
       "last_verified": "2026-11-23",
       "verification_status": "verified",
-      "notes": "Master's-level award. Applicants must be citizens/refugees of an eligible Commonwealth country and permanently resident in an eligible Commonwealth country; must meet academic, financial-need and return-home conditions. Must apply via a participating university and CSC Central; university admission is separate. The Democratic Republic of the Congo is not on the official eligible-country list. Dual-citizenship conditions should be confirmed with CSC where relevant."
+      "notes": "Master's-level award. Applicants must be citizens/refugees of an eligible Commonwealth country and permanently resident in an eligible Commonwealth country; must meet academic, financial-need and return-home conditions. Must apply via a participating university and CSC Central; university admission is separate. The Democratic Republic of the Congo is not on the official eligible-country list. Dual-citizenship conditions should be confirmed with CSC where relevant.",
+      "application_status": "open"
     },
     {
       "id": "sb-sch-ca-pearson-2027",
@@ -340,7 +346,8 @@
       "official_source_url": "https://future.utoronto.ca/pearson-scholarships",
       "last_verified": "2026-11-23",
       "verification_status": "closed",
-      "notes": "For international students requiring a Canadian study permit, in final year of secondary school in 2026/27 or graduated no earlier than June 2026. School nomination required. Not available to students already attending post-secondary studies. 2027 entry deadlines have passed; retain for reference and monitor next cycle. Confirm dual citizenship and Canadian status with U of T if applicable."
+      "notes": "For international students requiring a Canadian study permit, in final year of secondary school in 2026/27 or graduated no earlier than June 2026. School nomination required. Not available to students already attending post-secondary studies. 2027 entry deadlines have passed; retain for reference and monitor next cycle. Confirm dual citizenship and Canadian status with U of T if applicable.",
+      "application_status": "closed"
     },
     {
       "id": "sb-sch-ca-study-in-canada-2026",
@@ -387,7 +394,8 @@
       "official_source_url": "https://www.educanada.ca/scholarships-bourses/can/institutions/study-in-canada-sep-etudes-au-canada-pct.aspx?lang=eng",
       "last_verified": "2026-11-23",
       "verification_status": "closed",
-      "notes": "Only Canadian post-secondary institutions can apply and select participants; direct individual applications are not accepted. Eligible citizens must be enrolled full-time at a post-secondary institution in an eligible country and pay tuition there. DRC is not included in the eligible-country list for this call."
+      "notes": "Only Canadian post-secondary institutions can apply and select participants; direct individual applications are not accepted. Eligible citizens must be enrolled full-time at a post-secondary institution in an eligible country and pay tuition there. DRC is not included in the eligible-country list for this call.",
+      "application_status": "closed"
     },
     {
       "id": "sb-sch-es-jaen-talent-2027",
@@ -422,7 +430,8 @@
       "official_source_url": "https://www.ujaen.es/internacional/en/international-calls/talent-attraction-scholarship-programme-undergraduate-studies-20272028",
       "last_verified": "2026-11-23",
       "verification_status": "closed",
-      "notes": "75 scholarships announced. Nationality eligibility is restricted to countries in Annex I and special selection routes; do not infer eligibility without checking Annex I. Admission to an eligible University of Jaén degree is separate. The call is closed."
+      "notes": "75 scholarships announced. Nationality eligibility is restricted to countries in Annex I and special selection routes; do not infer eligibility without checking Annex I. Admission to an eligible University of Jaén degree is separate. The call is closed.",
+      "application_status": "closed"
     },
     {
       "id": "sb-sch-ma-amci-international-annual",
@@ -453,7 +462,8 @@
       "official_source_url": "https://www.univh2c.ma/en/page/international-student",
       "last_verified": "2026-11-23",
       "verification_status": "needs_review",
-      "notes": "Hassan II University states that AMCI awards scholarships each year under cooperation programmes and annual quotas. Current call-specific nationality lists, award coverage, deadline and application route have not yet been verified; do not present as an open application."
+      "notes": "Hassan II University states that AMCI awards scholarships each year under cooperation programmes and annual quotas. Current call-specific nationality lists, award coverage, deadline and application route have not yet been verified; do not present as an open application.",
+      "application_status": "not_announced"
     },
     {
       "id": "sb-sch-us-csusb-presidential-2027",
@@ -481,7 +491,8 @@
       "official_source_url": "https://www.csusb.edu/international-education/international-admissions/newly-admitted-students",
       "last_verified": "2026-11-23",
       "verification_status": "needs_review",
-      "notes": "The university lists this merit award for newly admitted non-resident students and publishes application periods. The page snippet available for this record does not establish the award amount or confirm all international applicant categories. Confirm full eligibility and award terms before marking verified."
+      "notes": "The university lists this merit award for newly admitted non-resident students and publishes application periods. The page snippet available for this record does not establish the award amount or confirm all international applicant categories. Confirm full eligibility and award terms before marking verified.",
+      "application_status": "open"
     },
     {
       "id": "sb-sch-jp-tohoku-global-2027",
@@ -512,7 +523,8 @@
       "official_source_url": "https://www.tohoku.ac.jp/en/news/images/382_new_scholarship_program_for_international_students_2027_poster.pdf",
       "last_verified": "2026-11-23",
       "verification_status": "needs_review",
-      "notes": "Official university poster announces a new programme for international students enrolling from 2027, covering full or half tuition for undergraduate, master's and professional degree programmes. It says detailed rules will be announced later; do not treat this as an open application or confirmed nationality-wide award yet."
+      "notes": "Official university poster announces a new programme for international students enrolling from 2027, covering full or half tuition for undergraduate, master's and professional degree programmes. It says detailed rules will be announced later; do not treat this as an open application or confirmed nationality-wide award yet.",
+      "application_status": "not_announced"
     }
   ]
 }
