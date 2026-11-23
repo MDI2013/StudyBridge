@@ -13,6 +13,7 @@
     "Education": ["education", "learning", "teaching"]
   };
   const DESTINATION_ALPHA3 = { CA:"CAN", FR:"FRA", DE:"DEU", UK:"GBR", US:"USA", MA:"MAR", ES:"ESP", NL:"NLD", AU:"AUS", JP:"JPN" };
+  const AFRICAN_NATIONALITIES = new Set(["DZA","AGO","BEN","BWA","BFA","BDI","CPV","CMR","CAF","TCD","COM","COG","COD","CIV","DJI","EGY","GNQ","ERI","SWZ","ETH","GAB","GMB","GHA","GIN","GNB","KEN","LSO","LBR","LBY","MDG","MWI","MLI","MRT","MUS","MAR","MOZ","NAM","NER","NGA","RWA","STP","SEN","SYC","SLE","SOM","ZAF","SSD","SDN","TZA","TGO","TUN","UGA","ZMB","ZWE"]);
 
   function programmeFit(record, preferences) {
     const p = preferences || {};
@@ -64,6 +65,11 @@
     const groups = record.eligible_nationality_groups || [];
     const excludedSelected = selected.filter(code => excluded.includes(code));
     const includedSelected = selected.filter(code => eligible.includes(code));
+    const africanDualRule = record.dual_citizenship_policy === "non_african_disqualifies";
+    if (africanDualRule && selected.some(code => !AFRICAN_NATIONALITIES.has(code))) {
+      return { status:"no_match", label:"Non-African dual citizenship is excluded",
+        notes:["The provider states that applicants holding any non-African citizenship are ineligible, even if they also hold African citizenship."] };
+    }
     if (excludedSelected.length && !includedSelected.length) {
       return { status:"no_match", label:"Selected nationality is excluded",
         notes:["A selected nationality appears in the provider's exclusion list: " + excludedSelected.join(", ") + ".",
@@ -83,7 +89,7 @@
       return { status:"no_match", label:"No confirmed nationality match",
         notes:["None of the selected nationalities appears in the record's verified nationality list."] };
     }
-    if (selected.length > 1 && !eligible.includes("ALL")) {
+    if (selected.length > 1 && !eligible.includes("ALL") && !africanDualRule) {
       return { status:"unknown", label:"Possible nationality match — dual citizenship needs checking",
         notes:["At least one selected nationality is listed, but the record does not establish how the provider treats multiple citizenships."] };
     }
