@@ -9,6 +9,12 @@ on:
       - "scripts/validate-scholarships.js"
       - "scripts/validate-programmes.js"
       - "scripts/validate-universities.js"
+      - "scripts/validate-pages.js"
+      - "index.html"
+      - "scholarships.html"
+      - "programmes.html"
+      - "profile.html"
+      - "tracker.html"
       - ".github/workflows/validate-scholarships.yml"
   pull_request:
     paths:
@@ -35,3 +41,5 @@ jobs:
         run: node scripts/validate-programmes.js
       - name: Validate university records
         run: node scripts/validate-universities.js
+      - name: Validate page scripts and local links
+        run: node scripts/validate-pages.js
