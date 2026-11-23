@@ -45,8 +45,9 @@
       else if (intake) checks.push("Confirm whether this programme has your preferred intake");
     }
     if (!reasons.length && !checks.length) checks.push("Add preferences to see why this programme may fit");
-    return { matched: reasons.length > 0 && !checks.some(x => /differs|not listed/.test(x)), reasons, checks,
-      label: reasons.length ? "Preference fit" : "Needs review",
+    const hardMismatch = checks.some(x => /differs|not listed/.test(x));
+    return { matched: reasons.length > 0 && !hardMismatch, reasons, checks,
+      label: reasons.length ? (hardMismatch ? "Partial preference match" : "Preference fit") : "Needs review",
       disclaimer: "This is a preference match only. It does not assess academic admission requirements or guarantee acceptance." };
   }
 
@@ -54,10 +55,10 @@
     const selected = Array.isArray(selectedNationalities) ? selectedNationalities : [];
     const notes = [];
     if (!selected.length) return { status:"not_checked", label:"Select a nationality to check", notes:["Nationality has not been selected."] };
-    if (record.verification_status !== "verified") return { status:"unknown", label:"Eligibility needs verification", notes:["This record is not marked as fully verified."] };
-    if (["closed","expired"].includes(record.application_status) || record.verification_status === "closed" || record.verification_status === "expired") {
+    if (["closed","expired"].includes(record.application_status) || ["closed","expired"].includes(record.verification_status)) {
       return { status:"cycle_closed", label:"Past or closed cycle", notes:["This cycle is not currently open; nationality fit is not presented as an active opportunity."] };
     }
+    if (record.verification_status !== "verified") return { status:"unknown", label:"Eligibility needs verification", notes:["This record is not marked as fully verified."] };
     const eligible = record.eligible_nationalities || [];
     const excluded = record.excluded_nationalities || [];
     const groups = record.eligible_nationality_groups || [];
