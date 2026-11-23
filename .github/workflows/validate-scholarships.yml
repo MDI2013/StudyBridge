@@ -5,8 +5,10 @@ on:
     paths:
       - "data/scholarships.json"
       - "data/programmes.json"
+      - "data/universities.json"
       - "scripts/validate-scholarships.js"
       - "scripts/validate-programmes.js"
+      - "scripts/validate-universities.js"
       - ".github/workflows/validate-scholarships.yml"
   pull_request:
     paths:
@@ -30,3 +32,5 @@ jobs:
         run: node scripts/validate-scholarships.js
       - name: Validate programme records
         run: node scripts/validate-programmes.js
+      - name: Validate university records
+        run: node scripts/validate-universities.js
