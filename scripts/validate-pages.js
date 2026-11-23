@@ -26,6 +26,9 @@ for (const page of pages) {
   }
   for (const match of html.matchAll(/(?:href|src)=["']([^"']+)["']/gi)) {
     const target = match[1];
+    // Runtime-generated template-literal links (for example ${record.url}) are not
+    // filesystem paths; validate their data fields separately instead.
+    if (target.includes("${")) continue;
     if (/^(?:https?:|mailto:|tel:|#|data:|javascript:)/i.test(target)) continue;
     const pathname = target.split(/[?#]/)[0];
     if (!pathname) continue;
