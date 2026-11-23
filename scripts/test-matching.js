@@ -13,6 +13,9 @@ const base = { verification_status:"verified", application_status:"open", eligib
 assert.equal(scholarshipNationalityFit(base, ["COD"], "").status, "possible_match");
 assert.ok(scholarshipNationalityFit(base, ["COD"], "").notes.includes("Your selected nationality is explicitly listed by the provider."));
 assert.equal(scholarshipNationalityFit(base, ["COD","CAN"], "").status, "unknown");
+const sciencesPo = {...base, eligible_nationalities:["COD","KEN","GHA"], dual_citizenship_policy:"non_african_disqualifies"};
+assert.equal(scholarshipNationalityFit(sciencesPo, ["COD","CAN"], "").status, "no_match");
+assert.equal(scholarshipNationalityFit(sciencesPo, ["COD","KEN"], "").status, "possible_match");
 assert.equal(scholarshipNationalityFit({...base, eligible_nationality_groups:["Non-EEA countries"], eligible_nationalities:[]}, ["COD"], "").status, "unknown");
 assert.equal(scholarshipNationalityFit({...base, eligible_nationality_groups:["African participating countries"]}, ["COD"], "").status, "unknown");
 assert.equal(scholarshipNationalityFit({...base, excluded_nationalities:["COD"]}, ["COD"], "").status, "no_match");
