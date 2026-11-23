@@ -11,7 +11,9 @@ on:
   pull_request:
     paths:
       - "data/scholarships.json"
+      - "data/programmes.json"
       - "scripts/validate-scholarships.js"
+      - "scripts/validate-programmes.js"
       - ".github/workflows/validate-scholarships.yml"
 
 jobs:
