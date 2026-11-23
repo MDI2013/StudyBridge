@@ -959,7 +959,8 @@
       "last_verified": "2026-11-23",
       "verification_status": "verified",
       "notes": "Applicants must hold citizenship of an African country. Dual citizenship that includes a country outside Africa is explicitly ineligible. Applicants must be under 35 on 1 September of the scholarship application year; must be completing or hold a bachelor's degree from a university on Sciences Po's reference list, or meet the specified recognised bridge-programme/mentoring route, or have refugee status recognised by UNHCR; and must not already hold or be pursuing a master's degree. Applicants must apply to and be admitted to an eligible two-year Sciences Po master's programme; one-year and dual-degree programmes are excluded. Applicants already enrolled at Sciences Po or currently enrolled in or graduated from a French higher-education institution are ineligible. Two application deadlines apply: 23 November 2026 for an earlier admission decision, or 14 December 2026 for a later decision. The scholarship selection result is communicated in April 2027. The applicant must submit both the Scholars Program eligibility application and the Sciences Po master's application; admission and scholarship selection are separate competitive decisions. Confirm that the intended programme is on the eligible two-year list and check the minimum academic results required for the applicant's country of prior university study.",
-      "application_status": "open"
+      "application_status": "open",
+      "dual_citizenship_policy": "non_african_disqualifies"
     },
     {
       "id": "sb-sch-rw-alu-mastercard-2027",
