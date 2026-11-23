@@ -23,6 +23,14 @@ Use sources in this order:
 5. Recognized intergovernmental or sector databases for institution discovery and cross-checking.
 6. Reputable secondary sources only as discovery leads; never as the sole evidence for a published fee, admission rule, visa rule, or scholarship.
 
+## Scholarship verification rules
+- List a scholarship only when an official provider, government, university, or recognized funding body publishes the opportunity.
+- Record eligible nationalities/residency, study levels, fields, host-country restrictions, award value, what costs are covered, duration, application route, deadline or cycle, and official source URL.
+- Do not describe a scholarship as fully funded unless the official source explicitly confirms the covered costs.
+- Do not assume a student is eligible based only on their destination country or nationality; show the published eligibility criteria and ask students to confirm with the provider.
+- Mark closed or expired opportunities clearly; do not silently show them as currently open.
+- Recheck each opportunity for every application cycle and record the date checked.
+
 ## Evidence record for each programme
 
 - Institution ID and official programme title
