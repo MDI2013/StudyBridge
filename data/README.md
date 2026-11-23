@@ -1,0 +1,24 @@
+# StudyBridge university database
+
+## Files
+- `universities.json`: normalized seed directory migrated from the original website's university list.
+
+## Record rules
+- Each institution has a stable `id`.
+- `official_website` is the institution's homepage URL carried over from the existing site; verify it before marking the record reviewed.
+- `tuition.amount` must remain `null` until an official source confirms the amount for the relevant programme, degree level, international-student category, currency, and academic year.
+- `legacy_estimate_eur` preserves the old site's approximate EUR figure for audit only. It is not verified and must not be treated as current tuition.
+- `record_status` values: `needs_review`, `reviewed`, `published`, `archived`.
+- `tuition.verification_status` values: `not_verified`, `official_source_verified`, `expired`.
+- `last_verified` uses ISO date format (YYYY-MM-DD) and remains null until a human/source review is completed.
+
+## Required tuition evidence before publication
+1. Official institution fee page or official programme fee schedule.
+2. Programme and degree level.
+3. International-student fee category.
+4. Currency and fee basis (per year, semester, credit, or full programme).
+5. Academic year or intake period.
+6. Direct source URL and date checked.
+
+## Current status
+The initial migration contains 30 records from the legacy website. They are intentionally marked `needs_review`; this migration does not certify fees or admission information. The existing live UI is unchanged in this milestone.
