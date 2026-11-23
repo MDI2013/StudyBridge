@@ -76,6 +76,13 @@ async function init(){
   const data=await response.json();records=data.programmes||[];
   [...new Set(records.flatMap(r=>r.delivery_countries||[]))].filter(c=>countries[c]).sort((a,b)=>countries[a].localeCompare(countries[b])).forEach(c=>$("#country").add(new Option(countries[c],c)));
   [...new Set(records.flatMap(r=>r.study_fields||[]))].sort().forEach(f=>$("#field").add(new Option(f,f)));
+  try{
+   const prefs=JSON.parse(localStorage.getItem("studybridge.profile.preferences.v1")||"{}");
+   if(prefs.level&&[...$("#level").options].some(o=>o.value===prefs.level))$("#level").value=prefs.level;
+   if(prefs.destination&&[...$("#country").options].some(o=>o.value===prefs.destination))$("#country").value=prefs.destination;
+   const terms={"Business and management":"management","Marketing and communications":"marketing","Computer science and AI":"artificial intelligence","Engineering":"engineering","Health and medicine":"medical","Law and public policy":"law","Science and environment":"science","Arts and humanities":"humanities","Education":"education"};
+   if(prefs.field&&terms[prefs.field])$("#keyword").value=terms[prefs.field];
+  }catch(e){}
   render();
  }catch(error){$("#count").textContent="Database unavailable";$("#results").innerHTML='<div class="empty">We could not load programme records. Please try again later.</div>';}
 }
