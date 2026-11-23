@@ -1,7 +1,7 @@
 # StudyBridge university database
 
 ## Files
-- `universities.json`: normalized seed directory migrated from the original website's university list.
+- `universities.json`: normalized university directory; 30 migrated seed records plus 6 consortium partner institutions added from official joint-programme sources.
 - `degree-levels.json`: supported undergraduate and postgraduate search categories.
 - `scholarships.json`: scholarship and funding opportunity directory.
 - `programmes.json`: evidence-based degree-programme directory.
@@ -37,7 +37,7 @@ Each scholarship record must include a stable ID, official title, provider, nati
 The detailed machine-readable field definitions and matching policy are in `scholarships.json`.
 
 ### Local validation
-Run `node scripts/validate-scholarships.js` from the repository root to check required fields, unique IDs, verification/application status values, country-code formats, study-level values, date formats, and HTTPS source/application links. The script uses only Node.js built-ins.
+Run `node scripts/validate-scholarships.js` and `node scripts/validate-programmes.js` from the repository root to check required fields, unique IDs, status values, date formats, and HTTPS source/application links. The scripts use only Node.js built-ins. GitHub Actions runs both checks on relevant pushes and pull requests.
 
 ## Required tuition evidence before publication
 1. Official institution fee page or official programme fee schedule.
