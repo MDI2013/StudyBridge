@@ -999,6 +999,180 @@
       "last_verified": null,
       "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
       "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-031",
+      "name": "University of Twente",
+      "country_code": "NL",
+      "city": "Enschede",
+      "institution_type": "unknown",
+      "official_website": "https://www.utwente.nl/en/",
+      "study_fields": [],
+      "teaching_languages_as_listed": [],
+      "degree_levels": [
+        "postgraduate"
+      ],
+      "tuition": {
+        "amount": null,
+        "currency": null,
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://www.msc-waves.eu/",
+      "legacy_estimate_eur": null,
+      "legacy_description": null,
+      "record_status": "needs_review",
+      "last_verified": "2026-11-23",
+      "review_notes": "Added as a verified partner institution in an official joint master's programme. This confirms postgraduate participation in the named consortium programme only; it does not verify the institution's full programme catalogue, teaching languages, tuition or general admissions details.",
+      "degree_level_verification_status": "official_joint_programme_partner"
+    },
+    {
+      "id": "sb-032",
+      "name": "Università di Padova",
+      "country_code": "IT",
+      "city": "Padua",
+      "institution_type": "unknown",
+      "official_website": "https://www.unipd.it/en/",
+      "study_fields": [],
+      "teaching_languages_as_listed": [],
+      "degree_levels": [
+        "postgraduate"
+      ],
+      "tuition": {
+        "amount": null,
+        "currency": null,
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://www.msc-waves.eu/",
+      "legacy_estimate_eur": null,
+      "legacy_description": null,
+      "record_status": "needs_review",
+      "last_verified": "2026-11-23",
+      "review_notes": "Added as a verified partner institution in an official joint master's programme. This confirms postgraduate participation in the named consortium programme only; it does not verify the institution's full programme catalogue, teaching languages, tuition or general admissions details.",
+      "degree_level_verification_status": "official_joint_programme_partner"
+    },
+    {
+      "id": "sb-033",
+      "name": "University of Ljubljana",
+      "country_code": "SI",
+      "city": "Ljubljana",
+      "institution_type": "unknown",
+      "official_website": "https://www.uni-lj.si/en/",
+      "study_fields": [],
+      "teaching_languages_as_listed": [],
+      "degree_levels": [
+        "postgraduate"
+      ],
+      "tuition": {
+        "amount": null,
+        "currency": null,
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://www.msc-waves.eu/",
+      "legacy_estimate_eur": null,
+      "legacy_description": null,
+      "record_status": "needs_review",
+      "last_verified": "2026-11-23",
+      "review_notes": "Added as a verified partner institution in an official joint master's programme. This confirms postgraduate participation in the named consortium programme only; it does not verify the institution's full programme catalogue, teaching languages, tuition or general admissions details.",
+      "degree_level_verification_status": "official_joint_programme_partner"
+    },
+    {
+      "id": "sb-034",
+      "name": "University of Girona",
+      "country_code": "ES",
+      "city": "Girona",
+      "institution_type": "unknown",
+      "official_website": "https://www.udg.edu/en/",
+      "study_fields": [],
+      "teaching_languages_as_listed": [],
+      "degree_levels": [
+        "postgraduate"
+      ],
+      "tuition": {
+        "amount": null,
+        "currency": null,
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://maiamaster.org/about/",
+      "legacy_estimate_eur": null,
+      "legacy_description": null,
+      "record_status": "needs_review",
+      "last_verified": "2026-11-23",
+      "review_notes": "Added as a verified partner institution in an official joint master's programme. This confirms postgraduate participation in the named consortium programme only; it does not verify the institution's full programme catalogue, teaching languages, tuition or general admissions details.",
+      "degree_level_verification_status": "official_joint_programme_partner"
+    },
+    {
+      "id": "sb-035",
+      "name": "Université Bourgogne Europe",
+      "country_code": "FR",
+      "city": "Dijon",
+      "institution_type": "unknown",
+      "official_website": "https://www.ube.fr/en/",
+      "study_fields": [],
+      "teaching_languages_as_listed": [],
+      "degree_levels": [
+        "postgraduate"
+      ],
+      "tuition": {
+        "amount": null,
+        "currency": null,
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://maiamaster.org/about/",
+      "legacy_estimate_eur": null,
+      "legacy_description": null,
+      "record_status": "needs_review",
+      "last_verified": "2026-11-23",
+      "review_notes": "Added as a verified partner institution in an official joint master's programme. This confirms postgraduate participation in the named consortium programme only; it does not verify the institution's full programme catalogue, teaching languages, tuition or general admissions details.",
+      "degree_level_verification_status": "official_joint_programme_partner"
+    },
+    {
+      "id": "sb-036",
+      "name": "Università degli Studi di Cassino e del Lazio Meridionale",
+      "country_code": "IT",
+      "city": "Cassino",
+      "institution_type": "unknown",
+      "official_website": "https://www.unicas.it/",
+      "study_fields": [],
+      "teaching_languages_as_listed": [],
+      "degree_levels": [
+        "postgraduate"
+      ],
+      "tuition": {
+        "amount": null,
+        "currency": null,
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://maiamaster.org/about/",
+      "legacy_estimate_eur": null,
+      "legacy_description": null,
+      "record_status": "needs_review",
+      "last_verified": "2026-11-23",
+      "review_notes": "Added as a verified partner institution in an official joint master's programme. This confirms postgraduate participation in the named consortium programme only; it does not verify the institution's full programme catalogue, teaching languages, tuition or general admissions details.",
+      "degree_level_verification_status": "official_joint_programme_partner"
     }
   ],
   "supported_degree_levels": [
