@@ -105,13 +105,12 @@ async function init(){
   addOptions($("#destination"),records.flatMap(r=>r.host_countries||[]),"All destinations");
   const fields=[...new Set(records.flatMap(r=>r.eligible_fields||[]))].sort();
   fields.forEach(f=>$("#field").add(new Option(f,f)));
-  try{const saved=JSON.parse(localStorage.getItem("sb-nationalities")||"[]");[...$("#nationalities").options].forEach(o=>o.selected=saved.includes(o.value))}catch(e){}
   render();
  }catch(e){$("#count").textContent="Database unavailable";$("#results").innerHTML='<div class="empty">We could not load the scholarship database. Please try again later.</div>'}
 }
 $("#apply").onclick=render;
-$("#nationalities").addEventListener("change",()=>{try{localStorage.setItem("sb-nationalities",JSON.stringify([...$("#nationalities").selectedOptions].map(o=>o.value)))}catch(e){}});
-$("#clear").onclick=()=>{["nationalities","residence","destination","level","field","funding","status","keyword"].forEach(id=>{const e=$("#"+id);if(e.multiple)[...e.options].forEach(o=>o.selected=false);else if(e.tagName==="SELECT")e.selectedIndex=0;else e.value=""});try{localStorage.removeItem("sb-nationalities")}catch(e){}render()};
+// Nationality selections remain in page memory only; do not persist personal eligibility details in browser storage.
+$("#clear").onclick=()=>{["nationalities","residence","destination","level","field","funding","status","keyword"].forEach(id=>{const e=$("#"+id);if(e.multiple)[...e.options].forEach(o=>o.selected=false);else if(e.tagName==="SELECT")e.selectedIndex=0;else e.value=""});render()};
 init();
 </script>
 </body></html>
