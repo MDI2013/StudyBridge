@@ -13,6 +13,7 @@ const base = { verification_status:"verified", application_status:"open", eligib
 assert.equal(scholarshipNationalityFit(base, ["COD"], "").status, "possible_match");
 assert.equal(scholarshipNationalityFit(base, ["COD","CAN"], "").status, "unknown");
 assert.equal(scholarshipNationalityFit({...base, eligible_nationality_groups:["Non-EEA countries"], eligible_nationalities:[]}, ["COD"], "").status, "unknown");
+assert.equal(scholarshipNationalityFit({...base, eligible_nationality_groups:["African participating countries"]}, ["COD"], "").status, "possible_match");
 assert.equal(scholarshipNationalityFit({...base, excluded_nationalities:["COD"]}, ["COD"], "").status, "unknown");
 assert.equal(scholarshipNationalityFit({...base, application_status:"closed"}, ["COD"], "").status, "cycle_closed");
 assert.equal(scholarshipNationalityFit(base, [], "").status, "not_checked");
