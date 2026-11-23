@@ -837,6 +837,41 @@
       "verification_status": "verified",
       "notes": "For citizens or legal permanent residents of the Democratic Republic of the Congo who are enrolled at an ABF-approved accredited post-secondary institution in the DRC, demonstrate financial need, maintain satisfactory academic progress and are active, sincere Christian Scientists. Applicants must be members of The Mother Church and a Christian Science branch church or society and provide a qualifying reference. Approved schools are listed on the official page; applications for unlisted schools are denied unless ABF first assesses the school. Applications are reviewed individually and an award is not guaranteed. ABF pays approved institutions/hostels directly. Next application period opens 12 January 2027 and closes 15 February 2027. Confirm the current approved-school list and maximum award directly with ABF before applying.",
       "application_status": "upcoming"
+    },
+    {
+      "id": "sb-sch-rw-cmu-africa-mastercard-2027",
+      "title": "Mastercard Foundation Scholars Program at Carnegie Mellon University Africa 2027",
+      "provider": "Carnegie Mellon University Africa and the Mastercard Foundation",
+      "eligibility_scope": "unknown",
+      "eligible_nationalities": [],
+      "eligible_nationality_groups": [
+        "Talented, service-oriented young Africans facing significant social and economic barriers; the university's public programme page does not provide a complete country-by-country nationality or dual-citizenship rule"
+      ],
+      "excluded_nationalities": [],
+      "eligible_residencies": [],
+      "host_countries": [
+        "RWA"
+      ],
+      "study_levels": [
+        "postgraduate"
+      ],
+      "eligible_fields": [
+        "Master of Science in Information Technology",
+        "Master of Science in Electrical and Computer Engineering",
+        "Master of Science in Engineering Artificial Intelligence"
+      ],
+      "funding_type": "full",
+      "award_amount": null,
+      "currency": "USD",
+      "funding_coverage": "Full tuition and fees, health insurance, travel and basic living expenses, application preparation support, orientation, project and entrepreneurship support, plus leadership and career development. Confirm the individual award terms with CMU-Africa.",
+      "deadline": "2027-01-15",
+      "application_cycle": "Fall 2027 entry. Applications open 1 October 2026; early admission deadline 15 December 2026 and final admission deadline 15 January 2027. Scholarship consideration requires admission and completion of the financial-aid assessment form in the application portal; the scholarship has no separately published deadline on the reviewed official pages.",
+      "official_application_url": "https://www.africa.engineering.cmu.edu/admissions/how-to-apply/",
+      "official_source_url": "https://www.africa.engineering.cmu.edu/impact/mastercard-foundation-scholars.html",
+      "last_verified": "2026-11-23",
+      "verification_status": "needs_review",
+      "notes": "The official CMU-Africa page confirms three eligible master's programmes and comprehensive scholarship support. Applicants must first be admitted to a CMU-Africa degree programme; admission does not guarantee scholarship selection. The university's 2027 admissions page gives 15 December 2026 as the early deadline and 15 January 2027 as the final deadline. The public scholarship page describes eligible scholars as talented, service-oriented young people facing significant social and economic barriers but does not publish a complete country list, detailed nationality rules, residence rules or dual-citizenship treatment. Keep nationality eligibility as unknown until CMU-Africa confirms the applicant's specific nationality and circumstances. Applicants must complete the separate financial-aid assessment form in their application checklist.",
+      "application_status": "open"
     }
   ]
 }
