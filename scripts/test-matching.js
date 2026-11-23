@@ -11,9 +11,10 @@ assert.ok(fit.checks.includes("Teaching language has not been verified"));
 
 const base = { verification_status:"verified", application_status:"open", eligible_nationalities:["COD"], eligible_nationality_groups:[], excluded_nationalities:[], eligible_residencies:[] };
 assert.equal(scholarshipNationalityFit(base, ["COD"], "").status, "possible_match");
+assert.ok(scholarshipNationalityFit(base, ["COD"], "").notes.includes("Your selected nationality is explicitly listed by the provider."));
 assert.equal(scholarshipNationalityFit(base, ["COD","CAN"], "").status, "unknown");
 assert.equal(scholarshipNationalityFit({...base, eligible_nationality_groups:["Non-EEA countries"], eligible_nationalities:[]}, ["COD"], "").status, "unknown");
-assert.equal(scholarshipNationalityFit({...base, eligible_nationality_groups:["African participating countries"]}, ["COD"], "").status, "possible_match");
+assert.equal(scholarshipNationalityFit({...base, eligible_nationality_groups:["African participating countries"]}, ["COD"], "").status, "unknown");
 assert.equal(scholarshipNationalityFit({...base, excluded_nationalities:["COD"]}, ["COD"], "").status, "no_match");
 assert.equal(scholarshipNationalityFit({...base, eligible_nationalities:["KEN"], excluded_nationalities:["COD"]}, ["COD","KEN"], "").status, "unknown");
 assert.equal(scholarshipNationalityFit({...base, application_status:"closed"}, ["COD"], "").status, "cycle_closed");
