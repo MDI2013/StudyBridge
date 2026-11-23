@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "supported_levels": [
+    {
+      "id": "undergraduate",
+      "label": "Undergraduate",
+      "examples": [
+        "Bachelor's degree",
+        "Associate degree",
+        "Diploma"
+      ],
+      "note": "Specific qualification names and entry routes vary by country and institution."
+    },
+    {
+      "id": "postgraduate",
+      "label": "Postgraduate",
+      "examples": [
+        "Postgraduate diploma",
+        "Master's degree",
+        "Doctoral degree / PhD"
+      ],
+      "note": "Specific qualification names, research routes and entry requirements vary by country and institution."
+    }
+  ],
+  "usage": "These are StudyBridge search categories. Do not assume an institution offers every qualification in a category. Populate each university's degree_levels only after checking its official programme catalogue."
+}
