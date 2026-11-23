@@ -47,7 +47,7 @@
       "eligibility_scope": "unknown",
       "eligible_nationalities": [],
       "eligible_nationality_groups": [
-        "International/foreign applicants; individual nationality and dual-citizenship conditions require confirmation in the 2027 regulations"
+        "Foreign applicants nominated by a French higher education institution; nationality and dual-citizenship conditions must be checked in the 2027 regulations"
       ],
       "excluded_nationalities": [],
       "eligible_residencies": [],
@@ -69,14 +69,14 @@
       "funding_type": "stipend",
       "award_amount": null,
       "currency": "EUR",
-      "funding_coverage": "Scholarship benefits are defined in the official 2027 programme regulations; amount and covered items not transcribed into this record pending review of the regulations.",
+      "funding_coverage": "Master's award: €1,200 monthly allowance from January 2026 plus international and national transport, insurance, housing-search support and cultural activities. Doctoral award: €2,000 monthly allowance plus listed services. Tuition fees are not covered by the Eiffel programme.",
       "deadline": "2027-01-06",
       "application_cycle": "2027 campaign; applications submitted to Campus France by French higher education institutions",
       "official_application_url": "https://www.campusfrance.org/en/france-excellence-eiffel-scholarship-program",
       "official_source_url": "https://www.campusfrance.org/en/france-excellence-eiffel-scholarship-program",
       "last_verified": "2026-11-23",
       "verification_status": "verified",
-      "notes": "Master's applicants must be up to 29 years old; doctoral applicants up to 35, as stated on the programme page. Students cannot submit directly: French higher education institutions submit applications. Results expected from 12 April 2027. Confirm nationality and dual-citizenship conditions in the 2027 regulations before displaying a positive eligibility match.",
+      "notes": "Master's applicants must be up to 29 years old; doctoral applicants up to 35. Applications must be submitted by a French higher education institution; students cannot apply directly. Campus France lists 6 January 2027 as the institutional submission deadline, but students must confirm the earlier internal deadline with their chosen institution. The 2027 regulations must be checked for nationality and dual-citizenship conditions.",
       "application_status": "upcoming"
     },
     {
@@ -116,9 +116,11 @@
       "title": "DAAD Development-Related Postgraduate Courses (EPOS)",
       "provider": "German Academic Exchange Service (DAAD)",
       "eligibility_scope": "regional",
-      "eligible_nationalities": [],
+      "eligible_nationalities": [
+        "COD"
+      ],
       "eligible_nationality_groups": [
-        "Developing and newly industrialised countries listed in the official DAAD EPOS eligible-country list"
+        "Graduates from countries on the DAAD EPOS eligible-country list; DRC appears in the linked list, whose PDF identifies validity 2024–2025"
       ],
       "excluded_nationalities": [],
       "eligible_residencies": [],
@@ -129,7 +131,7 @@
         "postgraduate"
       ],
       "eligible_fields": [],
-      "funding_type": "partial",
+      "funding_type": "stipend",
       "award_amount": null,
       "currency": "EUR",
       "funding_coverage": "Monthly payment of €992 for graduates; doctoral candidates €1,400 per month from February 2026; health, accident and personal liability insurance contributions and travel allowance. Additional benefits may apply under conditions.",
@@ -138,8 +140,8 @@
       "official_application_url": "https://www.daad.de/en/information-services-for-higher-education-institutions/further-information-on-daad-programmes/epos/",
       "official_source_url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database.pdf?detail=50076777&origin=137&page=1&status=3",
       "last_verified": "2026-11-23",
-      "verification_status": "verified",
-      "notes": "For graduates from eligible developing/newly industrialised countries with at least two years of professional experience. Supports selected postgraduate courses in Germany, usually master's and in exceptional cases doctoral study. Funding duration 12-42 months depending on programme. Applicants must verify their country against the official eligible-country list and check the deadline for their chosen course.",
+      "verification_status": "needs_review",
+      "notes": "DAAD states that applicants must be graduates from its eligible-country list, hold a relevant Bachelor's degree (normally four years), have above-average academic results, and have at least two years of relevant professional experience after the Bachelor's degree. DRC appears in the DAAD-linked country-list PDF, but that PDF states validity 2024–2025; confirm the current cycle's country eligibility before treating DRC as confirmed. Funding is €992/month for graduates and €1,400/month for doctoral candidates from February 2026, plus insurance contributions and travel allowance; funding lasts 12–42 months depending on course. Only listed EPOS courses are funded, and each course has its own deadline. Apply directly to the selected course, not to DAAD initially.",
       "application_status": "varies"
     },
     {
@@ -244,7 +246,8 @@
         "TUV",
         "UGA",
         "VUT",
-        "ZMB"
+        "ZMB",
+        "SLB"
       ],
       "eligible_nationality_groups": [
         "Eligible Commonwealth countries listed by the CSC"
@@ -313,7 +316,7 @@
       "official_source_url": "https://cscuk.fcdo.gov.uk/shared/",
       "last_verified": "2026-11-23",
       "verification_status": "verified",
-      "notes": "Master's-level award. Applicants must be citizens/refugees of an eligible Commonwealth country and permanently resident in an eligible Commonwealth country; must meet academic, financial-need and return-home conditions. Must apply via a participating university and CSC Central; university admission is separate. The Democratic Republic of the Congo is not on the official eligible-country list. Dual-citizenship conditions should be confirmed with CSC where relevant.",
+      "notes": "Master's-level award for one-year approved courses at participating UK universities. Applicants must be citizens or refugees of an eligible Commonwealth country and permanently resident in an eligible Commonwealth country; must meet degree-classification, financial-need and return-home conditions. Applicants must not have studied or worked for one academic year or more in a high-income country. Apply to the university course separately and through CSC Central. DRC is not on the official eligible-country list. Dual-citizenship conditions should be confirmed with CSC where relevant.",
       "application_status": "open"
     },
     {
@@ -481,17 +484,17 @@
       ],
       "study_levels": [],
       "eligible_fields": [],
-      "funding_type": "unknown",
+      "funding_type": "partial",
       "award_amount": null,
       "currency": "USD",
-      "funding_coverage": "Award value and renewal conditions require confirmation from the official scholarship page.",
+      "funding_coverage": "New undergraduate students: $6,000 per academic year. New graduate students: $4,000 per academic year. Award is limited to non-resident tuition fees due and is offered to qualified applicants until funds are exhausted. Undergraduate applicants must meet admission requirements, pay non-resident tuition, enroll in at least 12 units, meet a 3.5 GPA requirement and live on campus for the first full academic year. Graduate applicants must meet admission requirements, pay non-resident tuition, enroll in at least 6 units and have a 3.5 GPA in the last 60 semester units.",
       "deadline": "2026-12-07",
       "application_cycle": "Spring 2027 application period: 26 October–7 December 2026; Fall 2027 application period: 26 April–6 July 2027",
       "official_application_url": "https://www.csusb.edu/international-education/international-admissions/newly-admitted-students",
       "official_source_url": "https://www.csusb.edu/international-education/international-admissions/newly-admitted-students",
       "last_verified": "2026-11-23",
       "verification_status": "needs_review",
-      "notes": "The university lists this merit award for newly admitted non-resident students and publishes application periods. The page snippet available for this record does not establish the award amount or confirm all international applicant categories. Confirm full eligibility and award terms before marking verified.",
+      "notes": "CSUSB's official flyer specifies award amounts and academic requirements for new undergraduate and graduate applicants. The university's international admissions page lists Spring 2027 new-student applications from 26 October to 7 December 2026, and Fall 2027 from 26 April to 6 July 2027. The flyer does not define all international applicant/residency classifications or dual-citizenship treatment; confirm with international@csusb.edu before marking nationality eligibility confirmed. Awards are limited and offered until funds are exhausted.",
       "application_status": "open"
     },
     {
@@ -516,14 +519,14 @@
       "funding_type": "tuition_only",
       "award_amount": null,
       "currency": "JPY",
-      "funding_coverage": "Full or half tuition fee coverage; approximately the top one-third of admitted students may be considered, subject to final programme details.",
+      "funding_coverage": "Full or one-half of tuition fees for selected international students enrolling in undergraduate, master's or professional degree programmes from the 2027 academic year. Approximately the top one-third of admitted students may receive support, based on entrance examination results, academic performance after enrolment and other criteria. Detailed rules remain subject to final university publication.",
       "deadline": null,
       "application_cycle": "Students enrolling from the 2027 academic year; detailed rules and application procedures are to be announced by the university",
       "official_application_url": "https://www.tohoku.ac.jp/en/news/images/382_new_scholarship_program_for_international_students_2027_poster.pdf",
       "official_source_url": "https://www.tohoku.ac.jp/en/news/images/382_new_scholarship_program_for_international_students_2027_poster.pdf",
       "last_verified": "2026-11-23",
       "verification_status": "needs_review",
-      "notes": "Official university poster announces a new programme for international students enrolling from 2027, covering full or half tuition for undergraduate, master's and professional degree programmes. It says detailed rules will be announced later; do not treat this as an open application or confirmed nationality-wide award yet.",
+      "notes": "Tohoku University's official international scholarship page now describes the International Excellence Scholarship as a 2027 programme for undergraduate, master's and professional degree students, with full or half tuition support for approximately the top one-third of eligible students. Final rules and application procedures are still subject to university publication; do not imply that all international applicants qualify or that a separate application is open.",
       "application_status": "not_announced"
     }
   ]
