@@ -1,10 +1,12 @@
-name: Validate StudyBridge scholarship data
+name: Validate StudyBridge data
 
 on:
   push:
     paths:
       - "data/scholarships.json"
+      - "data/programmes.json"
       - "scripts/validate-scholarships.js"
+      - "scripts/validate-programmes.js"
       - ".github/workflows/validate-scholarships.yml"
   pull_request:
     paths:
@@ -24,3 +26,5 @@ jobs:
           node-version: "22"
       - name: Validate scholarship records
         run: node scripts/validate-scholarships.js
+      - name: Validate programme records
+        run: node scripts/validate-programmes.js
