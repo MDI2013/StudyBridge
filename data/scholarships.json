@@ -37,7 +37,8 @@
     "verification_status": "verified | needs_review | expired | closed",
     "notes": "Relevant official conditions, including dual/multiple-citizenship restrictions and uncertainty",
     "eligible_nationality_groups": "Array of official provider-defined nationality groups or region/category labels (for example non-EEA or DAC-listed countries); do not infer group membership without an authoritative classification source",
-    "application_status": "open | upcoming | closed | not_announced | varies | unknown; distinguish cycle availability from eligibility verification"
+    "application_status": "open | upcoming | closed | not_announced | varies | unknown; distinguish cycle availability from eligibility verification",
+    "dual_citizenship_policy": "Optional explicit provider rule: provider_unspecified | non_african_disqualifies | single_nationality_only | manual_confirmation_required. Do not infer; matching logic uses only documented rules."
   },
   "scholarships": [
     {
