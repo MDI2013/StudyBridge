@@ -10,7 +10,8 @@ main{max-width:1080px;margin:34px auto;padding:0 20px}.eyebrow{font-size:.76rem;
 .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}button{border:0;border-radius:9px;background:var(--brand);color:white;padding:10px 15px;font:inherit;font-weight:700;cursor:pointer}button.secondary{background:#e9eef6;color:var(--ink)}button.danger{background:#fff0f0;color:#9b2222}
 .notice{background:#fff8e8;border:1px solid #f1d79a;border-radius:12px;padding:13px 15px;font-size:.9rem}.list{display:grid;gap:12px}.item{background:white;border:1px solid var(--line);border-radius:13px;padding:16px;display:grid;grid-template-columns:1fr auto;gap:10px}.item h3{margin:0 0 4px}.tag{display:inline-block;padding:3px 8px;border-radius:999px;background:#edf3fb;color:#244b82;font-size:.78rem;font-weight:700}.tag.submitted{background:#e8f6ef;color:#17643f}.tag.rejected{background:#fff0f0;color:#9b2222}.meta{color:var(--muted);font-size:.88rem}.itemActions{display:flex;gap:8px;flex-wrap:wrap;align-items:start}.itemActions button{font-size:.83rem;padding:7px 10px}.empty{padding:25px;border:1px dashed #cbd5e1;border-radius:12px;color:var(--muted);text-align:center}footer{border-top:1px solid var(--line);margin:30px 0;padding:18px 0;color:var(--muted);font-size:.85rem}
 @media(max-width:650px){.grid{grid-template-columns:1fr}.item{grid-template-columns:1fr}}
-</style></head><body>
+</style>
+<link rel="stylesheet" href="assets/site.css"></head><body>
 <header><a class="brand" href="index.html">StudyBridge</a><nav class="nav"><a href="index.html">Universities</a><a href="profile.html">My profile</a><a href="programmes.html">Programmes</a><a href="scholarships.html">Scholarships</a></nav></header>
 <main>
 <div class="eyebrow">Stay organised</div><h1>Your application tracker.</h1><p>Keep your programme and scholarship applications, deadlines and next actions in one place. You control this list.</p>
@@ -79,4 +80,5 @@ $("importFile").addEventListener("change",async ev=>{
 });
 $("clearAll").addEventListener("click",()=>{if(confirm("Delete every application tracker entry from this browser? This cannot be undone unless you exported a backup.")){entries=[];persist();resetForm();render();$("formStatus").textContent="All tracker entries cleared."; }});
 load();render();
-</script></body></html>
+</script><script src="assets/site.js" defer></script>
+</body></html>
