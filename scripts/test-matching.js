@@ -18,7 +18,7 @@ assert.equal(scholarshipNationalityFit(sciencesPo, ["COD","CAN"], "").status, "n
 assert.equal(scholarshipNationalityFit(sciencesPo, ["COD","KEN"], "").status, "possible_match");
 assert.equal(scholarshipNationalityFit({...base, eligible_nationality_groups:["Non-EEA countries"], eligible_nationalities:[]}, ["COD"], "").status, "unknown");
 assert.equal(scholarshipNationalityFit({...base, eligible_nationality_groups:["African participating countries"], eligible_nationalities:[]}, ["COD"], "").status, "unknown");
-assert.equal(scholarshipNationalityFit({...base, excluded_nationalities:["COD"]}, ["COD"], "").status, "no_match");
+assert.equal(scholarshipNationalityFit({...base, eligible_nationalities:[], excluded_nationalities:["COD"]}, ["COD"], "").status, "no_match");
 assert.equal(scholarshipNationalityFit({...base, eligible_nationalities:["KEN"], excluded_nationalities:["COD"]}, ["COD","KEN"], "").status, "unknown");
 assert.equal(scholarshipNationalityFit({...base, application_status:"closed"}, ["COD"], "").status, "cycle_closed");
 assert.equal(scholarshipNationalityFit(base, [], "").status, "not_checked");
