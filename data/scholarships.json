@@ -801,6 +801,42 @@
       "verification_status": "verified",
       "notes": "For African citizens applying to eligible full-time one-year postgraduate courses at Cambridge under the programme themes of climate resilience and sustainability. Applicants must normally be resident in an African country; the official programme states an exception for temporary absence for study or work and for applicants with refugee or internally displaced status. The scholarship application is integrated into the course application and applicants opt in for funding. Course-specific funding deadlines vary, generally falling in early December or January; check the exact course deadline before applying. The official fee-waiver page includes Congo (Dem. Rep.) among countries whose applicants receive an automatic application-fee waiver, but the general waiver request deadline for countries not on that list was 20 November 2026. Admission and scholarship selection are competitive; meeting nationality and residence criteria does not guarantee an award. Confirm dual/multiple-citizenship cases with the programme.",
       "application_status": "open"
+    },
+    {
+      "id": "sb-sch-cd-albert-baker-2027",
+      "title": "Albert Baker Scholarship – Democratic Republic of the Congo",
+      "provider": "The Albert Baker Fund",
+      "eligibility_scope": "specific_nationalities",
+      "eligible_nationalities": [
+        "COD"
+      ],
+      "eligible_nationality_groups": [],
+      "excluded_nationalities": [],
+      "eligible_residencies": [
+        "COD"
+      ],
+      "host_countries": [
+        "COD"
+      ],
+      "study_levels": [
+        "undergraduate",
+        "postgraduate"
+      ],
+      "eligible_fields": [
+        "Degree, certificate or vocational study at an ABF-approved post-secondary institution in the DRC"
+      ],
+      "funding_type": "other",
+      "award_amount": null,
+      "currency": "USD",
+      "funding_coverage": "Payment toward tuition, academic fees, examination fees and approved student-hostel fees at approved institutions. Payments are made directly to the school or hostel; students do not receive cash. Maximum award amounts and individual coverage must be confirmed with ABF.",
+      "deadline": "2027-02-15",
+      "application_cycle": "Recurring application windows. The next published window is 12 January–15 February 2027; later windows are 13 March–15 April, 15 June–31 July, and 2 September–31 October. Only one scholarship may be received per academic year.",
+      "official_application_url": "https://www.albertbakerfund.org/scholarships/drc/",
+      "official_source_url": "https://www.albertbakerfund.org/scholarships/drc/",
+      "last_verified": "2026-11-23",
+      "verification_status": "verified",
+      "notes": "For citizens or legal permanent residents of the Democratic Republic of the Congo who are enrolled at an ABF-approved accredited post-secondary institution in the DRC, demonstrate financial need, maintain satisfactory academic progress and are active, sincere Christian Scientists. Applicants must be members of The Mother Church and a Christian Science branch church or society and provide a qualifying reference. Approved schools are listed on the official page; applications for unlisted schools are denied unless ABF first assesses the school. Applications are reviewed individually and an award is not guaranteed. ABF pays approved institutions/hostels directly. Next application period opens 12 January 2027 and closes 15 February 2027. Confirm the current approved-school list and maximum award directly with ABF before applying.",
+      "application_status": "upcoming"
     }
   ]
 }
