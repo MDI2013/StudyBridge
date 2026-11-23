@@ -23,6 +23,13 @@ on:
       - "data/universities.json"
       - "scripts/validate-scholarships.js"
       - "scripts/validate-programmes.js"
+      - "scripts/validate-universities.js"
+      - "scripts/validate-pages.js"
+      - "index.html"
+      - "scholarships.html"
+      - "programmes.html"
+      - "profile.html"
+      - "tracker.html"
       - ".github/workflows/validate-scholarships.yml"
 
 jobs:
