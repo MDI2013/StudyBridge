@@ -25,6 +25,7 @@ button.secondary{background:white;color:var(--ink);border:1px solid var(--line)}
 footer{padding:28px 0;color:var(--muted);font-size:.85rem}
 @media(max-width:650px){.filters,.grid{grid-template-columns:1fr}.wrap{padding:16px}.panel,.card{padding:14px}}
 </style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <div class="wrap">
@@ -120,4 +121,5 @@ $("#apply").onclick=render;
 $("#clear").onclick=()=>{["nationalities","residence","destination","level","field","funding","status","keyword"].forEach(id=>{const e=$("#"+id);if(e.multiple)[...e.options].forEach(o=>o.selected=false);else if(e.tagName==="SELECT")e.selectedIndex=0;else e.value=""});render()};
 init();
 </script>
+<script src="assets/site.js" defer></script>
 </body></html>
