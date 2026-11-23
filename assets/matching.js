@@ -64,10 +64,15 @@
     const groups = record.eligible_nationality_groups || [];
     const excludedSelected = selected.filter(code => excluded.includes(code));
     const includedSelected = selected.filter(code => eligible.includes(code));
-    if (excludedSelected.length) {
-      return { status:"unknown", label:"Possible nationality restriction — confirm with provider",
+    if (excludedSelected.length && !includedSelected.length) {
+      return { status:"no_match", label:"Selected nationality is excluded",
         notes:["A selected nationality appears in the provider's exclusion list: " + excludedSelected.join(", ") + ".",
-          "Multiple-citizenship rules can affect the result; StudyBridge cannot resolve this automatically."] };
+          "If you hold another nationality, check the provider's dual-citizenship rules before drawing a final conclusion."] };
+    }
+    if (excludedSelected.length && includedSelected.length) {
+      return { status:"unknown", label:"Multiple-nationality rules need confirmation",
+        notes:["One selected nationality appears in the exclusion list and another appears in the eligible list.",
+          "The provider's rules for dual or multiple citizenship must be confirmed directly."] };
     }
     if (groups.length && !eligible.includes("ALL") && !includedSelected.length) {
       return { status:"unknown", label:"Nationality group requires manual verification",
