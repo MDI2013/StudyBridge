@@ -21,6 +21,7 @@ input,select{font:inherit;width:100%;padding:11px 12px;border:1px solid #cbd5e1;
 footer{color:var(--muted);font-size:.85rem;margin:34px 0;padding:18px 0;border-top:1px solid var(--line)}.empty{background:white;border:1px dashed #cbd5e1;border-radius:12px;padding:24px;color:var(--muted);grid-column:1/-1}
 @media(max-width:760px){.filters{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}}@media(max-width:480px){.filters{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}}
 </style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <header><a class="brand" href="index.html">StudyBridge</a><nav class="nav" aria-label="Main navigation"><a href="index.html">Home</a><a href="scholarships.html">Scholarships</a><a href="programmes.html" aria-current="page">Programmes</a><a href="profile.html">My profile</a><a href="tracker.html">Application tracker</a></nav></header>
@@ -94,5 +95,6 @@ $("#keyword").addEventListener("keydown",e=>{if(e.key==="Enter")render()});
 $("#clear").addEventListener("click",()=>{["keyword","country","level","field","status"].forEach(id=>$("#"+id).value="");render()});
 init();
 </script>
+<script src="assets/site.js" defer></script>
 </body>
 </html>
