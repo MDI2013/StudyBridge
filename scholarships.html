@@ -63,8 +63,9 @@ function eligibleStatus(r,selected,residence){
  if(selected.some(x=>excluded.includes(x)))return "Possible exclusion — check provider rules";
  const matched=eligible.includes("ALL")||selected.some(x=>eligible.includes(x));
  if(!matched)return r.eligible_nationality_groups?.length?"Nationality group must be checked":"No confirmed nationality match";
- if(r.id==="sb-sch-uk-commonwealth-shared-2027"&&!residence)return "Nationality match — residence requirement not checked";
- if(r.id==="sb-sch-uk-commonwealth-shared-2027"&&residence&&!r.eligible_residencies.includes(residence))return "Residence does not match listed eligible countries";
+ const residencyRules=r.eligible_residencies||[];
+ if(residencyRules.length&&!residence)return "Nationality match — residence requirement not checked";
+ if(residencyRules.length&&residence&&!residencyRules.includes("ALL")&&!residencyRules.includes(residence))return "Residence does not match listed eligible countries";
  return "Nationality match — other conditions apply";
 }
 function render(){
