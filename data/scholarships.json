@@ -528,6 +528,36 @@
       "verification_status": "needs_review",
       "notes": "Tohoku University's official international scholarship page now describes the International Excellence Scholarship as a 2027 programme for undergraduate, master's and professional degree students, with full or half tuition support for approximately the top one-third of eligible students. Final rules and application procedures are still subject to university publication; do not imply that all international applicants qualify or that a separate application is open.",
       "application_status": "not_announced"
+    },
+    {
+      "id": "sb-sch-mastercard-foundation-partner-2027",
+      "title": "Mastercard Foundation Scholars Program (partner institution applications)",
+      "provider": "The Mastercard Foundation and participating partner institutions",
+      "eligibility_scope": "unknown",
+      "eligible_nationalities": [],
+      "eligible_nationality_groups": [
+        "Eligibility is determined by each participating partner institution; country and applicant-group rules vary by institution"
+      ],
+      "excluded_nationalities": [],
+      "eligible_residencies": [],
+      "host_countries": [],
+      "study_levels": [
+        "undergraduate",
+        "postgraduate"
+      ],
+      "eligible_fields": [],
+      "funding_type": "other",
+      "award_amount": null,
+      "currency": null,
+      "funding_coverage": "Comprehensive support may include tuition, accommodation, books and scholastic materials, mentoring, counselling, leadership development and, where necessary, a return air ticket. Exact support is determined by the partner institution.",
+      "deadline": null,
+      "application_cycle": "Ongoing programme; partner institutions set their own application windows, eligibility rules and deadlines. Check each institution's current call.",
+      "official_application_url": "https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/where-to-apply/",
+      "official_source_url": "https://mastercardfdn.org/en/frequently-asked-questions/",
+      "last_verified": "2026-11-23",
+      "verification_status": "needs_review",
+      "notes": "This is a partner-managed scholarship programme, not one central application. Applicants must apply directly to a participating institution and follow that institution's current process. Admission to a partner university does not guarantee scholarship selection. The Foundation confirms support at secondary, undergraduate and master's levels, but not PhD level. The Foundation lists partners in Africa and other regions; do not infer eligibility from nationality or residence alone. Verify the current institution-specific call, award package, eligible nationalities, residence conditions and dual-citizenship rules before applying. The Foundation warns that it does not solicit payments or application fees for scholarship recruitment.",
+      "application_status": "varies"
     }
   ]
 }
