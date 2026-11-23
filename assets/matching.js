@@ -69,7 +69,7 @@
         notes:["A selected nationality appears in the provider's exclusion list: " + excludedSelected.join(", ") + ".",
           "Multiple-citizenship rules can affect the result; StudyBridge cannot resolve this automatically."] };
     }
-    if (groups.length && !eligible.includes("ALL")) {
+    if (groups.length && !eligible.includes("ALL") && !includedSelected.length) {
       return { status:"unknown", label:"Nationality group requires manual verification",
         notes:["The provider uses a nationality group or country list that has not been mapped to each selected nationality.",
           "Check the official eligible-country list and dual-citizenship rules."] };
