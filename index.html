@@ -195,7 +195,7 @@ tbody th{color:var(--mut);font-weight:500;white-space:nowrap}
         <button type="button" class="sb-globe-marker" data-globe-country="AU" style="--x:79%;--y:75%" aria-label="Explore Australia">AU</button>
         <button type="button" class="sb-globe-marker" data-globe-country="JP" style="--x:82%;--y:43%" aria-label="Explore Japan">JP</button>
       </div>
-      <div class="sb-globe-caption"><span class="sb-live-dot"></span> Explore study destinations</div>
+      <div class="sb-globe-caption"><span class="sb-live-dot"></span> Drag to rotate · Explore study destinations</div>
       <button type="button" class="sb-globe-motion" id="sb-globe-motion" aria-pressed="false">Ⅱ Pause globe</button>
     </div>
     <div class="sb-world-side">
@@ -388,6 +388,27 @@ $("#pl").onclick=e=>{const b=e.target.closest("[data-k]");if(b)country(b.dataset
 $("#pp").onclick=e=>{const b=e.target.closest("[data-go]");if(!b)return;st.c=b.dataset.go;sc.value=st.c;c2.value=st.c;view("unis");list();scrollTo(0,0)};
 document.addEventListener("click",e=>{const c=e.target.closest(".card");if(c)return open(+c.dataset.id);const v=e.target.closest("[data-v]");if(v)return view(v.dataset.v);const g=e.target.closest("[data-gc]");if(g){view("pays");country(g.dataset.gc)}});
 document.querySelectorAll("[data-globe-country]").forEach(button=>button.addEventListener("click",()=>country(button.dataset.globeCountry)));
+const globeStage=document.querySelector(".sb-globe-stage");
+const globeSurface=$("#sb-globe-surface");
+if(globeStage&&globeSurface){
+ let globeTurn=0,dragStartX=0,turnStart=0,dragging=false;
+ const paintGlobe=()=>globeSurface.setAttribute("transform","translate("+globeTurn+" 0)");
+ globeStage.style.cursor="grab";
+ globeStage.addEventListener("pointerdown",e=>{
+  if(e.target.closest("button"))return;
+  dragging=true;dragStartX=e.clientX;turnStart=globeTurn;
+  globeStage.setPointerCapture(e.pointerId);globeStage.style.cursor="grabbing";
+ });
+ globeStage.addEventListener("pointermove",e=>{
+  if(!dragging)return;
+  globeTurn=Math.max(-150,Math.min(150,turnStart+(e.clientX-dragStartX)*.72));
+  paintGlobe();
+ });
+ const stopGlobeDrag=()=>{dragging=false;globeStage.style.cursor="grab"};
+ globeStage.addEventListener("pointerup",stopGlobeDrag);
+ globeStage.addEventListener("pointercancel",stopGlobeDrag);
+ globeStage.addEventListener("lostpointercapture",stopGlobeDrag);
+}
 const globeMotion=$("#sb-globe-motion");
 if(globeMotion)globeMotion.addEventListener("click",()=>{
   const paused=globeMotion.getAttribute("aria-pressed")!=="true";
