@@ -324,7 +324,7 @@ $("#dc").onclick=e=>{
 };
 save();applyLang();
 const requestedView=new URLSearchParams(location.search).get("view");
-if(requestedView==="unis")view("unis");
+if(["home","unis","pays","fav","plan"].includes(requestedView))view(requestedView);
 </script>
 <script src="assets/site.js" defer></script>
 </body>
