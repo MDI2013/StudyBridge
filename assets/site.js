@@ -19,9 +19,18 @@ function setupNav(){
  nav.innerHTML=items.map(([label,href,key,active])=>'<a href="'+href+'"'+(active?' aria-current="page"':'')+'>'+label+'</a>').join("");
  nav.classList.add("sb-site-nav");
  let toggle=header.querySelector(".sb-menu-toggle");
- if(!toggle){toggle=document.createElement("button");toggle.type="button";toggle.className="sb-menu-toggle";toggle.setAttribute("aria-controls",nav.id);toggle.setAttribute("aria-expanded","false");toggle.innerHTML='<span aria-hidden="true">☰</span><span>Menu</span>';nav.parentNode.insertBefore(toggle,nav);}
- toggle.addEventListener("click",()=>{const open=nav.classList.toggle("is-open");toggle.setAttribute("aria-expanded",String(open));});
- nav.addEventListener("click",()=>{nav.classList.remove("is-open");toggle.setAttribute("aria-expanded","false");});
+ if(!toggle){toggle=document.createElement("button");toggle.type="button";toggle.className="sb-menu-toggle";toggle.setAttribute("aria-controls",nav.id);nav.parentNode.insertBefore(toggle,nav);}
+ const setMenu=(open)=>{
+  nav.classList.toggle("is-open",open);
+  toggle.setAttribute("aria-expanded",String(open));
+  toggle.setAttribute("aria-label",open?"Close navigation menu":"Open navigation menu");
+  toggle.innerHTML='<span aria-hidden="true">'+(open?"✕":"☰")+'</span>';
+ };
+ setMenu(false);
+ toggle.addEventListener("click",()=>setMenu(!nav.classList.contains("is-open")));
+ nav.addEventListener("click",()=>setMenu(false));
+ document.addEventListener("click",e=>{if(!header.contains(e.target))setMenu(false);});
+ document.addEventListener("keydown",e=>{if(e.key==="Escape")setMenu(false);});
 }
 function setupBackTop(){
  if(document.querySelector(".sb-back-top"))return;
