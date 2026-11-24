@@ -34,7 +34,7 @@ function setupNav(){
 }
 function setupBackTop(){
  if(document.querySelector(".sb-back-top"))return;
- const b=document.createElement("button");b.type="button";b.className="sb-back-top";b.setAttribute("aria-label","Back to top");b.title="Back to top";b.textContent="↑";document.body.appendChild(b);
+ const b=document.createElement("button");b.type="button";b.className="sb-back-top";b.setAttribute("aria-label","Back to top");b.title="Back to top";b.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>';document.body.appendChild(b);
  const update=()=>b.classList.toggle("is-visible",window.scrollY>420);
  window.addEventListener("scroll",update,{passive:true});update();
  b.addEventListener("click",()=>window.scrollTo({top:0,behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"}));
