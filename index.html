@@ -322,7 +322,9 @@ $("#dc").onclick=e=>{
   else if(b.dataset.pays){$("#dg").close();view("pays");country(b.dataset.pays);scrollTo(0,0)}
   else if("close" in b.dataset)$("#dg").close();
 };
-save();applyLang();\nconst requestedView=new URLSearchParams(location.search).get("view");\nif(requestedView==="unis")view("unis");
+save();applyLang();
+const requestedView=new URLSearchParams(location.search).get("view");
+if(requestedView==="unis")view("unis");
 </script>
 <script src="assets/site.js" defer></script>
 </body>
