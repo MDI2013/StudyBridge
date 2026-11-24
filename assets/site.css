@@ -455,3 +455,39 @@ body:has(main #results) select{
  .sb-world-side .pays{margin:12px 0 4px!important}
  .sb-globe-caption{left:2%;bottom:-22px;font-size:.78rem}
 }
+
+
+/* v2.1: consistent back-to-top control across every page */
+button.sb-back-top{
+ position:fixed!important;
+ right:max(18px,env(safe-area-inset-right,18px))!important;
+ bottom:max(18px,env(safe-area-inset-bottom,18px))!important;
+ z-index:1100!important;
+ box-sizing:border-box!important;
+ width:48px!important;min-width:48px!important;max-width:48px!important;
+ height:48px!important;min-height:48px!important;max-height:48px!important;
+ padding:0!important;margin:0!important;
+ display:grid!important;place-items:center!important;
+ border:1px solid rgba(255,255,255,.18)!important;
+ border-radius:50%!important;
+ background:#14213d!important;color:#fff!important;
+ box-shadow:0 5px 18px rgba(8,20,42,.22)!important;
+ font-size:0!important;line-height:1!important;
+ opacity:0;visibility:hidden;transform:translateY(8px);
+ transition:opacity .18s ease,transform .18s ease,visibility .18s ease;
+ -webkit-tap-highlight-color:transparent;
+}
+button.sb-back-top.is-visible{opacity:1;visibility:visible;transform:translateY(0)}
+button.sb-back-top svg{display:block!important;width:23px!important;height:23px!important;overflow:visible}
+button.sb-back-top svg path{
+ fill:none!important;stroke:currentColor!important;stroke-width:2.5!important;
+ stroke-linecap:round!important;stroke-linejoin:round!important;
+}
+button.sb-back-top:active{transform:translateY(0) scale(.96)}
+@media(max-width:720px){
+ button.sb-back-top{
+  right:max(16px,env(safe-area-inset-right,16px))!important;
+  bottom:max(16px,env(safe-area-inset-bottom,16px))!important;
+  width:48px!important;height:48px!important;
+ }
+}
