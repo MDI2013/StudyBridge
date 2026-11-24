@@ -138,31 +138,17 @@ tbody th{color:var(--mut);font-weight:500;white-space:nowrap}
 </div>
 
 <div class="view" id="v-pays" hidden><h2 class="pt" data-i="pP"></h2><p class="pd" data-i="pPd"></p>
-  <section class="sb-world-explorer" aria-label="Interactive world destination explorer">
-    <div class="sb-globe-stage">
-      <div class="sb-globe-halo"></div>
-      <div class="sb-globe-art" id="sb-globe-art">
-        <img src="assets/studybridge-globe.webp" alt="A realistic view of Earth at night, with the Atlantic Ocean, the Americas, Europe and Africa visible">
-      </div>
-      <div class="sb-globe-markers" id="sb-globe-markers" aria-label="Choose a destination">
-        <button type="button" class="sb-globe-marker" data-globe-country="CA" style="--x:33%;--y:36%" aria-label="Explore Canada">CA</button>
-        <button type="button" class="sb-globe-marker" data-globe-country="US" style="--x:32%;--y:43%" aria-label="Explore United States">US</button>
-        <button type="button" class="sb-globe-marker" data-globe-country="MA" style="--x:68%;--y:47%" aria-label="Explore Morocco">MA</button>
-        <button type="button" class="sb-globe-marker" data-globe-country="FR" style="--x:70%;--y:39%" aria-label="Explore France">FR</button>
-        <button type="button" class="sb-globe-marker" data-globe-country="DE" style="--x:76%;--y:37%" aria-label="Explore Germany">DE</button>
-        <button type="button" class="sb-globe-marker" data-globe-country="UK" style="--x:65%;--y:37%" aria-label="Explore United Kingdom">UK</button>
-        <button type="button" class="sb-globe-marker" data-globe-country="ES" style="--x:65%;--y:43%" aria-label="Explore Spain">ES</button>
-        <button type="button" class="sb-globe-marker" data-globe-country="NL" style="--x:72%;--y:35%" aria-label="Explore Netherlands">NL</button>AU</button>JP</button>
-      </div>
-      <div class="sb-globe-caption"><span class="sb-live-dot"></span> Explore study destinations</div>
+  <section class="sb-world-explorer" aria-label="Interactive 3D world destination explorer">
+    <div class="sb-globe-stage"><div class="sb-globe-halo"></div>
+      <div id="sb-globe" class="sb-globe-canvas" role="img" aria-label="Interactive three-dimensional Earth globe. Drag to rotate and select a destination."></div>
+      <div class="sb-globe-caption"><span class="sb-live-dot"></span> Drag to rotate · Select a destination</div>
     </div>
     <div class="sb-world-side">
       <span class="sb-world-kicker">YOUR NEXT CHAPTER STARTS HERE</span>
       <h3>Where would you like to study?</h3>
-      <p>Choose a glowing destination on the globe or select a country below to explore its study guide.</p>
+      <p>Rotate the Earth and choose a destination, or select a country below.</p>
       <div class="sb-world-selected" id="sb-world-selected"><span class="sb-world-selected-icon">🌍</span><span><b>Select a destination</b><small>Country details will appear here</small></span></div>
-      <div class="sb-world-hint">Available destination guides</div>
-      <div class="pays" id="pl"></div>
+      <div class="sb-world-hint">Available destination guides</div><div class="pays" id="pl"></div>
     </div>
   </section>
   <div class="panel" id="pp"></div>
