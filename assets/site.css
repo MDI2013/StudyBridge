@@ -161,3 +161,45 @@ button.secondary,button.alt,.actions button.secondary,.links button.secondary{
   }
   main,.wrap>main{margin-top:22px}
 }
+
+/* v1.3: one consistent two-row header on every page */
+header,.top{
+ width:100%;max-width:1120px;margin:0 auto!important;
+ display:grid!important;grid-template-columns:minmax(0,1fr) auto;
+ grid-template-areas:"brand language" "nav nav";
+ align-items:center;gap:10px 16px;padding:14px 20px!important;
+ background:var(--sb-card)!important;border-bottom:1px solid var(--sb-line)!important;
+}
+header .brand,header .logo,.top .brand{grid-area:brand;align-self:center}
+header #ll{grid-area:language;justify-self:end;max-width:160px}
+header nav,.top nav,nav.sb-site-nav{
+ grid-area:nav;display:flex!important;align-items:center;justify-content:flex-start;
+ flex-wrap:wrap;gap:7px;width:100%;min-width:0;
+ background:transparent!important;border:0!important;border-radius:0!important;padding:0!important;
+}
+header nav a,header nav button,.top nav a,.top nav button{
+ display:inline-flex;align-items:center;justify-content:center;min-height:40px;
+ padding:9px 13px!important;border-radius:999px!important;
+ border:1px solid var(--sb-line)!important;background:var(--sb-card)!important;
+ color:var(--sb-muted)!important;font-weight:650;text-decoration:none;white-space:nowrap;
+}
+header nav a[aria-current="page"],.top nav a[aria-current="page"]{
+ background:var(--sb-teal)!important;border-color:var(--sb-teal)!important;color:#fff!important;
+}
+.notice{
+ background:#fff4d6!important;color:#493817!important;border:1px solid #e8cf8c!important;
+ border-radius:12px;padding:13px 15px;
+}
+.notice b{color:#33240c!important}
+@media(prefers-color-scheme:dark){
+ .notice{background:#352b19!important;color:#f5e7c5!important;border-color:#705b32!important}
+ .notice b{color:#fff2cf!important}
+}
+:root[data-theme="dark"] .notice{background:#352b19!important;color:#f5e7c5!important;border-color:#705b32!important}
+:root[data-theme="dark"] .notice b{color:#fff2cf!important}
+@media(max-width:720px){
+ header,.top{grid-template-columns:minmax(0,1fr) auto;padding:12px 16px!important}
+ header nav,.top nav,nav.sb-site-nav{justify-content:flex-start;gap:6px}
+ header nav a,.top nav a{white-space:normal;text-align:left;min-height:38px;padding:8px 11px!important}
+ header #ll{max-width:130px}
+}
