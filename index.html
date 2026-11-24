@@ -138,7 +138,61 @@ tbody th{color:var(--mut);font-weight:500;white-space:nowrap}
 </div>
 
 <div class="view" id="v-pays" hidden><h2 class="pt" data-i="pP"></h2><p class="pd" data-i="pPd"></p>
-  <div class="pays" id="pl"></div>
+  <section class="sb-world-explorer" aria-label="Interactive world destination explorer">
+    <div class="sb-globe-stage">
+      <div class="sb-globe-halo"></div>
+      <div class="sb-globe-art" id="sb-globe-art" role="img" aria-label="Animated globe illustration. Select a destination using the country markers.">
+        <svg viewBox="0 0 520 520" aria-hidden="true">
+          <defs>
+            <radialGradient id="sb-ocean" cx="34%" cy="28%" r="75%"><stop offset="0" stop-color="#286d83"/><stop offset=".55" stop-color="#16435f"/><stop offset="1" stop-color="#0b1b32"/></radialGradient>
+            <linearGradient id="sb-land" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#75d2bd"/><stop offset="1" stop-color="#268d86"/></linearGradient>
+            <clipPath id="sb-sphere-clip"><circle cx="260" cy="260" r="218"/></clipPath>
+          </defs>
+          <circle cx="260" cy="260" r="224" fill="#4fc3b9" opacity=".12"/>
+          <circle cx="260" cy="260" r="218" fill="url(#sb-ocean)" stroke="#65d8cb" stroke-opacity=".65" stroke-width="2"/>
+          <g clip-path="url(#sb-sphere-clip)">
+            <g class="sb-globe-grid" fill="none" stroke="#9bded7" stroke-opacity=".25" stroke-width="1.2">
+              <ellipse cx="260" cy="260" rx="205" ry="74"/><ellipse cx="260" cy="260" rx="205" ry="145"/>
+              <ellipse cx="260" cy="260" rx="105" ry="218"/><ellipse cx="260" cy="260" rx="172" ry="218"/>
+              <path d="M42 260H478M60 180H460M60 340H460"/>
+            </g>
+            <g fill="url(#sb-land)" stroke="#a5e6d6" stroke-opacity=".35" stroke-width="1.2">
+              <path d="M105 112l31-24 39 5 15 21 33 7 12 23-18 22-35 3-12 27-28 8-16 36-23-11-9-32-25-17 9-29-13-21z"/>
+              <path d="M205 245l30 10 18 32-8 41-20 39-9 48-21 25-13-34 7-41-15-40 8-44z"/>
+              <path d="M275 104l33-20 47 9 22 21 40 7 21 31-17 22-34-4-20 24-34-7-17 20-30-12-29 12-20-22 9-29-18-19z"/>
+              <path d="M310 218l35 3 27 24 5 37-21 24-8 48-29 36-20-21 7-42-19-36 6-38z"/>
+              <path d="M404 352l31 10 14 27-17 25-33-7-15-25z"/>
+              <path d="M120 65l27-10 22 12-9 17-30 2z"/>
+            </g>
+            <path d="M260 42c-90 0-164 56-199 136 48-54 118-86 199-86s151 32 199 86C424 98 350 42 260 42z" fill="#fff" opacity=".08"/>
+          </g>
+          <circle cx="260" cy="260" r="218" fill="none" stroke="#9ce8df" stroke-opacity=".25" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="sb-globe-markers" id="sb-globe-markers" aria-label="Choose a destination">
+        <button type="button" class="sb-globe-marker" data-globe-country="CA" style="--x:27%;--y:32%" aria-label="Explore Canada">CA</button>
+        <button type="button" class="sb-globe-marker" data-globe-country="US" style="--x:29%;--y:45%" aria-label="Explore United States">US</button>
+        <button type="button" class="sb-globe-marker" data-globe-country="MA" style="--x:48%;--y:51%" aria-label="Explore Morocco">MA</button>
+        <button type="button" class="sb-globe-marker" data-globe-country="FR" style="--x:53%;--y:43%" aria-label="Explore France">FR</button>
+        <button type="button" class="sb-globe-marker" data-globe-country="DE" style="--x:57%;--y:40%" aria-label="Explore Germany">DE</button>
+        <button type="button" class="sb-globe-marker" data-globe-country="UK" style="--x:49%;--y:38%" aria-label="Explore United Kingdom">UK</button>
+        <button type="button" class="sb-globe-marker" data-globe-country="ES" style="--x:49%;--y:48%" aria-label="Explore Spain">ES</button>
+        <button type="button" class="sb-globe-marker" data-globe-country="NL" style="--x:55%;--y:36%" aria-label="Explore Netherlands">NL</button>
+        <button type="button" class="sb-globe-marker" data-globe-country="AU" style="--x:79%;--y:75%" aria-label="Explore Australia">AU</button>
+        <button type="button" class="sb-globe-marker" data-globe-country="JP" style="--x:82%;--y:43%" aria-label="Explore Japan">JP</button>
+      </div>
+      <div class="sb-globe-caption"><span class="sb-live-dot"></span> Explore study destinations</div>
+      <button type="button" class="sb-globe-motion" id="sb-globe-motion" aria-pressed="false">Ⅱ Pause globe</button>
+    </div>
+    <div class="sb-world-side">
+      <span class="sb-world-kicker">YOUR NEXT CHAPTER STARTS HERE</span>
+      <h3>Where would you like to study?</h3>
+      <p>Choose a glowing destination on the globe or select a country below to explore its study guide.</p>
+      <div class="sb-world-selected" id="sb-world-selected"><span class="sb-world-selected-icon">🌍</span><span><b>Select a destination</b><small>Country details will appear here</small></span></div>
+      <div class="sb-world-hint">Available destination guides</div>
+      <div class="pays" id="pl"></div>
+    </div>
+  </section>
   <div class="panel" id="pp"></div>
 </div>
 
