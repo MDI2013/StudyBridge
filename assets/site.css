@@ -388,3 +388,12 @@ body:has(main #results) select{
   font-size:1.35rem!important;line-height:1;border-radius:12px!important;
  }
 }
+
+/* v1.9: real interactive WebGL Earth globe */
+.sb-globe-stage{max-width:620px;aspect-ratio:1;overflow:hidden;border-radius:50%}
+.sb-globe-canvas{position:absolute;inset:0;width:100%;height:100%;cursor:grab;touch-action:pan-y}
+.sb-globe-canvas:active{cursor:grabbing}
+.sb-globe-canvas canvas{display:block;width:100%!important;height:100%!important}
+.sb-globe-caption{z-index:4;pointer-events:none}
+.sb-globe-fallback{position:absolute;inset:12%;display:grid;place-items:center;text-align:center;color:#d4eaf7;padding:20px}
+@media(max-width:520px){.sb-globe-stage{max-width:410px}}
