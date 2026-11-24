@@ -92,3 +92,72 @@ main,.wrap>main{max-width:1120px}
   header nav,.top nav,nav.sb-site-nav{justify-content:flex-start}
   header nav a,header nav button,.top nav a,.top nav button{white-space:normal}
 }
+
+
+/* v1.2 review pass — consistent navigation, readable controls, and page alignment */
+:root{color-scheme:light dark}
+body{min-height:100vh}
+header,.top{
+  width:100%;max-width:1120px;margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:14px 20px!important;
+}
+header nav,.top nav,nav.sb-site-nav{
+  flex:1 1 100%;width:100%;min-width:0;
+  display:flex;align-items:center;justify-content:flex-start;
+  gap:7px;flex-wrap:wrap;
+  background:transparent!important;border:0!important;
+  border-radius:0!important;padding:0!important;
+}
+header nav a,header nav button,.top nav a,.top nav button{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:40px;padding:9px 14px!important;
+  border-radius:999px!important;border:1px solid var(--sb-line)!important;
+  background:var(--sb-card)!important;color:var(--sb-muted)!important;
+  font-weight:650;text-decoration:none;white-space:nowrap;
+}
+header nav a:hover,header nav button:hover,.top nav a:hover,.top nav button:hover{
+  background:var(--sb-line)!important;color:var(--sb-ink)!important;
+}
+header nav a[aria-current="page"],header nav button[aria-pressed="true"],
+.top nav a[aria-current="page"]{
+  background:var(--sb-teal)!important;border-color:var(--sb-teal)!important;color:#fff!important;
+}
+header .brand,header .logo,.top .brand{flex:0 0 auto}
+main,.wrap>main{width:100%;max-width:1120px;margin-left:auto;margin-right:auto}
+.wrap{width:100%;max-width:1120px;margin-left:auto;margin-right:auto}
+.hero,.intro,.panel,.results-head,.grid,footer{min-width:0}
+.card details,.card details[open]{
+  background:var(--sb-bg)!important;border:1px solid var(--sb-line)!important;
+  border-radius:10px!important;color:var(--sb-ink)!important;
+}
+.card details summary,.card details summary:focus{
+  display:block;background:var(--sb-bg)!important;color:var(--sb-ink)!important;
+  border:0!important;border-radius:8px!important;padding:8px 10px!important;
+  font-weight:700;cursor:pointer;
+}
+.card details p,.card details small{color:var(--sb-muted)!important}
+.nationality-options{
+  background:var(--sb-card)!important;border:1px solid var(--sb-line)!important;
+  color:var(--sb-ink)!important;
+}
+.nationality-option,.nationality-option label{
+  color:var(--sb-ink)!important;opacity:1!important;
+}
+.nationality-option input[type="checkbox"]{accent-color:var(--sb-teal)}
+input,select,textarea{
+  background:var(--sb-card)!important;color:var(--sb-ink)!important;
+  border:1px solid var(--sb-line)!important;
+}
+button.secondary,button.alt,.actions button.secondary,.links button.secondary{
+  background:var(--sb-card)!important;color:var(--sb-ink)!important;
+  border:1px solid var(--sb-line)!important;
+}
+@media(max-width:720px){
+  header,.top{align-items:flex-start;gap:10px;padding:12px 16px!important}
+  header nav,.top nav,nav.sb-site-nav{justify-content:flex-start;gap:6px}
+  header nav a,header nav button,.top nav a,.top nav button{
+    white-space:normal;text-align:left;min-height:38px;padding:8px 11px!important;
+  }
+  main,.wrap>main{margin-top:22px}
+}
