@@ -151,20 +151,34 @@ tbody th{color:var(--mut);font-weight:500;white-space:nowrap}
           <circle cx="260" cy="260" r="224" fill="#4fc3b9" opacity=".12"/>
           <circle cx="260" cy="260" r="218" fill="url(#sb-ocean)" stroke="#65d8cb" stroke-opacity=".65" stroke-width="2"/>
           <g clip-path="url(#sb-sphere-clip)">
+            <g id="sb-globe-surface">
             <g class="sb-globe-grid" fill="none" stroke="#9bded7" stroke-opacity=".25" stroke-width="1.2">
               <ellipse cx="260" cy="260" rx="205" ry="74"/><ellipse cx="260" cy="260" rx="205" ry="145"/>
               <ellipse cx="260" cy="260" rx="105" ry="218"/><ellipse cx="260" cy="260" rx="172" ry="218"/>
               <path d="M42 260H478M60 180H460M60 340H460"/>
             </g>
-            <g fill="url(#sb-land)" stroke="#a5e6d6" stroke-opacity=".35" stroke-width="1.2">
-              <path d="M105 112l31-24 39 5 15 21 33 7 12 23-18 22-35 3-12 27-28 8-16 36-23-11-9-32-25-17 9-29-13-21z"/>
-              <path d="M205 245l30 10 18 32-8 41-20 39-9 48-21 25-13-34 7-41-15-40 8-44z"/>
-              <path d="M275 104l33-20 47 9 22 21 40 7 21 31-17 22-34-4-20 24-34-7-17 20-30-12-29 12-20-22 9-29-18-19z"/>
-              <path d="M310 218l35 3 27 24 5 37-21 24-8 48-29 36-20-21 7-42-19-36 6-38z"/>
-              <path d="M404 352l31 10 14 27-17 25-33-7-15-25z"/>
-              <path d="M120 65l27-10 22 12-9 17-30 2z"/>
+            <g fill="url(#sb-land)" stroke="#a5e6d6" stroke-opacity=".45" stroke-width="1.2">
+              <!-- North America -->
+              <path d="M72 115l24-26 39-13 30 8 22-8 29 14 14 24 33 13 9 24-18 19-27-2-18 18-28-2-15 21-20 4-13 28-20 8-18-17-5-27-22-17 6-27-18-19z"/>
+              <path d="M197 232l24 6 18 19 7 29-12 26-11 34-8 39-19 30-14-22 2-33-15-33 8-37-7-30z"/>
+              <!-- South America -->
+              <path d="M229 305l26 9 17 25-5 33-13 38-8 45-19 31-13-24 4-38-12-34 8-38z"/>
+              <!-- Europe and Asia -->
+              <path d="M260 130l24-23 31-12 22 8 18-13 35 11 17-2 32 19 32 4 22 25-8 19-26-2-17 18-25-3-18 18-29-8-21 15-23-9-19 8-22-18-23 2-14-18-18-7 4-22z"/>
+              <!-- Africa -->
+              <path d="M286 230l32-10 29 13 19 27-4 34-16 31-13 40-19 27-19-17-8-39-19-33 4-39-11-24z"/>
+              <!-- India and Southeast Asia -->
+              <path d="M369 239l23 9 14 26-10 24-15-5-15-26z"/>
+              <path d="M404 281l25 4 18 17-5 15-26-5-16-15z"/>
+              <!-- Japan -->
+              <path d="M450 210l8 8-3 19-9 12-5-12z"/>
+              <!-- Australia -->
+              <path d="M398 365l31-5 29 16 13 27-17 24-34-4-25-24z"/>
+              <!-- Greenland -->
+              <path d="M160 55l25-13 27 9-2 22-22 13-25-10z"/>
             </g>
             <path d="M260 42c-90 0-164 56-199 136 48-54 118-86 199-86s151 32 199 86C424 98 350 42 260 42z" fill="#fff" opacity=".08"/>
+            </g>
           </g>
           <circle cx="260" cy="260" r="218" fill="none" stroke="#9ce8df" stroke-opacity=".25" stroke-width="1"/>
         </svg>
