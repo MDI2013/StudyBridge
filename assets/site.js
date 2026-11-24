@@ -22,14 +22,14 @@ function setupNav(){
  if(!toggle){toggle=document.createElement("button");toggle.type="button";toggle.className="sb-menu-toggle";toggle.setAttribute("aria-controls",nav.id);nav.parentNode.insertBefore(toggle,nav);}
  const setMenu=(open)=>{
   nav.classList.toggle("is-open",open);
-  toggle.setAttribute("aria-expanded",String(open));
+  toggle.setAttribute("aria-expanded",open?"true":"false");
   toggle.setAttribute("aria-label",open?"Close navigation menu":"Open navigation menu");
-  toggle.innerHTML='<span aria-hidden="true">'+(open?"✕":"☰")+'</span>';
+  toggle.innerHTML='<span aria-hidden="true">'+(open?"×":"☰")+'</span>';
  };
  setMenu(false);
- toggle.addEventListener("click",()=>setMenu(!nav.classList.contains("is-open")));
- nav.addEventListener("click",()=>setMenu(false));
- document.addEventListener("click",e=>{if(!header.contains(e.target))setMenu(false);});
+ toggle.addEventListener("click",e=>{e.preventDefault();e.stopPropagation();setMenu(toggle.getAttribute("aria-expanded")!=="true");});
+ nav.addEventListener("click",e=>{if(e.target.closest("a"))setMenu(false);});
+ document.addEventListener("pointerdown",e=>{if(!header.contains(e.target))setMenu(false);},{passive:true});
  document.addEventListener("keydown",e=>{if(e.key==="Escape")setMenu(false);});
 }
 function setupBackTop(){
@@ -56,5 +56,26 @@ function setupHomeAccordions(){
  sync();window.addEventListener("resize",sync,{passive:true});
  home.dataset.mobileSectionsReady="true";
 }
-document.addEventListener("DOMContentLoaded",()=>{setupNav();setupBackTop();setupHomeAccordions();});
+function setupStudyGlobe(){
+ const host=document.getElementById("sb-globe");if(!host||host.dataset.ready==="true")return;
+ if(typeof window.Globe!=="function"){host.innerHTML='<div class="sb-globe-fallback">The interactive globe could not load. Please use the country list below.</div>';return;}
+ host.dataset.ready="true";
+ const coords={CA:[56,-106],US:[39,-98],MA:[31,-7],FR:[46,2],DE:[51,10],UK:[55,-3],ES:[40,-4],NL:[52,5],AU:[-25,133],JP:[36,138]};
+ const names={CA:"Canada",US:"United States",MA:"Morocco",FR:"France",DE:"Germany",UK:"United Kingdom",ES:"Spain",NL:"Netherlands",AU:"Australia",JP:"Japan"};
+ const points=Object.keys(coords).map(code=>({code,name:names[code],lat:coords[code][0],lng:coords[code][1],size:0.24}));
+ const globe=window.Globe()(host).globeImageUrl("https://unpkg.com/three-globe@2.41.12/example/img/earth-blue-marble.jpg")
+  .backgroundColor("rgba(0,0,0,0)").showAtmosphere(true).atmosphereColor("#55c9ee").atmosphereAltitude(0.18)
+  .pointsData(points).pointLat(d=>d.lat).pointLng(d=>d.lng).pointRadius(d=>d.size).pointColor(() => "#63e4f4").pointAltitude(0.012)
+  .onPointClick(d=>{const chip=document.querySelector('#pl [data-country="'+d.code+'"]');if(chip)chip.click();});
+ const resize=()=>{if(host.clientWidth&&host.clientHeight)globe.width(host.clientWidth).height(host.clientHeight);};
+ if("ResizeObserver" in window)new ResizeObserver(resize).observe(host);else window.addEventListener("resize",resize,{passive:true});
+ resize();globe.pointOfView({lat:24,lng:12,altitude:2.15},0);
+ globe.controls().autoRotate=true;globe.controls().autoRotateSpeed=0.28;globe.controls().enableDamping=true;globe.controls().dampingFactor=0.08;
+}
+function watchStudyGlobe(){
+ const view=document.getElementById("v-pays");if(!view)return;
+ const tryInit=()=>{if(!view.hidden)setupStudyGlobe();};
+ tryInit();new MutationObserver(tryInit).observe(view,{attributes:true,attributeFilter:["hidden","class"]});
+}
+document.addEventListener("DOMContentLoaded",()=>{setupNav();setupBackTop();setupHomeAccordions();watchStudyGlobe();});
 })();
