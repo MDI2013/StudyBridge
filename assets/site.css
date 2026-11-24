@@ -203,3 +203,57 @@ header nav a[aria-current="page"],.top nav a[aria-current="page"]{
  header nav a,.top nav a{white-space:normal;text-align:left;min-height:38px;padding:8px 11px!important}
  header #ll{max-width:130px}
 }
+
+
+/* v1.4: programme page contrast and legibility in both themes */
+body:has(main #results){
+ color:var(--sb-ink)!important;
+}
+body:has(main #results) .panel,
+body:has(main #results) .card,
+body:has(main #results) .empty{
+ background:var(--sb-card)!important;
+ color:var(--sb-ink)!important;
+ border-color:var(--sb-line)!important;
+}
+body:has(main #results) .meta,
+body:has(main #results) .muted,
+body:has(main #results) footer{
+ color:var(--sb-muted)!important;
+}
+body:has(main #results) .fact{
+ background:var(--sb-bg)!important;
+ color:var(--sb-ink)!important;
+ border:1px solid var(--sb-line)!important;
+}
+body:has(main #results) .fact b{
+ color:var(--sb-muted)!important;
+}
+body:has(main #results) .pill{
+ background:var(--sb-line)!important;
+ color:var(--sb-ink)!important;
+}
+body:has(main #results) .pill.open{
+ background:color-mix(in srgb,var(--sb-teal) 18%,var(--sb-card))!important;
+ color:var(--sb-ink)!important;
+}
+body:has(main #results) .match{
+ background:var(--sb-card)!important;
+ color:var(--sb-ink)!important;
+ border-left-color:var(--sb-teal)!important;
+}
+body:has(main #results) .match .caution{
+ color:var(--sb-muted)!important;
+}
+body:has(main #results) .links a{
+ color:var(--sb-teal)!important;text-decoration:underline;
+}
+body:has(main #results) .links button.secondary{
+ background:var(--sb-card)!important;color:var(--sb-ink)!important;
+ border:1px solid var(--sb-line)!important;
+}
+body:has(main #results) input,
+body:has(main #results) select{
+ background:var(--sb-card)!important;color:var(--sb-ink)!important;
+ border-color:var(--sb-line)!important;
+}
