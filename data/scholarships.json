@@ -1,7 +1,7 @@
 {
-  "schema_version": "1.4.0",
+  "schema_version": "1.5.0",
   "dataset_name": "StudyBridge Scholarship Directory",
-  "updated_at": "2026-11-23",
+  "updated_at": "2026-11-25",
   "publication_policy": "Only publish opportunities with an official scholarship or funding source, clear eligibility, award details, deadline or application cycle, and a last-verified date. Empty dataset means no scholarships have yet been verified; do not display invented examples.",
   "student_discovery_filters": [
     "nationality",
@@ -1231,6 +1231,187 @@
           "notes": "La página oficial de ayuda financiera de ALU describe las becas Mastercard como becas completas que cubren la matrícula y apoyo financiero adicional; las condiciones exactas dependen del contrato o donante. Primero hay que cumplir los requisitos de admisión de ALU, demostrar necesidad económica y desventaja socioeconómica, tener 26 años o menos, buen potencial académico y al menos una B en los exámenes nacionales, además de potencial de liderazgo y contribución comunitaria. Se anima especialmente a mujeres jóvenes, refugiados y desplazados, y personas con discapacidades físicas o de aprendizaje. Las plazas son limitadas y cumplir los criterios no garantiza la beca. El directorio de socios de Mastercard Foundation incluye ALU en Kigali, Ruanda, a nivel de grado con solicitudes abiertas. ACNUR Ruanda informa del 30 de noviembre de 2026 como fecha límite para enero de 2027, pero las páginas de ALU revisadas no confirman esa fecha de forma independiente. Confirma directamente con ALU la fecha, convocatoria y normas de nacionalidad/residencia. Las páginas oficiales revisadas no especifican el tratamiento de la doble ciudadanía.",
           "funding_coverage": "Matrícula completa y apoyo financiero adicional durante toda la estancia académica en ALU. El paquete exacto puede variar según el contrato de beca o el donante asociado; confirma las condiciones individuales.",
           "application_cycle": "Admisión de enero de 2027 en ALU. El directorio de socios de Mastercard Foundation indica que ALU tiene solicitudes abiertas. ACNUR Ruanda informa del 30 de noviembre de 2026 como fecha límite; las páginas de ALU revisadas no confirman esa fecha de forma independiente. Confirma la fecha y la convocatoria directamente con ALU."
+        }
+      }
+    },
+    {
+      "id": "sb-sch-eu-erasmus-mundus-joint-masters-2027",
+      "title": "Erasmus Mundus Joint Masters Scholarships (2027 intake)",
+      "provider": "European Commission; Erasmus Mundus Joint Master consortia",
+      "eligibility_scope": "all_nationalities",
+      "eligible_nationalities": [
+        "ALL"
+      ],
+      "eligible_nationality_groups": [
+        "Students worldwide; each master's consortium sets its own admission and scholarship criteria"
+      ],
+      "excluded_nationalities": [],
+      "eligible_residencies": [],
+      "host_countries": [
+        "EU"
+      ],
+      "study_levels": [
+        "postgraduate"
+      ],
+      "eligible_fields": [],
+      "funding_type": "full",
+      "award_amount": null,
+      "currency": "EUR",
+      "funding_coverage": "For selected scholarship holders, the award covers participation costs and contributes to travel, visa and living costs. Exact award terms and eligibility are confirmed by each master's consortium.",
+      "deadline": null,
+      "application_cycle": "2027 intake. Most programmes accept student applications between October 2026 and January 2027; exact deadlines are set by each individual master's consortium. Students apply directly to the consortium.",
+      "official_application_url": "https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters",
+      "official_source_url": "https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters",
+      "last_verified": "2026-11-25",
+      "verification_status": "verified",
+      "notes": "The European Commission states that students from all over the world may apply and that full scholarships are available to the best-ranked students. A scholarship is not automatic for every admitted student. Each programme sets its own academic, nationality, document and deadline rules; check the consortium website and course catalogue before applying. The general Erasmus+ programme call deadline is not a student application deadline.",
+      "application_status": "varies",
+      "locales": {
+        "fr": {
+          "notes": "La Commission européenne indique que les étudiants du monde entier peuvent candidater et que des bourses complètes sont attribuées aux candidats les mieux classés. La bourse n’est pas automatique pour chaque étudiant admis. Chaque consortium fixe ses propres critères académiques, règles de nationalité, documents et échéances ; consultez le site du programme et le catalogue des cours. La date limite de l’appel général Erasmus+ n’est pas la date limite de candidature des étudiants.",
+          "funding_coverage": "Pour les lauréats, la bourse couvre les frais de participation et contribue aux frais de voyage, de visa et de séjour. Les conditions exactes sont fixées par chaque consortium.",
+          "application_cycle": "Rentrée 2027. La plupart des programmes reçoivent les candidatures entre octobre 2026 et janvier 2027 ; chaque consortium fixe sa propre date limite. Les étudiants postulent directement auprès du consortium."
+        },
+        "es": {
+          "notes": "La Comisión Europea indica que pueden solicitarla estudiantes de todo el mundo y que se conceden becas completas a los candidatos mejor clasificados. La beca no es automática para todas las personas admitidas. Cada consorcio establece sus propios criterios académicos, reglas de nacionalidad, documentos y plazos; consulta la web del programa y el catálogo de cursos. La fecha límite de la convocatoria general Erasmus+ no es la fecha límite de solicitud para estudiantes.",
+          "funding_coverage": "Para los beneficiarios, la beca cubre los costes de participación y contribuye a los gastos de viaje, visado y manutención. Cada consorcio confirma las condiciones exactas.",
+          "application_cycle": "Ingreso en 2027. La mayoría de los programas reciben solicitudes entre octubre de 2026 y enero de 2027; cada consorcio fija su propio plazo. Los estudiantes solicitan directamente al consorcio."
+        }
+      }
+    },
+    {
+      "id": "sb-sch-ae-mbzuai-graduate-2027",
+      "title": "MBZUAI Graduate Scholarships – Master's and PhD (Fall 2027)",
+      "provider": "Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)",
+      "eligibility_scope": "unknown",
+      "eligible_nationalities": [],
+      "eligible_nationality_groups": [
+        "International graduate applicants; confirm programme-specific nationality and admission rules with MBZUAI"
+      ],
+      "excluded_nationalities": [],
+      "eligible_residencies": [],
+      "host_countries": [
+        "ARE"
+      ],
+      "study_levels": [
+        "postgraduate"
+      ],
+      "eligible_fields": [
+        "Artificial intelligence",
+        "Machine learning",
+        "Computer vision",
+        "Natural language processing",
+        "Statistics and data science",
+        "Computational biology"
+      ],
+      "funding_type": "full",
+      "award_amount": null,
+      "currency": "AED",
+      "funding_coverage": "MBZUAI states that most MSc programmes are fully funded for Fall 2027, except the Master in Applied Artificial Intelligence. PhD scholarships include tuition, accommodation, healthcare, student visa and a monthly stipend. Programme-specific terms apply.",
+      "deadline": "2026-12-15",
+      "application_cycle": "Fall 2027. Most master's and PhD programmes close on 15 December 2026 at 17:00 GST. MSc and PhD Computational Biology have a separate deadline of 22 January 2027. Confirm the deadline on the selected programme page.",
+      "official_application_url": "https://mbzuai.ac.ae/admissions/graduate-masters-admissions/",
+      "official_source_url": "https://mbzuai.ac.ae/study-artificial-intelligence",
+      "last_verified": "2026-11-25",
+      "verification_status": "verified",
+      "notes": "Scholarship consideration is connected to admission and programme-specific requirements. The Master in Applied Artificial Intelligence is excluded from the general full-funding statement. Computational Biology has a separate deadline and funding package; check its dedicated page. Do not assume that every programme or every admitted student receives identical funding.",
+      "application_status": "open",
+      "locales": {
+        "fr": {
+          "notes": "L’attribution de la bourse est liée à l’admission et aux exigences propres à chaque programme. Le Master in Applied Artificial Intelligence est exclu de l’annonce générale de financement complet. Les programmes de biologie computationnelle ont une échéance et un financement distincts ; consultez leur page dédiée. Ne supposez pas que tous les programmes ou tous les étudiants admis reçoivent le même financement.",
+          "funding_coverage": "MBZUAI indique que la plupart des masters sont entièrement financés pour l’automne 2027, à l’exception du Master in Applied Artificial Intelligence. Les bourses doctorales couvrent les frais de scolarité, le logement, les soins de santé, le visa étudiant et une allocation mensuelle. Les conditions varient selon le programme.",
+          "application_cycle": "Rentrée automne 2027. La plupart des masters et doctorats ferment le 15 décembre 2026 à 17 h GST. Les programmes de biologie computationnelle ont une échéance distincte au 22 janvier 2027. Vérifiez la page du programme choisi."
+        },
+        "es": {
+          "notes": "La consideración para la beca está vinculada a la admisión y a los requisitos específicos de cada programa. El Master in Applied Artificial Intelligence queda excluido de la declaración general de financiación completa. Los programas de biología computacional tienen un plazo y paquete de financiación distintos; consulta su página específica. No des por hecho que todos los programas o estudiantes admitidos reciben la misma financiación.",
+          "funding_coverage": "MBZUAI indica que la mayoría de los másteres cuentan con financiación completa para otoño de 2027, excepto el Master in Applied Artificial Intelligence. Las becas de doctorado incluyen matrícula, alojamiento, atención médica, visado de estudiante y estipendio mensual. Las condiciones dependen del programa.",
+          "application_cycle": "Ingreso en otoño de 2027. La mayoría de los másteres y doctorados cierran el 15 de diciembre de 2026 a las 17:00 GST. Biología Computacional tiene un plazo separado: 22 de enero de 2027. Comprueba la página del programa elegido."
+        }
+      }
+    },
+    {
+      "id": "sb-sch-cn-fudan-government-scholarships-2027",
+      "title": "Fudan University 2027 Chinese Government and Shanghai Government Scholarships",
+      "provider": "Fudan University; Chinese Government Scholarship programme; Shanghai Municipal Government",
+      "eligibility_scope": "unknown",
+      "eligible_nationalities": [],
+      "eligible_nationality_groups": [
+        "Non-Chinese citizens applying to eligible Fudan postgraduate programmes; programme and scholarship rules apply"
+      ],
+      "excluded_nationalities": [],
+      "eligible_residencies": [],
+      "host_countries": [
+        "CHN"
+      ],
+      "study_levels": [
+        "postgraduate"
+      ],
+      "eligible_fields": [],
+      "funding_type": "full",
+      "award_amount": null,
+      "currency": "CNY",
+      "funding_coverage": "Tuition waiver, free on-campus accommodation or an off-campus accommodation subsidy, comprehensive medical insurance, and a monthly stipend of RMB 3,000 for master's students or RMB 3,500 for doctoral students.",
+      "deadline": "2026-12-10",
+      "application_cycle": "2027 postgraduate admission. Applications for the listed Chinese Government Scholarship and Shanghai Government Scholarship routes run from 5 November to 10 December 2026. Applicants must complete the relevant government and Fudan application-system steps.",
+      "official_application_url": "https://www.fudan.edu.cn/en/",
+      "official_source_url": "https://newsroom.fudan.edu.cn/_upload/article/files/a6/a6/f41bf39948ffba43eed34707711b/cdcc3ea2-693a-449d-ba35-f92af2cc4c95.pdf",
+      "last_verified": "2026-11-25",
+      "verification_status": "verified",
+      "notes": "The official Fudan 2027 postgraduate admission information states applicants must be non-Chinese citizens, master's applicants under 35 and doctoral applicants under 40, and must not hold another Chinese Government scholarship. The listed application period is 5 November–10 December 2026. Applicants must complete the applicable scholarship form and Fudan's international application system. Check the original guide for programme-specific requirements and any additional restrictions.",
+      "application_status": "open",
+      "locales": {
+        "fr": {
+          "notes": "Le guide officiel d’admission aux études supérieures 2027 de Fudan indique que les candidats doivent être des citoyens non chinois ; les candidats au master doivent avoir moins de 35 ans et ceux au doctorat moins de 40 ans. Ils ne doivent pas déjà bénéficier d’une autre bourse du gouvernement chinois. La période indiquée est du 5 novembre au 10 décembre 2026. Il faut remplir le formulaire de bourse applicable et le système de candidature de Fudan. Consultez le guide pour les exigences propres au programme.",
+          "funding_coverage": "Exonération des frais de scolarité, logement sur le campus ou aide au logement hors campus, assurance médicale complète et allocation mensuelle de 3 000 RMB pour le master ou 3 500 RMB pour le doctorat.",
+          "application_cycle": "Admission postgraduate 2027. Les candidatures aux voies indiquées de la bourse du gouvernement chinois et de la bourse du gouvernement de Shanghai se déroulent du 5 novembre au 10 décembre 2026."
+        },
+        "es": {
+          "notes": "La información oficial de admisión de posgrado 2027 de Fudan establece que los solicitantes deben ser ciudadanos no chinos; los candidatos a máster deben tener menos de 35 años y los de doctorado menos de 40. No deben recibir otra beca del Gobierno chino. El periodo indicado es del 5 de noviembre al 10 de diciembre de 2026. Deben completar el formulario de beca correspondiente y el sistema de solicitud de Fudan. Consulta la guía original para requisitos específicos del programa.",
+          "funding_coverage": "Exención de matrícula, alojamiento gratuito en el campus o subsidio para alojamiento externo, seguro médico integral y estipendio mensual de 3.000 RMB para máster o 3.500 RMB para doctorado.",
+          "application_cycle": "Admisión de posgrado 2027. Las solicitudes para las vías indicadas de la Beca del Gobierno chino y la Beca del Gobierno de Shanghái se realizan del 5 de noviembre al 10 de diciembre de 2026."
+        }
+      }
+    },
+    {
+      "id": "sb-sch-cn-sjtu-government-university-2027",
+      "title": "Shanghai Jiao Tong University 2027 Graduate Scholarships",
+      "provider": "Shanghai Jiao Tong University; Chinese Government Scholarship programme; Shanghai Government",
+      "eligibility_scope": "unknown",
+      "eligible_nationalities": [],
+      "eligible_nationality_groups": [
+        "International graduate applicants who meet SJTU programme and scholarship requirements"
+      ],
+      "excluded_nationalities": [],
+      "eligible_residencies": [],
+      "host_countries": [
+        "CHN"
+      ],
+      "study_levels": [
+        "postgraduate"
+      ],
+      "eligible_fields": [],
+      "funding_type": "unknown",
+      "award_amount": null,
+      "currency": "CNY",
+      "funding_coverage": "Scholarship types include Chinese Government, Shanghai Government and SJTU awards. Award levels, funding periods and coverage depend on the scholarship and are displayed in SJTU's application system; do not assume a uniform package.",
+      "deadline": "2026-12-15",
+      "application_cycle": "2027 graduate admission. First-round Chinese Government Scholarship deadline through the university: 15 December 2026. Further university-channel deadline: 15 February 2027. Shanghai Government and SJTU scholarship deadline: 31 March 2027. Applicants may use either university or embassy/consulate channel for the Chinese Government Scholarship, not both.",
+      "official_application_url": "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/270",
+      "official_source_url": "https://en.sjtu.edu.cn/storage/global/web/en/page/2026/11/add6c176490f982cb3a41a734ac463f2.pdf",
+      "last_verified": "2026-11-25",
+      "verification_status": "verified",
+      "notes": "The 2027 guide requires applicants to meet graduate programme eligibility, not hold another scholarship, be no older than 35 for master's or 40 for doctoral study, and be non-Chinese citizens holding a foreign ordinary passport. Applicants may apply through the university or a Chinese embassy/consulate for the Chinese Government Scholarship, but may choose only one channel. The 15 December deadline is the first round; later deadlines apply to other rounds and scholarship types. Check the guide and selected programme for exact award terms.",
+      "application_status": "open",
+      "locales": {
+        "fr": {
+          "notes": "Le guide 2027 exige que les candidats remplissent les conditions d’admission aux études supérieures, ne bénéficient pas d’une autre bourse, aient au plus 35 ans pour le master ou 40 ans pour le doctorat et soient des citoyens non chinois titulaires d’un passeport ordinaire étranger. Pour la bourse du gouvernement chinois, la candidature peut passer par l’université ou par une ambassade/consulat chinois, mais une seule voie peut être choisie. Le 15 décembre est la première échéance ; d’autres dates s’appliquent aux autres tours et bourses. Consultez le guide et le programme choisi.",
+          "funding_coverage": "Les bourses comprennent des aides du gouvernement chinois, du gouvernement de Shanghai et de SJTU. Le niveau, la durée et la couverture dépendent de la bourse et sont précisés dans le système de candidature de SJTU ; aucun forfait uniforme ne doit être supposé.",
+          "application_cycle": "Admission graduate 2027. Première échéance de la bourse du gouvernement chinois via l’université : 15 décembre 2026. Échéance suivante via l’université : 15 février 2027. Bourses du gouvernement de Shanghai et de SJTU : 31 mars 2027."
+        },
+        "es": {
+          "notes": "La guía 2027 exige cumplir los requisitos de admisión de posgrado, no recibir otra beca, tener como máximo 35 años para máster o 40 para doctorado y ser ciudadano no chino con pasaporte ordinario extranjero. Para la Beca del Gobierno chino se puede solicitar a través de la universidad o de una embajada/consulado chino, pero solo se puede elegir una vía. El 15 de diciembre es la primera ronda; hay otras fechas para rondas y becas distintas. Consulta la guía y el programa elegido.",
+          "funding_coverage": "Las becas incluyen ayudas del Gobierno chino, del Gobierno de Shanghái y de SJTU. El nivel, la duración y la cobertura dependen de la beca y aparecen en el sistema de solicitud de SJTU; no se debe suponer un paquete uniforme.",
+          "application_cycle": "Admisión de posgrado 2027. Primera fecha límite de la Beca del Gobierno chino a través de la universidad: 15 de diciembre de 2026. Segunda fecha a través de la universidad: 15 de febrero de 2027. Becas del Gobierno de Shanghái y de SJTU: 31 de marzo de 2027."
         }
       }
     }
