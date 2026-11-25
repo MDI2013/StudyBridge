@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.0.0",
-  "last_updated": "2026-11-23",
+  "schema_version": "1.1.0",
+  "last_updated": "2026-11-25",
   "data_policy": "Only publish programme facts supported by the programme's own official website or an official government/European Union source. Unknown values remain null or unknown. Programme-cycle status is separate from admissions eligibility and funding.",
   "programmes": [
     {
@@ -203,6 +203,409 @@
       "last_verified": "2026-11-23",
       "verification_status": "official_source_checked",
       "notes": "The Master of Information offers eight concentrations. Admission requirements and academic equivalencies must be checked directly with the Faculty of Information."
+    },
+    {
+      "id": "sb-prog-uva-ba-2027",
+      "title": "Business Administration",
+      "qualification": "Bachelor's programme",
+      "degree_level": "undergraduate",
+      "duration": "Not stated in reviewed catalogue",
+      "ects": null,
+      "study_fields": [
+        "Business and management",
+        "Strategy",
+        "Marketing",
+        "Human resources"
+      ],
+      "delivery_countries": [
+        "NL"
+      ],
+      "partner_institutions": [
+        "University of Amsterdam"
+      ],
+      "teaching_language": "English",
+      "intake": null,
+      "application_status": "unknown",
+      "application_deadline": null,
+      "application_notes": "The official catalogue lists this programme as English-taught and full-time.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "official_admissions_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "official_source_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-022"
+      ]
+    },
+    {
+      "id": "sb-prog-uva-business-analytics-2027",
+      "title": "Business Analytics",
+      "qualification": "Bachelor's programme",
+      "degree_level": "undergraduate",
+      "duration": "Not stated in reviewed catalogue",
+      "ects": null,
+      "study_fields": [
+        "Business analytics",
+        "Data science",
+        "Economics"
+      ],
+      "delivery_countries": [
+        "NL"
+      ],
+      "partner_institutions": [
+        "University of Amsterdam"
+      ],
+      "teaching_language": "English",
+      "intake": null,
+      "application_status": "unknown",
+      "application_deadline": null,
+      "application_notes": "The official catalogue lists this programme as English-taught and full-time.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "official_admissions_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "official_source_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-022"
+      ]
+    },
+    {
+      "id": "sb-prog-uva-econometrics-data-2027",
+      "title": "Econometrics and Data Science",
+      "qualification": "Bachelor's programme",
+      "degree_level": "undergraduate",
+      "duration": "Not stated in reviewed catalogue",
+      "ects": null,
+      "study_fields": [
+        "Econometrics",
+        "Data science",
+        "Economics",
+        "Statistics"
+      ],
+      "delivery_countries": [
+        "NL"
+      ],
+      "partner_institutions": [
+        "University of Amsterdam"
+      ],
+      "teaching_language": "English",
+      "intake": null,
+      "application_status": "unknown",
+      "application_deadline": null,
+      "application_notes": "The official catalogue lists this programme as English-taught and full-time.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "official_admissions_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "official_source_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-022"
+      ]
+    },
+    {
+      "id": "sb-prog-uva-european-studies-2027",
+      "title": "European Studies",
+      "qualification": "Bachelor's programme",
+      "degree_level": "undergraduate",
+      "duration": "Not stated in reviewed catalogue",
+      "ects": null,
+      "study_fields": [
+        "European studies",
+        "Politics",
+        "Economics",
+        "Law",
+        "Humanities"
+      ],
+      "delivery_countries": [
+        "NL"
+      ],
+      "partner_institutions": [
+        "University of Amsterdam"
+      ],
+      "teaching_language": "English",
+      "intake": null,
+      "application_status": "unknown",
+      "application_deadline": null,
+      "application_notes": "The official catalogue lists this programme as English-taught and full-time.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "official_admissions_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "official_source_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-022"
+      ]
+    },
+    {
+      "id": "sb-prog-oxford-cs-2027",
+      "title": "Computer Science",
+      "qualification": "MCompSci or BA",
+      "degree_level": "undergraduate",
+      "duration": "3 or 4 years",
+      "ects": null,
+      "study_fields": [
+        "Computer science",
+        "Mathematics",
+        "Artificial intelligence",
+        "Software systems"
+      ],
+      "delivery_countries": [
+        "UK"
+      ],
+      "partner_institutions": [
+        "University of Oxford"
+      ],
+      "teaching_language": null,
+      "intake": null,
+      "application_status": "closed",
+      "application_deadline": "2026-10-15",
+      "application_notes": "The official course page lists 15 October 2026 as the application deadline for this cycle.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/computer-science",
+      "official_admissions_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/computer-science",
+      "official_source_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/computer-science",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-010"
+      ]
+    },
+    {
+      "id": "sb-prog-oxford-economics-management-2027",
+      "title": "Economics and Management",
+      "qualification": "BA",
+      "degree_level": "undergraduate",
+      "duration": "3 years",
+      "ects": null,
+      "study_fields": [
+        "Economics",
+        "Business and management"
+      ],
+      "delivery_countries": [
+        "UK"
+      ],
+      "partner_institutions": [
+        "University of Oxford"
+      ],
+      "teaching_language": null,
+      "intake": null,
+      "application_status": "closed",
+      "application_deadline": "2026-10-15",
+      "application_notes": "The official course page lists 15 October 2026 as the application deadline for this cycle.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/economics-and-management",
+      "official_admissions_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/economics-and-management",
+      "official_source_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/economics-and-management",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-010"
+      ]
+    },
+    {
+      "id": "sb-prog-oxford-engineering-science-2027",
+      "title": "Engineering Science",
+      "qualification": "MEng",
+      "degree_level": "undergraduate",
+      "duration": "4 years",
+      "ects": null,
+      "study_fields": [
+        "Engineering",
+        "Applied sciences",
+        "Mathematics"
+      ],
+      "delivery_countries": [
+        "UK"
+      ],
+      "partner_institutions": [
+        "University of Oxford"
+      ],
+      "teaching_language": null,
+      "intake": null,
+      "application_status": "closed",
+      "application_deadline": "2026-10-15",
+      "application_notes": "The official course page lists 15 October 2026 as the application deadline for this cycle.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/engineering-science",
+      "official_admissions_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/engineering-science",
+      "official_source_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/engineering-science",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-010"
+      ]
+    },
+    {
+      "id": "sb-prog-oxford-law-2027",
+      "title": "Law (Jurisprudence)",
+      "qualification": "BA (equivalent to LLB)",
+      "degree_level": "undergraduate",
+      "duration": "3 or 4 years",
+      "ects": null,
+      "study_fields": [
+        "Law",
+        "Jurisprudence"
+      ],
+      "delivery_countries": [
+        "UK"
+      ],
+      "partner_institutions": [
+        "University of Oxford"
+      ],
+      "teaching_language": null,
+      "intake": null,
+      "application_status": "closed",
+      "application_deadline": "2026-10-15",
+      "application_notes": "The official course page lists 15 October 2026 as the application deadline for this cycle.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/law-jurisprudence",
+      "official_admissions_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/law-jurisprudence",
+      "official_source_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/law-jurisprudence",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-010"
+      ]
+    },
+    {
+      "id": "sb-prog-mit-eecs-2027",
+      "title": "Electrical Engineering and Computer Science",
+      "qualification": "Graduate degree options include MEng, SM, PhD and ScD",
+      "degree_level": "postgraduate",
+      "duration": "Not stated in reviewed source",
+      "ects": null,
+      "study_fields": [
+        "Electrical engineering",
+        "Computer science",
+        "Artificial intelligence",
+        "Machine learning",
+        "Robotics"
+      ],
+      "delivery_countries": [
+        "US"
+      ],
+      "partner_institutions": [
+        "MIT"
+      ],
+      "teaching_language": null,
+      "intake": null,
+      "application_status": "unknown",
+      "application_deadline": null,
+      "application_notes": "The official department page lists graduate degree options and current admissions information. It states that MIT does not offer admission for a terminal master's degree.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://oge.mit.edu/programs/electrical-engineering-and-computer-science/",
+      "official_admissions_url": "https://oge.mit.edu/programs/electrical-engineering-and-computer-science/",
+      "official_source_url": "https://oge.mit.edu/programs/electrical-engineering-and-computer-science/",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-013"
+      ]
+    },
+    {
+      "id": "sb-prog-mit-architecture-2027",
+      "title": "Graduate Architecture degrees",
+      "qualification": "MArch, SMArchS, SMBT, SMACT and PhD",
+      "degree_level": "postgraduate",
+      "duration": "Not stated in reviewed source",
+      "ects": null,
+      "study_fields": [
+        "Architecture",
+        "Urbanism",
+        "Building technology",
+        "Art and design"
+      ],
+      "delivery_countries": [
+        "US"
+      ],
+      "partner_institutions": [
+        "MIT"
+      ],
+      "teaching_language": null,
+      "intake": null,
+      "application_status": "unknown",
+      "application_deadline": null,
+      "application_notes": "MIT's official page lists the graduate degree options and application requirements.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://oge.mit.edu/programs/architecture/",
+      "official_admissions_url": "https://oge.mit.edu/programs/architecture/",
+      "official_source_url": "https://oge.mit.edu/programs/architecture/",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-013"
+      ]
+    },
+    {
+      "id": "sb-prog-mit-mban-2027",
+      "title": "Master of Business Analytics (MBAn)",
+      "qualification": "Master of Business Analytics",
+      "degree_level": "postgraduate",
+      "duration": "Not stated in reviewed source",
+      "ects": null,
+      "study_fields": [
+        "Business analytics",
+        "Data analytics",
+        "Operations research",
+        "Management"
+      ],
+      "delivery_countries": [
+        "US"
+      ],
+      "partner_institutions": [
+        "MIT"
+      ],
+      "teaching_language": null,
+      "intake": null,
+      "application_status": "open",
+      "application_deadline": "2027-01-05",
+      "application_notes": "The official programme page lists a 5 January 2027 deadline and Fall entry term.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://oge.mit.edu/programs/mit-sloan-master-of-business-analytics/",
+      "official_admissions_url": "https://oge.mit.edu/programs/mit-sloan-master-of-business-analytics/",
+      "official_source_url": "https://oge.mit.edu/programs/mit-sloan-master-of-business-analytics/",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-013"
+      ]
     }
   ]
 }
