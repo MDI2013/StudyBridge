@@ -53,8 +53,8 @@ for (const item of partnerRecords) {
   if (!item.tuition || item.tuition.amount !== null) {
     errors.push((item.id || item.name) + ": consortium partner tuition must remain null until programme-specific official evidence is verified");
   }
-  if (!Array.isArray(item.degree_levels) || item.degree_levels.length !== 0) {
-    errors.push((item.id || item.name) + ": do not infer institution-wide degree levels from consortium participation");
+  if (!Array.isArray(item.degree_levels) || item.degree_levels.some(level => level !== "postgraduate")) {
+    errors.push((item.id || item.name) + ": consortium-only records may indicate postgraduate participation only; do not infer undergraduate catalogue availability");
   }
 }
 
