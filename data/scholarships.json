@@ -1247,9 +1247,7 @@
       ],
       "excluded_nationalities": [],
       "eligible_residencies": [],
-      "host_countries": [
-        "EU"
-      ],
+      "host_countries": [],
       "study_levels": [
         "postgraduate"
       ],
