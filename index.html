@@ -275,7 +275,7 @@ const save=()=>{try{localStorage.setItem("sb-fav",JSON.stringify([...st.fav]))}c
 const feeTxt=u=>u.fee==null?t("feeUnknown"):"≈ "+fmt(u.fee)+" € "+t("perY")+(u.fee<=1000?" "+t("low"):"");
 const sc=$("#qc"),c2=$("#c2");
 
-function card(u){return `<button class="card" data-id="${u.id}"><h3>${tr(u.n)}</h3><div class="meta">${P[u.c].f} ${tr(u.city)}, ${tr(P[u.c].n)} · ${tr(u.t)}</div><div class="tags">${u.fl.map(f=>`<span class="tag">${tr(f)}</span>`).join("")}</div><div class="meta">${t("tc")} : ${trl(u.l)}</div><div class="fee">${feeTxt(u)}</div></button>`}
+function card(u){return `<button class="card" data-id="${u.id}"><h3>${tr(u.n)}</h3><div class="meta">${P[u.c].f} ${tr(u.city)}, ${tr(P[u.c].n)} · ${tr(u.t)}</div>${u.partner?`<div class="tags"><span class="tag">${t("partnerScope")}</span></div>`:`<div class="tags">${u.fl.map(f=>`<span class="tag">${tr(f)}</span>`).join("")}</div>`}<div class="meta">${t("tc")} : ${trl(u.l)}</div><div class="fee">${feeTxt(u)}</div></button>`}
 
 function list(){
   const q=st.q.toLowerCase();
@@ -306,7 +306,7 @@ function view(v){
 }
 function open(id){
   const u=U[id],p=P[u.c],c=cx(u.c),on=st.fav.has(id);
-  $("#dc").innerHTML=`<div><h2 style="font-size:1.5rem">${tr(u.n)}</h2><div class="meta">${p.f} ${tr(u.city)}, ${tr(p.n)} · ${tr(u.t)}</div></div><div class="facts" style="margin:0"><div class="fact"><b>${t("fee")}</b>${feeTxt(u)}</div><div class="fact"><b>${t("lang")}</b>${trl(u.l)}</div><div class="fact"><b>${t("dom")}</b>${u.fl.map(tr).join(", ")}</div><div class="fact"><b>${t("life")}</b>${p.life}</div><div class="fact"><b>${t("visa")}</b>${c[1]}</div><div class="fact"><b>${t("work")}</b>${c[2]}</div></div><div class="row"><a class="btn" href="${u.url}" target="_blank" rel="noopener" style="text-decoration:none">${t("site")}</a><button class="btn alt" data-fav="${id}">${on?t("rem"):t("add")}</button><button class="btn alt" data-pays="${u.c}">${t("guide")} ${tr(p.n)}</button><button class="btn alt" data-close>${t("close")}</button></div>`;
+  $("#dc").innerHTML=`<div><h2 style="font-size:1.5rem">${tr(u.n)}</h2><div class="meta">${p.f} ${tr(u.city)}, ${tr(p.n)} · ${tr(u.t)}</div></div><div class="facts" style="margin:0"><div class="fact"><b>${t("fee")}</b>${feeTxt(u)}</div><div class="fact"><b>${t("lang")}</b>${trl(u.l)}</div><div class="fact"><b>${t("dom")}</b>${u.fl.map(tr).join(", ")}</div><div class="fact"><b>${t("life")}</b>${p.life}</div><div class="fact"><b>${t("visa")}</b>${c[1]}</div><div class="fact"><b>${t("work")}</b>${c[2]}</div></div>${u.partner?`<p class="meta">${t("partnerScope")}. ${u.d}</p>`:""}<div class="row"><a class="btn" href="${u.url}" target="_blank" rel="noopener" style="text-decoration:none">${t("site")}</a><button class="btn alt" data-fav="${id}">${on?t("rem"):t("add")}</button><button class="btn alt" data-pays="${u.c}">${t("guide")} ${tr(p.n)}</button><button class="btn alt" data-close>${t("close")}</button></div>`;
   $("#dg").showModal();
 }
 function build(){
