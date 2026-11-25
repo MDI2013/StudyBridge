@@ -16,6 +16,9 @@ const https = value => {
 };
 
 if (!Array.isArray(data.universities)) errors.push("universities must be an array");
+if (Array.isArray(data.universities) && data.universities.length !== 36) {
+  errors.push("expected 36 university records (30 migrated records plus 6 consortium partners)");
+}
 
 for (const [index, item] of (data.universities || []).entries()) {
   const label = item.id || "record #" + (index + 1);
@@ -33,6 +36,25 @@ for (const [index, item] of (data.universities || []).entries()) {
   if (!item.tuition || !("amount" in item.tuition)) errors.push(label + ": tuition.amount field is required (use null when unknown)");
   if (item.tuition && item.tuition.amount !== null && (typeof item.tuition.amount !== "number" || item.tuition.amount < 0)) {
     errors.push(label + ": tuition.amount must be a non-negative number or null");
+  }
+}
+
+const partnerRecords = (data.universities || []).filter(item =>
+  typeof item.review_notes === "string" &&
+  item.review_notes.startsWith("Added as a verified partner institution in an official joint master's programme.")
+);
+if (partnerRecords.length !== 6) {
+  errors.push("expected 6 consortium partner records with explicit joint-programme-only review notes");
+}
+for (const item of partnerRecords) {
+  if (item.record_status !== "needs_review") {
+    errors.push((item.id || item.name) + ": consortium partner must remain needs_review until its wider catalogue is verified");
+  }
+  if (!item.tuition || item.tuition.amount !== null) {
+    errors.push((item.id || item.name) + ": consortium partner tuition must remain null until programme-specific official evidence is verified");
+  }
+  if (!Array.isArray(item.degree_levels) || item.degree_levels.length !== 0) {
+    errors.push((item.id || item.name) + ": do not infer institution-wide degree levels from consortium participation");
   }
 }
 
