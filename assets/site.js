@@ -161,6 +161,19 @@ function applyLanguage(root=document){
 function setupLanguage(){
  const style=document.createElement("style");style.textContent=".sb-language-picker{display:inline-flex;align-items:center;gap:7px;font-size:.85rem;font-weight:650;color:var(--muted,#64748b)}.sb-language-picker select{width:auto;min-width:112px;padding:7px 9px;border:1px solid var(--line,#dbe3ee);border-radius:8px;background:#fff;color:var(--ink,#172b4d);font:inherit}header{align-items:center}";document.head.appendChild(style);
  applyLanguage();
+ const homeLanguageSelect=document.querySelector("#ll");
+ if(homeLanguageSelect&&!homeLanguageSelect.dataset.sbNavLanguageListener){
+  homeLanguageSelect.dataset.sbNavLanguageListener="true";
+  homeLanguageSelect.addEventListener("change",()=>{
+   const lang=currentLanguage();
+   const nav=document.querySelector("header nav");
+   if(nav)translateNode(nav,lang);
+   const toggle=document.querySelector("header .sb-menu-toggle");
+   if(toggle){const open=toggle.getAttribute("aria-expanded")==="true";toggle.setAttribute("aria-label",lang==="fr"?(open?"Fermer le menu de navigation":"Ouvrir le menu de navigation"):lang==="es"?(open?"Cerrar menú de navegación":"Abrir menú de navegación"):(open?"Close navigation menu":"Open navigation menu"));}
+   const header=document.querySelector("header");
+   if(header)header.setAttribute("aria-label",lang==="fr"?"En-tête du site":lang==="es"?"Encabezado del sitio":"Site header");
+  });
+ }
  const observer=new MutationObserver(records=>{const lang=currentLanguage();records.forEach(record=>record.addedNodes.forEach(node=>{if(node.nodeType===Node.ELEMENT_NODE||node.nodeType===Node.TEXT_NODE)translateNode(node,lang);}));});
  observer.observe(document.body,{childList:true,subtree:true});
 }
