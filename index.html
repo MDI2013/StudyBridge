@@ -246,10 +246,28 @@ Object.assign(VERIFIED_LANGUAGES,{
 29:{l:"Japonais, anglais (programmes spécifiques)",langSource:"https://www.osaka-u.ac.jp/en/international/inbound/files/guide.pdf/%40%40download/file"}
 });
 U.forEach(u=>{if(VERIFIED_LANGUAGES[u.id])Object.assign(u,VERIFIED_LANGUAGES[u.id]);});
+Object.assign(VERIFIED_LANGUAGES,{
+1:{l:"Français, anglais (selon le programme)",langSource:"https://international-welcome.unistra.fr/apply-to-the-university-of-strasbourg/courses-of-the-university-of-strasbourg/courses-taught-in-english/"},
+2:{l:"Français, anglais (selon le programme)",langSource:"https://iae.umontpellier.fr/en/coming-to-study-at-iae-montpellier/"},
+10:{l:"Anglais",langSource:"https://documents.manchester.ac.uk/display.aspx?DocID=39973"},
+11:{l:"Anglais",langSource:"https://biology.ed.ac.uk/undergraduate/degree-options/china-22-programme/eligibility"},
+13:{l:"Anglais",langSource:"https://michiganross.umich.edu/sites/default/files/uploads/Programs/GlobalInitiatives/pdf/university_of_michigan_ross_fact_sheet_2016_17.pdf"},
+14:{l:"Anglais",langSource:"https://bisp.berkeley.edu/program/frequently-asked-questions"},
+15:{l:"Français (selon la filière)",langSource:"https://www.um5.ac.ma/um5/sites/default/files/docs/academique/FAQ-svio.pdf"},
+17:{l:"Français (programmes vérifiés)",langSource:"https://www.uca.ma/en/formations/initial-training/droit-des-affaires-et-de-lentreprise"},
+25:{l:"Anglais",langSource:"https://www.sydney.edu.au/study/applying/how-to-apply/international-students/english-language-requirements.html"}
+});
+U.forEach(u=>{if(VERIFIED_LANGUAGES[u.id])Object.assign(u,VERIFIED_LANGUAGES[u.id]);});
 const TUITION_SOURCES={
-1:"https://en.unistra.fr/en/node/1781/tuition-fees",
+1:"https://www.unistra.fr/fr/formation/admission/droits-dinscription",
+2:"https://www.umontpellier.fr/en/international/etudier-a-letranger/etudiants-internationaux-annee-universitaire-2026-2027",
+10:"https://www.manchester.ac.uk/study/international/finance-and-scholarships/fees/",
+11:"https://study.ed.ac.uk/undergraduate/fees-funding/fees-costs/international-eu-eea",
+13:"https://admissions.umich.edu/costs-aid/costs",
+14:"https://registrar.berkeley.edu/tuition-fees/fee-schedule/",
 21:"https://www.uva.nl/en/education/fees-and-funding/tuition-fees",
 22:"https://www.tudelft.nl/en/education/study-programme-orientation/practical-matters/tuition-fee-finances",
+25:"https://www.sydney.edu.au/study/fees-and-loans/international-student-tuition-fees.html",
 30:"https://www.utwente.nl/en/education/student-services/upcoming-students/money-matters/tuitionfees/"
 };
 U.forEach(u=>{if(TUITION_SOURCES[u.id])u.feeSource=TUITION_SOURCES[u.id];});
@@ -276,6 +294,13 @@ M.es["Espagnol, anglais (selon le programme)"]="Español, inglés (según el pro
 M.en["Néerlandais, anglais (selon le programme)"]="Dutch, English (depending on programme)";
 M.es["Néerlandais, anglais (selon le programme)"]="Neerlandés, inglés (según el programa)";
 M.en["Japonais, anglais (programmes spécifiques)"]="Japanese, English (specific programmes)";
+M.en["Français, anglais (selon le programme)"]="French, English (depending on programme)";
+M.es["Français, anglais (selon le programme)"]="Francés, inglés (según el programa)";
+M.en["Français (selon la filière)"]="French (depending on study track)";
+M.es["Français (selon la filière)"]="Francés (según la especialidad)";
+M.en["Français (programmes vérifiés)"]="French (programmes verified)";
+M.es["Français (programas verificados)"]="Francés (programas verificados)";
+
 M.es["Japonais, anglais (programmes spécifiques)"]="Japonés, inglés (programas específicos)";
 M.en["Anglais (programmes spécifiques)"]="English (specific programmes)";
 M.es["Anglais (programmes spécifiques)"]="Inglés (programas específicos)";
