@@ -78,7 +78,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "verified",
       "notes": "Master's applicants must be up to 29 years old; doctoral applicants up to 35. Applications must be submitted by a French higher education institution; students cannot apply directly. Campus France lists 6 January 2027 as the institutional submission deadline, but students must confirm the earlier internal deadline with their chosen institution. The 2027 regulations must be checked for nationality and dual-citizenship conditions.",
-      "application_status": "upcoming"
+      "application_status": "upcoming",
+      "locales": {
+        "fr": {
+          "notes": "Les candidats au master doivent avoir au plus 29 ans ; les candidats au doctorat, au plus 35 ans. La candidature doit être présentée par un établissement français d’enseignement supérieur : les étudiants ne peuvent pas postuler directement. Campus France fixe au 6 janvier 2027 la date limite de dépôt par les établissements ; vérifiez la date interne, généralement antérieure, auprès de l’établissement choisi. Les règles 2027 relatives à la nationalité et à la double nationalité doivent être confirmées."
+        },
+        "es": {
+          "notes": "Los solicitantes de máster deben tener como máximo 29 años; los de doctorado, 35. La solicitud debe presentarla una institución francesa de educación superior; los estudiantes no pueden solicitarla directamente. Campus France indica el 6 de enero de 2027 como fecha límite institucional, pero cada estudiante debe confirmar con la institución elegida su plazo interno, normalmente anterior. Deben comprobarse las normas de 2027 sobre nacionalidad y doble ciudadanía."
+        }
+      }
     },
     {
       "id": "sb-sch-nl-nl-scholarship-2027",
@@ -110,7 +118,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "verified",
       "notes": "Applicants must have a non-EEA nationality, apply for a full-time bachelor's or master's programme at a participating institution, meet that institution's requirements, and not hold a degree from a Dutch educational institution. Participating institutions and deadlines vary by year. Dual-nationality cases should be checked against the provider's nationality rule.",
-      "application_status": "open"
+      "application_status": "open",
+      "locales": {
+        "fr": {
+          "notes": "Les candidats doivent avoir une nationalité hors EEE, postuler à un programme de licence ou de master à temps plein dans un établissement participant, satisfaire aux conditions de cet établissement et ne pas déjà détenir un diplôme d’un établissement néerlandais. Les établissements participants et leurs échéances varient selon l’année. Les situations de double nationalité doivent être vérifiées selon la règle de nationalité de l’organisme."
+        },
+        "es": {
+          "notes": "Los solicitantes deben tener una nacionalidad de fuera del EEE, solicitar un programa de grado o máster a tiempo completo en una institución participante, cumplir los requisitos de esa institución y no tener ya un título de una institución educativa neerlandesa. Las instituciones participantes y los plazos varían cada año. Los casos de doble nacionalidad deben comprobarse conforme a la norma de nacionalidad del organismo."
+        }
+      }
     },
     {
       "id": "sb-sch-de-daad-epos-2027",
@@ -143,7 +159,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "needs_review",
       "notes": "DAAD states that applicants must be graduates from its eligible-country list, hold a relevant Bachelor's degree (normally four years), have above-average academic results, and have at least two years of relevant professional experience after the Bachelor's degree. DRC appears in the DAAD-linked country-list PDF, but that PDF states validity 2024–2025; confirm the current cycle's country eligibility before treating DRC as confirmed. Funding is €992/month for graduates and €1,400/month for doctoral candidates from February 2026, plus insurance contributions and travel allowance; funding lasts 12–42 months depending on course. Only listed EPOS courses are funded, and each course has its own deadline. Apply directly to the selected course, not to DAAD initially.",
-      "application_status": "varies"
+      "application_status": "varies",
+      "locales": {
+        "fr": {
+          "notes": "DAAD exige un diplôme obtenu dans un pays admissible, une licence pertinente (normalement de quatre ans), de très bons résultats et au moins deux ans d’expérience professionnelle pertinente après la licence. La RDC figure dans un document DAAD relatif à la liste des pays, mais celui-ci indique une validité 2024–2025 : l’admissibilité actuelle de la RDC doit donc être confirmée. L’aide est de 992 €/mois pour les diplômés et de 1 400 €/mois pour les doctorants à partir de février 2026, avec contributions d’assurance et aide au voyage ; durée de 12 à 42 mois selon le cursus. Seuls les cursus EPOS répertoriés sont financés et chacun a sa propre date limite. Postulez directement au cursus choisi, et non d’abord auprès du DAAD."
+        },
+        "es": {
+          "notes": "DAAD exige un título obtenido en un país elegible, una licenciatura pertinente (normalmente de cuatro años), resultados académicos superiores a la media y al menos dos años de experiencia profesional relacionada después de la licenciatura. La RDC aparece en un documento de DAAD sobre países elegibles, pero ese documento indica validez 2024–2025: debe confirmarse la elegibilidad actual de la RDC. La ayuda es de 992 €/mes para graduados y 1.400 €/mes para doctorandos desde febrero de 2026, más contribuciones al seguro y ayuda de viaje; dura entre 12 y 42 meses según el curso. Solo se financian los cursos EPOS incluidos en la lista y cada uno tiene su propio plazo. Solicita directamente al curso elegido, no inicialmente a DAAD."
+        }
+      }
     },
     {
       "id": "sb-sch-au-australia-awards-africa-2027",
@@ -198,7 +222,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "closed",
       "notes": "The DRC is explicitly listed among eligible African participating countries. Country-specific eligibility, priority fields, study levels, opening and closing dates must be checked with the relevant in-country contact. The 2027 intake deadline has passed; do not show this cycle as open.",
-      "application_status": "closed"
+      "application_status": "closed",
+      "locales": {
+        "fr": {
+          "notes": "La RDC figure explicitement parmi les pays africains participants admissibles. Les critères propres au pays, les domaines prioritaires, les niveaux d’études, les dates d’ouverture et de clôture doivent être confirmés auprès du contact local compétent. La date limite de la campagne 2027 est passée ; cette édition ne doit pas être présentée comme ouverte."
+        },
+        "es": {
+          "notes": "La RDC figura expresamente entre los países africanos participantes elegibles. Los requisitos específicos del país, campos prioritarios, niveles de estudio y fechas de apertura y cierre deben confirmarse con el contacto local correspondiente. El plazo de la convocatoria para 2027 ya ha pasado; no debe mostrarse como abierta."
+        }
+      }
     },
     {
       "id": "sb-sch-uk-commonwealth-shared-2027",
@@ -318,7 +350,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "verified",
       "notes": "Master's-level award for one-year approved courses at participating UK universities. Applicants must be citizens or refugees of an eligible Commonwealth country and permanently resident in an eligible Commonwealth country; must meet degree-classification, financial-need and return-home conditions. Applicants must not have studied or worked for one academic year or more in a high-income country. Apply to the university course separately and through CSC Central. DRC is not on the official eligible-country list. Dual-citizenship conditions should be confirmed with CSC where relevant.",
-      "application_status": "open"
+      "application_status": "open",
+      "locales": {
+        "fr": {
+          "notes": "Bourse de master destinée à des cursus approuvés d’un an dans des universités britanniques participantes. Les candidats doivent être citoyens ou réfugiés d’un pays du Commonwealth admissible et y résider de façon permanente ; ils doivent satisfaire aux critères de diplôme, de besoin financier et de retour dans leur pays. Ils ne doivent pas avoir étudié ou travaillé pendant une année universitaire ou plus dans un pays à revenu élevé. Il faut candidater au cursus universitaire et via CSC Central. La RDC ne figure pas sur la liste officielle des pays admissibles. En cas de double nationalité, confirmez les règles auprès de la CSC."
+        },
+        "es": {
+          "notes": "Beca de máster para cursos aprobados de un año en universidades británicas participantes. Los solicitantes deben ser ciudadanos o refugiados de un país elegible de la Commonwealth y residir permanentemente en un país elegible; deben cumplir los requisitos de titulación, necesidad económica y regreso a su país. No deben haber estudiado ni trabajado durante un año académico o más en un país de ingresos altos. Hay que solicitar el curso universitario por separado y también a través de CSC Central. La RDC no figura en la lista oficial de países elegibles. Si existe doble nacionalidad, confirma las condiciones con CSC."
+        }
+      }
     },
     {
       "id": "sb-sch-ca-pearson-2027",
@@ -351,7 +391,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "closed",
       "notes": "For international students requiring a Canadian study permit, in final year of secondary school in 2026/27 or graduated no earlier than June 2026. School nomination required. Not available to students already attending post-secondary studies. 2027 entry deadlines have passed; retain for reference and monitor next cycle. Confirm dual citizenship and Canadian status with U of T if applicable.",
-      "application_status": "closed"
+      "application_status": "closed",
+      "locales": {
+        "fr": {
+          "notes": "Destinée aux étudiants internationaux qui ont besoin d’un permis d’études canadien, qui sont en dernière année du secondaire en 2026/27 ou ont obtenu leur diplôme au plus tôt en juin 2026. Une nomination par l’école est obligatoire. Les étudiants déjà inscrits dans l’enseignement postsecondaire ne sont pas admissibles. Les échéances pour l’entrée 2027 sont passées ; conservez cette fiche à titre informatif et surveillez le prochain cycle. Vérifiez auprès de l’Université de Toronto les règles relatives à la double nationalité et au statut au Canada."
+        },
+        "es": {
+          "notes": "Para estudiantes internacionales que necesitan un permiso de estudios canadiense, cursan el último año de secundaria en 2026/27 o se graduaron no antes de junio de 2026. Se requiere nominación del centro educativo. No pueden participar quienes ya cursan estudios postsecundarios. Los plazos para ingresar en 2027 ya han pasado; conserva esta ficha como referencia y sigue la próxima convocatoria. Confirma con la Universidad de Toronto las normas sobre doble nacionalidad y estatus en Canadá."
+        }
+      }
     },
     {
       "id": "sb-sch-ca-study-in-canada-2026",
@@ -399,7 +447,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "closed",
       "notes": "Only Canadian post-secondary institutions can apply and select participants; direct individual applications are not accepted. Eligible citizens must be enrolled full-time at a post-secondary institution in an eligible country and pay tuition there. DRC is not included in the eligible-country list for this call.",
-      "application_status": "closed"
+      "application_status": "closed",
+      "locales": {
+        "fr": {
+          "notes": "Seuls les établissements postsecondaires canadiens peuvent présenter une demande et sélectionner les participants ; les candidatures individuelles ne sont pas acceptées. Les candidats doivent être citoyens d’un pays admissible, être inscrits à temps plein dans un établissement postsecondaire de ce pays et y payer des frais de scolarité. La RDC ne figure pas dans la liste des pays admissibles pour cet appel."
+        },
+        "es": {
+          "notes": "Solo las instituciones postsecundarias canadienses pueden presentar solicitudes y seleccionar participantes; no se aceptan solicitudes individuales. Los ciudadanos deben estar matriculados a tiempo completo en una institución postsecundaria de un país elegible y pagar allí sus tasas. La RDC no figura en la lista de países elegibles para esta convocatoria."
+        }
+      }
     },
     {
       "id": "sb-sch-es-jaen-talent-2027",
@@ -435,7 +491,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "closed",
       "notes": "75 scholarships announced. Nationality eligibility is restricted to countries in Annex I and special selection routes; do not infer eligibility without checking Annex I. Admission to an eligible University of Jaén degree is separate. The call is closed.",
-      "application_status": "closed"
+      "application_status": "closed",
+      "locales": {
+        "fr": {
+          "notes": "75 bourses ont été annoncées. L’admissibilité selon la nationalité est limitée aux pays de l’annexe I et à certaines voies de sélection : ne présumez pas de votre admissibilité sans consulter cette annexe. L’admission à un diplôme admissible de l’Université de Jaén est une démarche distincte. L’appel est clôturé."
+        },
+        "es": {
+          "notes": "Se anunciaron 75 becas. La elegibilidad por nacionalidad se limita a los países del Anexo I y a vías especiales de selección; no presupongas que cumples los requisitos sin consultar el Anexo I. La admisión a un título elegible de la Universidad de Jaén es un proceso separado. La convocatoria está cerrada."
+        }
+      }
     },
     {
       "id": "sb-sch-ma-amci-international-annual",
@@ -467,7 +531,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "needs_review",
       "notes": "Hassan II University states that AMCI awards scholarships each year under cooperation programmes and annual quotas. Current call-specific nationality lists, award coverage, deadline and application route have not yet been verified; do not present as an open application.",
-      "application_status": "not_announced"
+      "application_status": "not_announced",
+      "locales": {
+        "fr": {
+          "notes": "L’Université Hassan II indique que l’AMCI attribue des bourses chaque année dans le cadre de programmes de coopération et de quotas annuels. Les listes de nationalités, la couverture, les dates limites et la procédure de candidature propres au prochain appel n’ont pas encore été vérifiées. Ne présentez pas cette bourse comme une candidature actuellement ouverte."
+        },
+        "es": {
+          "notes": "La Universidad Hassan II indica que AMCI concede becas cada año mediante programas de cooperación y cuotas anuales. Aún no se han verificado las listas de nacionalidades, cobertura, fecha límite ni procedimiento de la próxima convocatoria. No presentes esta beca como una oportunidad abierta actualmente."
+        }
+      }
     },
     {
       "id": "sb-sch-us-csusb-presidential-2027",
@@ -496,7 +568,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "needs_review",
       "notes": "CSUSB's official flyer specifies award amounts and academic requirements for new undergraduate and graduate applicants. The university's international admissions page lists Spring 2027 new-student applications from 26 October to 7 December 2026, and Fall 2027 from 26 April to 6 July 2027. The flyer does not define all international applicant/residency classifications or dual-citizenship treatment; confirm with international@csusb.edu before marking nationality eligibility confirmed. Awards are limited and offered until funds are exhausted.",
-      "application_status": "open"
+      "application_status": "open",
+      "locales": {
+        "fr": {
+          "notes": "Le document officiel de la CSUSB précise les montants et critères académiques pour les nouveaux candidats de premier cycle et de cycles supérieurs. La page d’admission internationale indique les périodes de candidature : printemps 2027, du 26 octobre au 7 décembre 2026 ; automne 2027, du 26 avril au 6 juillet 2027. Le document ne définit pas toutes les catégories de résidence ou de statut international ni les règles de double nationalité. Confirmez votre situation auprès de international@csusb.edu avant de considérer votre nationalité comme admissible. Les bourses sont limitées et attribuées jusqu’à épuisement des fonds."
+        },
+        "es": {
+          "notes": "El folleto oficial de CSUSB especifica importes y requisitos académicos para nuevos estudiantes de grado y posgrado. La página de admisiones internacionales indica los periodos de solicitud: primavera de 2027, del 26 de octubre al 7 de diciembre de 2026; otoño de 2027, del 26 de abril al 6 de julio de 2027. El folleto no define todas las clasificaciones de residencia o de estudiantes internacionales ni el tratamiento de la doble ciudadanía. Confirma tu situación en international@csusb.edu antes de considerar verificada la elegibilidad por nacionalidad. Las becas son limitadas y se conceden hasta agotar los fondos."
+        }
+      }
     },
     {
       "id": "sb-sch-jp-tohoku-global-2027",
@@ -528,7 +608,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "needs_review",
       "notes": "Tohoku University's official international scholarship page now describes the International Excellence Scholarship as a 2027 programme for undergraduate, master's and professional degree students, with full or half tuition support for approximately the top one-third of eligible students. Final rules and application procedures are still subject to university publication; do not imply that all international applicants qualify or that a separate application is open.",
-      "application_status": "not_announced"
+      "application_status": "not_announced",
+      "locales": {
+        "fr": {
+          "notes": "La page officielle de Tohoku décrit le programme International Excellence Scholarship 2027 pour les étudiants de licence, de master et de programmes professionnels. Il prévoit une exonération totale ou de moitié des frais de scolarité pour environ le tiers des étudiants admissibles les mieux classés. Les règles définitives et la procédure doivent encore être publiées par l’université. Ne laissez pas entendre que tous les candidats internationaux sont admissibles ni qu’une candidature distincte est déjà ouverte."
+        },
+        "es": {
+          "notes": "La página oficial de Tohoku describe la International Excellence Scholarship 2027 para estudiantes de grado, máster y programas profesionales. Ofrece cobertura total o del 50 % de la matrícula a aproximadamente el tercio superior de los estudiantes elegibles. La universidad aún debe publicar las normas definitivas y el procedimiento. No debe sugerirse que todos los estudiantes internacionales cumplen los requisitos ni que ya existe una solicitud independiente abierta."
+        }
+      }
     },
     {
       "id": "sb-sch-mastercard-foundation-partner-2027",
@@ -558,7 +646,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "needs_review",
       "notes": "This is a partner-managed scholarship programme, not one central application. Applicants must apply directly to a participating institution and follow that institution's current process. Admission to a partner university does not guarantee scholarship selection. The Foundation confirms support at secondary, undergraduate and master's levels, but not PhD level. The Foundation lists partners in Africa and other regions; do not infer eligibility from nationality or residence alone. Verify the current institution-specific call, award package, eligible nationalities, residence conditions and dual-citizenship rules before applying. The Foundation warns that it does not solicit payments or application fees for scholarship recruitment.",
-      "application_status": "varies"
+      "application_status": "varies",
+      "locales": {
+        "fr": {
+          "notes": "Il s’agit d’un programme géré par chaque établissement partenaire, et non d’une candidature centralisée. Les candidats doivent postuler directement auprès d’un établissement participant et suivre sa procédure actuelle. L’admission dans une université partenaire ne garantit pas l’obtention de la bourse. La Fondation confirme un soutien aux niveaux secondaire, licence et master, mais pas au doctorat. Elle répertorie des partenaires en Afrique et dans d’autres régions : ne déduisez pas l’admissibilité de la seule nationalité ou résidence. Vérifiez l’appel de l’établissement, les nationalités admissibles, les conditions de résidence, le financement et les règles de double nationalité. La Fondation ne demande aucun paiement ni frais de candidature pour le recrutement."
+        },
+        "es": {
+          "notes": "Es un programa gestionado por cada institución asociada, no una solicitud centralizada. Los solicitantes deben dirigirse directamente a una institución participante y seguir su proceso vigente. La admisión en una universidad asociada no garantiza la selección para la beca. La Fundación confirma apoyo en secundaria, grado y máster, pero no doctorado. Tiene socios en África y otras regiones; no deduzcas la elegibilidad únicamente por nacionalidad o residencia. Verifica la convocatoria de cada institución, nacionalidades admitidas, residencia, financiación y normas de doble ciudadanía. La Fundación advierte que no solicita pagos ni tasas de solicitud para la contratación de becarios."
+        }
+      }
     },
     {
       "id": "sb-sch-mu-mauritius-africa-2027",
@@ -590,7 +686,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "verified",
       "notes": "Applicants must be resident citizens of an active African Union member state or African Commonwealth country and must already have applied for a full-time on-campus diploma, degree, MPhil or PhD at an eligible public higher education institution in Mauritius for the 2027 academic year. Undergraduate applicants must be over 18 and under 26 on 1 January 2028. MPhil, MPhil/PhD and PhD applicants must be under 40 on that date. The application must be submitted through the nominating agency or authorised institution in the applicant's country of citizenship; the agency may nominate a maximum of 15 candidates. The 17 March 2027 date is the soft-copy deadline for agencies, not necessarily the student's own deadline. Confirm earlier local deadline and dual-citizenship treatment with the agency.",
-      "application_status": "upcoming"
+      "application_status": "upcoming",
+      "locales": {
+        "fr": {
+          "notes": "Les candidats doivent être citoyens résidents d’un État membre actif de l’Union africaine ou d’un pays africain du Commonwealth et avoir déjà demandé une admission à temps plein en présentiel dans un établissement public admissible de Maurice pour l’année universitaire 2027. Pour la licence, ils doivent avoir plus de 18 ans et moins de 26 ans au 1er janvier 2028. Pour le MPhil, le MPhil/PhD et le PhD, ils doivent avoir moins de 40 ans à cette date. La candidature passe par l’agence de nomination ou l’établissement autorisé dans le pays de citoyenneté ; chaque agence peut nommer au maximum 15 candidats. Le 17 mars 2027 est la date limite d’envoi électronique des agences, pas nécessairement celle des étudiants. Confirmez la date locale, plus tôt, et les règles de double nationalité auprès de l’agence."
+        },
+        "es": {
+          "notes": "Los solicitantes deben ser ciudadanos residentes de un Estado miembro activo de la Unión Africana o de un país africano de la Commonwealth y haber solicitado ya admisión a tiempo completo y presencial en una institución pública elegible de Mauricio para el curso 2027. Para grado, deben tener más de 18 y menos de 26 años el 1 de enero de 2028. Para MPhil, MPhil/PhD y PhD, deben tener menos de 40 años en esa fecha. La solicitud se presenta a través de la agencia nominadora o institución autorizada del país de ciudadanía; cada agencia puede nominar como máximo a 15 candidatos. El 17 de marzo de 2027 es el plazo de envío electrónico de las agencias, no necesariamente el del estudiante. Confirma con la agencia el plazo nacional, que será anterior, y las normas sobre doble ciudadanía."
+        }
+      }
     },
     {
       "id": "sb-sch-be-ku-leuven-africa-2027",
@@ -735,7 +839,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "verified",
       "notes": "For outstanding African applicants to eligible KU Leuven master's or advanced master's programmes. Applicant must be a national of a listed country and reside in one of the listed countries at the time of application. Previous degree must have been obtained outside Flanders; high academic performance and English proficiency are required. Applicants already enrolled at a Flemish higher education institution are generally ineligible, with a limited stated exception for a specific preparatory programme. The award cannot be combined with other scholarships from KU Leuven, Belgian national or regional governments, or the European Commission. One award is available. Submit the complete master's application including the candidacy form and separately register the scholarship candidacy by 15 January 2027. Dual-nationality cases must be confirmed with KU Leuven if the applicant also holds a nationality not listed.",
-      "application_status": "open"
+      "application_status": "open",
+      "locales": {
+        "fr": {
+          "notes": "Destinée aux candidats africains d’excellence qui postulent à un master ou master avancé admissible à KU Leuven. Le candidat doit être ressortissant d’un pays figurant sur la liste et résider dans l’un des pays indiqués au moment de la candidature. Le diplôme précédent doit avoir été obtenu hors de Flandre ; un excellent dossier académique et une maîtrise de l’anglais sont requis. Les personnes déjà inscrites dans un établissement flamand sont généralement exclues, sauf exception limitée prévue pour un programme préparatoire précis. La bourse ne peut être cumulée avec certaines autres bourses de KU Leuven, des autorités belges ou de la Commission européenne. Une seule bourse est disponible. Déposez le dossier complet de master avec le formulaire de candidature et inscrivez séparément votre candidature à la bourse avant le 15 janvier 2027. Les doubles nationalités doivent être confirmées auprès de KU Leuven si l’une des nationalités n’est pas répertoriée."
+        },
+        "es": {
+          "notes": "Para candidatos africanos destacados que solicitan másteres o másteres avanzados elegibles en KU Leuven. El solicitante debe ser ciudadano de un país incluido en la lista y residir en uno de los países indicados al presentar la solicitud. El título anterior debe haberse obtenido fuera de Flandes; se exige un expediente académico excelente y dominio del inglés. Quienes ya estén matriculados en una institución flamenca generalmente no son elegibles, salvo una excepción limitada para un programa preparatorio específico. La beca no puede combinarse con determinadas becas de KU Leuven, gobiernos belgas o la Comisión Europea. Solo hay una beca. Presenta el expediente completo de máster con el formulario de candidatura y registra por separado la solicitud de beca antes del 15 de enero de 2027. Confirma con KU Leuven los casos de doble nacionalidad si una nacionalidad no figura en la lista."
+        }
+      }
     },
     {
       "id": "sb-sch-de-daad-icir-jkuat-phd-2027",
@@ -768,7 +880,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "verified",
       "notes": "Applicants need a completed two-year master's degree or equivalent with at least Second Class/Upper Division or equivalent, strong motivation, proficiency in the language of instruction, and a last university degree obtained no more than six years before application. Applicants must be nationals or permanent residents of a Sub-Saharan African country. Target candidates include public university staff, prospective teaching/research staff, public-sector candidates, DAFI alumni, and other fresh graduates/professionals. Up to two in-country and three in-region awards are planned, subject to funding. Apply through the DAAD Portal and separately apply for admission to JKUAT. In-country and in-region benefits differ; for in-region study the applicant must study in another Sub-Saharan African country outside their home country/country of residence permit. Dual citizenship and the appropriate route should be confirmed with DAAD.",
-      "application_status": "open"
+      "application_status": "open",
+      "locales": {
+        "fr": {
+          "notes": "Les candidats doivent avoir un master de deux ans ou équivalent avec au moins une mention Second Class/Upper Division ou équivalent, une forte motivation, la maîtrise de la langue d’enseignement et un diplôme universitaire obtenu au cours des six dernières années. Ils doivent être citoyens ou résidents permanents d’un pays d’Afrique subsaharienne. Sont notamment visés les employés d’universités publiques, futurs enseignants ou chercheurs, candidats du secteur public, anciens boursiers DAFI et jeunes diplômés ou professionnels. Jusqu’à deux bourses en pays et trois bourses régionales sont prévues, sous réserve de financement. Postulez via le portail DAAD et séparément à JKUAT. Pour la voie régionale, les études doivent se dérouler dans un autre pays d’Afrique subsaharienne que le pays d’origine ou de permis de résidence. Confirmez auprès du DAAD la voie appropriée et le traitement des doubles nationalités."
+        },
+        "es": {
+          "notes": "Los solicitantes necesitan un máster de dos años o equivalente con al menos Second Class/Upper Division o equivalente, gran motivación, dominio del idioma de enseñanza y un título universitario obtenido como máximo seis años antes de la solicitud. Deben ser ciudadanos o residentes permanentes de un país del África subsahariana. Entre los candidatos previstos figuran personal de universidades públicas, futuros docentes/investigadores, candidatos del sector público, antiguos becarios DAFI y recién graduados o profesionales. Se prevén hasta dos becas nacionales y tres regionales, sujetas a financiación. Solicita a través del portal DAAD y también por separado la admisión en JKUAT. Para la modalidad regional, los estudios deben realizarse en otro país subsahariano distinto del país de origen o de residencia autorizada. Confirma con DAAD la modalidad adecuada y el tratamiento de la doble ciudadanía."
+        }
+      }
     },
     {
       "id": "sb-sch-uk-cambridge-mastercard-2027",
@@ -801,7 +921,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "verified",
       "notes": "For African citizens applying to eligible full-time one-year postgraduate courses at Cambridge under the programme themes of climate resilience and sustainability. Applicants must normally be resident in an African country; the official programme states an exception for temporary absence for study or work and for applicants with refugee or internally displaced status. The scholarship application is integrated into the course application and applicants opt in for funding. Course-specific funding deadlines vary, generally falling in early December or January; check the exact course deadline before applying. The official fee-waiver page includes Congo (Dem. Rep.) among countries whose applicants receive an automatic application-fee waiver, but the general waiver request deadline for countries not on that list was 20 November 2026. Admission and scholarship selection are competitive; meeting nationality and residence criteria does not guarantee an award. Confirm dual/multiple-citizenship cases with the programme.",
-      "application_status": "open"
+      "application_status": "open",
+      "locales": {
+        "fr": {
+          "notes": "Destinée aux citoyens africains qui postulent à des cursus admissibles à temps plein d’un an à Cambridge, dans les domaines de la résilience climatique et du développement durable. Les candidats doivent normalement résider dans un pays africain ; des exceptions existent notamment pour une absence temporaire liée aux études ou au travail, ainsi que pour certains statuts de réfugié ou de déplacement interne. La demande de bourse est intégrée à la candidature au cursus ; il faut indiquer vouloir être considéré pour le financement. Les échéances varient selon le cursus, généralement début décembre ou en janvier : vérifiez celle du programme choisi. La page officielle d’exonération des frais de candidature inclut le Congo (Rép. dém.) pour l’exonération automatique ; la date du 20 novembre 2026 concernait la demande distincte d’exonération pour les pays non répertoriés. L’admission et la sélection sont concurrentielles. Confirmez les situations de double ou multiple nationalité auprès du programme."
+        },
+        "es": {
+          "notes": "Para ciudadanos africanos que solicitan cursos elegibles de posgrado a tiempo completo de un año en Cambridge en las áreas de resiliencia climática y sostenibilidad. Normalmente deben residir en un país africano; existen excepciones para ausencias temporales por estudios o trabajo y para determinadas situaciones de refugio o desplazamiento interno. La solicitud de beca se integra en la solicitud del curso y el candidato debe indicar que desea optar a financiación. Los plazos varían según el curso, normalmente a principios de diciembre o en enero; comprueba el plazo exacto. La página oficial de exención de tasas incluye Congo (Rep. Dem.) para la exención automática; el 20 de noviembre de 2026 era el plazo de solicitud separada para países no incluidos. La admisión y la selección son competitivas. Confirma con el programa los casos de doble o múltiple ciudadanía."
+        }
+      }
     },
     {
       "id": "sb-sch-cd-albert-baker-2027",
@@ -837,7 +965,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "verified",
       "notes": "For citizens or legal permanent residents of the Democratic Republic of the Congo who are enrolled at an ABF-approved accredited post-secondary institution in the DRC, demonstrate financial need, maintain satisfactory academic progress and are active, sincere Christian Scientists. Applicants must be members of The Mother Church and a Christian Science branch church or society and provide a qualifying reference. Approved schools are listed on the official page; applications for unlisted schools are denied unless ABF first assesses the school. Applications are reviewed individually and an award is not guaranteed. ABF pays approved institutions/hostels directly. Next application period opens 12 January 2027 and closes 15 February 2027. Confirm the current approved-school list and maximum award directly with ABF before applying.",
-      "application_status": "upcoming"
+      "application_status": "upcoming",
+      "locales": {
+        "fr": {
+          "notes": "Destinée aux citoyens ou résidents permanents légaux de la République démocratique du Congo inscrits dans un établissement postsecondaire accrédité et approuvé par l’ABF en RDC. Les candidats doivent démontrer un besoin financier, maintenir des résultats satisfaisants et être des Scientistes chrétiens actifs et sincères. Ils doivent être membres de The Mother Church et d’une branche ou société de la Christian Science, et fournir une référence admissible. Les établissements approuvés figurent sur le site officiel ; les écoles non répertoriées doivent être évaluées au préalable par l’ABF. Chaque dossier est examiné individuellement et l’attribution n’est pas garantie. L’ABF paie directement l’établissement ou le foyer. La prochaine période de candidature va du 12 janvier au 15 février 2027. Confirmez la liste des établissements et le montant maximal auprès de l’ABF."
+        },
+        "es": {
+          "notes": "Para ciudadanos o residentes permanentes legales de la República Democrática del Congo matriculados en una institución postsecundaria acreditada y aprobada por ABF en la RDC. Deben demostrar necesidad económica, mantener un progreso académico satisfactorio y ser Científicos Cristianos activos y sinceros. Deben ser miembros de The Mother Church y de una rama o sociedad de Christian Science, y aportar una referencia válida. Las instituciones aprobadas aparecen en la página oficial; ABF debe evaluar previamente las no incluidas. Cada solicitud se revisa individualmente y la concesión no está garantizada. ABF paga directamente a la institución o residencia. El próximo periodo de solicitud es del 12 de enero al 15 de febrero de 2027. Confirma con ABF la lista vigente de centros y el importe máximo."
+        }
+      }
     },
     {
       "id": "sb-sch-rw-cmu-africa-mastercard-2027",
@@ -872,7 +1008,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "needs_review",
       "notes": "The official CMU-Africa page confirms three eligible master's programmes and comprehensive scholarship support. Applicants must first be admitted to a CMU-Africa degree programme; admission does not guarantee scholarship selection. The university's 2027 admissions page gives 15 December 2026 as the early deadline and 15 January 2027 as the final deadline. The public scholarship page describes eligible scholars as talented, service-oriented young people facing significant social and economic barriers but does not publish a complete country list, detailed nationality rules, residence rules or dual-citizenship treatment. Keep nationality eligibility as unknown until CMU-Africa confirms the applicant's specific nationality and circumstances. Applicants must complete the separate financial-aid assessment form in their application checklist.",
-      "application_status": "open"
+      "application_status": "open",
+      "locales": {
+        "fr": {
+          "notes": "La page officielle de CMU-Africa confirme trois masters admissibles et une aide complète. Les candidats doivent d’abord être admis à un programme de diplôme de CMU-Africa ; l’admission ne garantit pas la sélection pour la bourse. Les dates d’admission 2027 sont le 15 décembre 2026 pour la priorité et le 15 janvier 2027 pour la date finale. La page publique de la bourse décrit les profils comme des jeunes talentueux, engagés et confrontés à d’importants obstacles socio-économiques, mais ne publie pas de liste complète des pays ni de règles détaillées sur la nationalité, la résidence ou la double nationalité. L’admissibilité selon la nationalité reste donc inconnue jusqu’à confirmation par CMU-Africa. Remplissez également le formulaire distinct d’évaluation de l’aide financière dans la liste de contrôle de candidature."
+        },
+        "es": {
+          "notes": "La página oficial de CMU-Africa confirma tres másteres elegibles y apoyo integral. Primero hay que ser admitido en un programa de CMU-Africa; la admisión no garantiza la beca. La página de admisiones de 2027 indica el 15 de diciembre de 2026 como plazo anticipado y el 15 de enero de 2027 como plazo final. La página pública de la beca describe a jóvenes con talento y vocación de servicio que afrontan importantes barreras sociales y económicas, pero no publica una lista completa de países ni normas detalladas de nacionalidad, residencia o doble ciudadanía. La elegibilidad por nacionalidad debe seguir como desconocida hasta que CMU-Africa confirme el caso concreto. También hay que completar el formulario separado de evaluación de ayuda financiera en la lista de la solicitud."
+        }
+      }
     },
     {
       "id": "sb-sch-fr-sciencespo-mastercard-2027",
@@ -961,7 +1105,15 @@
       "verification_status": "verified",
       "notes": "Applicants must hold citizenship of an African country. Dual citizenship that includes a country outside Africa is explicitly ineligible. Applicants must be under 35 on 1 September of the scholarship application year; must be completing or hold a bachelor's degree from a university on Sciences Po's reference list, or meet the specified recognised bridge-programme/mentoring route, or have refugee status recognised by UNHCR; and must not already hold or be pursuing a master's degree. Applicants must apply to and be admitted to an eligible two-year Sciences Po master's programme; one-year and dual-degree programmes are excluded. Applicants already enrolled at Sciences Po or currently enrolled in or graduated from a French higher-education institution are ineligible. Two application deadlines apply: 23 November 2026 for an earlier admission decision, or 14 December 2026 for a later decision. The scholarship selection result is communicated in April 2027. The applicant must submit both the Scholars Program eligibility application and the Sciences Po master's application; admission and scholarship selection are separate competitive decisions. Confirm that the intended programme is on the eligible two-year list and check the minimum academic results required for the applicant's country of prior university study.",
       "application_status": "open",
-      "dual_citizenship_policy": "non_african_disqualifies"
+      "dual_citizenship_policy": "non_african_disqualifies",
+      "locales": {
+        "fr": {
+          "notes": "Les candidats doivent être citoyens d’un pays africain. La double nationalité incluant un pays hors d’Afrique rend explicitement le candidat inadmissible. Les candidats doivent avoir moins de 35 ans au 1er septembre de l’année de candidature et être titulaires ou en voie d’obtenir une licence d’une université figurant sur la liste de référence de Sciences Po, satisfaire à une voie de passerelle/mentorat reconnue ou avoir un statut de réfugié reconnu par le HCR. Ils ne doivent pas déjà détenir ou préparer un master. Il faut être admis à un master admissible de deux ans à Sciences Po ; les cursus d’un an et les doubles diplômes sont exclus. Les étudiants déjà inscrits à Sciences Po ou actuellement inscrits dans un établissement français d’enseignement supérieur, ou qui en sont diplômés, ne sont pas admissibles. Deux dates limites existent : 23 novembre 2026 ou 14 décembre 2026 selon la date de décision souhaitée. La candidature au programme Scholars et celle au master de Sciences Po sont toutes deux obligatoires. Vérifiez la liste des masters admissibles et les résultats académiques minimums applicables au pays d’études antérieures."
+        },
+        "es": {
+          "notes": "Los solicitantes deben tener ciudadanía de un país africano. La doble ciudadanía que incluya un país no africano excluye expresamente al candidato. Deben tener menos de 35 años el 1 de septiembre del año de solicitud y estar terminando o haber obtenido una licenciatura de una universidad incluida en la lista de referencia de Sciences Po, cumplir la vía reconocida de programa puente/mentoría o tener estatus de refugiado reconocido por ACNUR. No deben tener ni estar cursando ya un máster. Deben solicitar y ser admitidos en un máster elegible de dos años de Sciences Po; los programas de un año y los dobles títulos quedan excluidos. No son elegibles quienes ya estén matriculados en Sciences Po o estén matriculados o se hayan graduado en una institución francesa de educación superior. Hay dos plazos: 23 de noviembre de 2026 o 14 de diciembre de 2026, según la fecha de decisión deseada. Se requieren tanto la solicitud de elegibilidad del Scholars Program como la solicitud al máster. Comprueba la lista de programas de dos años y las notas mínimas del país donde se cursaron los estudios anteriores."
+        }
+      }
     },
     {
       "id": "sb-sch-rw-alu-mastercard-2027",
@@ -992,7 +1144,15 @@
       "last_verified": "2026-11-23",
       "verification_status": "needs_review",
       "notes": "ALU's official financial-aid page describes Mastercard Foundation awards as full-ride scholarships covering full tuition and additional financial support, with exact terms varying by scholarship contract or donor. Applicants must first meet ALU admission requirements; demonstrate financial need and socio-economic disadvantage; be aged 26 or below; have strong academic potential and at least a B in national examinations; and demonstrate leadership potential and community contribution. Young women, refugees and displaced people, and people with physical or learning disabilities are especially encouraged. Scholarship places are limited and meeting criteria does not guarantee an award. The Mastercard Foundation's partner directory lists ALU in Kigali, Rwanda, at undergraduate level with applications open. UNHCR Rwanda reports 30 November 2026 as the ALU deadline for the January 2027 intake, but the reviewed ALU pages do not independently state this deadline; confirm the date, intake and applicant nationality/residence rules directly with ALU. The official pages reviewed do not specify how dual or multiple citizenship is treated, so do not auto-confirm eligibility.",
-      "application_status": "open"
+      "application_status": "open",
+      "locales": {
+        "fr": {
+          "notes": "La page officielle d’aide financière d’ALU décrit les bourses Mastercard comme des bourses complètes couvrant les frais de scolarité et un soutien financier supplémentaire ; les conditions exactes dépendent du contrat de bourse ou du donateur. Les candidats doivent satisfaire aux conditions d’admission d’ALU, démontrer un besoin financier et un désavantage socio-économique, avoir 26 ans ou moins, présenter un bon potentiel académique et au moins un B aux examens nationaux, ainsi qu’un potentiel de leadership et d’engagement communautaire. Les jeunes femmes, les réfugiés et personnes déplacées ainsi que les personnes ayant un handicap physique ou des troubles d’apprentissage sont particulièrement encouragés. Les places sont limitées et satisfaire aux critères ne garantit pas une bourse. Le répertoire de la Fondation Mastercard indique ALU à Kigali au niveau licence avec candidatures ouvertes. Le HCR Rwanda indique le 30 novembre 2026 comme date limite pour janvier 2027, mais les pages ALU consultées ne confirment pas indépendamment cette date. Confirmez la date, la rentrée et les règles de nationalité/résidence auprès d’ALU. Les règles relatives aux doubles nationalités ne sont pas publiées."
+        },
+        "es": {
+          "notes": "La página oficial de ayuda financiera de ALU describe las becas Mastercard como becas completas que cubren la matrícula y apoyo financiero adicional; las condiciones exactas dependen del contrato o donante. Primero hay que cumplir los requisitos de admisión de ALU, demostrar necesidad económica y desventaja socioeconómica, tener 26 años o menos, buen potencial académico y al menos una B en los exámenes nacionales, además de potencial de liderazgo y contribución comunitaria. Se anima especialmente a mujeres jóvenes, refugiados y desplazados, y personas con discapacidades físicas o de aprendizaje. Las plazas son limitadas y cumplir los criterios no garantiza la beca. El directorio de socios de Mastercard Foundation incluye ALU en Kigali, Ruanda, a nivel de grado con solicitudes abiertas. ACNUR Ruanda informa del 30 de noviembre de 2026 como fecha límite para enero de 2027, pero las páginas de ALU revisadas no confirman esa fecha de forma independiente. Confirma directamente con ALU la fecha, convocatoria y normas de nacionalidad/residencia. Las páginas oficiales revisadas no especifican el tratamiento de la doble ciudadanía."
+        }
+      }
     }
   ]
 }
