@@ -26,15 +26,15 @@
         "fee_basis": null,
         "student_category": "international",
         "academic_year": null,
-        "source_url": null,
+        "source_url": "https://www.sorbonne-universite.fr/en/education/study-sorbonne-university/enrolment-procedures-and-tuition-fees",
         "verification_status": "not_verified"
       },
-      "admissions_source_url": null,
+      "admissions_source_url": "https://www.sorbonne-universite.fr/en/education/study-sorbonne-university/enrolment-procedures-and-tuition-fees",
       "legacy_estimate_eur": 2800,
       "legacy_description": "Université pluridisciplinaire au cœur de Paris, forte en sciences et en médecine.",
       "record_status": "needs_review",
       "last_verified": null,
-      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "review_notes": "Official 2026/2027 enrolment and tuition page reviewed. It publishes national fee rates and confirms a 2026/27 exemption policy for non-EU students; individual eligibility/exemptions and programme-specific details still require checking. Degree-level catalogue and field/language mapping remain to be verified; record remains needs_review.",
       "degree_level_verification_status": "not_verified"
     },
     {
@@ -59,15 +59,15 @@
         "fee_basis": null,
         "student_category": "international",
         "academic_year": null,
-        "source_url": null,
+        "source_url": "https://en.unistra.fr/en/node/1781/tuition-fees",
         "verification_status": "not_verified"
       },
-      "admissions_source_url": null,
+      "admissions_source_url": "https://en.unistra.fr/en/node/1781/tuition-fees",
       "legacy_estimate_eur": 2800,
       "legacy_description": "Grande université européenne, proche de l'Allemagne, avec de nombreux échanges.",
       "record_status": "needs_review",
       "last_verified": null,
-      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "review_notes": "Official 2026/2027 tuition page reviewed. Fees differ by degree, nationality/residency and exemption status; non-EU differentiated fees and several exemptions apply. The page notes some 2026 decree implementation details are being updated. Do not publish a single university-wide international fee. Degree-level catalogue and field/language mapping remain to be verified; record remains needs_review.",
       "degree_level_verification_status": "not_verified"
     },
     {
@@ -92,15 +92,15 @@
         "fee_basis": null,
         "student_category": "international",
         "academic_year": null,
-        "source_url": null,
+        "source_url": "https://www.umontpellier.fr/en/international/etudier-a-letranger/etudiants-internationaux-annee-universitaire-2026-2027",
         "verification_status": "not_verified"
       },
-      "admissions_source_url": null,
+      "admissions_source_url": "https://www.umontpellier.fr/en/international/etudier-a-letranger/etudiants-internationaux-annee-universitaire-2026-2027",
       "legacy_estimate_eur": 2800,
       "legacy_description": "Une des plus anciennes facultés de médecine d'Europe, ville étudiante dynamique.",
       "record_status": "needs_review",
       "last_verified": null,
-      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "review_notes": "Official 2026/2027 international-student fee guidance reviewed. The 2026 decree changed differentiated-fee rules; fees depend on degree level and administrative status, with exemptions in defined cases. No single university-wide amount should be entered. Degree-level catalogue and field/language mapping remain to be verified; record remains needs_review.",
       "degree_level_verification_status": "not_verified"
     },
     {
@@ -224,15 +224,15 @@
         "fee_basis": null,
         "student_category": "international",
         "academic_year": null,
-        "source_url": null,
+        "source_url": "https://www.tum.de/en/studies/fees/tuition",
         "verification_status": "not_verified"
       },
-      "admissions_source_url": null,
+      "admissions_source_url": "https://www.tum.de/en/studies/fees/tuition",
       "legacy_estimate_eur": 4000,
       "legacy_description": "Référence allemande en ingénierie et innovation, liens étroits avec l'industrie.",
       "record_status": "needs_review",
       "last_verified": null,
-      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "review_notes": "Official TUM tuition page reviewed. Non-EU/EEA tuition is programme-dependent (generally €2,000 or €3,000 per semester for bachelor's and €4,000 or €6,000 per semester for master's, with exceptions); semester fees also apply. TUM states increases from winter 2027/28. A single university-wide amount would be misleading. Degree-level catalogue and field/language mapping remain to be verified; record remains needs_review.",
       "degree_level_verification_status": "not_verified"
     },
     {
