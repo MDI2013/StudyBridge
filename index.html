@@ -263,8 +263,8 @@ const FIELDS=["Ingénierie","Sciences","Santé","Business","Lettres & SHS"];
 const cap=s=>s[0].toUpperCase()+s.slice(1);
 const LANGS=[...new Set(U.flatMap(u=>u.l.split(", ").map(cap)))].sort();
 const LOC={fr:"fr-FR",en:"en-US",es:"es-ES"};
-let LG="fr",ck="FR";
-try{LG=localStorage.getItem("sb-lg")||(["en","es"].includes((navigator.language||"").slice(0,2))?navigator.language.slice(0,2):"fr")}catch(e){}
+let LG="en",ck="FR";
+try{LG=localStorage.getItem("sb-lg")||"en"}catch(e){}
 if(!S[LG])LG="fr";
 const t=k=>S[LG][k],tr=s=>LG==="fr"?s:(M[LG][s]||s),trl=s=>LG==="fr"?s:s.split(", ").map(x=>tr(cap(x))).join(", ");
 const cx=k=>LG==="fr"?[P[k].note,P[k].visa,P[k].work,P[k].lang]:CT[LG][k];
