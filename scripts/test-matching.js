@@ -22,4 +22,11 @@ assert.equal(scholarshipNationalityFit({...base, eligible_nationalities:[], excl
 assert.equal(scholarshipNationalityFit({...base, eligible_nationalities:["KEN"], excluded_nationalities:["COD"]}, ["COD","KEN"], "").status, "unknown");
 assert.equal(scholarshipNationalityFit({...base, application_status:"closed"}, ["COD"], "").status, "cycle_closed");
 assert.equal(scholarshipNationalityFit(base, [], "").status, "not_checked");
+assert.equal(scholarshipNationalityFit({...base, eligible_residencies:["COD"]}, ["COD"], "").status, "unknown");
+assert.equal(scholarshipNationalityFit({...base, eligible_residencies:["COD"]}, ["COD"], "KEN").status, "no_match");
+assert.equal(scholarshipNationalityFit({...base, eligible_residencies:["COD"]}, ["COD"], "COD").status, "possible_match");
+assert.equal(scholarshipNationalityFit({...base, eligible_residencies:["ALL"]}, ["COD"], "CAN").status, "possible_match");
+assert.equal(scholarshipNationalityFit({...base, eligible_nationalities:["ALL"]}, ["COD","CAN"], "").status, "possible_match");
+assert.equal(scholarshipNationalityFit({...base, verification_status:"needs_review"}, ["COD"], "").status, "unknown");
+assert.equal(scholarshipNationalityFit({...base, application_status:"upcoming"}, ["COD"], "").status, "possible_match");
 console.log("StudyBridge matching tests passed.");
