@@ -167,7 +167,15 @@ function setupLanguage(){
   homeLanguageSelect.addEventListener("change",()=>{
    const lang=currentLanguage();
    const nav=document.querySelector("header nav");
-   if(nav)translateNode(nav,lang);
+   if(nav){
+    const labels={
+     en:["Home","Universities","Country guide","My shortlist","My checklist","Scholarships","Programmes","My profile","Application tracker"],
+     fr:["Accueil","Universités","Guide pays","Ma sélection","Ma liste de contrôle","Bourses","Programmes","Mon profil","Suivi des candidatures"],
+     es:["Inicio","Universidades","Guía de países","Mi selección","Mi lista de tareas","Becas","Programas","Mi perfil","Seguimiento de solicitudes"]
+    };
+    nav.querySelectorAll("a").forEach((link,index)=>{const label=labels[lang]?.[index];if(label)link.textContent=label;});
+    nav.setAttribute("aria-label",lang==="fr"?"Navigation principale":lang==="es"?"Navegación principal":"Main navigation");
+   }
    const toggle=document.querySelector("header .sb-menu-toggle");
    if(toggle){const open=toggle.getAttribute("aria-expanded")==="true";toggle.setAttribute("aria-label",lang==="fr"?(open?"Fermer le menu de navigation":"Ouvrir le menu de navigation"):lang==="es"?(open?"Cerrar menú de navegación":"Abrir menú de navegación"):(open?"Close navigation menu":"Open navigation menu"));}
    const header=document.querySelector("header");
