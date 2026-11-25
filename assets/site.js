@@ -78,9 +78,15 @@ function applyLanguage(root=document){
  if(root===document){
   const header=document.querySelector("header");
   if(header){
-   let picker=header.querySelector("#sb-language-picker");
-   if(!picker){picker=document.createElement("label");picker.id="sb-language-picker";picker.className="sb-language-picker";picker.innerHTML='<span class="sb-language-label">Language</span><select aria-label="Language"><option value="en">English</option><option value="fr">Français</option><option value="es">Español</option></select>';header.appendChild(picker);picker.querySelector("select").addEventListener("change",e=>{try{localStorage.setItem(LANG_KEY,e.target.value)}catch(err){}location.reload();});}
-   picker.querySelector("select").value=lang;
+   // The homepage already owns #ll and its own language UI. Reuse it instead of
+   // injecting a second selector that can drift out of sync with the homepage.
+   let select=header.querySelector("#ll");
+   if(!select){
+    let picker=header.querySelector("#sb-language-picker");
+    if(!picker){picker=document.createElement("label");picker.id="sb-language-picker";picker.className="sb-language-picker";picker.innerHTML='<span class="sb-language-label">Language</span><select aria-label="Language"><option value="en">English</option><option value="fr">Français</option><option value="es">Español</option></select>';header.appendChild(picker);select=picker.querySelector("select");select.addEventListener("change",e=>{try{localStorage.setItem(LANG_KEY,e.target.value)}catch(err){}location.reload();});}
+    else select=picker.querySelector("select");
+   }
+   select.value=lang;
   }
  }
  const skip=new Set(["SCRIPT","STYLE","NOSCRIPT","TEXTAREA"]);
