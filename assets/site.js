@@ -41,9 +41,11 @@ function translateText(value,lang){
  const dict=UI[lang];if(!dict)return value;
  const trimmed=value.trim();if(dict[trimmed])return value.replace(trimmed,dict[trimmed]);
  const region=translatedRegion(trimmed,lang);if(region)return value.replace(trimmed,region);
+ const prefixes=lang==="fr"?[["Deadline:","Date limite :"],["Next action:","Prochaine action :"],["Funding type:","Type de financement :"],["Application cycle:","Période de candidature :"],["Nationality check:","Vérification de la nationalité :"]]:[["Deadline:","Fecha límite:"],["Next action:","Próxima acción:"],["Funding type:","Tipo de financiación:"],["Application cycle:","Ciclo de solicitud:"],["Nationality check:","Comprobación de nacionalidad:"]];
+ for(const [from,to] of prefixes)if(trimmed.startsWith(from))return value.replace(from,to);
  const count=trimmed.match(/^(\d+)\s+(programme|programmes|scholarship|scholarships|record|records|entry|entries)$/i);
  if(count){const n=Number(count[1]);let label=count[2].toLowerCase();if(lang==="fr")label=label.startsWith("programme")?"programme":label.startsWith("scholarship")?"bourse":label.startsWith("record")?"dossier":"entrée";else label=label.startsWith("programme")?"programa":label.startsWith("scholarship")?"beca":label.startsWith("record")?"registro":"entrada";return n+" "+label+(n===1?"":lang==="fr"?"s":"s");}
- const country=trimmed.match(/^(.+?)\s+\(([A-Z]{2})\)$/);if(country&&typeof Intl!=="undefined"&&Intl.DisplayNames){try{const name=new Intl.DisplayNames([lang],{type:"region"}).of(country[2]);return value.replace(trimmed,country[2]==="CD"&&lang==="fr"?"République démocratique du Congo":country[2]==="CD"&&lang==="es"?"República Democrática del Congo":name+" ("+country[2]+")");}catch(e){}}
+ const country=trimmed.match(/^(.+?)\s+\(([A-Z]{2})\)$/);if(country&&typeof Intl!=="undefined"&&Intl.DisplayNames){try{const name=new Intl.DisplayNames([lang],{type:"region"}).of(country[2]);return value.replace(trimmed,country[2]==="CD"&&lang==="fr"?"République démocratique du Congo (CD)":country[2]==="CD"&&lang==="es"?"República Democrática del Congo (CD)":name+" ("+country[2]+")");}catch(e){}}
  return value;
 }
 function translateNode(node,lang){
