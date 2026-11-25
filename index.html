@@ -288,7 +288,7 @@ function list(){
 function favs(){
   const r=U.filter(u=>st.fav.has(u.id));
   $("#fg").innerHTML=r.length?r.map(card).join(""):`<div class="empty">${t("favE")}<br><br><button class="btn alt" data-v="unis">${t("goU")}</button></div>`;
-  const rows=[["cty",u=>P[u.c].f+" "+tr(P[u.c].n)],["cityL",u=>tr(u.city)],["typeL",u=>tr(u.t)],["fee",u=>feeTxt(u)],["lang",u=>trl(u.l)],["dom",u=>u.fl.map(tr).join(", ")],["life",u=>P[u.c].life],["visa",u=>cx(u.c)[1]],["work",u=>cx(u.c)[2]]];
+  const rows=[["cty",u=>P[u.c].f+" "+tr(P[u.c].n)],["cityL",u=>tr(u.city)],["typeL",u=>tr(u.t)],["fee",u=>feeTxt(u)],["lang",u=>teachTxt(u.l)],["dom",u=>u.fl.map(tr).join(", ")],["life",u=>P[u.c].life],["visa",u=>cx(u.c)[1]],["work",u=>cx(u.c)[2]]];
   $("#cp").innerHTML=r.length>1?`<h3 style="margin-bottom:10px">${t("cmp")}</h3><div class="tw"><table><thead><tr><th></th>${r.map(u=>`<th>${tr(u.n)}</th>`).join("")}</tr></thead><tbody>${rows.map(x=>`<tr><th scope="row">${t(x[0])}</th>${r.map(u=>`<td>${x[1](u)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`:(r.length?`<p class="meta">${t("cmpH")}</p>`:"");
 }
 function country(k){
