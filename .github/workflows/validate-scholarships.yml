@@ -21,6 +21,7 @@ on:
       - ".github/workflows/validate-scholarships.yml"
   pull_request:
     paths:
+      - "scripts/test-data-integrity.js"
       - "data/scholarships.json"
       - "data/programmes.json"
       - "data/universities.json"
