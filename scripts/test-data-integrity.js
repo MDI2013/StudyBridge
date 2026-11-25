@@ -38,6 +38,16 @@ for (const institution of partnerRecords) {
 
 if (partnerRecords.length !== 6) errors.push("expected six consortium-only partner institutions");
 
+
+const languageScript = fs.readFileSync(path.join(root, "assets/site.js"), "utf8");
+for (const token of ["sb-lg", "sb-language-picker", "fr:{", "es:{", "new MutationObserver", "function applyLanguage"]) {
+  if (!languageScript.includes(token)) errors.push("shared language system is missing required feature: " + token);
+}
+for (const page of ["index.html", "scholarships.html", "programmes.html", "profile.html", "tracker.html"]) {
+  const html = fs.readFileSync(path.join(root, page), "utf8");
+  if (!html.includes('src="assets/site.js"')) errors.push(page + ": shared language/navigation script is not loaded");
+}
+
 const homepage = fs.readFileSync(path.join(root, "index.html"), "utf8");
 const arrayStart = homepage.indexOf("const U=[");
 const arrayEnd = homepage.indexOf("].map((u,i)=>", arrayStart);
