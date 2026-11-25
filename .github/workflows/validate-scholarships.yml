@@ -58,6 +58,7 @@ jobs:
         run: node scripts/validate-universities.js
       - name: Validate page scripts and local links
         run: |
+          node --check assets/site.js
           node scripts/validate-pages.js
           node scripts/test-matching.js
           node scripts/test-data-integrity.js
