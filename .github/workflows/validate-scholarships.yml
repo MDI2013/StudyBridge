@@ -11,6 +11,7 @@ on:
       - "scripts/validate-universities.js"
       - "scripts/validate-pages.js"
       - "scripts/test-matching.js"
+      - "scripts/test-data-integrity.js"
       - "assets/matching.js"
       - "index.html"
       - "scholarships.html"
@@ -56,3 +57,4 @@ jobs:
         run: |
           node scripts/validate-pages.js
           node scripts/test-matching.js
+          node scripts/test-data-integrity.js
