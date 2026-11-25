@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0.0",
   "dataset_name": "StudyBridge University Directory",
-  "updated_at": "2026-11-23",
+  "updated_at": "2026-11-25",
   "publication_policy": "Records marked needs_review are seed records, not verified recommendations. Tuition amount remains null until confirmed from an official institution source for a specific programme, degree level, international student category, currency, and academic year.",
   "universities": [
     {
@@ -125,15 +125,15 @@
         "fee_basis": null,
         "student_category": "international",
         "academic_year": null,
-        "source_url": null,
+        "source_url": "https://www.mcgill.ca/student-accounts/tuition-fees/general-tuition-and-fees-information/tuition-fees-2026-27",
         "verification_status": "not_verified"
       },
-      "admissions_source_url": null,
+      "admissions_source_url": "https://www.mcgill.ca/undergraduate-admissions/international-students",
       "legacy_estimate_eur": 22000,
       "legacy_description": "Université de recherche reconnue, dans une ville bilingue.",
       "record_status": "needs_review",
       "last_verified": null,
-      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "review_notes": "Official McGill 2026/27 tuition guidance reviewed. International undergraduate tuition is programme/degree-specific and uses a guaranteed tuition model for specified bachelor's and professional degrees; graduate tuition differs between non-thesis and thesis programmes and is assessed on programme and student status. Do not enter a single university-wide amount. The linked international-student admissions page is an undergraduate overview; graduate applicants must check their individual department/programme. Programme catalogue, degree-level mapping, fee category and exact fee basis remain to be verified; record remains needs_review.",
       "degree_level_verification_status": "not_verified"
     },
     {
@@ -158,15 +158,15 @@
         "fee_basis": null,
         "student_category": "international",
         "academic_year": null,
-        "source_url": null,
+        "source_url": "https://registraire.umontreal.ca/droits-de-scolarite/calculateur-des-droits-de-scolarite/",
         "verification_status": "not_verified"
       },
-      "admissions_source_url": null,
+      "admissions_source_url": "https://admission.umontreal.ca/en/who-are-you/foreign-student/",
       "legacy_estimate_eur": 18000,
       "legacy_description": "Grande université francophone d'Amérique du Nord.",
       "record_status": "needs_review",
       "last_verified": null,
-      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "review_notes": "Official 2026/27 tuition calculator reviewed; estimates vary by programme/discipline, degree cycle, study load and legal status in Canada, and exclude insurance, housing, transport and other living costs. International-student exemptions may apply. The official international-student admissions page directs applicants to country-specific equivalencies and programme-specific requirements. Do not enter a single university-wide tuition amount. Full catalogue, programme-level fee basis and field/language mapping remain to be verified; record remains needs_review.",
       "degree_level_verification_status": "not_verified"
     },
     {
@@ -191,15 +191,15 @@
         "fee_basis": null,
         "student_category": "international",
         "academic_year": null,
-        "source_url": null,
+        "source_url": "https://www.registrar.utoronto.ca/fees-payments/tuition-fee-schedules/",
         "verification_status": "not_verified"
       },
-      "admissions_source_url": null,
+      "admissions_source_url": "https://www.utoronto.ca/admissions",
       "legacy_estimate_eur": 28000,
       "legacy_description": "Première université canadienne en recherche, trois campus.",
       "record_status": "needs_review",
       "last_verified": null,
-      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "review_notes": "Official University Registrar tuition schedule guidance reviewed for 2026/27. Tuition depends on programme, division, course/programme fee structure, legal status, course load, year of entry and year of study; international rates apply unless an exemption is granted. The University directs students to programme-specific Tuition Explorer schedules. Do not enter a single university-wide amount. Programme catalogue, degree-level mapping and exact programme fee schedules remain to be verified; record remains needs_review.",
       "degree_level_verification_status": "not_verified"
     },
     {
@@ -258,15 +258,15 @@
         "fee_basis": null,
         "student_category": "international",
         "academic_year": null,
-        "source_url": null,
+        "source_url": "https://www.lmu.de/en/workspace-for-students/abc-study-guide/fees-and-tuition-fees/",
         "verification_status": "not_verified"
       },
-      "admissions_source_url": null,
+      "admissions_source_url": "https://www.lmu.de/en/study/degree-students/applications-for-admission/where-do-i-apply/",
       "legacy_estimate_eur": 600,
       "legacy_description": "Université de recherche historique avec une contribution semestrielle faible.",
       "record_status": "needs_review",
       "last_verified": null,
-      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "review_notes": "Official LMU fee guidance reviewed. LMU states that general tuition fees have not been charged since winter semester 2013/14; students still pay the Munich Student Union semester contribution, which is distinct from tuition and is subject to change. Separate fees may apply to selected graduate/professional programmes. International applicants generally apply via the International Office, with exceptions depending on programme and admission route. Do not record the semester contribution as tuition. Programme-specific fees, catalogue, degree-level mapping and field/language mapping remain to be verified; record remains needs_review.",
       "degree_level_verification_status": "not_verified"
     },
     {
