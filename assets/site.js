@@ -26,9 +26,21 @@ es:{
 "Save changes":"Guardar cambios","Application updated.":"Solicitud actualizada.","Application added.":"Solicitud añadida.","Please use a secure https:// link, or leave the link blank.":"Usa un enlace seguro https:// o deja el campo vacío.","The browser could not save the tracker. Export a backup or remove some entries.":"El navegador no pudo guardar el seguimiento. Exporta una copia o elimina algunas entradas.","Delete this tracker entry?":"¿Eliminar esta entrada del seguimiento?","All tracker entries cleared.":"Se han eliminado todas las entradas.","Backup imported. Existing entries with matching IDs were updated.":"Copia importada. Se actualizaron las entradas existentes con los mismos identificadores.","That file is not a valid StudyBridge tracker backup.":"Ese archivo no es una copia válida del seguimiento de StudyBridge.","Official link ↗":"Enlace oficial ↗","Edit":"Editar","Delete":"Eliminar"
 }};
 function currentLanguage(){let v="en";try{v=localStorage.getItem(LANG_KEY)||"en"}catch(e){}return UI[v]?v:"en";}
+const regionNames={};
+function translatedRegion(name,lang){
+ if(!name||lang==="en"||typeof Intl==="undefined"||!Intl.DisplayNames)return null;
+ const cacheKey=lang;
+ if(!regionNames[cacheKey]){
+  const en=new Intl.DisplayNames(["en"],{type:"region"}),local=new Intl.DisplayNames([lang],{type:"region"}),map=new Map();
+  for(let a=65;a<=90;a++)for(let b=65;b<=90;b++){const code=String.fromCharCode(a,b),label=en.of(code);if(label&&label!==code)map.set(label,local.of(code));}
+  regionNames[cacheKey]=map;
+ }
+ return regionNames[cacheKey].get(name)||null;
+}
 function translateText(value,lang){
  const dict=UI[lang];if(!dict)return value;
  const trimmed=value.trim();if(dict[trimmed])return value.replace(trimmed,dict[trimmed]);
+ const region=translatedRegion(trimmed,lang);if(region)return value.replace(trimmed,region);
  const count=trimmed.match(/^(\d+)\s+(programme|programmes|scholarship|scholarships|record|records|entry|entries)$/i);
  if(count){const n=Number(count[1]);let label=count[2].toLowerCase();if(lang==="fr")label=label.startsWith("programme")?"programme":label.startsWith("scholarship")?"bourse":label.startsWith("record")?"dossier":"entrée";else label=label.startsWith("programme")?"programa":label.startsWith("scholarship")?"beca":label.startsWith("record")?"registro":"entrada";return n+" "+label+(n===1?"":lang==="fr"?"s":"s");}
  const country=trimmed.match(/^(.+?)\s+\(([A-Z]{2})\)$/);if(country&&typeof Intl!=="undefined"&&Intl.DisplayNames){try{const name=new Intl.DisplayNames([lang],{type:"region"}).of(country[2]);return value.replace(trimmed,country[2]==="CD"&&lang==="fr"?"République démocratique du Congo":country[2]==="CD"&&lang==="es"?"República Democrática del Congo":name+" ("+country[2]+")");}catch(e){}}
@@ -58,6 +70,7 @@ function applyLanguage(root=document){
  else translateNode(root,lang);
 }
 function setupLanguage(){
+ const style=document.createElement("style");style.textContent=".sb-language-picker{display:inline-flex;align-items:center;gap:7px;font-size:.85rem;font-weight:650;color:var(--muted,#64748b)}.sb-language-picker select{width:auto;min-width:112px;padding:7px 9px;border:1px solid var(--line,#dbe3ee);border-radius:8px;background:#fff;color:var(--ink,#172b4d);font:inherit}header{align-items:center}";document.head.appendChild(style);
  applyLanguage();
  const observer=new MutationObserver(records=>{const lang=currentLanguage();records.forEach(record=>record.addedNodes.forEach(node=>{if(node.nodeType===Node.ELEMENT_NODE||node.nodeType===Node.TEXT_NODE)translateNode(node,lang);}));});
  observer.observe(document.body,{childList:true,subtree:true});
