@@ -266,7 +266,7 @@ const LOC={fr:"fr-FR",en:"en-US",es:"es-ES"};
 let LG="en",ck="FR";
 try{LG=localStorage.getItem("sb-lg")||"en"}catch(e){}
 if(!S[LG])LG="fr";
-const t=k=>S[LG][k],tr=s=>LG==="fr"?s:(M[LG][s]||s),trl=s=>LG==="fr"?s:s.split(", ").map(x=>tr(cap(x))).join(", "),teachTxt=s=>s==="Not verified"?({fr:"Non vérifié",en:"Not verified",es:"No verificado"}[LG]):trl(s);
+const t=k=>S[LG][k],tr=s=>LG==="fr"?s:(M[LG][s]||s),trl=s=>LG==="fr"?s:s.split(", ").map(x=>tr(cap(x))).join(", "),teachTxt=s=>s==="Not verified"?({fr:"Non vérifiée",en:"Not verified",es:"No verificado"}[LG]):trl(s);
 const cx=k=>LG==="fr"?[P[k].note,P[k].visa,P[k].work,P[k].lang]:CT[LG][k];
 const fmt=n=>n.toLocaleString(LOC[LG]);
 const st={q:"",c:"",f:"",lg:"",bg:60000,so:"n",fav:new Set()};
@@ -306,7 +306,7 @@ function view(v){
 }
 function open(id){
   const u=U[id],p=P[u.c],c=cx(u.c),on=st.fav.has(id);
-  $("#dc").innerHTML=`<div><h2 style="font-size:1.5rem">${tr(u.n)}</h2><div class="meta">${p.f} ${tr(u.city)}, ${tr(p.n)} · ${tr(u.t)}</div></div><div class="facts" style="margin:0"><div class="fact"><b>${t("fee")}</b>${feeTxt(u)}</div><div class="fact"><b>${t("lang")}</b>${trl(u.l)}</div><div class="fact"><b>${t("dom")}</b>${u.fl.length?u.fl.map(tr).join(", "):t("notVerified")}</div><div class="fact"><b>${t("life")}</b>${p.life}</div><div class="fact"><b>${t("visa")}</b>${c[1]}</div><div class="fact"><b>${t("work")}</b>${c[2]}</div></div>${u.partner?`<p class="meta">${t("partnerScope")}. ${u.d}</p>`:""}<div class="row"><a class="btn" href="${u.url}" target="_blank" rel="noopener" style="text-decoration:none">${t("site")}</a><button class="btn alt" data-fav="${id}">${on?t("rem"):t("add")}</button><button class="btn alt" data-pays="${u.c}">${t("guide")} ${tr(p.n)}</button><button class="btn alt" data-close>${t("close")}</button></div>`;
+  $("#dc").innerHTML=`<div><h2 style="font-size:1.5rem">${tr(u.n)}</h2><div class="meta">${p.f} ${tr(u.city)}, ${tr(p.n)} · ${tr(u.t)}</div></div><div class="facts" style="margin:0"><div class="fact"><b>${t("fee")}</b>${feeTxt(u)}</div><div class="fact"><b>${t("lang")}</b>${teachTxt(u.l)}</div><div class="fact"><b>${t("dom")}</b>${u.fl.length?u.fl.map(tr).join(", "):t("notVerified")}</div><div class="fact"><b>${t("life")}</b>${p.life}</div><div class="fact"><b>${t("visa")}</b>${c[1]}</div><div class="fact"><b>${t("work")}</b>${c[2]}</div></div>${u.partner?`<p class="meta">${t("partnerScope")}. ${u.d}</p>`:""}<div class="row"><a class="btn" href="${u.url}" target="_blank" rel="noopener" style="text-decoration:none">${t("site")}</a><button class="btn alt" data-fav="${id}">${on?t("rem"):t("add")}</button><button class="btn alt" data-pays="${u.c}">${t("guide")} ${tr(p.n)}</button><button class="btn alt" data-close>${t("close")}</button></div>`;
   $("#dg").showModal();
 }
 function build(){
