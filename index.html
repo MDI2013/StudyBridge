@@ -56,7 +56,7 @@ nav button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
 .fact b{display:block;font-size:.8rem;color:var(--mut);font-weight:500}
 dialog{border:0;border-radius:16px;padding:0;max-width:560px;width:calc(100% - 28px);background:var(--card);color:var(--ink)}
 dialog::backdrop{background:rgba(10,15,30,.6)}
-.dl{padding:24px;display:flex;flex-direction:column;gap:12px}
+.dl{padding:24px;display:flex;flex-direction:column;gap:12px}.dl .fee-details p{margin:6px 0}.dl .fee-details ul{margin:6px 0;padding-left:20px}.dl .fee-details li{margin:4px 0}.dl>.meta{margin:4px 0}
 .row{display:flex;gap:8px;flex-wrap:wrap}
 footer{border-top:1px solid var(--line);padding:22px 0 30px;color:var(--mut);font-size:.85rem}
 .view[hidden]{display:none}
@@ -294,6 +294,21 @@ const TUITION_SOURCES={
 };
 U.forEach(u=>{if(TUITION_SOURCES[u.id])u.feeSource=TUITION_SOURCES[u.id];});
 
+
+const PARTNER_DESCRIPTIONS={
+30:{fr:"Partenaire de délivrance du diplôme dans le MSc WAVES uniquement. Le catalogue général, les langues d’enseignement et les frais de l’établissement ne sont pas vérifiés. Programme : https://msc-waves.eu/",en:"Degree-awarding partner in the MSc WAVES programme only. The university-wide catalogue, teaching languages and tuition fees have not been verified. Programme: https://msc-waves.eu/",es:"Socio que otorga el título únicamente en el programa MSc WAVES. No se han verificado el catálogo general de la universidad, los idiomas de enseñanza ni las tasas. Programa: https://msc-waves.eu/"},
+31:{fr:"Partenaire de délivrance du diplôme dans le MSc WAVES uniquement. Le catalogue général, les langues d’enseignement et les frais de l’établissement ne sont pas vérifiés. Programme : https://msc-waves.eu/",en:"Degree-awarding partner in the MSc WAVES programme only. The university-wide catalogue, teaching languages and tuition fees have not been verified. Programme: https://msc-waves.eu/",es:"Socio que otorga el título únicamente en el programa MSc WAVES. No se han verificado el catálogo general de la universidad, los idiomas de enseñanza ni las tasas. Programa: https://msc-waves.eu/"},
+32:{fr:"Partenaire de délivrance du diplôme dans le MSc WAVES uniquement. Le catalogue général, les langues d’enseignement et les frais de l’établissement ne sont pas vérifiés. Programme : https://msc-waves.eu/",en:"Degree-awarding partner in the MSc WAVES programme only. The university-wide catalogue, teaching languages and tuition fees have not been verified. Programme: https://msc-waves.eu/",es:"Socio que otorga el título únicamente en el programa MSc WAVES. No se han verificado el catálogo general de la universidad, los idiomas de enseñanza ni las tasas. Programa: https://msc-waves.eu/"},
+33:{fr:"Université membre du consortium MAIA uniquement. Le catalogue général, les langues d’enseignement et les frais de l’établissement ne sont pas vérifiés. Programme : https://maiamaster.org/about/",en:"Consortium university in MAIA only. The university-wide catalogue, teaching languages and tuition fees have not been verified. Programme: https://maiamaster.org/about/",es:"Universidad miembro del consorcio MAIA únicamente. No se han verificado el catálogo general, los idiomas de enseñanza ni las tasas de la institución. Programa: https://maiamaster.org/about/"},
+34:{fr:"Université membre du consortium MAIA uniquement. Le catalogue général, les langues d’enseignement et les frais de l’établissement ne sont pas vérifiés. Programme : https://maiamaster.org/about/",en:"Consortium university in MAIA only. The university-wide catalogue, teaching languages and tuition fees have not been verified. Programme: https://maiamaster.org/about/",es:"Universidad miembro del consorcio MAIA únicamente. No se han verificado el catálogo general, los idiomas de enseñanza ni las tasas de la institución. Programa: https://maiamaster.org/about/"},
+35:{fr:"Université membre du consortium MAIA uniquement. Le catalogue général, les langues d’enseignement et les frais de l’établissement ne sont pas vérifiés. Programme : https://maiamaster.org/about/",en:"Consortium university in MAIA only. The university-wide catalogue, teaching languages and tuition fees have not been verified. Programme: https://maiamaster.org/about/",es:"Universidad miembro del consorcio MAIA únicamente. No se han verificado el catálogo general, los idiomas de enseñanza ni las tasas de la institución. Programa: https://maiamaster.org/about/"}
+};
+const COUNTRY_LIFE={
+IT:{fr:"Non renseigné",en:"Not reported",es:"No indicado"},
+SI:{fr:"Non renseigné",en:"Not reported",es:"No indicado"}
+};
+const countryLife=k=>COUNTRY_LIFE[k]?.[LG]||P[k].life;
+const partnerDescription=u=>PARTNER_DESCRIPTIONS[u.id]?.[LG]||u.d;
 const TUITION_DETAILS={
 34:{year:"2026–2027",currency:"EUR",rows:[
 {level:{fr:"Licence",en:"Bachelor's",es:"Grado"},category:{fr:"Tarif national de base",en:"Base national fee",es:"Tasa nacional base"},amount:"178 €"},
@@ -303,11 +318,11 @@ const TUITION_DETAILS={
 {level:{fr:"Master / cycle ingénieur",en:"Master's / engineering cycle",es:"Máster / ciclo de ingeniería"},category:{fr:"Tarif différencié pour les étudiants concernés hors UE/EEE",en:"Differentiated fee for eligible non-EU/EEA students",es:"Tasa diferenciada para estudiantes elegibles de fuera de la UE/EEE"},amount:"3 950 €"}
 ],note:{fr:"Les tarifs différenciés concernent certaines situations (notamment première inscription dans un cycle, changement de cycle ou d’établissement) pour les nationalités hors UE/EEE et catégories assimilées. Des exonérations individuelles sont possibles dans la limite prévue par la réglementation. Certaines formations en anglais peuvent ajouter des frais spécifiques. La CVEC est en supplément.",en:"Differentiated rates apply to specified cases (including first enrolment in a cycle, changing cycle or institution) for non-EU/EEA and other specified nationalities. Individual exemptions may be available within the regulatory limit. Some English-taught programmes add extra fees. The CVEC is additional.",es:"Las tasas diferenciadas se aplican a determinados casos (incluida la primera matrícula en un ciclo, el cambio de ciclo o de universidad) para nacionalidades de fuera de la UE/EEE y otras categorías indicadas. Puede haber exenciones individuales dentro del límite reglamentario. Algunos programas en inglés añaden tasas específicas. La CVEC se paga aparte."}},
 35:{year:"2026–2027",currency:"EUR",rows:[
-{level:{fr:"Licence en Computer Engineering (page du programme)",en:"Computer Engineering bachelor's (programme page)",es:"Grado en Computer Engineering (página del programa)"},category:{fr:"Étudiants internationaux — indication propre au programme",en:"International students — programme-specific indication",es:"Estudiantes internacionales — indicación específica del programa"},amount:"À partir d’environ 1 000 €/an"}
+{level:{fr:"Licence en Computer Engineering (page du programme)",en:"Computer Engineering bachelor's (programme page)",es:"Grado en Computer Engineering (página del programa)"},category:{fr:"Étudiants internationaux — indication propre au programme",en:"International students — programme-specific indication",es:"Estudiantes internacionales — indicación específica del programa"},amount:{fr:"À partir d’environ 1 000 €/an",en:"From approximately €1,000/year",es:"Desde aproximadamente 1.000 €/año"}}
 ],note:{fr:"Indication publiée sur la page du programme Computer Engineering, et non tarif universel de l’établissement. Le montant final dépend du programme et de l’évaluation des frais. Ne pas appliquer automatiquement cette indication au programme conjoint MAIA.",en:"This indication is published on the Computer Engineering programme page; it is not a universal institutional fee. The final amount depends on the programme and fee assessment. Do not automatically apply it to the MAIA joint programme.",es:"Esta indicación aparece en la página del programa Computer Engineering; no es una tasa universal de la institución. El importe final depende del programa y de la evaluación de tasas. No debe aplicarse automáticamente al programa conjunto MAIA."}}
 };
 
-[31,32,33].forEach(id=>{const u=U.find(x=>x.id===id);if(u)u.feeSourceKind="partner";});
+[30,31,32,33,34,35].forEach(id=>{const u=U.find(x=>x.id===id);if(u)u.feeSourceKind="partner";});
 U.find(u=>u.id===15).feeSourceKind="fees";
 U.find(u=>u.id===17).feeSourceKind="registration";
 
@@ -391,8 +406,8 @@ const save=()=>{try{localStorage.setItem("sb-fav",JSON.stringify([...st.fav]))}c
 const feeTxt=u=>u.fee==null?t("feeUnknown"):"≈ "+fmt(u.fee)+" € "+t("perY")+(u.fee<=1000?" "+t("low"):"");
 function tuitionDetailsHtml(u){
  const d=TUITION_DETAILS[u.id];if(!d)return "";
- const rows=d.rows.map(r=>`<li><b>${t("feeLevel")}:</b> ${r.level[LG]} · <b>${t("feeCategory")}:</b> ${r.category[LG]} · <b>${t("feeAmount")}:</b> ${r.amount}</li>`).join("");
- return `<section class="meta" style="margin:14px 0"><b>${t("feeDetails")}</b><p>${t("feeYear")}: ${d.year} · ${d.currency}</p><ul style="padding-left:20px;line-height:1.6">${rows}</ul><p><b>${t("feeNote")}:</b> ${d.note[LG]}</p></section>`;
+ const rows=d.rows.map(r=>`<li><b>${t("feeLevel")}:</b> ${r.level[LG]} · <b>${t("feeCategory")}:</b> ${r.category[LG]} · <b>${t("feeAmount")}:</b> ${typeof r.amount==="string"?r.amount:r.amount[LG]}</li>`).join("");
+ return `<section class="meta fee-details" style="margin:8px 0"><b>${t("feeDetails")}</b><p>${t("feeYear")}: ${d.year} · ${d.currency}</p><ul style="padding-left:20px;line-height:1.6">${rows}</ul><p><b>${t("feeNote")}:</b> ${d.note[LG]}</p></section>`;
 }
 
 const sc=$("#qc"),c2=$("#c2");
@@ -428,7 +443,7 @@ function view(v){
 }
 function open(id){
   const u=U[id],p=P[u.c],c=cx(u.c),on=st.fav.has(id);
-  $("#dc").innerHTML=`<div><h2 style="font-size:1.5rem">${tr(u.n)}</h2><div class="meta">${p.f} ${tr(u.city)}, ${tr(p.n)} · ${tr(u.t)}</div></div><div class="facts" style="margin:0"><div class="fact"><b>${t("fee")}</b>${feeTxt(u)}</div><div class="fact"><b>${t("lang")}</b>${teachTxt(u.l)}</div><div class="fact"><b>${t("dom")}</b>${u.fl.length?u.fl.map(tr).join(", "):t("notVerified")}</div><div class="fact"><b>${t("life")}</b>${p.life}</div><div class="fact"><b>${t("visa")}</b>${c[1]}</div><div class="fact"><b>${t("work")}</b>${c[2]}</div></div>${tuitionDetailsHtml(u)}${u.langSource?`<p class="meta"><a href="${u.langSource}" target="_blank" rel="noopener">${t("languageSource")}</a></p>`:""}${u.feeSource?`<p class="meta"><a href="${u.feeSource}" target="_blank" rel="noopener">${t(u.feeSourceKind==="registration"?"registrationSource":u.feeSourceKind==="partner"?"partnerFeeSource":"tuitionSource")}</a></p>`:`<p class="meta">${t("feeUnavailable")}</p>`}${u.partner?`<p class="meta">${t("partnerScope")}. ${u.d}</p>`:""}<div class="row"><a class="btn" href="${u.url}" target="_blank" rel="noopener" style="text-decoration:none">${t("site")}</a><button class="btn alt" data-fav="${id}">${on?t("rem"):t("add")}</button><button class="btn alt" data-pays="${u.c}">${t("guide")} ${tr(p.n)}</button><button class="btn alt" data-close>${t("close")}</button></div>`;
+  $("#dc").innerHTML=`<div><h2 style="font-size:1.5rem">${tr(u.n)}</h2><div class="meta">${p.f} ${tr(u.city)}, ${tr(p.n)} · ${tr(u.t)}</div></div><div class="facts" style="margin:0"><div class="fact"><b>${t("fee")}</b>${feeTxt(u)}</div><div class="fact"><b>${t("lang")}</b>${teachTxt(u.l)}</div><div class="fact"><b>${t("dom")}</b>${u.fl.length?u.fl.map(tr).join(", "):t("notVerified")}</div><div class="fact"><b>${t("life")}</b>${countryLife(k)}</div><div class="fact"><b>${t("visa")}</b>${c[1]}</div><div class="fact"><b>${t("work")}</b>${c[2]}</div></div>${tuitionDetailsHtml(u)}${u.langSource?`<p class="meta"><a href="${u.langSource}" target="_blank" rel="noopener">${t("languageSource")}</a></p>`:""}${u.feeSource?`<p class="meta"><a href="${u.feeSource}" target="_blank" rel="noopener">${t(u.feeSourceKind==="registration"?"registrationSource":u.feeSourceKind==="partner"?"partnerFeeSource":"tuitionSource")}</a></p>`:`<p class="meta">${t("feeUnavailable")}</p>`}${u.partner?`<p class="meta">${t("partnerScope")}. ${partnerDescription(u)}</p>`:""}<div class="row"><a class="btn" href="${u.url}" target="_blank" rel="noopener" style="text-decoration:none">${t("site")}</a><button class="btn alt" data-fav="${id}">${on?t("rem"):t("add")}</button><button class="btn alt" data-pays="${u.c}">${t("guide")} ${tr(p.n)}</button><button class="btn alt" data-close>${t("close")}</button></div>`;
   $("#dg").showModal();
 }
 function build(){
