@@ -491,3 +491,8 @@ button.sb-back-top:active{transform:translateY(0) scale(.96)}
   width:48px!important;height:48px!important;
  }
 }
+
+
+/* Consistent StudyBridge bridge mark across all discovery pages */
+.brand{display:inline-flex;align-items:center;gap:10px}
+.brand-mark{display:block;width:34px;height:22px;flex:none}
