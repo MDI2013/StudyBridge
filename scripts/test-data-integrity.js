@@ -37,6 +37,25 @@ for (const institution of partnerRecords) {
 }
 
 if (partnerRecords.length !== 6) errors.push("expected six consortium-only partner institutions");
+
+const homepage = fs.readFileSync(path.join(root, "index.html"), "utf8");
+const arrayStart = homepage.indexOf("const U=[");
+const arrayEnd = homepage.indexOf("].map((u,i)=>", arrayStart);
+if (arrayStart < 0 || arrayEnd < 0) {
+  errors.push("homepage university finder data array could not be inspected");
+} else {
+  try {
+    const finderRecords = JSON.parse(homepage.slice(arrayStart + "const U=".length, arrayEnd + 1));
+    if (finderRecords.length !== 36) errors.push("homepage finder must contain 36 institution records");
+    const normalised = homepage.slice(arrayEnd, homepage.indexOf("const S=", arrayEnd));
+    if (!normalised.includes('fee:null,l:"Not verified",fl:[]')) {
+      errors.push("homepage finder must suppress unverified legacy tuition, language and subject claims");
+    }
+  } catch (error) {
+    errors.push("homepage finder data must remain valid JSON-compatible data: " + error.message);
+  }
+}
+
 if (errors.length) {
   console.error("StudyBridge cross-dataset integrity failed:");
   errors.forEach(error => console.error(" - " + error));
