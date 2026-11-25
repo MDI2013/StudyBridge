@@ -42,7 +42,7 @@ footer{color:var(--muted);font-size:.85rem;margin:34px 0;padding:18px 0;border-t
 <script src="assets/matching.js"></script>
 <script>
 const $=s=>document.querySelector(s);
-const countries={NL:"Netherlands",BR:"Brazil",IE:"Ireland",IT:"Italy",ES:"Spain",FR:"France",SI:"Slovenia",CA:"Canada"};
+const countries={NL:"Netherlands",BR:"Brazil",IE:"Ireland",IT:"Italy",ES:"Spain",FR:"France",SI:"Slovenia",CA:"Canada",UK:"United Kingdom",US:"United States"};
 let records=[];
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const statusLabel=s=>({open:"Applications open",upcoming:"Upcoming",closed:"Closed",not_announced:"Not announced",varies:"Deadlines vary",unknown:"Status unknown"})[s]||"Status unknown";
