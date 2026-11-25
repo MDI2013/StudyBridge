@@ -13,6 +13,7 @@ on:
       - "scripts/test-matching.js"
       - "scripts/test-data-integrity.js"
       - "assets/matching.js"
+      - "assets/site.js"
       - "index.html"
       - "scholarships.html"
       - "programmes.html"
