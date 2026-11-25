@@ -32,6 +32,7 @@ on:
       - "scripts/validate-pages.js"
       - "scripts/test-matching.js"
       - "assets/matching.js"
+      - "assets/site.js"
       - "index.html"
       - "scholarships.html"
       - "programmes.html"
