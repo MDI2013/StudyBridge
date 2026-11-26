@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-11-26",
+  "countries": [
+    {
+      "code": "CA",
+      "name": "Canada",
+      "flag": "🇨🇦",
+      "capital": "Ottawa",
+      "currency": "CAD",
+      "languages": [
+        "English",
+        "French"
+      ],
+      "permit_name": "Study permit",
+      "official_immigration_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit.html",
+      "official_admissions_url": "https://www.educanada.ca/",
+      "official_work_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work.html",
+      "official_poststudy_url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation.html",
+      "admission": "Apply directly to a recognised institution and confirm programme-specific academic and language requirements. For post-secondary study, check that the institution is a Designated Learning Institution (DLI).",
+      "visa_steps": [
+        "Obtain a letter of acceptance from a DLI.",
+        "Check whether a provincial or territorial attestation letter (PAL/TAL) is required; exemptions apply.",
+        "Prepare proof of funds, identity documents and any requested medical or police documents.",
+        "Apply online and follow biometrics or additional-document instructions.",
+        "If approved, review the letter of introduction and any travel document requirements before departure."
+      ],
+      "documents": [
+        "Letter of acceptance from a DLI",
+        "PAL/TAL where required",
+        "Proof of funds for tuition, living costs and travel",
+        "Valid passport and identity documents",
+        "Medical exam or police certificate if requested"
+      ],
+      "funds": "The required amount depends on tuition, family size and where you will study. Check IRCC's current proof-of-funds table before applying.",
+      "work": "Work eligibility and hour limits depend on the conditions of the study permit and current IRCC rules. Check the official work-while-studying page; do not assume every student may work.",
+      "poststudy": "A Post-Graduation Work Permit (PGWP) may be available only if the student, institution and programme meet the rules in force when applying.",
+      "costs": "Tuition and living costs vary by institution, province, city and programme. Use institution fee schedules and current government guidance.",
+      "notes": "Quebec has additional provincial requirements. PAL/TAL exemptions and PGWP rules can change; verify them for the exact programme and application date.",
+      "sources": [
+        "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/eligibility.html",
+        "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents.html"
+      ]
+    },
+    {
+      "code": "US",
+      "name": "United States",
+      "flag": "🇺🇸",
+      "capital": "Washington, D.C.",
+      "currency": "USD",
+      "languages": [
+        "English"
+      ],
+      "permit_name": "F-1 student visa (academic study)",
+      "official_immigration_url": "https://travel.state.gov/content/travel/en/us-visas/study/student-visa.html",
+      "official_admissions_url": "https://educationusa.state.gov/",
+      "official_work_url": "https://studyinthestates.dhs.gov/students/work",
+      "official_poststudy_url": "https://studyinthestates.dhs.gov/students/work/optional-practical-training-opt",
+      "admission": "Apply to a Student and Exchange Visitor Program (SEVP)-certified school. The institution sets academic, English-language, testing and financial admission requirements.",
+      "visa_steps": [
+        "Apply to an SEVP-certified school and receive an acceptance.",
+        "Pay the I-901 SEVIS fee when required and obtain Form I-20 from the school.",
+        "Complete the DS-160 visa application and pay the visa application fee.",
+        "Schedule and attend the visa interview with the required documents.",
+        "Follow the visa and entry instructions; a visa does not guarantee admission at the border."
+      ],
+      "documents": [
+        "Form I-20 issued by the school",
+        "Valid passport",
+        "DS-160 confirmation and visa appointment documents",
+        "Evidence of funds for tuition and living costs",
+        "Academic records and any additional interview evidence"
+      ],
+      "funds": "Applicants must demonstrate credible funding for the costs of study and living. The school documents estimated costs on the I-20; check its instructions and consular requirements.",
+      "work": "F-1 employment is restricted. On-campus work and authorised training options have specific conditions; obtain the required authorisation before working.",
+      "poststudy": "Optional Practical Training (OPT), including STEM OPT extensions for eligible students, is subject to detailed eligibility and authorisation rules.",
+      "costs": "Tuition and living expenses vary widely by institution and location. Compare the institution's published cost of attendance and financial aid.",
+      "notes": "Visa issuance, interview availability and entry decisions are individual. Do not begin employment without the required authorisation.",
+      "sources": [
+        "https://studyinthestates.dhs.gov/sevis-help-hub/student-records/fm-student-employment",
+        "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html"
+      ]
+    },
+    {
+      "code": "UK",
+      "name": "United Kingdom",
+      "flag": "🇬🇧",
+      "capital": "London",
+      "currency": "GBP",
+      "languages": [
+        "English"
+      ],
+      "permit_name": "Student visa",
+      "official_immigration_url": "https://www.gov.uk/student-visa",
+      "official_admissions_url": "https://www.ucas.com/",
+      "official_work_url": "https://www.gov.uk/student-visa",
+      "official_poststudy_url": "https://www.gov.uk/graduate-visa",
+      "admission": "Apply to a licensed student sponsor. You generally need an unconditional offer and a Confirmation of Acceptance for Studies (CAS). Academic and English-language requirements are set by the provider.",
+      "visa_steps": [
+        "Receive an offer from a licensed student sponsor.",
+        "Obtain your CAS and check course and sponsor details.",
+        "Prepare evidence of funds and English ability where required.",
+        "Apply online for the Student visa, pay the fee and Immigration Health Surcharge if applicable.",
+        "Complete identity verification or attend a biometrics appointment as instructed."
+      ],
+      "documents": [
+        "CAS reference number",
+        "Valid passport",
+        "Proof of funds if required",
+        "English-language evidence if required",
+        "ATAS certificate or parental consent where applicable"
+      ],
+      "funds": "The financial requirement depends on course fees, study location and maintenance rules. Check the current GOV.UK amount and required holding period before applying.",
+      "work": "Work permission depends on course level, sponsor and visa conditions. Check the conditions on the eVisa and current GOV.UK rules.",
+      "poststudy": "The Graduate visa is subject to eligibility and the rules in force when applying. Check current duration, application timing and qualifying course requirements.",
+      "costs": "Tuition varies by university and course. Living-cost requirements differ between London and outside London; consult current official guidance.",
+      "notes": "Dependants are restricted for many taught courses. ATAS applies to certain sensitive subject areas and nationalities.",
+      "sources": [
+        "https://www.gov.uk/student-visa/money",
+        "https://www.gov.uk/student-visa/knowledge-of-english"
+      ]
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "flag": "🇫🇷",
+      "capital": "Paris",
+      "currency": "EUR",
+      "languages": [
+        "French",
+        "English (programme-dependent)"
+      ],
+      "permit_name": "Long-stay student visa (VLS-TS) or other student residence route",
+      "official_immigration_url": "https://france-visas.gouv.fr/en/student",
+      "official_admissions_url": "https://www.campusfrance.org/en",
+      "official_work_url": "https://www.service-public.fr/particuliers/vosdroits/F2713?lang=en",
+      "official_poststudy_url": "https://www.service-public.fr/particuliers/vosdroits/F17319?lang=en",
+      "admission": "Requirements depend on the institution, programme and applicant's country of residence. Campus France procedures apply in designated countries; check the relevant country-specific process.",
+      "visa_steps": [
+        "Choose a recognised programme and obtain admission or pre-enrolment evidence.",
+        "Check whether the Etudes en France procedure applies in your country.",
+        "Use France-Visas to identify the correct visa and document checklist.",
+        "Submit the application through the designated process and attend an appointment if required.",
+        "After arrival, validate a VLS-TS online within the required period, if that is the visa issued."
+      ],
+      "documents": [
+        "Admission or pre-enrolment evidence",
+        "Passport and visa application forms",
+        "Proof of resources meeting the current threshold",
+        "Proof of accommodation where requested",
+        "Health insurance and civil-status documents where required"
+      ],
+      "funds": "Applicants must show sufficient resources under the current French rules. Confirm the amount and acceptable evidence on France-Visas and Campus France.",
+      "work": "Student work is generally subject to an annual legal limit. Confirm the current limit and any exceptions before accepting work.",
+      "poststudy": "A temporary residence route to seek employment or create a business may be available to eligible graduates; conditions depend on qualification and circumstances.",
+      "costs": "Tuition differs between public institutions, private schools and programmes. Check the institution's current fee schedule and any differentiated fees or exemptions.",
+      "notes": "The visa route and Campus France process depend on nationality and country of residence. VLS-TS validation is time-sensitive.",
+      "sources": [
+        "https://france-visas.gouv.fr/en/your-arrival-in-france",
+        "https://www.campusfrance.org/en/tuition-fees-France"
+      ]
+    },
+    {
+      "code": "DE",
+      "name": "Germany",
+      "flag": "🇩🇪",
+      "capital": "Berlin",
+      "currency": "EUR",
+      "languages": [
+        "German",
+        "English (programme-dependent)"
+      ],
+      "permit_name": "National visa for study, followed by residence permit where required",
+      "official_immigration_url": "https://www.make-it-in-germany.com/en/visa-residence/types/studying",
+      "official_admissions_url": "https://www.daad.de/en/studying-in-germany/",
+      "official_work_url": "https://www.make-it-in-germany.com/en/study-vocational-training/studies-in-germany/work",
+      "official_poststudy_url": "https://www.make-it-in-germany.com/en/visa-residence/types/other/job-search-opportunity-card",
+      "admission": "Check whether your school-leaving certificate or previous degree qualifies for the chosen programme. Some applicants need Studienkolleg or a recognised assessment; language requirements are programme-specific.",
+      "visa_steps": [
+        "Check admission eligibility and apply to the university or preparatory course.",
+        "Confirm whether you need a student visa before travel.",
+        "Arrange accepted proof of financing, such as a blocked account, scholarship or formal commitment where permitted.",
+        "Apply through the responsible German mission and provide the required documents.",
+        "After arrival, complete local registration and apply for a residence permit if required."
+      ],
+      "documents": [
+        "Admission letter or evidence of applicant status where applicable",
+        "Proof of financing using an accepted method",
+        "Valid passport",
+        "Health insurance evidence",
+        "Academic qualifications and language evidence"
+      ],
+      "funds": "The blocked-account amount and accepted alternatives can change. Use the current German mission and official study portal guidance; do not rely on older annual figures.",
+      "work": "Student work rights are governed by current residence law and may differ by permit status. Check the current official guidance before working.",
+      "poststudy": "Eligible graduates of German higher education institutions may apply for a residence permit to seek qualified employment, subject to current conditions.",
+      "costs": "Many public universities charge no general tuition but semester contributions apply; exceptions and tuition-charging states or programmes exist. Verify institution-specific fees.",
+      "notes": "Admission recognition and visa requirements depend on nationality and prior education. A blocked account is not the only possible financing route.",
+      "sources": [
+        "https://www.study-in-germany.com/en/plan-your-studies/requirements/visa/",
+        "https://www.anerkennung-in-deutschland.de/html/en/index.php"
+      ]
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands",
+      "flag": "🇳🇱",
+      "capital": "Amsterdam",
+      "currency": "EUR",
+      "languages": [
+        "Dutch",
+        "English (many international programmes)"
+      ],
+      "permit_name": "Residence permit for study; entry MVV may also be required",
+      "official_immigration_url": "https://ind.nl/en/residence-permits/study/student-residence-permit-for-university-or-higher-professional-education",
+      "official_admissions_url": "https://www.studyinnl.org/",
+      "official_work_url": "https://ind.nl/en/residence-permits/study/student-residence-permit-for-university-or-higher-professional-education",
+      "official_poststudy_url": "https://ind.nl/en/residence-permits/work/orientation-year-highly-educated-persons",
+      "admission": "Apply to a recognised Dutch higher education institution. The institution sets academic and language requirements and generally acts as the immigration sponsor.",
+      "visa_steps": [
+        "Apply to a recognised institution and meet its admission conditions.",
+        "The institution submits the residence-permit application and MVV application if needed.",
+        "Provide proof of sufficient funds and other requested documents.",
+        "Complete any required civic integration or biometrics steps as instructed.",
+        "After arrival, collect the residence document and comply with study-progress requirements."
+      ],
+      "documents": [
+        "Admission/enrolment evidence",
+        "Valid passport",
+        "Proof of sufficient funds",
+        "Proof of payment or financial arrangements as required",
+        "TB test or other health documentation if applicable"
+      ],
+      "funds": "The required monthly study norm is updated periodically. Check the IND study permit page for the current amount and whether tuition must be demonstrated separately.",
+      "work": "Paid employment usually requires a work permit arranged by the employer, with limited exceptions such as permitted seasonal or self-employed work. Check current IND rules.",
+      "poststudy": "Eligible graduates may apply for the one-year orientation-year residence permit, subject to qualification and timing rules.",
+      "costs": "Tuition differs between EU/EEA and non-EU/EEA students and between institutions. Housing availability and costs vary substantially by city.",
+      "notes": "Only recognised sponsors can apply for the student residence permit. Students must meet study-progress requirements.",
+      "sources": [
+        "https://ind.nl/en/independent-sustainable-and-sufficient-income",
+        "https://www.studyinnl.org/finances"
+      ]
+    },
+    {
+      "code": "AU",
+      "name": "Australia",
+      "flag": "🇦🇺",
+      "capital": "Canberra",
+      "currency": "AUD",
+      "languages": [
+        "English"
+      ],
+      "permit_name": "Student visa (subclass 500)",
+      "official_immigration_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "official_admissions_url": "https://www.studyaustralia.gov.au/",
+      "official_work_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+      "official_poststudy_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485",
+      "admission": "Apply to a provider and course registered for overseas students (CRICOS). Providers set academic, English-language and other admission requirements.",
+      "visa_steps": [
+        "Choose a CRICOS-registered course and receive a Confirmation of Enrolment (CoE).",
+        "Arrange Overseas Student Health Cover (OSHC) for the required period.",
+        "Prepare evidence for the Genuine Student requirement and financial capacity.",
+        "Submit the Student visa (subclass 500) application online with supporting documents.",
+        "Complete health, biometrics or character checks if requested."
+      ],
+      "documents": [
+        "Confirmation of Enrolment (CoE)",
+        "OSHC evidence",
+        "Evidence addressing the Genuine Student requirement",
+        "Financial capacity evidence",
+        "English, health and character documents as requested"
+      ],
+      "funds": "Financial capacity thresholds and accepted evidence can change. Check the current Department of Home Affairs checklist for the applicant's circumstances.",
+      "work": "Work limits apply during study periods, with different rules during scheduled course breaks and for certain research students. Check current visa conditions.",
+      "poststudy": "The Temporary Graduate visa (subclass 485) has distinct streams, qualification and age requirements. Check current rules before planning around it.",
+      "costs": "Tuition depends on provider, course and study level. Living costs vary by city; use official planning resources and provider estimates.",
+      "notes": "The Genuine Student assessment and evidence requirements are central to the application. A CoE alone does not guarantee a visa.",
+      "sources": [
+        "https://cricos.education.gov.au/",
+        "https://www.studyaustralia.gov.au/en/plan-your-move"
+      ]
+    },
+    {
+      "code": "CN",
+      "name": "China",
+      "flag": "🇨🇳",
+      "capital": "Beijing",
+      "currency": "CNY",
+      "languages": [
+        "Mandarin Chinese",
+        "English (programme-dependent)"
+      ],
+      "permit_name": "X1 visa for long-term study or X2 visa for short-term study",
+      "official_immigration_url": "https://www.visaforchina.cn/",
+      "official_admissions_url": "https://www.campuschina.org/",
+      "official_work_url": "https://en.nia.gov.cn/",
+      "official_poststudy_url": "https://en.nia.gov.cn/",
+      "admission": "Apply to a university authorised to enrol international students. Programme, language, medical and academic requirements vary by institution and scholarship route.",
+      "visa_steps": [
+        "Obtain admission from the host university and the official study-visa documents it issues (commonly JW201/JW202 or the relevant confirmation).",
+        "Check the responsible Chinese embassy or visa application service for the current X1/X2 category and checklist.",
+        "Submit the visa application and attend any required appointment.",
+        "For X1 long-term study, follow the local entry-exit administration instructions to apply for a residence permit after arrival within the required period.",
+        "Keep the university informed and comply with local residence registration requirements."
+      ],
+      "documents": [
+        "University admission notice",
+        "Official study-visa supporting form/document issued for the programme",
+        "Valid passport and visa application form",
+        "Medical examination or other supporting documents if requested",
+        "Proof of funding and accommodation if requested"
+      ],
+      "funds": "Funding evidence and document requirements depend on the visa office, university and scholarship route. Follow the current embassy/visa-centre checklist.",
+      "work": "Do not assume student work is permitted. Off-campus work or internships require compliance with immigration and university approval rules; verify before starting.",
+      "poststudy": "Post-study residence and employment are not automatic. Graduates must qualify under a separate immigration or employment route.",
+      "costs": "Tuition, accommodation and living costs vary by city, university and programme. Confirm the current fee schedule directly with the university.",
+      "notes": "Visa forms, procedures and service providers vary by country of application. Check the local Chinese embassy or official visa application centre and the university's international office.",
+      "sources": [
+        "https://en.nia.gov.cn/",
+        "https://www.mfa.gov.cn/eng/"
+      ]
+    }
+  ]
+}
