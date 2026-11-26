@@ -1,0 +1,64 @@
+name: Validate StudyBridge data
+
+on:
+  push:
+    paths:
+      - "data/scholarships.json"
+      - "data/programmes.json"
+      - "data/universities.json"
+      - "scripts/validate-scholarships.js"
+      - "scripts/validate-programmes.js"
+      - "scripts/validate-universities.js"
+      - "scripts/validate-pages.js"
+      - "scripts/test-matching.js"
+      - "scripts/test-data-integrity.js"
+      - "assets/matching.js"
+      - "assets/site.js"
+      - "index.html"
+      - "scholarships.html"
+      - "programmes.html"
+      - "profile.html"
+      - "tracker.html"
+      - ".github/workflows/validate-scholarships.yml"
+  pull_request:
+    paths:
+      - "scripts/test-data-integrity.js"
+      - "data/scholarships.json"
+      - "data/programmes.json"
+      - "data/universities.json"
+      - "scripts/validate-scholarships.js"
+      - "scripts/validate-programmes.js"
+      - "scripts/validate-universities.js"
+      - "scripts/validate-pages.js"
+      - "scripts/test-matching.js"
+      - "assets/matching.js"
+      - "assets/site.js"
+      - "index.html"
+      - "scholarships.html"
+      - "programmes.html"
+      - "profile.html"
+      - "tracker.html"
+      - ".github/workflows/validate-scholarships.yml"
+
+jobs:
+  validate-scholarships:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate scholarship records
+        run: node scripts/validate-scholarships.js
+      - name: Validate programme records
+        run: node scripts/validate-programmes.js
+      - name: Validate university records
+        run: node scripts/validate-universities.js
+      - name: Validate page scripts and local links
+        run: |
+          node --check assets/site.js
+          node scripts/validate-pages.js
+          node scripts/test-matching.js
+          node scripts/test-data-integrity.js

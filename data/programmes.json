@@ -1,0 +1,611 @@
+{
+  "schema_version": "1.1.0",
+  "last_updated": "2026-11-25",
+  "data_policy": "Only publish programme facts supported by the programme's own official website or an official government/European Union source. Unknown values remain null or unknown. Programme-cycle status is separate from admissions eligibility and funding.",
+  "programmes": [
+    {
+      "id": "sb-prog-emildai-2027",
+      "title": "European Master in Law, Data and Artificial Intelligence (EMILDAI)",
+      "qualification": "Joint Master's degree",
+      "degree_level": "postgraduate",
+      "duration": "Not stated in the reviewed source",
+      "ects": null,
+      "study_fields": [
+        "Law",
+        "Data governance",
+        "Artificial intelligence",
+        "Digital regulation"
+      ],
+      "delivery_countries": [
+        "NL",
+        "BR"
+      ],
+      "partner_institutions": [
+        "Six partner universities; includes Erasmus University Rotterdam and Fundação Getulio Vargas from the 2026/2028 intake"
+      ],
+      "teaching_language": null,
+      "intake": "2027–2029 edition",
+      "application_status": "open",
+      "application_deadline": "2027-01-17",
+      "application_notes": "Round 1 opens 16 November 2026 and closes 17 January 2027; round 1 considers full and partial funding. A second round opens 21 March 2027 for self-funded applicants only.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Erasmus Mundus Joint Master programme. The programme page describes full and partial funding in round 1; individual award values and eligibility must be checked in the official admissions information.",
+      "official_programme_url": "https://emildai.eu/",
+      "official_admissions_url": "https://emildai.eu/admissions/how-to-apply/",
+      "official_source_url": "https://emildai.eu/",
+      "last_verified": "2026-11-23",
+      "verification_status": "official_source_checked",
+      "notes": "Interdisciplinary programme delivered by six partner universities. The reviewed official source confirms new partners in the Netherlands and Brazil but does not enumerate every partner country on the page inspected. Do not infer teaching language, fees, or exact duration from the programme title.",
+      "partner_institution_ids": []
+    },
+    {
+      "id": "sb-prog-waves-2027",
+      "title": "MSc WAVES – Water Vulnerability Engineering in Spatial Sciences",
+      "qualification": "Double MSc degree",
+      "degree_level": "postgraduate",
+      "duration": "2 years",
+      "ects": 120,
+      "study_fields": [
+        "Water sciences",
+        "Earth observation",
+        "Hydrology",
+        "Engineering",
+        "Machine learning",
+        "Environmental policy"
+      ],
+      "delivery_countries": [
+        "NL",
+        "IT",
+        "SI"
+      ],
+      "partner_institutions": [
+        "University of Twente",
+        "Università di Padova",
+        "University of Ljubljana"
+      ],
+      "teaching_language": null,
+      "intake": "September 2027",
+      "application_status": "open",
+      "application_deadline": "2027-01-15",
+      "application_notes": "Official programme homepage lists 15 January 2027 at 23:59 CET as the application deadline. Confirm track-specific eligibility and requirements on the official site.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Erasmus Mundus Joint Master selected for EU funding. Programme-specific scholarship coverage and eligibility must be confirmed in the official fees and funding section.",
+      "official_programme_url": "https://www.msc-waves.eu/",
+      "official_admissions_url": "https://www.msc-waves.eu/",
+      "official_source_url": "https://www.msc-waves.eu/",
+      "last_verified": "2026-11-23",
+      "verification_status": "official_source_checked",
+      "notes": "Three specialisation tracks and mobility between partner countries. The published study guide is marked draft and subject to change until 1 January 2027.",
+      "partner_institution_ids": [
+        "sb-031",
+        "sb-032",
+        "sb-033"
+      ]
+    },
+    {
+      "id": "sb-prog-maia-2027",
+      "title": "European Master on Medical Image Analysis (MAIA)",
+      "qualification": "International Master's programme",
+      "degree_level": "postgraduate",
+      "duration": "2 years, full-time",
+      "ects": 120,
+      "study_fields": [
+        "Medical image analysis",
+        "Artificial intelligence",
+        "Machine learning",
+        "Medical robotics",
+        "Healthcare technology"
+      ],
+      "delivery_countries": [
+        "ES",
+        "FR",
+        "IT"
+      ],
+      "partner_institutions": [
+        "University of Girona",
+        "Université Bourgogne Europe",
+        "Università degli Studi di Cassino e del Lazio Meridionale"
+      ],
+      "teaching_language": null,
+      "intake": "September 2027 cohort announced",
+      "application_status": "open",
+      "application_deadline": null,
+      "application_notes": "The official site states applications are open. A closing date was not confirmed in the reviewed official source.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "The programme has an official Fees & Grants section; amounts and current award conditions have not yet been verified for this record.",
+      "official_programme_url": "https://maiamaster.org/about/",
+      "official_admissions_url": "https://maiamaster.org/",
+      "official_source_url": "https://maiamaster.org/about/",
+      "last_verified": "2026-11-23",
+      "verification_status": "official_source_checked",
+      "notes": "Two-year full-time programme with mandatory mobility and a joint consortium. Application deadline and teaching language remain unknown.",
+      "partner_institution_ids": [
+        "sb-034",
+        "sb-035",
+        "sb-036"
+      ]
+    },
+    {
+      "id": "sb-prog-mcgill-mma-2027",
+      "title": "Master of Management in Analytics (MMA) – In-Person",
+      "qualification": "Master of Management",
+      "degree_level": "postgraduate",
+      "duration": "12 or 16 months, full-time",
+      "ects": null,
+      "study_fields": [
+        "Business analytics",
+        "Data analytics",
+        "Artificial intelligence",
+        "Management"
+      ],
+      "delivery_countries": [
+        "CA"
+      ],
+      "partner_institutions": [
+        "McGill University"
+      ],
+      "partner_institution_ids": [
+        "sb-004"
+      ],
+      "teaching_language": null,
+      "intake": "July 2027",
+      "application_status": "open",
+      "application_deadline": "2027-01-15",
+      "application_notes": "The official admissions page lists 15 January 2027 as the final deadline for international students for the Summer 2027 in-person intake. A separate March 15 deadline applies to Canadian citizens and permanent residents.",
+      "tuition_amount": null,
+      "tuition_currency": "CAD",
+      "funding_notes": "See the official tuition and financial aid page for the 2027 entering class. StudyBridge does not currently display a tuition figure in this record.",
+      "official_programme_url": "https://www.mcgill.ca/desautels/programs/mma/inperson",
+      "official_admissions_url": "https://www.mcgill.ca/desautels/programs/mma/inperson/admissions",
+      "official_source_url": "https://www.mcgill.ca/desautels/programs/mma/inperson",
+      "last_verified": "2026-11-23",
+      "verification_status": "official_source_checked",
+      "notes": "In-person delivery in Montreal. McGill also offers an online version; this record represents only the in-person delivery."
+    },
+    {
+      "id": "sb-prog-utoronto-mi-2027",
+      "title": "Master of Information (MI)",
+      "qualification": "Master of Information",
+      "degree_level": "postgraduate",
+      "duration": "2 years",
+      "ects": null,
+      "study_fields": [
+        "Information science",
+        "Human-centered data science",
+        "User experience design",
+        "Information systems",
+        "Knowledge management",
+        "Archives and records management"
+      ],
+      "delivery_countries": [
+        "CA"
+      ],
+      "partner_institutions": [
+        "University of Toronto"
+      ],
+      "partner_institution_ids": [
+        "sb-006"
+      ],
+      "teaching_language": null,
+      "intake": "September 2027",
+      "application_status": "open",
+      "application_deadline": "2027-01-31",
+      "application_notes": "The Faculty of Information states that applications are open for September 2027 entry and that all supporting documents must be submitted by 31 January. Check the official admissions page for exact requirements and updates.",
+      "tuition_amount": null,
+      "tuition_currency": "CAD",
+      "funding_notes": "The faculty describes automatic consideration for entrance awards for applicants meeting the stated GPA and file-completion conditions; award details and eligibility must be checked directly with the faculty.",
+      "official_programme_url": "https://www.sgs.utoronto.ca/programs/information/",
+      "official_admissions_url": "https://ischool.utoronto.ca/future-students/apply-to-masters-programs/",
+      "official_source_url": "https://ischool.utoronto.ca/future-students/apply-to-masters-programs/",
+      "last_verified": "2026-11-23",
+      "verification_status": "official_source_checked",
+      "notes": "The Master of Information offers eight concentrations. Admission requirements and academic equivalencies must be checked directly with the Faculty of Information."
+    },
+    {
+      "id": "sb-prog-uva-ba-2027",
+      "title": "Business Administration",
+      "qualification": "Bachelor's programme",
+      "degree_level": "undergraduate",
+      "duration": "Not stated in reviewed catalogue",
+      "ects": null,
+      "study_fields": [
+        "Business and management",
+        "Strategy",
+        "Marketing",
+        "Human resources"
+      ],
+      "delivery_countries": [
+        "NL"
+      ],
+      "partner_institutions": [
+        "University of Amsterdam"
+      ],
+      "teaching_language": "English",
+      "intake": null,
+      "application_status": "unknown",
+      "application_deadline": null,
+      "application_notes": "The official catalogue lists this programme as English-taught and full-time.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "official_admissions_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "official_source_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-022"
+      ]
+    },
+    {
+      "id": "sb-prog-uva-business-analytics-2027",
+      "title": "Business Analytics",
+      "qualification": "Bachelor's programme",
+      "degree_level": "undergraduate",
+      "duration": "Not stated in reviewed catalogue",
+      "ects": null,
+      "study_fields": [
+        "Business analytics",
+        "Data science",
+        "Economics"
+      ],
+      "delivery_countries": [
+        "NL"
+      ],
+      "partner_institutions": [
+        "University of Amsterdam"
+      ],
+      "teaching_language": "English",
+      "intake": null,
+      "application_status": "unknown",
+      "application_deadline": null,
+      "application_notes": "The official catalogue lists this programme as English-taught and full-time.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "official_admissions_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "official_source_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-022"
+      ]
+    },
+    {
+      "id": "sb-prog-uva-econometrics-data-2027",
+      "title": "Econometrics and Data Science",
+      "qualification": "Bachelor's programme",
+      "degree_level": "undergraduate",
+      "duration": "Not stated in reviewed catalogue",
+      "ects": null,
+      "study_fields": [
+        "Econometrics",
+        "Data science",
+        "Economics",
+        "Statistics"
+      ],
+      "delivery_countries": [
+        "NL"
+      ],
+      "partner_institutions": [
+        "University of Amsterdam"
+      ],
+      "teaching_language": "English",
+      "intake": null,
+      "application_status": "unknown",
+      "application_deadline": null,
+      "application_notes": "The official catalogue lists this programme as English-taught and full-time.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "official_admissions_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "official_source_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-022"
+      ]
+    },
+    {
+      "id": "sb-prog-uva-european-studies-2027",
+      "title": "European Studies",
+      "qualification": "Bachelor's programme",
+      "degree_level": "undergraduate",
+      "duration": "Not stated in reviewed catalogue",
+      "ects": null,
+      "study_fields": [
+        "European studies",
+        "Politics",
+        "Economics",
+        "Law",
+        "Humanities"
+      ],
+      "delivery_countries": [
+        "NL"
+      ],
+      "partner_institutions": [
+        "University of Amsterdam"
+      ],
+      "teaching_language": "English",
+      "intake": null,
+      "application_status": "unknown",
+      "application_deadline": null,
+      "application_notes": "The official catalogue lists this programme as English-taught and full-time.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "official_admissions_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "official_source_url": "https://www.uva.nl/en/bachelors/bachelorsprogrammes",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-022"
+      ]
+    },
+    {
+      "id": "sb-prog-oxford-cs-2027",
+      "title": "Computer Science",
+      "qualification": "MCompSci or BA",
+      "degree_level": "undergraduate",
+      "duration": "3 or 4 years",
+      "ects": null,
+      "study_fields": [
+        "Computer science",
+        "Mathematics",
+        "Artificial intelligence",
+        "Software systems"
+      ],
+      "delivery_countries": [
+        "UK"
+      ],
+      "partner_institutions": [
+        "University of Oxford"
+      ],
+      "teaching_language": null,
+      "intake": null,
+      "application_status": "closed",
+      "application_deadline": "2026-10-15",
+      "application_notes": "The official course page lists 15 October 2026 as the application deadline for this cycle.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/computer-science",
+      "official_admissions_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/computer-science",
+      "official_source_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/computer-science",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-010"
+      ]
+    },
+    {
+      "id": "sb-prog-oxford-economics-management-2027",
+      "title": "Economics and Management",
+      "qualification": "BA",
+      "degree_level": "undergraduate",
+      "duration": "3 years",
+      "ects": null,
+      "study_fields": [
+        "Economics",
+        "Business and management"
+      ],
+      "delivery_countries": [
+        "UK"
+      ],
+      "partner_institutions": [
+        "University of Oxford"
+      ],
+      "teaching_language": null,
+      "intake": null,
+      "application_status": "closed",
+      "application_deadline": "2026-10-15",
+      "application_notes": "The official course page lists 15 October 2026 as the application deadline for this cycle.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/economics-and-management",
+      "official_admissions_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/economics-and-management",
+      "official_source_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/economics-and-management",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-010"
+      ]
+    },
+    {
+      "id": "sb-prog-oxford-engineering-science-2027",
+      "title": "Engineering Science",
+      "qualification": "MEng",
+      "degree_level": "undergraduate",
+      "duration": "4 years",
+      "ects": null,
+      "study_fields": [
+        "Engineering",
+        "Applied sciences",
+        "Mathematics"
+      ],
+      "delivery_countries": [
+        "UK"
+      ],
+      "partner_institutions": [
+        "University of Oxford"
+      ],
+      "teaching_language": null,
+      "intake": null,
+      "application_status": "closed",
+      "application_deadline": "2026-10-15",
+      "application_notes": "The official course page lists 15 October 2026 as the application deadline for this cycle.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/engineering-science",
+      "official_admissions_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/engineering-science",
+      "official_source_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/engineering-science",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-010"
+      ]
+    },
+    {
+      "id": "sb-prog-oxford-law-2027",
+      "title": "Law (Jurisprudence)",
+      "qualification": "BA (equivalent to LLB)",
+      "degree_level": "undergraduate",
+      "duration": "3 or 4 years",
+      "ects": null,
+      "study_fields": [
+        "Law",
+        "Jurisprudence"
+      ],
+      "delivery_countries": [
+        "UK"
+      ],
+      "partner_institutions": [
+        "University of Oxford"
+      ],
+      "teaching_language": null,
+      "intake": null,
+      "application_status": "closed",
+      "application_deadline": "2026-10-15",
+      "application_notes": "The official course page lists 15 October 2026 as the application deadline for this cycle.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/law-jurisprudence",
+      "official_admissions_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/law-jurisprudence",
+      "official_source_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing/law-jurisprudence",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-010"
+      ]
+    },
+    {
+      "id": "sb-prog-mit-eecs-2027",
+      "title": "Electrical Engineering and Computer Science",
+      "qualification": "Graduate degree options include MEng, SM, PhD and ScD",
+      "degree_level": "postgraduate",
+      "duration": "Not stated in reviewed source",
+      "ects": null,
+      "study_fields": [
+        "Electrical engineering",
+        "Computer science",
+        "Artificial intelligence",
+        "Machine learning",
+        "Robotics"
+      ],
+      "delivery_countries": [
+        "US"
+      ],
+      "partner_institutions": [
+        "MIT"
+      ],
+      "teaching_language": null,
+      "intake": null,
+      "application_status": "unknown",
+      "application_deadline": null,
+      "application_notes": "The official department page lists graduate degree options and current admissions information. It states that MIT does not offer admission for a terminal master's degree.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://oge.mit.edu/programs/electrical-engineering-and-computer-science/",
+      "official_admissions_url": "https://oge.mit.edu/programs/electrical-engineering-and-computer-science/",
+      "official_source_url": "https://oge.mit.edu/programs/electrical-engineering-and-computer-science/",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-013"
+      ]
+    },
+    {
+      "id": "sb-prog-mit-architecture-2027",
+      "title": "Graduate Architecture degrees",
+      "qualification": "MArch, SMArchS, SMBT, SMACT and PhD",
+      "degree_level": "postgraduate",
+      "duration": "Not stated in reviewed source",
+      "ects": null,
+      "study_fields": [
+        "Architecture",
+        "Urbanism",
+        "Building technology",
+        "Art and design"
+      ],
+      "delivery_countries": [
+        "US"
+      ],
+      "partner_institutions": [
+        "MIT"
+      ],
+      "teaching_language": null,
+      "intake": null,
+      "application_status": "unknown",
+      "application_deadline": null,
+      "application_notes": "MIT's official page lists the graduate degree options and application requirements.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://oge.mit.edu/programs/architecture/",
+      "official_admissions_url": "https://oge.mit.edu/programs/architecture/",
+      "official_source_url": "https://oge.mit.edu/programs/architecture/",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-013"
+      ]
+    },
+    {
+      "id": "sb-prog-mit-mban-2027",
+      "title": "Master of Business Analytics (MBAn)",
+      "qualification": "Master of Business Analytics",
+      "degree_level": "postgraduate",
+      "duration": "Not stated in reviewed source",
+      "ects": null,
+      "study_fields": [
+        "Business analytics",
+        "Data analytics",
+        "Operations research",
+        "Management"
+      ],
+      "delivery_countries": [
+        "US"
+      ],
+      "partner_institutions": [
+        "MIT"
+      ],
+      "teaching_language": null,
+      "intake": null,
+      "application_status": "open",
+      "application_deadline": "2027-01-05",
+      "application_notes": "The official programme page lists a 5 January 2027 deadline and Fall entry term.",
+      "tuition_amount": null,
+      "tuition_currency": null,
+      "funding_notes": "Tuition and funding details have not been verified for this programme record.",
+      "official_programme_url": "https://oge.mit.edu/programs/mit-sloan-master-of-business-analytics/",
+      "official_admissions_url": "https://oge.mit.edu/programs/mit-sloan-master-of-business-analytics/",
+      "official_source_url": "https://oge.mit.edu/programs/mit-sloan-master-of-business-analytics/",
+      "last_verified": "2026-11-25",
+      "verification_status": "official_source_checked",
+      "notes": "Programme title and level are listed by the institution. Unpublished details are left unconfirmed.",
+      "partner_institution_ids": [
+        "sb-013"
+      ]
+    }
+  ]
+}

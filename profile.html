@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Set your StudyBridge study preferences and discover programmes and scholarships.">
+<title>My Study Profile | StudyBridge</title>
+<style>
+:root{--ink:#172b4d;--muted:#64748b;--line:#dbe3ee;--brand:#2256a5;--soft:#f4f7fb}
+*{box-sizing:border-box}body{margin:0;background:#f8fafc;color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+header{background:#fff;border-bottom:1px solid var(--line);padding:15px max(20px,calc((100vw - 1040px)/2));display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+a{color:var(--brand);font-weight:650}.brand{font-weight:800;text-decoration:none;color:var(--ink);font-size:1.15rem}.nav{display:flex;gap:14px;flex-wrap:wrap}
+main{max-width:1040px;margin:34px auto;padding:0 20px}.intro{max-width:720px}h1{font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin:.3rem 0 .8rem}.eyebrow{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);font-weight:750}
+.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;margin:22px 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.field{display:flex;flex-direction:column;gap:6px}.field label{font-weight:650}.field small,.muted{color:var(--muted);font-size:.88rem}input,select{width:100%;padding:11px 12px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;color:var(--ink);font:inherit}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}button{background:var(--brand);color:white;border:0;border-radius:9px;padding:11px 17px;font:inherit;font-weight:700;cursor:pointer}button.secondary{background:#e9eef6;color:var(--ink)}button.danger{background:#fff0f0;color:#9b2222}
+.notice{background:#fff8e8;border:1px solid #f1d79a;border-radius:12px;padding:13px 15px;font-size:.9rem}.results{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.result{background:var(--soft);border-radius:12px;padding:16px}.result h3{margin:0 0 6px}.result p{margin:0 0 12px;color:var(--muted);font-size:.9rem}
+footer{border-top:1px solid var(--line);margin:30px 0;padding:18px 0;color:var(--muted);font-size:.85rem}
+@media(max-width:650px){.grid,.results{grid-template-columns:1fr}}
+</style>
+<link rel="stylesheet" href="assets/site.css"></head>
+<body>
+<header><a class="brand" href="index.html?view=unis"><svg class="brand-mark" viewBox="0 0 34 22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M2 18C8 2 26 2 32 18M2 18h30M10 18V9M17 18V5M24 18V9"/></svg><span>StudyBridge</span></a><nav class="nav"><a href="index.html?view=unis">Universities</a><a href="programmes.html">Programmes</a><a href="scholarships.html">Scholarships</a><a href="tracker.html">Application tracker</a></nav></header>
+<main>
+<section class="intro"><div class="eyebrow">Your study journey</div><h1>Build your study profile.</h1><p>Tell StudyBridge what you want to study and where you hope to go. Your preferences help you narrow programme and scholarship discovery.</p></section>
+<div class="notice"><b>Privacy first:</b> This starter profile saves only study preferences in this browser. It does not ask for your name, email, passport, date of birth, grades, financial information or documents. Do not enter sensitive information. Anyone with access to this browser profile may be able to see saved preferences.</div>
+<section class="panel"><h2>Your study preferences</h2><form id="profileForm">
+<div class="grid">
+<div class="field"><label for="level">What level do you want to study?</label><select id="level"><option value="">Choose a level</option><option value="undergraduate">Undergraduate</option><option value="postgraduate">Postgraduate</option></select></div>
+<div class="field"><label for="intake">When would you like to start?</label><select id="intake"><option value="">Not decided</option><option>2027</option><option>2028</option><option>2029</option><option>Flexible</option></select></div>
+<div class="field"><label for="destination">Preferred study destination</label><select id="destination"><option value="">No preference</option><option value="CA">Canada</option><option value="FR">France</option><option value="DE">Germany</option><option value="UK">United Kingdom</option><option value="US">United States</option><option value="MA">Morocco</option><option value="ES">Spain</option><option value="NL">Netherlands</option><option value="AU">Australia</option><option value="JP">Japan</option><option value="multiple">Multiple / open to options</option></select></div>
+<div class="field"><label for="field">Main subject interest</label><select id="field"><option value="">Choose a subject</option><option>Business and management</option><option>Marketing and communications</option><option>Computer science and AI</option><option>Engineering</option><option>Health and medicine</option><option>Law and public policy</option><option>Science and environment</option><option>Arts and humanities</option><option>Education</option><option>Other / undecided</option></select></div>
+<div class="field"><label for="language">Preferred teaching language</label><select id="language"><option value="">No preference</option><option value="English">English</option><option value="French">French</option><option value="Spanish">Spanish</option><option value="Other">Other / multiple</option></select></div>
+<div class="field"><label for="funding">Funding preference</label><select id="funding"><option value="">Explore all funding</option><option value="full">Full funding preferred</option><option value="partial">Partial funding / tuition support</option><option value="self">Self-funded options</option><option value="any">Any viable option</option></select></div>
+</div><div class="actions"><button type="submit">Save my preferences</button><button class="secondary" type="button" id="reset">Clear preferences</button></div><p id="status" class="muted" role="status" aria-live="polite"></p>
+</form></section>
+<section class="panel"><h2>Your next steps</h2><div class="results">
+<div class="result"><h3>Explore programmes</h3><p>Search degree programmes by subject, destination and level.</p><a id="programmeLink" href="programmes.html">Find programmes →</a></div>
+<div class="result"><h3>Explore scholarships</h3><p>Check opportunities using your nationality or nationalities and residence separately.</p><a href="scholarships.html">Find scholarships →</a></div>
+<div class="result"><h3>Organise applications</h3><p>Keep track of programmes, deadlines and your next actions.</p><a href="tracker.html">Open application tracker →</a></div>
+<div class="result"><h3>Compare universities</h3><p>Browse the StudyBridge university directory and shortlist institutions.</p><a href="index.html?view=unis">Explore universities →</a></div>
+</div></section>
+<footer>StudyBridge is an independent information platform. A saved preference is not an admissions assessment or confirmation of scholarship eligibility. Verify requirements with official providers.</footer>
+</main>
+<script>
+const KEY="studybridge.profile.preferences.v1";
+const $=id=>document.getElementById(id);
+function load(){try{const p=JSON.parse(localStorage.getItem(KEY)||"{}");["level","intake","destination","field","language","funding"].forEach(k=>{if(p[k]!==undefined)$(k).value=p[k]});}catch(e){$("status").textContent="Saved preferences could not be loaded in this browser."}}
+$("profileForm").addEventListener("submit",e=>{e.preventDefault();const p={};["level","intake","destination","field","language","funding"].forEach(k=>p[k]=$(k).value);try{localStorage.setItem(KEY,JSON.stringify(p));$("status").textContent="Your study preferences have been saved on this browser.";}catch(e){$("status").textContent="Your browser could not save these preferences. You can still use the discovery pages."}});
+$("reset").addEventListener("click",()=>{try{localStorage.removeItem(KEY)}catch(e){}$("profileForm").reset();$("status").textContent="Saved preferences cleared from this browser."});
+load();
+</script><script src="assets/site.js" defer></script>
+</body></html>

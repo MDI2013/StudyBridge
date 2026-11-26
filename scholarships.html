@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scholarships | StudyBridge</title>
+<style>
+:root{--bg:#f2f5f7;--ink:#14213d;--card:#fff;--line:#d6dee5;--teal:#0b7a75;--accent:#c8431f;--muted:#566376}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,sans-serif}
+.wrap{max-width:1050px;margin:auto;padding:20px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+a{color:var(--teal)}.brand{font-size:1.35rem;font-weight:800;color:var(--ink);text-decoration:none}
+.hero{padding:30px 0 18px}.hero h1{font-size:clamp(2rem,5vw,3rem);line-height:1.08;margin:0 0 12px}.hero p{max-width:65ch;color:var(--muted)}
+.panel,.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}
+label{font-weight:650;font-size:.92rem}input,select{font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:9px;background:white;color:#14213d;width:100%}
+small,.muted{color:var(--muted)}.hint{font-size:.84rem}
+.nationality-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;max-height:210px;overflow:auto;padding:9px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.nationality-option{display:flex;align-items:center;gap:7px;padding:5px 7px;border-radius:7px;font-size:.86rem;font-weight:500}
+.nationality-option input{width:auto;accent-color:var(--teal)}
+.nationality-selected{font-size:.86rem;color:var(--muted);padding:5px 0}
+@media(max-width:650px){.nationality-options{grid-template-columns:repeat(2,minmax(0,1fr));max-height:190px}}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+button{font:inherit;cursor:pointer;border:0;border-radius:9px;padding:10px 14px;background:var(--teal);color:white;font-weight:650}
+button.secondary{background:white;color:var(--ink);border:1px solid var(--line)}
+.results-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:24px 0 12px;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.card h2{font-size:1.1rem;margin:8px 0}.meta{font-size:.88rem;color:var(--muted)}.pill{display:inline-block;background:#e8f3f2;color:#075b56;border-radius:99px;padding:3px 9px;font-size:.78rem;font-weight:700;margin:2px 4px 2px 0}
+.pill.closed{background:#f3e9e7;color:#873c2c}.pill.review{background:#f4f0df;color:#705a16}
+.card p{margin:10px 0}.card details{margin-top:10px;padding:10px 12px;background:#f7f9fa;border-radius:9px}.card summary{cursor:pointer;font-weight:650}.card details p{font-size:.9rem;color:var(--muted)}.card .links{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px}
+.empty{padding:24px;text-align:center;border:1px dashed var(--line);border-radius:14px;color:var(--muted)}
+footer{padding:28px 0;color:var(--muted);font-size:.85rem}
+@media(max-width:650px){.filters,.grid{grid-template-columns:1fr}.wrap{padding:16px}.panel,.card{padding:14px}}
+</style>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="brand" href="index.html?view=unis"><svg class="brand-mark" viewBox="0 0 34 22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M2 18C8 2 26 2 32 18M2 18h30M10 18V9M17 18V5M24 18V9"/></svg><span>StudyBridge</span></a><nav style="display:flex;gap:14px;flex-wrap:wrap"><a href="index.html?view=unis">Universities</a><a href="scholarships.html">Scholarships</a><a href="programmes.html">Programmes</a><a href="profile.html">My profile</a><a href="tracker.html">Application tracker</a></nav></header>
+<section class="hero"><h1>Find scholarships that fit your journey.</h1><p>Search verified scholarship records by nationality, destination and study level. You can select more than one nationality. StudyBridge distinguishes confirmed nationality matches from opportunities that still need eligibility checks.</p></section>
+<section class="panel" aria-label="Scholarship filters">
+<div class="filters">
+<div class="field full"><label for="nationalities">Your nationality or nationalities</label><input id="natSearch" type="search" placeholder="Search for a nationality or country…" autocomplete="off" aria-label="Search nationalities"><div id="nationalityOptions" class="nationality-options" role="group" aria-label="Choose nationalities"></div><div id="nationalitySelected" class="nationality-selected" aria-live="polite">No nationalities selected</div><small id="nat-help" class="hint">Search and select one or more nationalities. Your country of residence is a separate requirement and is not inferred from nationality.</small></div>
+<div class="field"><label for="residence">Country where you currently live (optional)</label><select id="residence"><option value="">Not specified</option></select></div>
+<div class="field"><label for="destination">Where would you like to study?</label><select id="destination"><option value="">All destinations</option></select></div>
+<div class="field"><label for="level">Study level</label><select id="level"><option value="">All levels</option><option value="undergraduate">Undergraduate</option><option value="postgraduate">Postgraduate</option></select></div>
+<div class="field"><label for="field">Field of study</label><select id="field"><option value="">All fields</option></select></div>
+<div class="field"><label for="funding">Funding type</label><select id="funding"><option value="">All funding types</option><option value="full">Full funding</option><option value="partial">Partial funding</option><option value="stipend">Stipend</option><option value="tuition_only">Tuition only</option><option value="other">Other</option><option value="unknown">Not specified</option></select></div>
+<div class="field full"><label for="keyword">Search by scholarship or provider</label><input id="keyword" type="search" placeholder="e.g. Eiffel, DAAD, engineering"></div>
+<div class="field"><label for="status">Opportunity status</label><select id="status"><option value="all">All records</option><option value="open">Open now</option><option value="upcoming">Upcoming</option><option value="varies">Deadlines vary</option><option value="not_announced">Not yet announced</option><option value="closed">Closed</option><option value="review">Needs verification</option></select></div>
+</div>
+<div class="actions"><button id="apply">Find scholarships</button><button class="secondary" id="clear">Clear filters</button></div>
+</section>
+<div class="results-head"><h2>Scholarship opportunities</h2><span id="count" class="muted" aria-live="polite">Loading records…</span></div>
+<div id="results" class="grid"><div class="empty">Loading the StudyBridge scholarship database…</div></div>
+<footer>StudyBridge is an information and discovery platform, not a scholarship provider. A nationality match does not guarantee eligibility or an award. Always confirm the full rules, deadlines and application route with the official provider. Missing or unverified information is shown transparently.</footer>
+</div>
+<script src="assets/matching.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+const countries={
+AF:"Afghanistan",AL:"Albania",DZ:"Algeria",AO:"Angola",AR:"Argentina",AU:"Australia",AT:"Austria",BD:"Bangladesh",BE:"Belgium",BZ:"Belize",BJ:"Benin",BT:"Bhutan",BO:"Bolivia",BA:"Bosnia and Herzegovina",BW:"Botswana",BR:"Brazil",BG:"Bulgaria",BF:"Burkina Faso",BI:"Burundi",KH:"Cambodia",CM:"Cameroon",CA:"Canada",CV:"Cabo Verde",CF:"Central African Republic",TD:"Chad",CL:"Chile",CN:"China",CO:"Colombia",KM:"Comoros",CG:"Republic of the Congo",CD:"Democratic Republic of the Congo",CR:"Costa Rica",CI:"Côte d'Ivoire",HR:"Croatia",CU:"Cuba",CY:"Cyprus",CZ:"Czechia",DK:"Denmark",DJ:"Djibouti",DM:"Dominica",DO:"Dominican Republic",EC:"Ecuador",EG:"Egypt",SV:"El Salvador",GQ:"Equatorial Guinea",ER:"Eritrea",EE:"Estonia",SZ:"Eswatini",ET:"Ethiopia",FJ:"Fiji",FI:"Finland",FR:"France",GA:"Gabon",GM:"Gambia",GE:"Georgia",DE:"Germany",GH:"Ghana",GR:"Greece",GD:"Grenada",GT:"Guatemala",GN:"Guinea",GW:"Guinea-Bissau",GY:"Guyana",HT:"Haiti",HN:"Honduras",HU:"Hungary",IS:"Iceland",IN:"India",ID:"Indonesia",IR:"Iran",IQ:"Iraq",IE:"Ireland",IL:"Israel",IT:"Italy",JM:"Jamaica",JP:"Japan",JO:"Jordan",KZ:"Kazakhstan",KE:"Kenya",KI:"Kiribati",KW:"Kuwait",KG:"Kyrgyzstan",LA:"Laos",LV:"Latvia",LB:"Lebanon",LS:"Lesotho",LR:"Liberia",LY:"Libya",LI:"Liechtenstein",LT:"Lithuania",LU:"Luxembourg",MG:"Madagascar",MW:"Malawi",MY:"Malaysia",MV:"Maldives",ML:"Mali",MT:"Malta",MR:"Mauritania",MU:"Mauritius",MX:"Mexico",MD:"Moldova",MC:"Monaco",MN:"Mongolia",ME:"Montenegro",MA:"Morocco",MZ:"Mozambique",MM:"Myanmar",NA:"Namibia",NP:"Nepal",NL:"Netherlands",NZ:"New Zealand",NI:"Nicaragua",NE:"Niger",NG:"Nigeria",MK:"North Macedonia",NO:"Norway",OM:"Oman",PK:"Pakistan",PA:"Panama",PG:"Papua New Guinea",PY:"Paraguay",PE:"Peru",PH:"Philippines",PL:"Poland",PT:"Portugal",QA:"Qatar",RO:"Romania",RU:"Russia",RW:"Rwanda",KN:"Saint Kitts and Nevis",LC:"Saint Lucia",VC:"Saint Vincent and the Grenadines",WS:"Samoa",SM:"San Marino",ST:"Sao Tome and Principe",SA:"Saudi Arabia",SN:"Senegal",RS:"Serbia",SC:"Seychelles",SL:"Sierra Leone",SG:"Singapore",SK:"Slovakia",SI:"Slovenia",SB:"Solomon Islands",SO:"Somalia",ZA:"South Africa",KR:"South Korea",SS:"South Sudan",ES:"Spain",LK:"Sri Lanka",SD:"Sudan",SR:"Suriname",SE:"Sweden",CH:"Switzerland",SY:"Syria",TW:"Taiwan",TJ:"Tajikistan",TZ:"Tanzania",TH:"Thailand",TL:"Timor-Leste",TG:"Togo",TO:"Tonga",TT:"Trinidad and Tobago",TN:"Tunisia",TR:"Türkiye",UG:"Uganda",UA:"Ukraine",AE:"United Arab Emirates",GB:"United Kingdom",US:"United States",UY:"Uruguay",UZ:"Uzbekistan",VU:"Vanuatu",VA:"Vatican City",VE:"Venezuela",VN:"Vietnam",YE:"Yemen",ZM:"Zambia",ZW:"Zimbabwe"
+};
+const alpha3={AFG:"AF",ALB:"AL",DZA:"DZ",AGO:"AO",ARG:"AR",AUS:"AU",AUT:"AT",BGD:"BD",BEL:"BE",BLZ:"BZ",BEN:"BJ",BTN:"BT",BOL:"BO",BIH:"BA",BWA:"BW",BRA:"BR",BGR:"BG",BFA:"BF",BDI:"BI",KHM:"KH",CMR:"CM",CAN:"CA",CPV:"CV",CAF:"CF",TCD:"TD",CHL:"CL",CHN:"CN",COL:"CO",COM:"KM",COG:"CG",COD:"CD",CRI:"CR",CIV:"CI",HRV:"HR",CUB:"CU",CYP:"CY",CZE:"CZ",DNK:"DK",DJI:"DJ",DMA:"DM",DOM:"DO",ECU:"EC",EGY:"EG",SLV:"SV",GNQ:"GQ",ERI:"ER",EST:"EE",SWZ:"SZ",ETH:"ET",FJI:"FJ",FIN:"FI",FRA:"FR",GAB:"GA",GMB:"GM",GEO:"GE",DEU:"DE",GHA:"GH",GRC:"GR",GRD:"GD",GTM:"GT",GIN:"GN",GNB:"GW",GUY:"GY",HTI:"HT",HND:"HN",HUN:"HU",ISL:"IS",IND:"IN",IDN:"ID",IRN:"IR",IRQ:"IQ",IRL:"IE",ISR:"IL",ITA:"IT",JAM:"JM",JPN:"JP",JOR:"JO",KAZ:"KZ",KEN:"KE",KIR:"KI",KWT:"KW",KGZ:"KG",LAO:"LA",LVA:"LV",LBN:"LB",LSO:"LS",LBR:"LR",LBY:"LY",LIE:"LI",LTU:"LT",LUX:"LU",MDG:"MG",MWI:"MW",MYS:"MY",MDV:"MV",MLI:"ML",MLT:"MT",MRT:"MR",MUS:"MU",MEX:"MX",MDA:"MD",MCO:"MC",MNG:"MN",MNE:"ME",MAR:"MA",MOZ:"MZ",MMR:"MM",NAM:"NA",NPL:"NP",NLD:"NL",NZL:"NZ",NIC:"NI",NER:"NE",NGA:"NG",MKD:"MK",NOR:"NO",OMN:"OM",PAK:"PK",PAN:"PA",PNG:"PG",PRY:"PY",PER:"PE",PHL:"PH",POL:"PL",PRT:"PT",QAT:"QA",ROU:"RO",RUS:"RU",RWA:"RW",KNA:"KN",LCA:"LC",VCT:"VC",WSM:"WS",SMR:"SM",STP:"ST",SAU:"SA",SEN:"SN",SRB:"RS",SYC:"SC",SLE:"SL",SGP:"SG",SVK:"SK",SVN:"SI",SLB:"SB",SOM:"SO",ZAF:"ZA",KOR:"KR",SSD:"SS",ESP:"ES",LKA:"LK",SDN:"SD",SUR:"SR",SWE:"SE",CHE:"CH",SYR:"SY",TWN:"TW",TJK:"TJ",TZA:"TZ",THA:"TH",TLS:"TL",TGO:"TG",TON:"TO",TTO:"TT",TUN:"TN",TUR:"TR",UGA:"UG",UKR:"UA",ARE:"AE",GBR:"GB",USA:"US",URY:"UY",UZB:"UZ",VUT:"VU",VAT:"VA",VEN:"VE",VNM:"VN",YEM:"YE",ZMB:"ZM",ZWE:"ZW",MSR:"",SHN:""};
+let records=[];
+function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function countryName(code){if(code==="ALL")return "All nationalities";const a=alpha3[code];return a?countries[a]||code:code}
+function labelStatus(s){return s==="closed"||s==="expired"?"Closed":s==="needs_review"?"Needs verification":"Eligibility source verified"}
+function cycleLabel(s){return ({open:"Applications open",upcoming:"Upcoming cycle",closed:"Applications closed",not_announced:"Call not announced",varies:"Deadlines vary",unknown:"Cycle status unknown"})[s]||"Cycle status unknown"}
+function eligibleStatus(r,selected,residence){
+ return window.StudyBridgeMatching.scholarshipNationalityFit(r,selected,residence);
+}
+function render(){
+ const pageLanguage=document.documentElement.lang||"en";
+ const selected=[...selectedNationalities],res=$("#residence").value,dest=$("#destination").value,level=$("#level").value,status=$("#status").value,field=$("#field").value,funding=$("#funding").value,keyword=$("#keyword").value.trim().toLowerCase();
+ let rows=records.filter(r=>{
+  if(dest&&!r.host_countries?.includes(dest))return false;
+  if(level&&!r.study_levels?.includes(level))return false;
+  if(field&&!(r.eligible_fields||[]).some(x=>x.toLowerCase().includes(field.toLowerCase())))return false;
+  if(funding&&r.funding_type!==funding)return false;
+  if(keyword&&!([r.title,r.provider,...(r.eligible_fields||[]),r.notes].join(" ").toLowerCase().includes(keyword)))return false;
+  if(status==="closed"&&r.application_status!=="closed")return false;
+  if(status==="review"&&r.verification_status!=="needs_review")return false;
+  if(["open","upcoming","varies","not_announced"].includes(status)&&r.application_status!==status)return false;
+  
+  return true;
+ });
+ $("#count").textContent=rows.length+" record(s)";
+ $("#results").innerHTML=rows.length?rows.map(r=>{
+  const stat=eligibleStatus(r,selected,res);
+  const closed=r.application_status==="closed";
+  const review=r.verification_status==="needs_review";
+  const dests=(r.host_countries||[]).map(countryName).join(", ");
+  const nations=(r.eligible_nationalities||[]).map(countryName).join(", ");
+  const coverage=r.funding_coverage||"Not yet verified";
+  const localizedTitle=r.locales?.[pageLanguage]?.title||r.title;
+  const localizedProvider=r.locales?.[pageLanguage]?.provider||r.provider;
+  const localizedNotes=r.locales?.[pageLanguage]?.notes||r.notes||"Check the official source for complete conditions.";
+  const localizedCoverage=r.locales?.[pageLanguage]?.funding_coverage||coverage;
+  const localizedCycle=r.locales?.[pageLanguage]?.application_cycle||r.application_cycle||"Not yet verified";
+  return `<article class="card"><div><span class="pill ${review?"review":""}">${esc(labelStatus(r.verification_status))}</span><span class="pill ${closed?"closed":""}">${esc(cycleLabel(r.application_status))}</span><span class="pill">${esc(dests||"Destination not specified")}</span></div><h2>${esc(localizedTitle)}</h2><div class="meta">${esc(localizedProvider)} · ${esc((r.study_levels||[]).join(", ")||"Study level not specified")}</div><p><b>Nationality check:</b> ${esc(stat.label)}</p><p>${esc(localizedCoverage)}</p><p class="meta">${esc(stat.notes.join(" "))}</p><details><summary>Eligibility and important conditions</summary><p>${esc(localizedNotes)}</p></details><div class="meta">Funding type: ${esc(r.funding_type||"unknown")} · Application cycle: ${esc(localizedCycle)}</div><div class="meta">${r.deadline?"Deadline: "+esc(r.deadline):"Deadline: check official cycle"} ${nations?" · Nationalities: "+esc(nations):""}</div><div class="links"><a href="${esc(r.official_application_url)}" target="_blank" rel="noopener">Application information ↗</a><a href="${esc(r.official_source_url)}" target="_blank" rel="noopener noreferrer">Official source ↗</a><button type="button" class="secondary" data-track="${esc(r.id)}">Add to tracker</button></div></article>`;
+ }).join(""):'<div class="empty">No records match these filters. Try changing your filters.</div>';
+}
+$("#results").addEventListener("click",ev=>{
+ const button=ev.target.closest("[data-track]");if(!button)return;
+ const record=records.find(r=>r.id===button.dataset.track);if(!record)return;
+ const key="studybridge.application.tracker.v1";let entries=[];
+ try{const raw=JSON.parse(localStorage.getItem(key)||"[]");if(Array.isArray(raw))entries=raw;}catch(e){}
+ const id="scholarship-"+record.id;
+ if(entries.some(x=>x.id===id)){button.textContent="Already in tracker";return;}
+ entries.push({id,title:record.title,provider:record.provider||"Scholarship provider",kind:"scholarship",deadline:record.deadline||"",status:"researching",nextDate:"",next:"Review official eligibility and application instructions.",url:record.official_application_url||record.official_source_url,lastUpdated:new Date().toISOString().slice(0,10)});
+ try{localStorage.setItem(key,JSON.stringify(entries));button.textContent="Added to tracker";}catch(e){button.textContent="Could not save";}
+});
+let selectedNationalities=[];
+function renderNationalityOptions(){
+ const term=$("#natSearch").value.trim().toLowerCase();
+ const all=Object.keys(alpha3).filter(code=>alpha3[code]&&countries[alpha3[code]]).map(code=>({code,name:countryName(code)})).sort((a,b)=>a.name.localeCompare(b.name));
+ const visible=all.filter(x=>(x.name+" "+x.code).toLowerCase().includes(term));
+ $("#nationalityOptions").innerHTML=visible.length?visible.map(x=>'<label class="nationality-option"><input type="checkbox" value="'+esc(x.code)+'" '+(selectedNationalities.includes(x.code)?"checked":"")+'><span>'+esc(x.name)+' ('+esc(x.code)+')</span></label>').join(""):'<span class="muted">No matching country found.</span>';
+ $("#nationalitySelected").textContent=selectedNationalities.length?selectedNationalities.map(countryName).join(" · "):"No nationalities selected";
+}
+$("#nationalityOptions").addEventListener("change",ev=>{
+ const box=ev.target.closest('input[type="checkbox"]');if(!box)return;
+ if(box.checked&&!selectedNationalities.includes(box.value))selectedNationalities.push(box.value);
+ if(!box.checked)selectedNationalities=selectedNationalities.filter(x=>x!==box.value);
+ renderNationalityOptions();render();
+});
+$("#natSearch").addEventListener("input",renderNationalityOptions);
+function addOptions(sel,codes,first){const keep=sel.value;sel.innerHTML=first?'<option value="">'+first+'</option>':'';[...new Set(codes)].sort((a,b)=>countryName(a).localeCompare(countryName(b))).forEach(c=>{if(c==="ALL")return;const o=new Option(countryName(c)+" ("+c+")",c);sel.add(o)});if([...sel.options].some(o=>o.value===keep))sel.value=keep}
+async function init(){
+ try{
+  const res=await fetch("data/scholarships.json");if(!res.ok)throw new Error("Unable to load scholarship data");const data=await res.json();records=data.scholarships||[];
+  const allNationalityCodes=Object.keys(alpha3).filter(code=>alpha3[code]&&countries[alpha3[code]]);
+  renderNationalityOptions();addOptions($("#residence"),allNationalityCodes,"Not specified");
+  addOptions($("#destination"),records.flatMap(r=>r.host_countries||[]),"All destinations");
+  const fields=[...new Set(records.flatMap(r=>r.eligible_fields||[]))].sort();
+  fields.forEach(f=>$("#field").add(new Option(f,f)));
+  try{
+   const prefs=JSON.parse(localStorage.getItem("studybridge.profile.preferences.v1")||"{}");
+   if(prefs.destination&&[...$("#destination").options].some(o=>o.value===prefs.destination))$("#destination").value=prefs.destination;
+   if(prefs.level&&[...$("#level").options].some(o=>o.value===prefs.level))$("#level").value=prefs.level;
+   if((prefs.funding==="full"||prefs.funding==="partial")&&[...$("#funding").options].some(o=>o.value===prefs.funding))$("#funding").value=prefs.funding;
+  }catch(e){}
+  render();
+ }catch(e){$("#count").textContent="Database unavailable";$("#results").innerHTML='<div class="empty">We could not load the scholarship database. Please try again later.</div>'}
+}
+$("#apply").onclick=render;
+// Nationality selections remain in page memory only; do not persist personal eligibility details in browser storage.
+$("#clear").onclick=()=>{selectedNationalities=[];["residence","destination","level","field","funding","status"].forEach(id=>$("#"+id).selectedIndex=0);$("#keyword").value="";$("#natSearch").value="";renderNationalityOptions();render()};
+init();
+</script>
+<script src="assets/site.js" defer></script>
+</body></html>

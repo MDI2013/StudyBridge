@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Track study applications, deadlines and next actions with StudyBridge."><title>Application Tracker | StudyBridge</title>
+<style>
+:root{--ink:#172b4d;--muted:#64748b;--line:#dbe3ee;--brand:#2256a5;--soft:#f4f7fb;--green:#17643f}
+*{box-sizing:border-box}body{margin:0;background:#f8fafc;color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+header{background:white;border-bottom:1px solid var(--line);padding:15px max(20px,calc((100vw - 1080px)/2));display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.brand{font-weight:800;color:var(--ink);font-size:1.15rem;text-decoration:none}.nav{display:flex;gap:14px;flex-wrap:wrap}a{color:var(--brand);font-weight:650}
+main{max-width:1080px;margin:34px auto;padding:0 20px}.eyebrow{font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);font-weight:750}h1{font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin:.3rem 0 .8rem}.muted{color:var(--muted);font-size:.9rem}
+.panel{background:white;border:1px solid var(--line);border-radius:16px;padding:21px;margin:22px 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.field{display:flex;flex-direction:column;gap:6px}.field label{font-weight:650;font-size:.9rem}input,select,textarea{width:100%;font:inherit;padding:10px 12px;border:1px solid #cbd5e1;border-radius:9px;background:white;color:var(--ink)}textarea{min-height:80px;resize:vertical}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}button{border:0;border-radius:9px;background:var(--brand);color:white;padding:10px 15px;font:inherit;font-weight:700;cursor:pointer}button.secondary{background:#e9eef6;color:var(--ink)}button.danger{background:#fff0f0;color:#9b2222}
+.notice{background:#fff8e8;border:1px solid #f1d79a;border-radius:12px;padding:13px 15px;font-size:.9rem}.list{display:grid;gap:12px}.item{background:white;border:1px solid var(--line);border-radius:13px;padding:16px;display:grid;grid-template-columns:1fr auto;gap:10px}.item h3{margin:0 0 4px}.tag{display:inline-block;padding:3px 8px;border-radius:999px;background:#edf3fb;color:#244b82;font-size:.78rem;font-weight:700}.tag.submitted{background:#e8f6ef;color:#17643f}.tag.rejected{background:#fff0f0;color:#9b2222}.meta{color:var(--muted);font-size:.88rem}.itemActions{display:flex;gap:8px;flex-wrap:wrap;align-items:start}.itemActions button{font-size:.83rem;padding:7px 10px}.empty{padding:25px;border:1px dashed #cbd5e1;border-radius:12px;color:var(--muted);text-align:center}footer{border-top:1px solid var(--line);margin:30px 0;padding:18px 0;color:var(--muted);font-size:.85rem}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.item{grid-template-columns:1fr}}
+</style>
+<link rel="stylesheet" href="assets/site.css"></head><body>
+<header><a class="brand" href="index.html?view=unis"><svg class="brand-mark" viewBox="0 0 34 22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M2 18C8 2 26 2 32 18M2 18h30M10 18V9M17 18V5M24 18V9"/></svg><span>StudyBridge</span></a><nav class="nav"><a href="index.html?view=unis">Universities</a><a href="profile.html">My profile</a><a href="programmes.html">Programmes</a><a href="scholarships.html">Scholarships</a></nav></header>
+<main>
+<div class="eyebrow">Stay organised</div><h1>Your application tracker.</h1><p>Keep your programme and scholarship applications, deadlines and next actions in one place. You control this list.</p>
+<div class="notice"><b>Privacy note:</b> Tracker entries are saved in this browser only. Do not add passport numbers, passwords, bank details, grades, personal documents or sensitive information. This is not a secure document vault or a cloud account. Anyone with access to this browser profile may be able to view the list.</div>
+<section class="panel"><h2>Add an application</h2><form id="entryForm">
+<div class="grid">
+<div class="field"><label for="title">Programme or scholarship name *</label><input id="title" maxlength="140" required placeholder="e.g. Master of Information"></div>
+<div class="field"><label for="provider">University or provider *</label><input id="provider" maxlength="120" required placeholder="e.g. University of Toronto"></div>
+<div class="field"><label for="kind">Application type</label><select id="kind"><option value="programme">Study programme</option><option value="scholarship">Scholarship</option><option value="other">Other opportunity</option></select></div>
+<div class="field"><label for="deadline">Deadline</label><input id="deadline" type="date"></div>
+<div class="field"><label for="status">Current status</label><select id="status"><option value="researching">Researching</option><option value="preparing">Preparing documents</option><option value="ready">Ready to submit</option><option value="submitted">Submitted</option><option value="interview">Interview / assessment</option><option value="offer">Offer received</option><option value="rejected">Unsuccessful</option><option value="withdrawn">Withdrawn</option></select></div>
+<div class="field"><label for="nextDate">Next action date</label><input id="nextDate" type="date"></div>
+<div class="field" style="grid-column:1/-1"><label for="next">Next action (do not enter sensitive details)</label><textarea id="next" maxlength="500" placeholder="e.g. Check official transcript requirements"></textarea></div>
+<div class="field" style="grid-column:1/-1"><label for="url">Official application link (optional)</label><input id="url" type="url" maxlength="500" placeholder="https://..."></div>
+</div><div class="actions"><button type="submit" id="saveBtn">Add to tracker</button><button type="button" class="secondary" id="cancelEdit" hidden>Cancel edit</button></div><p id="formStatus" class="muted" role="status" aria-live="polite"></p>
+</form></section>
+<section class="panel"><div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"><div><h2 style="margin:0">My applications</h2><span id="count" class="muted">0 entries</span></div><div class="actions" style="margin:0"><button class="secondary" id="export">Export backup</button><button class="secondary" id="importBtn">Import backup</button><input id="importFile" type="file" accept="application/json,.json" hidden></div></div>
+<div id="entries" class="list" style="margin-top:16px"><div class="empty">No applications saved yet. Add your first opportunity above.</div></div>
+<div class="actions"><button class="danger" id="clearAll">Delete all tracker entries</button></div></section>
+<footer>StudyBridge is an independent planning tool, not an admissions office. Always confirm deadlines and requirements on official provider websites. Export a backup if you want to move your tracker to another browser or device.</footer>
+</main>
+<script>
+const KEY="studybridge.application.tracker.v1";
+const $=id=>document.getElementById(id);
+let entries=[],editingId=null;
+const labels={researching:"Researching",preparing:"Preparing documents",ready:"Ready to submit",submitted:"Submitted",interview:"Interview / assessment",offer:"Offer received",rejected:"Unsuccessful",withdrawn:"Withdrawn"};
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function load(){try{const raw=JSON.parse(localStorage.getItem(KEY)||"[]");entries=Array.isArray(raw)?raw.filter(x=>x&&typeof x.id==="string"&&typeof x.title==="string"&&typeof x.provider==="string"):[];}catch(e){entries=[];}}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(entries));return true;}catch(e){$("formStatus").textContent="The browser could not save the tracker. Export a backup or remove some entries.";return false;}}
+function resetForm(){editingId=null;$("entryForm").reset();$("saveBtn").textContent="Add to tracker";$("cancelEdit").hidden=true;}
+function render(){
+ entries.sort((a,b)=>(a.deadline||"9999-99-99").localeCompare(b.deadline||"9999-99-99"));
+ $("count").textContent=entries.length+" entr"+(entries.length===1?"y":"ies");
+ if(!entries.length){$("entries").innerHTML='<div class="empty">No applications saved yet. Add your first opportunity above.</div>';return;}
+ $("entries").innerHTML=entries.map(e=>{
+  const tag=e.status==="submitted"||e.status==="offer"?"submitted":e.status==="rejected"||e.status==="withdrawn"?"rejected":"";
+  const url=e.url&&/^https:\/\//i.test(e.url)?'<a href="'+esc(e.url)+'" target="_blank" rel="noopener noreferrer">Official link ↗</a>':"";
+  return '<article class="item"><div><h3>'+esc(e.title)+'</h3><div class="meta">'+esc(e.provider)+' · '+esc(e.kind==="scholarship"?"Scholarship":e.kind==="programme"?"Programme":"Other")+'</div><p><span class="tag '+tag+'">'+esc(labels[e.status]||"Researching")+'</span></p><div class="meta">Deadline: '+esc(e.deadline||"Not set")+' · Next action: '+esc(e.nextDate||"Not set")+'</div>'+(e.next?'<p>'+esc(e.next)+'</p>':"")+(url?'<p>'+url+'</p>':"")+'</div><div class="itemActions"><button class="secondary" data-edit="'+esc(e.id)+'">Edit</button><button class="danger" data-delete="'+esc(e.id)+'">Delete</button></div></article>';
+ }).join("");
+}
+function fillForm(e){editingId=e.id;["title","provider","kind","deadline","status","nextDate","next","url"].forEach(k=>$(k).value=e[k]||"");$("saveBtn").textContent="Save changes";$("cancelEdit").hidden=false;window.scrollTo({top:0,behavior:"smooth"});}
+$("entryForm").addEventListener("submit",ev=>{
+ ev.preventDefault();
+ const url=$("url").value.trim();
+ if(url&&!/^https:\/\//i.test(url)){$("formStatus").textContent="Please use a secure https:// link, or leave the link blank.";return;}
+ const item={id:editingId||("app-"+Date.now()+"-"+Math.random().toString(36).slice(2,8)),title:$("title").value.trim(),provider:$("provider").value.trim(),kind:$("kind").value,deadline:$("deadline").value,status:$("status").value,nextDate:$("nextDate").value,next:$("next").value.trim(),url,lastUpdated:new Date().toISOString().slice(0,10)};
+ if(editingId)entries=entries.map(x=>x.id===editingId?item:x);else entries.push(item);
+ if(persist()){$("formStatus").textContent=editingId?"Application updated.":"Application added.";resetForm();render();}
+});
+$("cancelEdit").addEventListener("click",resetForm);
+$("entries").addEventListener("click",ev=>{
+ const edit=ev.target.closest("[data-edit]"),del=ev.target.closest("[data-delete]");
+ if(edit){const found=entries.find(x=>x.id===edit.dataset.edit);if(found)fillForm(found);}
+ if(del&&confirm("Delete this tracker entry?")){entries=entries.filter(x=>x.id!==del.dataset.delete);persist();render();}
+});
+$("export").addEventListener("click",()=>{
+ const blob=new Blob([JSON.stringify({schema_version:1,exported_at:new Date().toISOString(),entries},null,2)],{type:"application/json"});
+ const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="studybridge-application-tracker-backup.json";a.click();URL.revokeObjectURL(url);
+});
+$("importBtn").addEventListener("click",()=>$("importFile").click());
+$("importFile").addEventListener("change",async ev=>{
+ const file=ev.target.files[0];if(!file)return;
+ try{const data=JSON.parse(await file.text());if(!Array.isArray(data.entries)||data.entries.some(x=>!x||typeof x.title!=="string"||typeof x.provider!=="string"||typeof x.id!=="string"))throw new Error("Invalid backup");
+  const map=new Map(entries.map(x=>[x.id,x]));data.entries.forEach(x=>map.set(x.id,x));entries=[...map.values()];persist();render();$("formStatus").textContent="Backup imported. Existing entries with matching IDs were updated.";
+ }catch(e){$("formStatus").textContent="That file is not a valid StudyBridge tracker backup.";}finally{$("importFile").value="";}
+});
+$("clearAll").addEventListener("click",()=>{if(confirm("Delete every application tracker entry from this browser? This cannot be undone unless you exported a backup.")){entries=[];persist();resetForm();render();$("formStatus").textContent="All tracker entries cleared."; }});
+load();render();
+</script><script src="assets/site.js" defer></script>
+</body></html>

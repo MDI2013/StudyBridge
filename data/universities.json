@@ -1,0 +1,1182 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_name": "StudyBridge University Directory",
+  "updated_at": "2026-11-25",
+  "publication_policy": "Records marked needs_review are seed records, not verified recommendations. Tuition amount remains null until confirmed from an official institution source for a specific programme, degree level, international student category, currency, and academic year.",
+  "universities": [
+    {
+      "id": "sb-001",
+      "name": "Sorbonne Université",
+      "country_code": "FR",
+      "city": "Paris",
+      "institution_type": "public",
+      "official_website": "https://www.sorbonne-universite.fr",
+      "study_fields": [
+        "Sciences",
+        "Santé",
+        "Lettres & SHS"
+      ],
+      "teaching_languages_as_listed": [
+        "Français"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "EUR",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": "https://www.sorbonne-universite.fr/en/education/study-sorbonne-university/enrolment-procedures-and-tuition-fees",
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://www.sorbonne-universite.fr/en/education/study-sorbonne-university/enrolment-procedures-and-tuition-fees",
+      "legacy_estimate_eur": 2800,
+      "legacy_description": "Université pluridisciplinaire au cœur de Paris, forte en sciences et en médecine.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Official 2026/2027 enrolment and tuition page reviewed. It publishes national fee rates and confirms a 2026/27 exemption policy for non-EU students; individual eligibility/exemptions and programme-specific details still require checking. Degree-level catalogue and field/language mapping remain to be verified; record remains needs_review.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-002",
+      "name": "Université de Strasbourg",
+      "country_code": "FR",
+      "city": "Strasbourg",
+      "institution_type": "public",
+      "official_website": "https://www.unistra.fr",
+      "study_fields": [
+        "Sciences",
+        "Santé",
+        "Lettres & SHS"
+      ],
+      "teaching_languages_as_listed": [
+        "Français"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "EUR",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": "https://en.unistra.fr/en/node/1781/tuition-fees",
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://en.unistra.fr/en/node/1781/tuition-fees",
+      "legacy_estimate_eur": 2800,
+      "legacy_description": "Grande université européenne, proche de l'Allemagne, avec de nombreux échanges.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Official 2026/2027 tuition page reviewed. Fees differ by degree, nationality/residency and exemption status; non-EU differentiated fees and several exemptions apply. The page notes some 2026 decree implementation details are being updated. Do not publish a single university-wide international fee. Degree-level catalogue and field/language mapping remain to be verified; record remains needs_review.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-003",
+      "name": "Université de Montpellier",
+      "country_code": "FR",
+      "city": "Montpellier",
+      "institution_type": "public",
+      "official_website": "https://www.umontpellier.fr",
+      "study_fields": [
+        "Santé",
+        "Sciences",
+        "Ingénierie"
+      ],
+      "teaching_languages_as_listed": [
+        "Français"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "EUR",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": "https://www.umontpellier.fr/en/international/etudier-a-letranger/etudiants-internationaux-annee-universitaire-2026-2027",
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://www.umontpellier.fr/en/international/etudier-a-letranger/etudiants-internationaux-annee-universitaire-2026-2027",
+      "legacy_estimate_eur": 2800,
+      "legacy_description": "Une des plus anciennes facultés de médecine d'Europe, ville étudiante dynamique.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Official 2026/2027 international-student fee guidance reviewed. The 2026 decree changed differentiated-fee rules; fees depend on degree level and administrative status, with exemptions in defined cases. No single university-wide amount should be entered. Degree-level catalogue and field/language mapping remain to be verified; record remains needs_review.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-004",
+      "name": "McGill University",
+      "country_code": "CA",
+      "city": "Montréal",
+      "institution_type": "public",
+      "official_website": "https://www.mcgill.ca",
+      "study_fields": [
+        "Santé",
+        "Sciences",
+        "Business"
+      ],
+      "teaching_languages_as_listed": [
+        "Anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "CAD",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": "https://www.mcgill.ca/student-accounts/tuition-fees/general-tuition-and-fees-information/tuition-fees-2026-27",
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://www.mcgill.ca/undergraduate-admissions/international-students",
+      "legacy_estimate_eur": 22000,
+      "legacy_description": "Université de recherche reconnue, dans une ville bilingue.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Official McGill 2026/27 tuition guidance reviewed. International undergraduate tuition is programme/degree-specific and uses a guaranteed tuition model for specified bachelor's and professional degrees; graduate tuition differs between non-thesis and thesis programmes and is assessed on programme and student status. Do not enter a single university-wide amount. The linked international-student admissions page is an undergraduate overview; graduate applicants must check their individual department/programme. Programme catalogue, degree-level mapping, fee category and exact fee basis remain to be verified; record remains needs_review.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-005",
+      "name": "Université de Montréal",
+      "country_code": "CA",
+      "city": "Montréal",
+      "institution_type": "public",
+      "official_website": "https://www.umontreal.ca",
+      "study_fields": [
+        "Santé",
+        "Sciences",
+        "Lettres & SHS"
+      ],
+      "teaching_languages_as_listed": [
+        "Français"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "CAD",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": "https://registraire.umontreal.ca/droits-de-scolarite/calculateur-des-droits-de-scolarite/",
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://admission.umontreal.ca/en/who-are-you/foreign-student/",
+      "legacy_estimate_eur": 18000,
+      "legacy_description": "Grande université francophone d'Amérique du Nord.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Official 2026/27 tuition calculator reviewed; estimates vary by programme/discipline, degree cycle, study load and legal status in Canada, and exclude insurance, housing, transport and other living costs. International-student exemptions may apply. The official international-student admissions page directs applicants to country-specific equivalencies and programme-specific requirements. Do not enter a single university-wide tuition amount. Full catalogue, programme-level fee basis and field/language mapping remain to be verified; record remains needs_review.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-006",
+      "name": "University of Toronto",
+      "country_code": "CA",
+      "city": "Toronto",
+      "institution_type": "public",
+      "official_website": "https://www.utoronto.ca",
+      "study_fields": [
+        "Ingénierie",
+        "Sciences",
+        "Business"
+      ],
+      "teaching_languages_as_listed": [
+        "Anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "CAD",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": "https://www.registrar.utoronto.ca/fees-payments/tuition-fee-schedules/",
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://www.utoronto.ca/admissions",
+      "legacy_estimate_eur": 28000,
+      "legacy_description": "Première université canadienne en recherche, trois campus.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Official University Registrar tuition schedule guidance reviewed for 2026/27. Tuition depends on programme, division, course/programme fee structure, legal status, course load, year of entry and year of study; international rates apply unless an exemption is granted. The University directs students to programme-specific Tuition Explorer schedules. Do not enter a single university-wide amount. Programme catalogue, degree-level mapping and exact programme fee schedules remain to be verified; record remains needs_review.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-007",
+      "name": "Technische Universität München",
+      "country_code": "DE",
+      "city": "Munich",
+      "institution_type": "public",
+      "official_website": "https://www.tum.de",
+      "study_fields": [
+        "Ingénierie",
+        "Sciences"
+      ],
+      "teaching_languages_as_listed": [
+        "Allemand",
+        "anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "EUR",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": "https://www.tum.de/en/studies/fees/tuition",
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://www.tum.de/en/studies/fees/tuition",
+      "legacy_estimate_eur": 4000,
+      "legacy_description": "Référence allemande en ingénierie et innovation, liens étroits avec l'industrie.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Official TUM tuition page reviewed. Non-EU/EEA tuition is programme-dependent (generally €2,000 or €3,000 per semester for bachelor's and €4,000 or €6,000 per semester for master's, with exceptions); semester fees also apply. TUM states increases from winter 2027/28. A single university-wide amount would be misleading. Degree-level catalogue and field/language mapping remain to be verified; record remains needs_review.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-008",
+      "name": "LMU Munich",
+      "country_code": "DE",
+      "city": "Munich",
+      "institution_type": "public",
+      "official_website": "https://www.lmu.de",
+      "study_fields": [
+        "Sciences",
+        "Lettres & SHS",
+        "Santé"
+      ],
+      "teaching_languages_as_listed": [
+        "Allemand",
+        "anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "EUR",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": "https://www.lmu.de/en/workspace-for-students/abc-study-guide/fees-and-tuition-fees/",
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://www.lmu.de/en/study/degree-students/applications-for-admission/where-do-i-apply/",
+      "legacy_estimate_eur": 600,
+      "legacy_description": "Université de recherche historique avec une contribution semestrielle faible.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Official LMU fee guidance reviewed. LMU states that general tuition fees have not been charged since winter semester 2013/14; students still pay the Munich Student Union semester contribution, which is distinct from tuition and is subject to change. Separate fees may apply to selected graduate/professional programmes. International applicants generally apply via the International Office, with exceptions depending on programme and admission route. Do not record the semester contribution as tuition. Programme-specific fees, catalogue, degree-level mapping and field/language mapping remain to be verified; record remains needs_review.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-009",
+      "name": "Universität Heidelberg",
+      "country_code": "DE",
+      "city": "Heidelberg",
+      "institution_type": "public",
+      "official_website": "https://www.uni-heidelberg.de",
+      "study_fields": [
+        "Sciences",
+        "Santé",
+        "Lettres & SHS"
+      ],
+      "teaching_languages_as_listed": [
+        "Allemand",
+        "anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "EUR",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 3000,
+      "legacy_description": "La plus ancienne université d'Allemagne, ambiance de petite ville étudiante.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-010",
+      "name": "University of Oxford",
+      "country_code": "UK",
+      "city": "Oxford",
+      "institution_type": "public",
+      "official_website": "https://www.ox.ac.uk",
+      "study_fields": [
+        "Lettres & SHS",
+        "Sciences",
+        "Santé"
+      ],
+      "teaching_languages_as_listed": [
+        "Anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "GBP",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 32000,
+      "legacy_description": "Enseignement par tutorats en petits groupes, collèges historiques.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-011",
+      "name": "University of Manchester",
+      "country_code": "UK",
+      "city": "Manchester",
+      "institution_type": "public",
+      "official_website": "https://www.manchester.ac.uk",
+      "study_fields": [
+        "Ingénierie",
+        "Business",
+        "Sciences"
+      ],
+      "teaching_languages_as_listed": [
+        "Anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "GBP",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 26000,
+      "legacy_description": "Grande université urbaine avec un fort réseau d'employeurs.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-012",
+      "name": "University of Edinburgh",
+      "country_code": "UK",
+      "city": "Édimbourg",
+      "institution_type": "public",
+      "official_website": "https://www.ed.ac.uk",
+      "study_fields": [
+        "Lettres & SHS",
+        "Sciences",
+        "Ingénierie"
+      ],
+      "teaching_languages_as_listed": [
+        "Anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "GBP",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 28000,
+      "legacy_description": "Université écossaise ancienne et très internationale.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-013",
+      "name": "MIT",
+      "country_code": "US",
+      "city": "Cambridge (MA)",
+      "institution_type": "privé",
+      "official_website": "https://www.mit.edu",
+      "study_fields": [
+        "Ingénierie",
+        "Sciences"
+      ],
+      "teaching_languages_as_listed": [
+        "Anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "USD",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 52000,
+      "legacy_description": "Institut de référence en ingénierie, informatique et recherche appliquée.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-014",
+      "name": "University of Michigan",
+      "country_code": "US",
+      "city": "Ann Arbor",
+      "institution_type": "public",
+      "official_website": "https://umich.edu",
+      "study_fields": [
+        "Ingénierie",
+        "Business",
+        "Santé"
+      ],
+      "teaching_languages_as_listed": [
+        "Anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "USD",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 55000,
+      "legacy_description": "Grande université publique, vie de campus et sport très présents.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-015",
+      "name": "UC Berkeley",
+      "country_code": "US",
+      "city": "Berkeley",
+      "institution_type": "public",
+      "official_website": "https://www.berkeley.edu",
+      "study_fields": [
+        "Sciences",
+        "Ingénierie",
+        "Business"
+      ],
+      "teaching_languages_as_listed": [
+        "Anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "USD",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 47000,
+      "legacy_description": "Université publique de recherche proche de la Silicon Valley.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-016",
+      "name": "Université Mohammed V",
+      "country_code": "MA",
+      "city": "Rabat",
+      "institution_type": "public",
+      "official_website": "https://www.um5.ac.ma",
+      "study_fields": [
+        "Sciences",
+        "Santé",
+        "Lettres & SHS"
+      ],
+      "teaching_languages_as_listed": [
+        "Français",
+        "arabe"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "MAD",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 500,
+      "legacy_description": "Principale université publique de la capitale.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-017",
+      "name": "Al Akhawayn University",
+      "country_code": "MA",
+      "city": "Ifrane",
+      "institution_type": "privé",
+      "official_website": "https://www.aui.ma",
+      "study_fields": [
+        "Business",
+        "Ingénierie",
+        "Lettres & SHS"
+      ],
+      "teaching_languages_as_listed": [
+        "Anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "MAD",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 10000,
+      "legacy_description": "Campus anglophone de type américain dans le Moyen Atlas.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-018",
+      "name": "Université Cadi Ayyad",
+      "country_code": "MA",
+      "city": "Marrakech",
+      "institution_type": "public",
+      "official_website": "https://www.uca.ma",
+      "study_fields": [
+        "Sciences",
+        "Ingénierie",
+        "Santé"
+      ],
+      "teaching_languages_as_listed": [
+        "Français",
+        "arabe"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "MAD",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 500,
+      "legacy_description": "Université publique multi-sites autour de Marrakech.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-019",
+      "name": "Universitat de Barcelona",
+      "country_code": "ES",
+      "city": "Barcelone",
+      "institution_type": "public",
+      "official_website": "https://www.ub.edu",
+      "study_fields": [
+        "Santé",
+        "Sciences",
+        "Lettres & SHS"
+      ],
+      "teaching_languages_as_listed": [
+        "Espagnol",
+        "catalan"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "EUR",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 3000,
+      "legacy_description": "Grande université publique au centre de Barcelone.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-020",
+      "name": "Universidad Complutense de Madrid",
+      "country_code": "ES",
+      "city": "Madrid",
+      "institution_type": "public",
+      "official_website": "https://www.ucm.es",
+      "study_fields": [
+        "Lettres & SHS",
+        "Santé",
+        "Sciences"
+      ],
+      "teaching_languages_as_listed": [
+        "Espagnol"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "EUR",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 2500,
+      "legacy_description": "L'une des plus grandes universités d'Espagne.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-021",
+      "name": "Universidad de Salamanca",
+      "country_code": "ES",
+      "city": "Salamanque",
+      "institution_type": "public",
+      "official_website": "https://www.usal.es",
+      "study_fields": [
+        "Lettres & SHS",
+        "Sciences"
+      ],
+      "teaching_languages_as_listed": [
+        "Espagnol"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "EUR",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 2000,
+      "legacy_description": "Université fondée au XIIIe siècle, idéale pour apprendre l'espagnol.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-022",
+      "name": "University of Amsterdam",
+      "country_code": "NL",
+      "city": "Amsterdam",
+      "institution_type": "public",
+      "official_website": "https://www.uva.nl",
+      "study_fields": [
+        "Business",
+        "Lettres & SHS",
+        "Sciences"
+      ],
+      "teaching_languages_as_listed": [
+        "Anglais",
+        "néerlandais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "EUR",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 13000,
+      "legacy_description": "Nombreux programmes en anglais dans une ville très internationale.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-023",
+      "name": "TU Delft",
+      "country_code": "NL",
+      "city": "Delft",
+      "institution_type": "public",
+      "official_website": "https://www.tudelft.nl",
+      "study_fields": [
+        "Ingénierie",
+        "Sciences"
+      ],
+      "teaching_languages_as_listed": [
+        "Anglais",
+        "néerlandais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "EUR",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 16000,
+      "legacy_description": "Université technique de premier plan en ingénierie et architecture.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-024",
+      "name": "Utrecht University",
+      "country_code": "NL",
+      "city": "Utrecht",
+      "institution_type": "public",
+      "official_website": "https://www.uu.nl",
+      "study_fields": [
+        "Sciences",
+        "Santé",
+        "Lettres & SHS"
+      ],
+      "teaching_languages_as_listed": [
+        "Anglais",
+        "néerlandais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "EUR",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 12000,
+      "legacy_description": "Recherche forte et enseignement en petits groupes.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-025",
+      "name": "University of Melbourne",
+      "country_code": "AU",
+      "city": "Melbourne",
+      "institution_type": "public",
+      "official_website": "https://www.unimelb.edu.au",
+      "study_fields": [
+        "Santé",
+        "Business",
+        "Sciences"
+      ],
+      "teaching_languages_as_listed": [
+        "Anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "AUD",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 28000,
+      "legacy_description": "Modèle de masters professionnels, ville réputée pour la vie étudiante.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-026",
+      "name": "University of Sydney",
+      "country_code": "AU",
+      "city": "Sydney",
+      "institution_type": "public",
+      "official_website": "https://www.sydney.edu.au",
+      "study_fields": [
+        "Business",
+        "Santé",
+        "Ingénierie"
+      ],
+      "teaching_languages_as_listed": [
+        "Anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "AUD",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 28000,
+      "legacy_description": "Campus historique près du centre-ville de Sydney.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-027",
+      "name": "Australian National University",
+      "country_code": "AU",
+      "city": "Canberra",
+      "institution_type": "public",
+      "official_website": "https://www.anu.edu.au",
+      "study_fields": [
+        "Sciences",
+        "Lettres & SHS"
+      ],
+      "teaching_languages_as_listed": [
+        "Anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "AUD",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 27000,
+      "legacy_description": "Université nationale axée sur la recherche.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-028",
+      "name": "Université de Tokyo",
+      "country_code": "JP",
+      "city": "Tokyo",
+      "institution_type": "public",
+      "official_website": "https://www.u-tokyo.ac.jp",
+      "study_fields": [
+        "Ingénierie",
+        "Sciences",
+        "Santé"
+      ],
+      "teaching_languages_as_listed": [
+        "Japonais",
+        "anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "JPY",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 4000,
+      "legacy_description": "Première université du Japon, programmes en anglais disponibles.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-029",
+      "name": "Université de Kyoto",
+      "country_code": "JP",
+      "city": "Kyoto",
+      "institution_type": "public",
+      "official_website": "https://www.kyoto-u.ac.jp",
+      "study_fields": [
+        "Sciences",
+        "Ingénierie"
+      ],
+      "teaching_languages_as_listed": [
+        "Japonais",
+        "anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "JPY",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 4000,
+      "legacy_description": "Tradition de liberté académique et nombreux prix Nobel.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-030",
+      "name": "Université d'Osaka",
+      "country_code": "JP",
+      "city": "Osaka",
+      "institution_type": "public",
+      "official_website": "https://www.osaka-u.ac.jp",
+      "study_fields": [
+        "Ingénierie",
+        "Santé",
+        "Sciences"
+      ],
+      "teaching_languages_as_listed": [
+        "Japonais",
+        "anglais"
+      ],
+      "degree_levels": [],
+      "tuition": {
+        "amount": null,
+        "currency": "JPY",
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": null,
+      "legacy_estimate_eur": 4000,
+      "legacy_description": "Grande université nationale, ville à la vie étudiante abordable.",
+      "record_status": "needs_review",
+      "last_verified": null,
+      "review_notes": "Migrated from the original StudyBridge list. Confirm institution details, study fields, teaching languages, fee basis, and international tuition against official sources before publishing as verified.",
+      "degree_level_verification_status": "not_verified"
+    },
+    {
+      "id": "sb-031",
+      "name": "University of Twente",
+      "country_code": "NL",
+      "city": "Enschede",
+      "institution_type": "unknown",
+      "official_website": "https://www.utwente.nl/en/",
+      "study_fields": [],
+      "teaching_languages_as_listed": [],
+      "degree_levels": [
+        "postgraduate"
+      ],
+      "tuition": {
+        "amount": null,
+        "currency": null,
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://www.msc-waves.eu/",
+      "legacy_estimate_eur": null,
+      "legacy_description": null,
+      "record_status": "needs_review",
+      "last_verified": "2026-11-23",
+      "review_notes": "Added as a verified partner institution in an official joint master's programme. This confirms postgraduate participation in the named consortium programme only; it does not verify the institution's full programme catalogue, teaching languages, tuition or general admissions details.",
+      "degree_level_verification_status": "official_joint_programme_partner"
+    },
+    {
+      "id": "sb-032",
+      "name": "Università di Padova",
+      "country_code": "IT",
+      "city": "Padua",
+      "institution_type": "unknown",
+      "official_website": "https://www.unipd.it/en/",
+      "study_fields": [],
+      "teaching_languages_as_listed": [],
+      "degree_levels": [
+        "postgraduate"
+      ],
+      "tuition": {
+        "amount": null,
+        "currency": null,
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://www.msc-waves.eu/",
+      "legacy_estimate_eur": null,
+      "legacy_description": null,
+      "record_status": "needs_review",
+      "last_verified": "2026-11-23",
+      "review_notes": "Added as a verified partner institution in an official joint master's programme. This confirms postgraduate participation in the named consortium programme only; it does not verify the institution's full programme catalogue, teaching languages, tuition or general admissions details.",
+      "degree_level_verification_status": "official_joint_programme_partner"
+    },
+    {
+      "id": "sb-033",
+      "name": "University of Ljubljana",
+      "country_code": "SI",
+      "city": "Ljubljana",
+      "institution_type": "unknown",
+      "official_website": "https://www.uni-lj.si/en/",
+      "study_fields": [],
+      "teaching_languages_as_listed": [],
+      "degree_levels": [
+        "postgraduate"
+      ],
+      "tuition": {
+        "amount": null,
+        "currency": null,
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://www.msc-waves.eu/",
+      "legacy_estimate_eur": null,
+      "legacy_description": null,
+      "record_status": "needs_review",
+      "last_verified": "2026-11-23",
+      "review_notes": "Added as a verified partner institution in an official joint master's programme. This confirms postgraduate participation in the named consortium programme only; it does not verify the institution's full programme catalogue, teaching languages, tuition or general admissions details.",
+      "degree_level_verification_status": "official_joint_programme_partner"
+    },
+    {
+      "id": "sb-034",
+      "name": "University of Girona",
+      "country_code": "ES",
+      "city": "Girona",
+      "institution_type": "unknown",
+      "official_website": "https://www.udg.edu/en/",
+      "study_fields": [],
+      "teaching_languages_as_listed": [],
+      "degree_levels": [
+        "postgraduate"
+      ],
+      "tuition": {
+        "amount": null,
+        "currency": null,
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://maiamaster.org/about/",
+      "legacy_estimate_eur": null,
+      "legacy_description": null,
+      "record_status": "needs_review",
+      "last_verified": "2026-11-23",
+      "review_notes": "Added as a verified partner institution in an official joint master's programme. This confirms postgraduate participation in the named consortium programme only; it does not verify the institution's full programme catalogue, teaching languages, tuition or general admissions details.",
+      "degree_level_verification_status": "official_joint_programme_partner"
+    },
+    {
+      "id": "sb-035",
+      "name": "Université Bourgogne Europe",
+      "country_code": "FR",
+      "city": "Dijon",
+      "institution_type": "unknown",
+      "official_website": "https://www.ube.fr/en/",
+      "study_fields": [],
+      "teaching_languages_as_listed": [],
+      "degree_levels": [
+        "postgraduate"
+      ],
+      "tuition": {
+        "amount": null,
+        "currency": null,
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://maiamaster.org/about/",
+      "legacy_estimate_eur": null,
+      "legacy_description": null,
+      "record_status": "needs_review",
+      "last_verified": "2026-11-23",
+      "review_notes": "Added as a verified partner institution in an official joint master's programme. This confirms postgraduate participation in the named consortium programme only; it does not verify the institution's full programme catalogue, teaching languages, tuition or general admissions details.",
+      "degree_level_verification_status": "official_joint_programme_partner"
+    },
+    {
+      "id": "sb-036",
+      "name": "Università degli Studi di Cassino e del Lazio Meridionale",
+      "country_code": "IT",
+      "city": "Cassino",
+      "institution_type": "unknown",
+      "official_website": "https://www.unicas.it/",
+      "study_fields": [],
+      "teaching_languages_as_listed": [],
+      "degree_levels": [
+        "postgraduate"
+      ],
+      "tuition": {
+        "amount": null,
+        "currency": null,
+        "fee_basis": null,
+        "student_category": "international",
+        "academic_year": null,
+        "source_url": null,
+        "verification_status": "not_verified"
+      },
+      "admissions_source_url": "https://maiamaster.org/about/",
+      "legacy_estimate_eur": null,
+      "legacy_description": null,
+      "record_status": "needs_review",
+      "last_verified": "2026-11-23",
+      "review_notes": "Added as a verified partner institution in an official joint master's programme. This confirms postgraduate participation in the named consortium programme only; it does not verify the institution's full programme catalogue, teaching languages, tuition or general admissions details.",
+      "degree_level_verification_status": "official_joint_programme_partner"
+    }
+  ],
+  "supported_degree_levels": [
+    "undergraduate",
+    "postgraduate"
+  ]
+}

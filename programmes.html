@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Search international university programmes on StudyBridge using official programme information.">
+<title>Find Programmes | StudyBridge</title>
+<style>
+:root{color-scheme:light;--ink:#172b4d;--muted:#64748b;--line:#dbe3ee;--brand:#2256a5;--soft:#f4f7fb;--green:#18794e}
+*{box-sizing:border-box}body{margin:0;background:#f8fafc;color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+header{background:#fff;border-bottom:1px solid var(--line);padding:15px max(20px,calc((100vw - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.brand{font-weight:800;font-size:1.15rem;color:var(--ink);text-decoration:none}.nav{display:flex;gap:16px;flex-wrap:wrap}.nav a{color:var(--brand);font-weight:650;text-decoration:none}
+main{max-width:1120px;margin:34px auto;padding:0 20px}.intro{max-width:760px;margin-bottom:24px}.eyebrow{color:var(--brand);font-weight:750;letter-spacing:.08em;text-transform:uppercase;font-size:.76rem}
+h1{font-size:clamp(2rem,5vw,3rem);line-height:1.08;margin:.35rem 0 .8rem}h2{font-size:1.2rem;margin:.4rem 0}
+.panel{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;margin:22px 0}
+.filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.field{display:flex;flex-direction:column;gap:6px}.field label{font-weight:650;font-size:.9rem}
+input,select{font:inherit;width:100%;padding:11px 12px;border:1px solid #cbd5e1;border-radius:9px;background:white;color:var(--ink)}
+.actions{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}button{border:0;border-radius:9px;background:var(--brand);color:white;padding:11px 17px;font:inherit;font-weight:700;cursor:pointer}button.secondary{background:#e9eef6;color:var(--ink)}
+.results-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:24px 0 12px}.muted{color:var(--muted);font-size:.9rem}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:19px;display:flex;flex-direction:column;gap:8px}.pills{display:flex;gap:7px;flex-wrap:wrap}.pill{font-size:.77rem;border-radius:999px;background:#edf3fb;color:#244b82;padding:4px 9px;font-weight:700}.pill.open{background:#e8f6ef;color:#17643f}.meta{font-size:.9rem;color:var(--muted)}.facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:5px 0}.fact{background:var(--soft);border-radius:9px;padding:9px;font-size:.87rem}.fact b{display:block;font-size:.76rem;color:var(--muted);margin-bottom:2px}.links{display:flex;gap:14px;flex-wrap:wrap;margin-top:auto;padding-top:10px}.links a{color:var(--brand);font-weight:700}.match{background:#f2f7ff;border-left:3px solid var(--brand);border-radius:8px;padding:10px 12px;font-size:.87rem}.match b{display:block;margin-bottom:3px}.match ul{margin:5px 0 0;padding-left:18px}.match .caution{color:var(--muted)}
+footer{color:var(--muted);font-size:.85rem;margin:34px 0;padding:18px 0;border-top:1px solid var(--line)}.empty{background:white;border:1px dashed #cbd5e1;border-radius:12px;padding:24px;color:var(--muted);grid-column:1/-1}
+@media(max-width:760px){.filters{grid-template-columns:1fr 1fr}.grid{grid-template-columns:1fr}}@media(max-width:480px){.filters{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}}
+</style>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header><a class="brand" href="index.html?view=unis"><svg class="brand-mark" viewBox="0 0 34 22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M2 18C8 2 26 2 32 18M2 18h30M10 18V9M17 18V5M24 18V9"/></svg><span>StudyBridge</span></a><nav class="nav" aria-label="Main navigation"><a href="index.html?view=unis">Home</a><a href="scholarships.html">Scholarships</a><a href="programmes.html" aria-current="page">Programmes</a><a href="profile.html">My profile</a><a href="tracker.html">Application tracker</a></nav></header>
+<main>
+<section class="intro"><div class="eyebrow">StudyBridge discovery</div><h1>Find a programme that moves you forward.</h1><p>Explore international degrees, compare programme basics and continue to the official university or consortium website for the latest admissions information.</p><p class="muted">We only display details supported by official programme sources. Missing tuition, language or deadline information is labelled rather than guessed.</p></section>
+<section class="panel" aria-label="Programme filters"><h2>Search programmes</h2><div class="filters">
+<div class="field"><label for="keyword">Programme or subject</label><input id="keyword" type="search" placeholder="e.g. artificial intelligence"></div>
+<div class="field"><label for="country">Study country</label><select id="country"><option value="">All countries</option></select></div>
+<div class="field"><label for="level">Study level</label><select id="level"><option value="">All levels</option><option value="undergraduate">Undergraduate</option><option value="postgraduate">Postgraduate</option></select></div>
+<div class="field"><label for="institution">University / institution</label><select id="institution"><option value="">All institutions</option></select></div>
+<div class="field"><label for="language">Teaching language</label><select id="language"><option value="">All languages</option></select></div>
+<div class="field"><label for="field">Subject area</label><select id="field"><option value="">All subject areas</option></select></div>
+<div class="field"><label for="status">Application status</label><select id="status"><option value="">All statuses</option><option value="open">Open</option><option value="upcoming">Upcoming</option><option value="closed">Closed</option><option value="not_announced">Not announced</option><option value="varies">Deadlines vary</option><option value="unknown">Unknown</option></select></div>
+</div><div class="actions"><button id="apply">Search programmes</button><button class="secondary" id="clear">Clear filters</button></div></section>
+<div class="results-head"><h2>Programmes</h2><span id="count" class="muted" aria-live="polite">Loading…</span></div><section id="results" class="grid"><div class="empty">Loading the programme database…</div></section>
+<footer>StudyBridge is an independent discovery platform, not an admissions office or scholarship provider. Programme details, deadlines, fees and eligibility can change. Always confirm requirements and submit applications through the official programme provider.</footer>
+</main>
+<script src="assets/matching.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+const countries={NL:"Netherlands",BR:"Brazil",IE:"Ireland",IT:"Italy",ES:"Spain",FR:"France",SI:"Slovenia",CA:"Canada",UK:"United Kingdom",US:"United States"};
+let records=[];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const statusLabel=s=>({open:"Applications open",upcoming:"Upcoming",closed:"Closed",not_announced:"Not announced",varies:"Deadlines vary",unknown:"Status unknown"})[s]||"Status unknown";
+function render(){
+ const keyword=$("#keyword").value.trim().toLowerCase(),country=$("#country").value,level=$("#level").value,field=$("#field").value,status=$("#status").value,institution=$("#institution").value,language=$("#language").value;
+ const rows=records.filter(r=>{
+  if(country&&!(r.delivery_countries||[]).includes(country))return false;
+  if(level&&r.degree_level!==level)return false;
+  if(field&&!(r.study_fields||[]).includes(field))return false;
+  if(status&&r.application_status!==status)return false;
+  if(institution&&!(r.partner_institutions||[]).includes(institution))return false;
+  if(language&&r.teaching_language!==language)return false;
+  if(keyword&&!([r.title,...(r.study_fields||[]),...(r.partner_institutions||[])].join(" ").toLowerCase().includes(keyword)))return false;
+  return true;
+ });
+ $("#count").textContent=rows.length+" programme(s)";
+ let preferences={};try{preferences=JSON.parse(localStorage.getItem("studybridge.profile.preferences.v1")||"{}")}catch(e){}
+ $("#results").innerHTML=rows.length?rows.map(r=>{
+  const fit=window.StudyBridgeMatching.programmeFit(r,preferences);
+  const countriesText=(r.delivery_countries||[]).map(c=>countries[c]||c).join(", ");
+  const deadline=r.application_deadline||"Not confirmed";
+  const partners=(r.partner_institutions||[]).join(" · ")||"Not confirmed";
+  return '<article class="card"><div class="pills"><span class="pill">'+esc(r.degree_level)+'</span><span class="pill '+esc(r.application_status||"unknown")+'">'+esc(statusLabel(r.application_status))+'</span></div><h2>'+esc(r.title)+'</h2><div class="meta">'+esc(r.qualification||"Qualification not confirmed")+' · '+esc(r.duration||"Duration not confirmed")+'</div><p>'+esc((r.study_fields||[]).join(" · "))+'</p><div class="facts"><div class="fact"><b>Confirmed partner countries</b>'+esc(countriesText||"Not confirmed")+'</div><div class="fact"><b>Application deadline</b>'+esc(deadline)+'</div><div class="fact"><b>Tuition</b>'+esc(r.tuition_amount==null?"Not verified":String(r.tuition_amount)+" "+(r.tuition_currency||""))+'</div><div class="fact"><b>Intake</b>'+esc(r.intake||"Not confirmed")+'</div><div class="fact"><b>Teaching language</b>'+esc(r.teaching_language||"Not verified")+'</div></div><div class="meta"><b>Partner institutions:</b> '+esc(partners)+'</div><p class="meta">'+esc(r.funding_notes||"Funding details not confirmed.")+'</p><div class="links"><a href="'+esc(r.official_programme_url)+'" target="_blank" rel="noopener noreferrer">Official programme page ↗</a><a href="'+esc(r.official_admissions_url)+'" target="_blank" rel="noopener noreferrer">Admissions information ↗</a><button type="button" class="secondary" data-track="'+esc(r.id)+'">Add to tracker</button></div><small class="meta">Source checked: '+esc(r.last_verified||"Not confirmed")+'</small></article>';
+ }).join(""):'<div class="empty">No programmes match these filters yet. Try removing a filter or searching another subject.</div>';
+}
+$("#results").addEventListener("click",ev=>{
+ const button=ev.target.closest("[data-track]");if(!button)return;
+ const record=records.find(r=>r.id===button.dataset.track);if(!record)return;
+ const key="studybridge.application.tracker.v1";let entries=[];
+ try{const raw=JSON.parse(localStorage.getItem(key)||"[]");if(Array.isArray(raw))entries=raw;}catch(e){}
+ const id="programme-"+record.id;
+ if(entries.some(x=>x.id===id)){button.textContent="Already in tracker";return;}
+ entries.push({id,title:record.title,provider:(record.partner_institutions||[]).join(", ")||"Programme provider",kind:"programme",deadline:record.application_deadline||"",status:"researching",nextDate:"",next:"Review official entry requirements and prepare an application checklist.",url:record.official_admissions_url||record.official_programme_url,lastUpdated:new Date().toISOString().slice(0,10)});
+ try{localStorage.setItem(key,JSON.stringify(entries));button.textContent="Added to tracker";}catch(e){button.textContent="Could not save";}
+});
+async function init(){
+ try{
+  const response=await fetch("data/programmes.json");if(!response.ok)throw new Error("Database unavailable");
+  const data=await response.json();records=data.programmes||[];
+  [...new Set(records.flatMap(r=>r.delivery_countries||[]))].filter(c=>countries[c]).sort((a,b)=>countries[a].localeCompare(countries[b])).forEach(c=>$("#country").add(new Option(countries[c],c)));
+  [...new Set(records.flatMap(r=>r.study_fields||[]))].sort().forEach(f=>$("#field").add(new Option(f,f)));
+  [...new Set(records.flatMap(r=>r.partner_institutions||[]))].sort().forEach(n=>$("#institution").add(new Option(n,n)));
+  [...new Set(records.map(r=>r.teaching_language).filter(Boolean))].sort().forEach(n=>$("#language").add(new Option(n,n)));
+  try{
+   const prefs=JSON.parse(localStorage.getItem("studybridge.profile.preferences.v1")||"{}");
+   if(prefs.level&&[...$("#level").options].some(o=>o.value===prefs.level))$("#level").value=prefs.level;
+   if(prefs.destination&&[...$("#country").options].some(o=>o.value===prefs.destination))$("#country").value=prefs.destination;
+   const terms={"Business and management":"management","Marketing and communications":"marketing","Computer science and AI":"artificial intelligence","Engineering":"engineering","Health and medicine":"medical","Law and public policy":"law","Science and environment":"science","Arts and humanities":"humanities","Education":"education"};
+   if(prefs.field&&terms[prefs.field])$("#keyword").value=terms[prefs.field];
+  }catch(e){}
+  render();
+ }catch(error){$("#count").textContent="Database unavailable";$("#results").innerHTML='<div class="empty">We could not load programme records. Please try again later.</div>';}
+}
+$("#apply").addEventListener("click",render);
+$("#keyword").addEventListener("keydown",e=>{if(e.key==="Enter")render()});
+$("#clear").addEventListener("click",()=>{["keyword","country","level","field","status","institution","language"].forEach(id=>$("#"+id).value="");render()});
+init();
+</script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
